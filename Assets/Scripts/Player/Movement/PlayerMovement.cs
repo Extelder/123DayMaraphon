@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     
     [Inject] private PlayerInputs _inputs;
 
+    [HideInInspector]public float CurrentMoveSpeed {  get; set; }
     public bool Moving { get; private set; }
 
 
