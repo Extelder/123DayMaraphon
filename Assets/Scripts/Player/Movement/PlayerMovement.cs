@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,27 +6,43 @@ using UnityEngine.UIElements.Experimental;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Scripts")]
-    [SerializeField] private PlayerWalking _walking;
-    [SerializeField] private PlayerDashing _dashing;
+    [Header("Components")] [SerializeField]
+    private PlayerWalk _walk;
+
+    [SerializeField] private PlayerDash _dash;
+    [SerializeField] private PlayerJump _jump;
+
+    [SerializeField] private PlayerInputs _inputs;
+
     public bool Moving { get; private set; }
+
 
     private void Update()
     {
-        _walking.Walk();
+        _inputs.GetMovingInputs();
+
+        _walk.Walk(new Vector3(_inputs.MovementHorizontal, 0, _inputs.MovementVertical));
     }
 
     private void OnEnable()
     {
-        _dashing.PlayerDashed += Dashing;
+        _inputs.DashPressed += Dashing;
+        _inputs.JumpPressed += Jumping;
     }
-    private void OnDisable ()
+
+    private void OnDisable()
     {
-        _dashing.PlayerDashed -= Dashing;
+        _inputs.DashPressed -= Dashing;
+        _inputs.JumpPressed -= Jumping;
     }
 
     private void Dashing()
     {
-        _dashing.Dash();
+        _dash.Dash();
+    }
+
+    private void Jumping()
+    {
+        _jump.Jump();
     }
 }
