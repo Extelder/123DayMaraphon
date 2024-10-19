@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3367053164615976230
 MonoBehaviour:
@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <DashKeyCode>k__BackingField: 304
+  <DasDownhKeyCode>k__BackingField: 306
   <JumpKeyCode>k__BackingField: 32

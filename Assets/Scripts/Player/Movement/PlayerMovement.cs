@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerWalk _walk;
 
     [SerializeField] private PlayerDash _dash;
+    [SerializeField] private PlayerDashDown _dashDown;
     [SerializeField] private PlayerJump _jump;
     
     [Inject] private PlayerInputs _inputs;
@@ -28,18 +29,25 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         _inputs.DashPressed += Dashing;
+        _inputs.DashDownPressed += DashingDown;
         _inputs.JumpPressed += Jumping;
     }
 
     private void OnDisable()
     {
         _inputs.DashPressed -= Dashing;
+        _inputs.DashDownPressed -= DashingDown;
         _inputs.JumpPressed -= Jumping;
     }
 
     private void Dashing()
     {
         _dash.Dash();
+    }
+    
+    private void DashingDown()
+    {
+        _dashDown.DashDown();
     }
 
     private void Jumping()
