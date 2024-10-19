@@ -19,8 +19,7 @@ public class PlayerWalk : MonoBehaviour
 
     public void Walk(Vector3 input)
     {
-        _playerMovement.CurrentMoveSpeed = _walkSpeed;
-        _rigidbody.velocity = transform.rotation * new Vector3(input.x * _playerMovement.CurrentMoveSpeed,
-            _rigidbody.velocity.y, input.z * _playerMovement.CurrentMoveSpeed);
+        _rigidbody.velocity = transform.rotation * new Vector3(input.x * _walkSpeed,
+            _rigidbody.velocity.y, input.z * _walkSpeed);
     }
 }

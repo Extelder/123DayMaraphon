@@ -48,6 +48,6 @@ public class PlayerJump : MonoBehaviour
 
         _jumpsAvailable--;
 
-        _rigidbody.AddForce(transform.up * _jumpForce, ForceMode.Impulse);
+        _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
     }
 }

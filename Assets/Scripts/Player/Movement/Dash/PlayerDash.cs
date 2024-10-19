@@ -10,7 +10,6 @@ public class PlayerDash : MonoBehaviour
     [SerializeField] private float _dashUpwardForce;
     [SerializeField] private float _dashCooldown;
     [Space(10)] [SerializeField] private Transform _orientation;
-    [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private float _targetMoveSpeed;
     [SerializeField] private float _speedChangeFactor;
 
@@ -27,12 +26,11 @@ public class PlayerDash : MonoBehaviour
 
     public void Dash()
     {
-        Debug.Log(_playerMovement.CurrentMoveSpeed);
         if (!_cooldownRecovered)
             return;
 
         StartCoroutine(SmoothlyLerpMoveSpeed());
-        Vector3 forceToApply = (_orientation.forward * _playerMovement.CurrentMoveSpeed + _orientation.up * _dashUpwardForce);
+        Vector3 forceToApply = (_orientation.forward * _dashSpeed + _orientation.up * _dashUpwardForce);
         _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
 
         _cooldownRecovered = false;
@@ -43,21 +41,22 @@ public class PlayerDash : MonoBehaviour
     private IEnumerator SmoothlyLerpMoveSpeed()
     {
         float time = 0;
-        float difference = Mathf.Abs(_targetMoveSpeed - _playerMovement.CurrentMoveSpeed);
-        float startValue = _playerMovement.CurrentMoveSpeed;
+        float difference = Mathf.Abs(_targetMoveSpeed - _dashSpeed);
+        float startValue = _dashSpeed;
         float boostFactor = _speedChangeFactor;
 
         while (time < difference)
         {
-            _playerMovement.CurrentMoveSpeed = Mathf.Lerp(startValue, _targetMoveSpeed, time / difference);
+            _dashSpeed = Mathf.Lerp(startValue, _targetMoveSpeed, time / difference);
+
+            _rigidbody.velocity += (_orientation.forward * _dashSpeed + _orientation.up * _dashUpwardForce);
 
             time += Time.deltaTime * boostFactor;
 
             yield return null;
         }
 
-        _playerMovement.CurrentMoveSpeed = _targetMoveSpeed;
-        _speedChangeFactor = 1f;
+        _dashSpeed = startValue;
     }
 
     private void OnDisable()

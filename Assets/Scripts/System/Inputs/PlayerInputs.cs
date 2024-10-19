@@ -24,7 +24,7 @@ public class PlayerInputs : MonoBehaviour
             DashPressed?.Invoke();
         }
         
-        if (Input.GetKey(JumpKeyCode))
+        if (Input.GetKeyDown(JumpKeyCode))
         {
             JumpPressed?.Invoke();
         }  

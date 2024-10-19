@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jumps: 2
-  _jumpForce: 4
+  _jumpForce: 8
   _resetRigidBodyYAfterJump: 1
   _groundChecker: {fileID: 4964944240793527871}
 --- !u!114 &1947032898487497675
@@ -219,13 +219,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e20f4cc93f12c1488044564bfb95fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dashSpeed: 200
-  _dashUpwardForce: 1
-  _dashCooldown: 4
+  _dashSpeed: 23
+  _dashUpwardForce: 0.1
+  _dashCooldown: 0.1
   _orientation: {fileID: 4063892871993162728}
-  _playerMovement: {fileID: 4206510036509519871}
-  _targetMoveSpeed: 300
-  _speedChangeFactor: 50
+  _targetMoveSpeed: 40
+  _speedChangeFactor: 80
 --- !u!1 &420415357327876813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,8 +1311,8 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 1
-  m_BlendUpdateMethod: 1
+  m_UpdateMethod: 0
+  m_BlendUpdateMethod: 0
   m_DefaultBlend:
     m_Style: 1
     m_Time: 2
