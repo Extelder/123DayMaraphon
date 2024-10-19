@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerJump : MonoBehaviour
@@ -15,6 +16,7 @@ public class PlayerJump : MonoBehaviour
     private Rigidbody _rigidbody;
 
     private int _jumpsAvailable;
+
 
     private void Awake()
     {
@@ -38,14 +40,14 @@ public class PlayerJump : MonoBehaviour
 
     public void Jump()
     {
-        if(_jumpsAvailable <= 0)
+        if (_jumpsAvailable <= 0)
             return;
-        
+
         if (_resetRigidBodyYAfterJump)
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, 0, _rigidbody.velocity.z);
 
         _jumpsAvailable--;
-        
+
         _rigidbody.AddForce(transform.up * _jumpForce, ForceMode.Impulse);
     }
 }

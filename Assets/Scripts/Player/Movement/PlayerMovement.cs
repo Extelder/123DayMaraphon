@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements.Experimental;
+using Zenject;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private PlayerDash _dash;
     [SerializeField] private PlayerJump _jump;
-
-    [SerializeField] private PlayerInputs _inputs;
+    
+    [Inject] private PlayerInputs _inputs;
 
     public bool Moving { get; private set; }
 

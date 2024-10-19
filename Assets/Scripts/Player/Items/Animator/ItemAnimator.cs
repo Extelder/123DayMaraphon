@@ -3,46 +3,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemAnimator : MonoBehaviour
+public class ItemAnimator : UnitAnimator
 {
-    [SerializeField] private Animator _animator;
-    [SerializeField] private string _idleAnimationBoolName, _moveAnimationBoolName, _shootAnimationBoolName;
+    [SerializeField] private string _moveAnimationBoolName, _shootAnimationBoolName;
 
     private void Start()
     {
         Idle();
     }
 
-    public virtual void DisableAllBools()
+    public override void DisableAllBools()
     {
-        _animator.SetBool(_idleAnimationBoolName, false);
-        _animator.SetBool(_moveAnimationBoolName, false);
-        _animator.SetBool(_shootAnimationBoolName, false);
+        SetAnimationBool(_moveAnimationBoolName, false);
+        SetAnimationBool(_shootAnimationBoolName, false);
     }
 
     public void Idle()
     {
-        SetAnimationBoolWithDisableOthers(_idleAnimationBoolName);
+        DisableAllBools();
     }
 
     public void Move()
     {
-        SetAnimationBoolWithDisableOthers(_moveAnimationBoolName);
+        SetTrueAnimationBoolWithDisableOthers(_moveAnimationBoolName);
     }
 
     public void Shoot()
     {
-        SetAnimationBoolWithDisableOthers(_shootAnimationBoolName);
-    }
-
-    public void SetAnimationBoolWithDisableOthers(string name)
-    {
-        DisableAllBools();
-        SetAnimationBool(name);
-    }
-
-    public void SetAnimationBool(string name)
-    {
-        _animator.SetBool(name, true);
+        SetTrueAnimationBoolWithDisableOthers(_shootAnimationBoolName);
     }
 }
