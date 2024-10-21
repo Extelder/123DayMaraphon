@@ -26,7 +26,9 @@ public class PlayerDash : MonoBehaviour
 
     public void Dash()
     {
-        if (!_cooldownRecovered)
+        StopAllCoroutines();
+
+        if (!_cooldownRecovered) 
             return;
 
         StartCoroutine(SmoothlyLerpMoveSpeed());
@@ -34,7 +36,7 @@ public class PlayerDash : MonoBehaviour
         _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
 
         _cooldownRecovered = false;
-
+ 
         CoolDown.Timer(_dashCooldown, () => { _cooldownRecovered = true; }, _disposable);
     }
 

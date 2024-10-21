@@ -16,9 +16,6 @@ public class PlayerMovement : MonoBehaviour
     
     [Inject] private PlayerInputs _inputs;
 
-    public bool Moving { get; private set; }
-
-
     private void Update()
     {
         _inputs.GetMovingInputs();
@@ -28,16 +25,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        _inputs.DashPressed += Dashing;
-        _inputs.DashDownPressed += DashingDown;
-        _inputs.JumpPressed += Jumping;
+        _inputs.DashPressedDown += Dashing;
+        _inputs.DashDownwardsPressedDown += DashingDown;
+        _inputs.JumpPressedDown += Jumping;
     }
 
     private void OnDisable()
     {
-        _inputs.DashPressed -= Dashing;
-        _inputs.DashDownPressed -= DashingDown;
-        _inputs.JumpPressed -= Jumping;
+        _inputs.DashPressedDown -= Dashing;
+        _inputs.DashDownwardsPressedDown -= DashingDown;
+        _inputs.JumpPressedDown -= Jumping;
     }
 
     private void Dashing()

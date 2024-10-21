@@ -6,6 +6,5 @@ public class MoveItemState : ItemState
 {
     public override void Enter()
     {
-        Animator.Move();
     }
 }

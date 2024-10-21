@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ItemAnimator : UnitAnimator
 {
-    [SerializeField] private string _moveAnimationBoolName, _shootAnimationBoolName;
+    [SerializeField] private string _shootAnimationBoolName;
 
     private void Start()
     {
@@ -14,18 +14,12 @@ public class ItemAnimator : UnitAnimator
 
     public override void DisableAllBools()
     {
-        SetAnimationBool(_moveAnimationBoolName, false);
         SetAnimationBool(_shootAnimationBoolName, false);
     }
 
     public void Idle()
     {
         DisableAllBools();
-    }
-
-    public void Move()
-    {
-        SetTrueAnimationBoolWithDisableOthers(_moveAnimationBoolName);
     }
 
     public void Shoot()

@@ -30,7 +30,7 @@ public class PlayerDashDown : MonoBehaviour
             return;
 
         StartCoroutine(SmoothlyLerpMoveSpeed());
-        Vector3 forceToApply = (_orientation.up * -_dashUpwardForce); ;
+        Vector3 forceToApply = (_orientation.up * -_dashUpwardForce); 
         _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
 
         _cooldownRecovered = false;
