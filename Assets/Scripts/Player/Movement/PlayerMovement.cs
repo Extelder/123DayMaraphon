@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     private PlayerWalk _walk;
 
     [SerializeField] private PlayerDash _dash;
-    [SerializeField] private PlayerDashDown _dashDown;
     [SerializeField] private PlayerJump _jump;
     
     [Inject] private PlayerInputs _inputs;
@@ -44,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void DashingDown()
     {
-        _dashDown.DashDown();
+        _dash.DashDown();
     }
 
     private void Jumping()

@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 239377956438191913}
   - component: {fileID: 5641981363132158727}
   - component: {fileID: 1947032898487497675}
-  - component: {fileID: 9113748938954180803}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -178,7 +177,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _walk: {fileID: 239377956438191913}
   _dash: {fileID: 1947032898487497675}
-  _dashDown: {fileID: 9113748938954180803}
   _jump: {fileID: 5641981363132158727}
 --- !u!114 &239377956438191913
 MonoBehaviour:
@@ -224,28 +222,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dashSpeed: 23
   _dashUpwardForce: 0.1
-  _dashCooldown: 1
+  _dashDownForce: -1.5
+  _dashCooldown: 0.1
+  _dashDownCooldown: 0.1
   _orientation: {fileID: 4063892871993162728}
   _targetMoveSpeed: 40
   _speedChangeFactor: 70
---- !u!114 &9113748938954180803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86614837546828997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5af576c9b31c37e49b301089e596b46e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dashSpeed: 23
-  _dashUpwardForce: 1
-  _dashDownCooldown: 0.1
-  _orientation: {fileID: 8726157497732438243}
-  _targetMoveSpeed: 40
-  _speedChangeFactor: 100
 --- !u!1 &420415357327876813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1171,6 @@ GameObject:
   - component: {fileID: 2626035544125673598}
   - component: {fileID: 5101284884207519597}
   - component: {fileID: 1600292837926898875}
-  - component: {fileID: 2045075641033113985}
   m_Layer: 7
   m_Name: RaycastWeapon
   m_TagString: Untagged
@@ -1329,22 +1310,6 @@ MonoBehaviour:
   _nullHitSafeTrailTargetPoint: {fileID: 778277280401525036}
   _spawnPoint: {fileID: 4976687215441900547}
   _trailPool: {fileID: 2305787734905356903}
---- !u!114 &2045075641033113985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6176237637945192683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46d8bb49f4fe3e244896e69897877adf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _weaponShoot: {fileID: 758412039500632669}
-  _player: {fileID: 4063892871993162728}
-  _nullHitSafeTrailTargetPoint: {fileID: 778277280401525036}
-  _impactPool: {fileID: 3390010580566749020}
 --- !u!1 &6721304459062331502
 GameObject:
   m_ObjectHideFlags: 0
