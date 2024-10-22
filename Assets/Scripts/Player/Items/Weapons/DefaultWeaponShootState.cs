@@ -10,6 +10,8 @@ public class DefaultWeaponShootState : WeaponShootState
 
     public event Action ShootPerformed;
 
+    private bool _alreadyShooting;
+
     public override void Enter()
     {
         CanChanged = false;
@@ -23,17 +25,36 @@ public class DefaultWeaponShootState : WeaponShootState
     }
 
 
-    public void AnimationEndCanChanged()
+    public void AnimationEndStartChecking()
     {
-        if (_playerInputs.MainShooting)
-            return;
-        CanChanged = true;
-        CanShoot = true;
-        Animator.DisableAllBools();
+        _alreadyShooting = false;
+        StopAllCoroutines();
+        StartCoroutine(AnimationEndChecking());
     }
 
-    private void OnDisable()
+    public void AnimationEndStopChecking()
     {
-        AnimationEndCanChanged();
+        StopAllCoroutines();
+
+        if (_alreadyShooting)
+            return;
+
+        CanChanged = true;
+        CanShoot = true;
+    }
+
+    private IEnumerator AnimationEndChecking()
+    {
+        while (true)
+        {
+            if (_playerInputs.MainShooting)
+            {
+                _alreadyShooting = true;
+                Animator.Shoot();
+                yield break;
+            }
+
+            yield return new WaitForSeconds(0.02f);
+        }
     }
 }

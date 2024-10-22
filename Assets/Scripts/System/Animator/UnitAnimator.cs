@@ -23,4 +23,9 @@ public abstract class UnitAnimator : MonoBehaviour
     {
         Animator.SetBool(nam, value);
     }
+
+    public void SetAnimationTrigger(string name)
+    {
+        Animator.SetTrigger(name);
+    }
 }

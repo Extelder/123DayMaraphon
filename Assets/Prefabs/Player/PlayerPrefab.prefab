@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Animator>k__BackingField: {fileID: 5101284884207519597}
-  _shootAnimationBoolName: IsShooting
+  _shootAnimationTriggerName: Shoot
 --- !u!95 &5101284884207519597
 Animator:
   serializedVersion: 5

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ItemAnimator : UnitAnimator
 {
-    [SerializeField] private string _shootAnimationBoolName;
+    [SerializeField] private string _shootAnimationTriggerName;
 
     private void Start()
     {
@@ -14,7 +14,7 @@ public class ItemAnimator : UnitAnimator
 
     public override void DisableAllBools()
     {
-        SetAnimationBool(_shootAnimationBoolName, false);
+        SetAnimationBool(_shootAnimationTriggerName, false);
     }
 
     public void Idle()
@@ -24,6 +24,6 @@ public class ItemAnimator : UnitAnimator
 
     public void Shoot()
     {
-        SetTrueAnimationBoolWithDisableOthers(_shootAnimationBoolName);
+        SetAnimationTrigger(_shootAnimationTriggerName);
     }
 }
