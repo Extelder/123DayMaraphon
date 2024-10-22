@@ -12,6 +12,7 @@ public class PlayerInputs : MonoBehaviour
 
     public bool MainShooting { get; private set; }
 
+    
     public event Action DashPressedDown;
     public event Action DashDownwardsPressedDown;
     public event Action JumpPressedDown;
