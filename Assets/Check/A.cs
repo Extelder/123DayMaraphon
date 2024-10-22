@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class A : MonoBehaviour
 {
+
    private void Start()
    {
       Debug.Log("Igoryava sosi");
    }
+
 }
