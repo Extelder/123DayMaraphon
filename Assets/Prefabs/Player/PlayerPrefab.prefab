@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4206510036509519871}
   - component: {fileID: 239377956438191913}
   - component: {fileID: 5641981363132158727}
+  - component: {fileID: 8522087793704030763}
   - component: {fileID: 1947032898487497675}
   m_Layer: 0
   m_Name: Player
@@ -178,6 +179,7 @@ MonoBehaviour:
   _walk: {fileID: 239377956438191913}
   _dash: {fileID: 1947032898487497675}
   _jump: {fileID: 5641981363132158727}
+  _dashDown: {fileID: 8522087793704030763}
 --- !u!114 &239377956438191913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +210,24 @@ MonoBehaviour:
   _jumpForce: 12
   _resetRigidBodyYAfterJump: 1
   _groundChecker: {fileID: 4964944240793527871}
+--- !u!114 &8522087793704030763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86614837546828997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3122dbaa7320544a86bbd6ecd101886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 0
+  dashUpwardForce: 1
+  orientation: {fileID: 8726157497732438243}
+  targetMoveSpeed: 50
+  speedChangeFactor: 80
+  _dashDownCooldown: 0.1
 --- !u!114 &1947032898487497675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,14 +240,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e20f4cc93f12c1488044564bfb95fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dashSpeed: 23
-  _dashUpwardForce: 0.1
-  _dashDownForce: -1.5
+  dashSpeed: 23
+  dashUpwardForce: 0.1
+  orientation: {fileID: 8726157497732438243}
+  targetMoveSpeed: 50
+  speedChangeFactor: 80
   _dashCooldown: 0.1
-  _dashDownCooldown: 0.1
-  _orientation: {fileID: 4063892871993162728}
-  _targetMoveSpeed: 40
-  _speedChangeFactor: 70
 --- !u!1 &420415357327876813
 GameObject:
   m_ObjectHideFlags: 0
