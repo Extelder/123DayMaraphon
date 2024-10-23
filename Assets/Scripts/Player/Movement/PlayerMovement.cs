@@ -7,19 +7,19 @@ using Zenject;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Components")] [SerializeField]
+    [Header("Components")]
+    [SerializeField]
     private PlayerWalk _walk;
 
     [SerializeField] private PlayerDash _dash;
     [SerializeField] private PlayerJump _jump;
     [SerializeField] private PlayerDashDown _dashDown;
-    
+
     [Inject] private PlayerInputs _inputs;
 
     private void Update()
     {
         _inputs.GetMovingInputs();
-
         _walk.Walk(new Vector3(_inputs.MovementHorizontal, 0, _inputs.MovementVertical));
     }
 
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _dash.Dash();
     }
-    
+
     private void DashingDown()
     {
         _dashDown.DashDown();

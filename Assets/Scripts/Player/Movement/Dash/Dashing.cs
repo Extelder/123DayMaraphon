@@ -26,7 +26,9 @@ public abstract class Dashing : MonoBehaviour
     public void AddImpulse(Vector3 forceToApply, float cooldown, CompositeDisposable disposable)
     {
         StopAllCoroutines();
+
         dashSpeed = _defaultDashSpeed;
+
         StartCoroutine(SmoothlyLerpMoveSpeed(forceToApply));
         rigidbody.AddForce(forceToApply, ForceMode.Impulse);
 
