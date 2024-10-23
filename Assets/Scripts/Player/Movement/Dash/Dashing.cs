@@ -10,23 +10,23 @@ public abstract class Dashing : MonoBehaviour
     [SerializeField] protected Transform orientation;
 
     [SerializeField] protected float targetMoveSpeed;
-    [SerializeField]  float speedChangeFactor;
+    [SerializeField] float speedChangeFactor;
     protected bool cooldownRecovered = true;
 
     protected Rigidbody rigidbody;
 
+    private float _defaultDashSpeed;
+
     private void Awake()
     {
+        _defaultDashSpeed = dashSpeed;
         rigidbody = GetComponent<Rigidbody>();
     }
 
     public void AddImpulse(Vector3 forceToApply, float cooldown, CompositeDisposable disposable)
     {
         StopAllCoroutines();
-
-        if (!cooldownRecovered)
-            return;
-
+        dashSpeed = _defaultDashSpeed;
         StartCoroutine(SmoothlyLerpMoveSpeed(forceToApply));
         rigidbody.AddForce(forceToApply, ForceMode.Impulse);
 

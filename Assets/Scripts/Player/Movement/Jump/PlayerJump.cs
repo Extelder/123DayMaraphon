@@ -9,6 +9,7 @@ public class PlayerJump : MonoBehaviour
 {
     [Header("Settings")] [SerializeField] private int _jumps;
     [SerializeField] private float _jumpForce;
+    [SerializeField] private float _jumpForceByJumpsMultiplayer;
     [SerializeField] private bool _resetRigidBodyYAfterJump;
 
     [SerializeField] private GroundChecker _groundChecker;
