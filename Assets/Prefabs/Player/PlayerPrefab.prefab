@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53a137c216a75047aa2b314f842a369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkSpeed: 0
+  WalkSpeed: 15
   _playerMovement: {fileID: 4206510036509519871}
 --- !u!114 &5641981363132158727
 MonoBehaviour:
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3122dbaa7320544a86bbd6ecd101886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 0
+  dashSpeed: 23
   dashUpwardForce: 1
   orientation: {fileID: 8726157497732438243}
   targetMoveSpeed: 50
@@ -295,9 +295,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxSlopeAngle: 60
   _playerHeight: 2
-  _playerWalk: {fileID: 239377956438191913}
-  _speedMultiplier: 1
-  _forceToGround: 50
   _layerMask:
     serializedVersion: 2
     m_Bits: 65

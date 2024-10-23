@@ -2,24 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Windows;
-using Zenject;
 
 public class PlayerSlopeMovement : MonoBehaviour
 {
     [SerializeField] private float _maxSlopeAngle;
     [SerializeField] private float _playerHeight;
-    [SerializeField] private PlayerWalk _playerWalk;
-    [SerializeField] private float _speedMultiplier;
-    [SerializeField] private float _forceToGround;
     [SerializeField] private LayerMask _layerMask;
-    [Inject] private PlayerInputs _playerInputs;
     private RaycastHit _slopeHit;
 
     private Rigidbody _rigidbody;
-
-    public event Action PlayerSloped;
 
     private void Awake()
     {
