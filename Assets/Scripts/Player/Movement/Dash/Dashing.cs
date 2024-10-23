@@ -24,8 +24,6 @@ public abstract class Dashing : MonoBehaviour
     {
         StopAllCoroutines();
 
-        if (!cooldownRecovered)
-            return;
 
         StartCoroutine(SmoothlyLerpMoveSpeed(forceToApply));
         rigidbody.AddForce(forceToApply, ForceMode.Impulse);

@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 5641981363132158727}
   - component: {fileID: 8522087793704030763}
   - component: {fileID: 1947032898487497675}
+  - component: {fileID: 3484173330324304254}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -180,6 +181,7 @@ MonoBehaviour:
   _dash: {fileID: 1947032898487497675}
   _jump: {fileID: 5641981363132158727}
   _dashDown: {fileID: 8522087793704030763}
+  _slopeMovement: {fileID: 3484173330324304254}
 --- !u!114 &239377956438191913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53a137c216a75047aa2b314f842a369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _walkSpeed: 15
+  WalkSpeed: 15
   _playerMovement: {fileID: 4206510036509519871}
 --- !u!114 &5641981363132158727
 MonoBehaviour:
@@ -222,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3122dbaa7320544a86bbd6ecd101886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 0
+  dashSpeed: 23
   dashUpwardForce: 1
   orientation: {fileID: 8726157497732438243}
   targetMoveSpeed: 50
@@ -246,6 +248,26 @@ MonoBehaviour:
   targetMoveSpeed: 50
   speedChangeFactor: 80
   _dashCooldown: 0.1
+--- !u!114 &3484173330324304254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86614837546828997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 526a72e4de8afc54c8d77c83041f950a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxSlopeAngle: 60
+  _playerHeight: 2
+  _playerWalk: {fileID: 239377956438191913}
+  _speedMultiplier: 20
+  _forceToGround: 80
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &420415357327876813
 GameObject:
   m_ObjectHideFlags: 0

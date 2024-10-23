@@ -6,7 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerWalk : MonoBehaviour
 {
-    [Header("Speed")][SerializeField] private float _walkSpeed;
+    [field: Header("Speed")]
+    [field: SerializeField] public float WalkSpeed;
 
     [SerializeField] private PlayerMovement _playerMovement;
 
@@ -19,7 +20,7 @@ public class PlayerWalk : MonoBehaviour
 
     public void Walk(Vector3 input)
     {
-        _rigidbody.velocity = transform.rotation * new Vector3(input.x * _walkSpeed,
-            _rigidbody.velocity.y, input.z * _walkSpeed);
+        _rigidbody.velocity = transform.rotation * new Vector3(input.x * WalkSpeed,
+            _rigidbody.velocity.y, input.z * WalkSpeed);
     }
 }
