@@ -15,6 +15,8 @@ public abstract class Dashing : MonoBehaviour
 
     protected Rigidbody rigidbody;
 
+    protected Coroutine LerpSpeedCoroutine;
+
     private float _defaultDashSpeed;
 
     private void Awake()
@@ -28,8 +30,7 @@ public abstract class Dashing : MonoBehaviour
         StopAllCoroutines();
 
         dashSpeed = _defaultDashSpeed;
-
-        StartCoroutine(SmoothlyLerpMoveSpeed(forceToApply));
+        LerpSpeedCoroutine = StartCoroutine(SmoothlyLerpMoveSpeed(forceToApply));
         rigidbody.AddForce(forceToApply, ForceMode.Impulse);
 
         cooldownRecovered = false;

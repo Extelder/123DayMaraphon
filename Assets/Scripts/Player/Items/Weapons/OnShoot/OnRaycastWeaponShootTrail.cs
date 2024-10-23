@@ -32,12 +32,11 @@ public class OnRaycastWeaponShootTrail : MonoBehaviour
         }
 
 
-        TrailRenderer trailRenderer = _trailPool.GetFreeElement(_spawnPoint.position, Quaternion.identity)
-            .GetComponent<TrailRenderer>();
-        StartCoroutine(SpawnTrail(trailRenderer, point));
+        Transform trail = _trailPool.GetFreeElement(_spawnPoint.position, Quaternion.identity).transform;
+        StartCoroutine(SpawnTrail(trail, point));
     }
 
-    private IEnumerator SpawnTrail(TrailRenderer trailRenderer, Vector3 point)
+    private IEnumerator SpawnTrail(Transform trailRenderer, Vector3 point)
     {
         float time = 0;
         Vector3 startPosition = trailRenderer.transform.position;
@@ -45,7 +44,7 @@ public class OnRaycastWeaponShootTrail : MonoBehaviour
         while (time < 1)
         {
             trailRenderer.transform.position = Vector3.Lerp(startPosition, point, time);
-            time += Time.deltaTime / trailRenderer.time;
+            time += Time.deltaTime * 2;
             yield return null;
         }
 
