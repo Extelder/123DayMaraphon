@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RaycastWeapon
+  m_Name: ShotGun
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Shoot
@@ -123,7 +123,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f8f4802cbe7724749a6807aacc16b609, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8c08a62e0d7a1f042aa740f940639d09, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

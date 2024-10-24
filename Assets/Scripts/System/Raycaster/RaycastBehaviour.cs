@@ -82,7 +82,7 @@ public class RaycastBehaviour : MonoBehaviour
 
     public void ThrowRaycast(ref RaycastHit outHit)
     {
-        Physics.Raycast(Camera.transform.position, Camera.forward, out outHit, Range, ~ToIgnore);
+       Physics.Raycast(Camera.transform.position, Camera.forward, out outHit, Range, ~ToIgnore);
     }
 
     public void ThrowRaycastWithOffset(ref RaycastHit outHit, Vector3 offset)
