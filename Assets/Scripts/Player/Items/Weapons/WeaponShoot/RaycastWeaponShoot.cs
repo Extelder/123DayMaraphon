@@ -8,6 +8,8 @@ public class RaycastWeaponShoot : WeaponShoot
 {
     public event Action<RaycastHit?> ShootPerformedWithRaycastHit;
 
+    private RaycastHit _hit;
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawRay(Camera.position, (Camera.forward + Camera.rotation * CurrentShootOffset) * Range);
@@ -28,6 +30,7 @@ public class RaycastWeaponShoot : WeaponShoot
                 Debug.Log(collider.gameObject.name);
                 if (collider.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor weaponVisitor))
                 {
+                    _hit = hit;
                     Accept(weaponVisitor);
                 }
             }
@@ -36,5 +39,10 @@ public class RaycastWeaponShoot : WeaponShoot
                 ShootPerformedWithRaycastHit?.Invoke(null);
             }
         }
+    }
+
+    public override void Accept(IWeaponVisitor visitor)
+    {
+        visitor.Visit(this, _hit);
     }
 }

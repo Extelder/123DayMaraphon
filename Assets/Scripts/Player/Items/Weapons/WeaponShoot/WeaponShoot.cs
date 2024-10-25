@@ -30,7 +30,7 @@ public class WeaponShoot : RaycastBehaviour
         ShootPerformed?.Invoke();
     }
 
-    public void Accept(IWeaponVisitor visitor)
+    public virtual void Accept(IWeaponVisitor visitor)
     {
         visitor.Visit(this);
     }
