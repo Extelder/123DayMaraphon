@@ -774,11 +774,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _overlapSettings: {fileID: 7945746809305000252}
   _orientation: {fileID: 8726157497732438243}
-  _forceBack: -10
+  _forceBack: -30
   _forceUpward: 0.1
-  _targetSpeed: -30
-  _speedChangeFactor: 70
-  _invertOrientationDashSpeed: 15
+  _targetSpeed: -100
+  _speedChangeFactor: 200
+  _invertOrientationDashSpeed: -20
 --- !u!1 &130655720114257054
 GameObject:
   m_ObjectHideFlags: 0
