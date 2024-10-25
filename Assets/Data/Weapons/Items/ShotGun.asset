@@ -15,5 +15,5 @@ MonoBehaviour:
   Name: ShotGun
   Id: 0
   DamagePerHit: 15
-  RandomRangeMultiplayer: 0.3
+  RandomRangeMultiplayer: 0.15
   HitsPerShot: 10
