@@ -8,7 +8,7 @@ public class PlayerDashWarpEffect : MonoBehaviour
 {
     [SerializeField] private PlayerDash _dash;
     [SerializeField] private Transform _spawnPoint;
-    [SerializeField] private Pool _warpEffectPool;
+    [Inject] private Pools _pools;
 
     private void OnEnable()
     {
@@ -22,7 +22,7 @@ public class PlayerDashWarpEffect : MonoBehaviour
 
     private void OnDashed()
     {
-        _warpEffectPool.GetFreeElement(_spawnPoint.position,
+        _pools.DashPool.GetFreeElement(_spawnPoint.position,
             _spawnPoint.rotation, _spawnPoint.transform);
     }
 }

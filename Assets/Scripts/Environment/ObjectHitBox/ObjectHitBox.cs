@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class ObjectHitBox : MonoBehaviour, IWeaponVisitor
 {
-    [SerializeField] private Pool _impactsPool;
+    [Inject] private Pools _pools;
 
     public void Visit(WeaponShoot weaponShoot)
     {
     }
-    
+
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
         DefaultRaycastVisit(hit);
@@ -22,6 +23,6 @@ public class ObjectHitBox : MonoBehaviour, IWeaponVisitor
 
     private void SpawningDecal(RaycastHit hit)
     {
-        var currentObject = _impactsPool.GetFreeElement(hit.point, Quaternion.Euler(0f, 0f, 0f));
+        var currentObject = _pools.DefaultImpactPool.GetFreeElement(hit.point, Quaternion.identity);
     }
 }

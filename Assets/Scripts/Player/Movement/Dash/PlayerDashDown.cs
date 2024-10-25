@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using UniRx;
 using UnityEngine;
+using Zenject;
 
 public class PlayerDashDown : Dashing
 {
     [Header("Settings")] [SerializeField] private float _dashDownCooldown;
-    [SerializeField] private Pool _floorStashPool;
+    [Inject] private Pools _pools;
 
 
     [Space(10)] [Header("Check Floor")] [SerializeField]
@@ -39,7 +40,7 @@ public class PlayerDashDown : Dashing
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 1000000f, _checkLayer))
-            _floorStashPool.GetFreeElement(hit.point);
+            _pools.DashDownPool.GetFreeElement(hit.point);
         StopCoroutine(LerpSpeedCoroutine);
     }
 

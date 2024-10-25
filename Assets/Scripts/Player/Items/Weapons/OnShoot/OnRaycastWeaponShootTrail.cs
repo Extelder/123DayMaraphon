@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class OnRaycastWeaponShootTrail : MonoBehaviour
 {
     [SerializeField] private RaycastWeaponShoot _weaponShoot;
     [SerializeField] private Transform _nullHitSafeTrailTargetPoint;
     [SerializeField] private Transform _spawnPoint;
-    [SerializeField] private Pool _trailPool;
+    [Inject] private Pools _pools;
 
     private void OnEnable()
     {
@@ -32,7 +33,7 @@ public class OnRaycastWeaponShootTrail : MonoBehaviour
         }
 
 
-        Transform trail = _trailPool.GetFreeElement(_spawnPoint.position, Quaternion.identity).transform;
+        Transform trail = _pools.TrailPool.GetFreeElement(_spawnPoint.position, Quaternion.identity).transform;
         StartCoroutine(SpawnTrail(trail, point));
     }
 
@@ -44,7 +45,7 @@ public class OnRaycastWeaponShootTrail : MonoBehaviour
         while (time < 1)
         {
             trailRenderer.transform.position = Vector3.Lerp(startPosition, point, time);
-            time += Time.deltaTime * 2;
+            time += Time.deltaTime * 5;
             yield return null;
         }
 
