@@ -534,6 +534,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &752561479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 752561480}
+  - component: {fileID: 752561481}
+  m_Layer: 0
+  m_Name: PlayerHealthInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &752561480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752561479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 979178033}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &752561481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752561479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e7a1417c9040b46823107b72108c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerHealth: {fileID: 8347662477821735892, guid: 616da802652ef264da033e0095a651dd,
+    type: 3}
+  _spawnPoint: {fileID: 1406336877}
+  _parent: {fileID: 1406336877}
 --- !u!1001 &811589443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -668,9 +716,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95141348a8020c40916f7a58a70504e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerHealth: {fileID: 0}
-  _valueToHeal: 0
-  _destroyAfterHeal: 0
+  _valueToHeal: 30
+  _destroyAfterHeal: 1
 --- !u!1 &824459060
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +943,7 @@ Transform:
   - {fileID: 2096231065}
   - {fileID: 511776433}
   - {fileID: 36921258}
+  - {fileID: 752561480}
   m_Father: {fileID: 185213722}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -913,6 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
   _monoInstallers:
+  - {fileID: 752561481}
   - {fileID: 36921259}
   - {fileID: 511776434}
   - {fileID: 2096231066}
