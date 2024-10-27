@@ -12,6 +12,5 @@ public class PlayerDamagePickUpable : MonoBehaviour, IPickupable
     public void PickUp()
     {
         _health.TakeDamage(_damage);
-        Debug.Log("спиздил");
     }
 }
