@@ -17,6 +17,7 @@ public class PlayerDashDown : Dashing
     [SerializeField] private float _checkRate;
     [SerializeField] private LayerMask _checkLayer;
     [SerializeField] private int _maxObjectsToCheck;
+    [SerializeField] private GroundChecker _groundChecker;
 
     private CompositeDisposable _dashDownDisposable = new CompositeDisposable();
 
@@ -24,6 +25,9 @@ public class PlayerDashDown : Dashing
 
     public void DashDown()
     {
+        if(_groundChecker.Detected) 
+            return;
+
         if (!cooldownRecovered)
             return;
 

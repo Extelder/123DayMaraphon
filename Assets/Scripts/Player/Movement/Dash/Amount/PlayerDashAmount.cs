@@ -27,6 +27,7 @@ public class PlayerDashAmount : MonoBehaviour
             return;
         }
 
+
         Debug.LogError(gameObject + " one more dashAmount");
     }
 
@@ -40,6 +41,13 @@ public class PlayerDashAmount : MonoBehaviour
     {
         if (_earn)
             Earn();
+    }
+
+    public void RecoverSpeed(float addibleSpeed)
+    {
+        _earn = false;
+        _current += addibleSpeed;
+        _earn = true;
     }
 
     private void Earn()

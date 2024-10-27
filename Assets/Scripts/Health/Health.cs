@@ -16,6 +16,11 @@ public abstract class Health : MonoBehaviour
         CurrentValue = MaxValue;
     }
 
+    private void Update()
+    {
+        Debug.Log(gameObject.name + CurrentValue);
+    }
+
     public void TakeDamage(float value)
     {
         if (CurrentValue - value > 0)
@@ -42,6 +47,12 @@ public abstract class Health : MonoBehaviour
     {
         ChangeHealthValue(MaxValue);
         OnHealedToMax?.Invoke(MaxValue);
+    }
+
+    public void Armor(float addibleHealth)
+    {
+        MaxValue *= addibleHealth;
+        CurrentValue = MaxValue;
     }
 
     public abstract void Death();
