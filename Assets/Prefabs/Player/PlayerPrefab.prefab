@@ -665,7 +665,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _maxObjectsToCheck: 10
-  _groundChecker: {fileID: 0}
+  _groundChecker: {fileID: 4964944240793527871}
 --- !u!114 &1947032898487497675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1469,8 +1469,8 @@ MonoBehaviour:
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
     m_InvertInput: 1
-    m_MinValue: -70
-    m_MaxValue: 70
+    m_MinValue: -90
+    m_MaxValue: 90
     m_Wrap: 0
     m_Recentering:
       m_enabled: 0
