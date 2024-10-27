@@ -17,6 +17,19 @@ public class PlayerDashAmount : MonoBehaviour
 
     public event Action<float> AmountChanged;
 
+    public static PlayerDashAmount Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+            return;
+        }
+
+        Debug.LogError(gameObject + "one more dashAmount");
+    }
+
     private void OnEnable()
     {
         _dash.Dashed += OnDashed;
@@ -27,6 +40,13 @@ public class PlayerDashAmount : MonoBehaviour
     {
         if (_earn)
             Earn();
+    }
+
+    public void RecoverSpeed(float addibleSpeed)
+    {
+        _earn = false;
+        _current += addibleSpeed;
+        _earn = true;
     }
 
     private void Earn()

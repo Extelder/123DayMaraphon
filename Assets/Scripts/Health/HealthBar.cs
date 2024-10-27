@@ -8,6 +8,11 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Image _healtBar;
     [SerializeField] private Health _health;
 
+    protected void OverrideHealth(Health health)
+    {
+        _health = health;
+    }
+
     private void OnEnable()
     {
         _health.HealthValueChanged += OnHealthValueChanged;
