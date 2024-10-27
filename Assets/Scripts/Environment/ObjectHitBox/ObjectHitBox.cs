@@ -16,6 +16,11 @@ public class ObjectHitBox : MonoBehaviour, IWeaponVisitor
         DefaultRaycastVisit(hit);
     }
 
+    public void Visit(Projectile projectile)
+    {
+        
+    }
+
     public void DefaultRaycastVisit(RaycastHit raycastHit)
     {
         SpawningDecal(raycastHit);

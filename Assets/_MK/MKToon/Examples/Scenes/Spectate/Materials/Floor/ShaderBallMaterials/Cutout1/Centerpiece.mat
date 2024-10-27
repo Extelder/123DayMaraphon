@@ -15,25 +15,42 @@ MonoBehaviour:
   version: 1
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Centerpiece
   m_Shader: {fileID: 4800000, guid: 7633a2fd8a3bed44791c9e952ff86e5d, type: 3}
-  m_ShaderKeywords: _ALPHACLIPPING_ON _FRESNELHIGHLIGHTS_ON _MK_ALBEDO_MAP _MK_ALPHA_CLIPPING
-    _MK_DETAIL_BLEND_MIX _MK_ENVIRONMENT_REFLECTIONS_ADVANCED _MK_FRESNEL_HIGHLIGHTS
-    _MK_LIGHT_CEL _MK_OUTLINE_DATA_UV7 _MK_OUTLINE_HULL_CLIP _MK_RECEIVE_SHADOWS
-    _MK_SPECULAR_ISOTROPIC _MK_WRAPPED_DIFFUSE _RECEIVESHADOWS_ON _WRAPPEDLIGHTING_ON
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _MK_ALBEDO_MAP
+  - _MK_ALPHA_CLIPPING
+  - _MK_ARTISTIC_ANIMATION_STUTTER
+  - _MK_DETAIL_BLEND_MIX
+  - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
+  - _MK_FRESNEL_HIGHLIGHTS
+  - _MK_LIGHT_CEL
+  - _MK_OUTLINE_DATA_UV7
+  - _MK_OUTLINE_HULL_CLIP
+  - _MK_RECEIVE_SHADOWS
+  - _MK_SPECULAR_ISOTROPIC
+  - _MK_WRAPPED_DIFFUSE
+  m_InvalidKeywords:
+  - _ALPHACLIPPING_ON
+  - _FRESNELHIGHLIGHTS_ON
+  - _RECEIVESHADOWS_ON
+  - _WRAPPEDLIGHTING_ON
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 2450
   stringTagMap:
-    IGNOREPROJECTOR: False
-    RenderType: Opaque
+    IGNOREPROJECTOR: true
+    RenderType: TransparentCutout
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -118,7 +135,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 008b9b93a6039f34ea1fc8ab8520057f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -197,9 +214,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
+    - _AddPrecomputedVelocity: 0
     - _AdvancedTab: 1
     - _AlbedoMapIntensity: 1
+    - _AlembicMotionVectors: 0
     - _AlphaClip: 0
     - _AlphaClipping: 1
     - _AlphaCutoff: 0.588
@@ -207,6 +227,7 @@ Material:
     - _Artistic: 0
     - _ArtisticFrequency: 1
     - _ArtisticProjection: 0
+    - _ArtisticShadowFilter: 0
     - _ArtisticStyle: 0
     - _Blend: 0
     - _BlendDst: 0
@@ -221,7 +242,7 @@ Material:
     - _Contrast: 1
     - _Cull: 2
     - _CustomBlend: 0
-    - _Cutoff: 0.5
+    - _Cutoff: 0.588
     - _DetailBlend: 0
     - _DetailMapBlendMode: 0
     - _DetailMix: 0.5
@@ -249,6 +270,7 @@ Material:
     - _GoochRampIntensity: 0.5
     - _HatchingMapScale: 1
     - _HeightMapScale: 0.5
+    - _Hue: 0
     - _IndirectFade: 1
     - _Initialized: 1
     - _InputTab: 1
@@ -276,6 +298,7 @@ Material:
     - _OcclusionStrength: 1
     - _OptionsTab: 1
     - _Outline: 3
+    - _OutlineClipOffset: 0
     - _OutlineData: 1
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25
@@ -332,7 +355,7 @@ Material:
     m_Colors:
     - _AlbedoColor: {r: 0.40777388, g: 0.6603774, b: 0, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _Color: {r: 0.40777385, g: 0.6603774, b: 0, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveColor: {r: 1, g: 1, b: 1, a: 0.5}

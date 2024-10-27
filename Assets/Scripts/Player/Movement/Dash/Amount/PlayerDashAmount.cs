@@ -17,6 +17,19 @@ public class PlayerDashAmount : MonoBehaviour
 
     public event Action<float> AmountChanged;
 
+    public static PlayerDashAmount Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+            return;
+        }
+
+        Debug.LogError(gameObject + " one more dashAmount");
+    }
+
     private void OnEnable()
     {
         _dash.Dashed += OnDashed;
