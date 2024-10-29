@@ -1,11 +1,13 @@
+using DG.Tweening.Core.Easing;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDashAmount : MonoBehaviour
+public class PlayerJumpAmount : MonoBehaviour
 {
-    [SerializeField] private PlayerDash _dash;
-    [SerializeField] private float _costByDash;
+    [SerializeField] private PlayerJump _jump;
+    [SerializeField] private float _costByJump;
     [SerializeField] private float _earnSpeed;
     [SerializeField] private float _delayAfterSpendToEarn = 0.1f;
     [Range(0, 1)][SerializeField] private float _capacity;
@@ -16,7 +18,7 @@ public class PlayerDashAmount : MonoBehaviour
 
     public event Action<float> AmountChanged;
 
-    public static PlayerDashAmount Instance { get; private set; }
+    public static PlayerJumpAmount Instance { get; private set; }
 
     private void Awake()
     {
@@ -32,7 +34,7 @@ public class PlayerDashAmount : MonoBehaviour
 
     private void OnEnable()
     {
-        _dash.Dashed += OnDashed;
+        _jump.Jumped += OnJumped;
         _current = _capacity;
     }
 
@@ -57,25 +59,25 @@ public class PlayerDashAmount : MonoBehaviour
             _current = _capacity;
 
         AmountChanged?.Invoke(_current);
-        if (_current >= _costByDash)
+        if (_current >= _costByJump)
         {
-            _dash.EnableDash();
+            _jump.EnableJump();
         }
     }
 
-    private void OnDashed()
+    private void OnJumped()
     {
         StopAllCoroutines();
 
-        Spend(_costByDash);
+        Spend(_costByJump);
 
         _earn = false;
 
         StartCoroutine(WaitForContinueEarning());
 
-        if (_current <= 0)
+        if (_current <= _costByJump)
         {
-            _dash.DisableDash();
+            _jump.DisableJump();
         }
     }
 
@@ -100,6 +102,6 @@ public class PlayerDashAmount : MonoBehaviour
 
     private void OnDisable()
     {
-        _dash.Dashed -= OnDashed;
+        _jump.Jumped -= OnJumped;
     }
 }
