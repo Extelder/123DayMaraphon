@@ -11,7 +11,7 @@ public class GroundChecker : MonoBehaviour
 
     public event Action GroundDetected;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent<Ground>(out Ground ground))
         {

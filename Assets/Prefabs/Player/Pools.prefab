@@ -9862,7 +9862,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 0, b: 0, a: 0.38323107}
+      key1: {r: 1, g: 0, b: 0, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0.38323107}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -9878,7 +9878,7 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 27949
-      atime1: 52235
+      atime1: 38550
       atime2: 57247
       atime3: 0
       atime4: 0
@@ -9914,6 +9914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _returnToPoolDelay: 4
+  _autoreturnToPool: 1
 --- !u!1 &3737723170723239185
 GameObject:
   m_ObjectHideFlags: 0
@@ -19745,6 +19746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _returnToPoolDelay: 2
+  _autoreturnToPool: 1
 --- !u!114 &8160873626925939976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29559,6 +29561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _returnToPoolDelay: 2
+  _autoreturnToPool: 1
 --- !u!114 &3442294513109550467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29713,6 +29716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _returnToPoolDelay: 2
+  _autoreturnToPool: 1
 --- !u!198 &7125958905357816267 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198029139897396496, guid: 9fe1ddc0da27cb44ebeeb8c2befa68bd,

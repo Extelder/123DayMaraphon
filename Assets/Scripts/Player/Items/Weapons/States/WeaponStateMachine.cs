@@ -4,6 +4,8 @@ using Zenject;
 
 public class WeaponStateMachine : StateMachine
 {
+    [SerializeField] private ItemTakeUp _item;
+
     [Header("States")] [SerializeField] private State _idle;
     [Inject] private PlayerInputs _playerInputs;
     [SerializeField] private WeaponShootState _shoot;
@@ -25,7 +27,8 @@ public class WeaponStateMachine : StateMachine
     private void OnMainShootPressedDown()
     {
         StopAllCoroutines();
-        ChangeState(_shoot);
+        if (_item.TakeUpped)
+            ChangeState(_shoot);
     }
 
     private IEnumerator TryingToExitShoot()

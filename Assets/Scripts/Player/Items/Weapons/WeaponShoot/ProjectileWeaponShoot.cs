@@ -26,6 +26,7 @@ public class ProjectileWeaponShoot : WeaponShoot
     {
         base.OnShootPerformed();
 
+        CameraShakeInvoke();
         Vector3 direction = Camera.position + Camera.forward * Range;
         Projectile projectile = _currentPool
             .GetFreeElement(_muzzle.position, Quaternion.FromToRotation(_muzzle.position, direction))

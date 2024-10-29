@@ -1,11 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemAnimator : UnitAnimator
+public class WeaponAnimator : UnitAnimator
 {
-    [SerializeField] private string _moveAnimationTriggerName;
+    [SerializeField] private string _shootAnimationTriggerName;
 
     private void Start()
     {
@@ -14,7 +13,7 @@ public class ItemAnimator : UnitAnimator
 
     public override void DisableAllBools()
     {
-        SetAnimationBool(_moveAnimationTriggerName, false);
+        SetAnimationBool(_shootAnimationTriggerName, false);
     }
 
     public void Idle()
@@ -22,8 +21,8 @@ public class ItemAnimator : UnitAnimator
         DisableAllBools();
     }
 
-    public void Move()
+    public void Shoot()
     {
-        SetAnimationTrigger(_moveAnimationTriggerName);
+        SetAnimationTrigger(_shootAnimationTriggerName);
     }
 }

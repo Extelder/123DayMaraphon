@@ -7,6 +7,7 @@ using UnityEngine;
 public class Projectile : PoolObject
 {
     [SerializeField] private CinemachineImpulseSource _cinemachineImpulseSource;
+    [SerializeField] private GameObject _projectileGFX;
     [field: SerializeField] public float Damage { get; private set; }
     [field: SerializeField] public float ExplosionForce { get; private set; }
     [SerializeField] private float _explosionRange;
@@ -17,10 +18,12 @@ public class Projectile : PoolObject
     private Collider[] colliders = new Collider[50];
     private CompositeDisposable _disposable = new CompositeDisposable();
     private bool _explosived;
-    
+
     public void Initiate(Vector3 targetPosition)
     {
+        _projectileGFX.SetActive(true);
         _disposable?.Clear();
+        transform.LookAt(targetPosition, transform.forward);
         Observable.EveryLateUpdate().Subscribe(_ =>
         {
             transform.position =
@@ -86,7 +89,8 @@ public class Projectile : PoolObject
         }
 
         _explosiveParticle?.Play();
-        Invoke(nameof(ReturnToPool), 0.5f);
+        _projectileGFX.SetActive(false);
+        Invoke(nameof(ReturnToPool), ReturnToPoolDelay);
     }
 
 

@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class PoolObject : MonoBehaviour
 {
-    [SerializeField] private float _returnToPoolDelay = 2f;
+    [field: SerializeField] public float ReturnToPoolDelay { get; private set; } = 2f;
     [SerializeField] private bool _autoreturnToPool = true;
 
     private void OnEnable()
     {
         if (_autoreturnToPool)
-            Invoke("ReturnToPool", _returnToPoolDelay);
+            Invoke("ReturnToPool", ReturnToPoolDelay);
     }
 
     public void ReturnToPool()

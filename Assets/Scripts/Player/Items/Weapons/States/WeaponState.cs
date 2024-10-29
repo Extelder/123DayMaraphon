@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class WeaponShootState : ItemState
+public abstract class WeaponState : State
 {
-    public bool CanShoot = true;
-
+    public WeaponAnimator Animator;
+    
     public abstract override void Enter();
 }

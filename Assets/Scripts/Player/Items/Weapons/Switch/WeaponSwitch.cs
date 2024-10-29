@@ -2,53 +2,36 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 using Random = UnityEngine.Random;
 
 public class WeaponSwitch : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _weapons;
-    [SerializeField] private WeaponStateMachine[] _weaponsStateMachines;
-    [SerializeField] private float _switchRate;
-    [SerializeField] private GameObject? _currentWeapon;
+    [SerializeField] private GameObject _shotGun;
+    [SerializeField] private GameObject _rifle;
+    [SerializeField] private GameObject _rpg;
+    
+    [Inject] private PlayerInputs _inputs;
 
-    private int _lastWeaponIndex = 0;
-    private int _currentWeaponIndex = 0;
-
-    private void Start()
+    private GameObject _currentWeapon;
+    
+    private void OnEnable()
     {
-        StartCoroutine(SwitchingWeapons());
-        ChangeWeapon(_weapons[0]);
+        _inputs.ShotGunKeyPressedDown += ShotGun;
+        _inputs.RifleKeyPressedDown += Rifle;
+        _inputs.RPGKeyPressedDown += RPG;
     }
 
-    private IEnumerator SwitchingWeapons()
+    private void OnDisable()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(_switchRate);
-
-            _lastWeaponIndex = _currentWeaponIndex;
-            if (GetRandomWeaponId(out GameObject weapon))
-            {
-                yield return new WaitUntil(() => !_weaponsStateMachines[_currentWeaponIndex].CurrentState.CanChanged);
-                Debug.Log(_weaponsStateMachines[_currentWeaponIndex]);
-                ChangeWeapon(weapon);
-            }
-        }
+        _inputs.ShotGunKeyPressedDown -= ShotGun;
+        _inputs.RifleKeyPressedDown -= Rifle;
+        _inputs.RPGKeyPressedDown -= RPG;
     }
 
-    private bool GetRandomWeaponId(out GameObject weapon)
-    {
-        int randWeaponId = Random.Range(0, _weapons.Length);
-        if (_weapons[randWeaponId] == _currentWeapon)
-        {
-            return GetRandomWeaponId(out weapon);
-        }
-
-        weapon = _weapons[randWeaponId];
-        _currentWeaponIndex = randWeaponId;
-        return true;
-    }
-
+    public void ShotGun() => ChangeWeapon(_shotGun);
+    public void Rifle() => ChangeWeapon(_rifle);
+    public void RPG() => ChangeWeapon(_rpg);
 
     public void ChangeWeapon(GameObject weapon)
     {

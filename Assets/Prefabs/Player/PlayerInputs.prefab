@@ -48,4 +48,6 @@ MonoBehaviour:
   <DasDownhKeyCode>k__BackingField: 306
   <JumpKeyCode>k__BackingField: 32
   <MainShootKeyCode>k__BackingField: 323
-  <MainShootingCayotTime>k__BackingField: 0.1
+  <ShotGunKeyCode>k__BackingField: 49
+  <RifleKeyCode>k__BackingField: 50
+  <RPGKeyCode>k__BackingField: 51
