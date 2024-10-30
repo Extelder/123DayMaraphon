@@ -3,13 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerWalk : MonoBehaviour
 {
-    [field: Header("Speed")]
-    [field: SerializeField] public float WalkSpeed;
-
-    [SerializeField] private PlayerMovement _playerMovement;
+    [field: Header("Speed")] [field: SerializeField]
+    public float WalkSpeed;
 
     private Rigidbody _rigidbody;
 

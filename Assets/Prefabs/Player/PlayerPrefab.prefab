@@ -575,7 +575,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkSpeed: 15
-  _playerMovement: {fileID: 4206510036509519871}
 --- !u!114 &5641981363132158727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9257,7 +9256,7 @@ MonoBehaviour:
     m_DissipationMode: 2
     m_DissipationDistance: 100
     m_PropagationSpeed: 343
-  m_DefaultVelocity: {x: 0, y: -0.19, z: 0}
+  m_DefaultVelocity: {x: 0, y: -0.38, z: -0.1}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 1
