@@ -27,8 +27,18 @@ public class WeaponStateMachine : StateMachine
     private void OnMainShootPressedDown()
     {
         StopAllCoroutines();
-        if (_item.TakeUpped)
-            ChangeState(_shoot);
+
+        StartCoroutine(WaitingForTakeUpToShoot());
+    }
+
+    private IEnumerator WaitingForTakeUpToShoot()
+    {
+        while (true)
+        {
+            if (_item.TakeUpped)
+                ChangeState(_shoot);
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 
     private IEnumerator TryingToExitShoot()

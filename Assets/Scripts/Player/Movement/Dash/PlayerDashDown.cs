@@ -23,9 +23,11 @@ public class PlayerDashDown : Dashing
 
     private Collider[] _others;
 
+    public event Action Stashed;
+
     public void DashDown()
     {
-        if(_groundChecker.Detected) 
+        if (_groundChecker.Detected)
             return;
 
         if (!cooldownRecovered)
@@ -42,6 +44,7 @@ public class PlayerDashDown : Dashing
 
     private void StashedOnFloor()
     {
+        Stashed?.Invoke();
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 1000000f, _checkLayer))
             _pools.DashDownPool.GetFreeElement(hit.point);

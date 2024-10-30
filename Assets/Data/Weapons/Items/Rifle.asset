@@ -15,5 +15,5 @@ MonoBehaviour:
   Name: Rifle
   Id: 1
   DamagePerHit: 4
-  RandomRangeMultiplayer: 0.1
+  RandomRangeMultiplayer: 0.05
   HitsPerShot: 1

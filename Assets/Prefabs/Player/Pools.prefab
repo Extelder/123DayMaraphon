@@ -9913,7 +9913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09d6a8c0437f714898764211d07663e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _returnToPoolDelay: 4
+  <ReturnToPoolDelay>k__BackingField: 2
   _autoreturnToPool: 1
 --- !u!1 &3737723170723239185
 GameObject:
@@ -19745,7 +19745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09d6a8c0437f714898764211d07663e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _returnToPoolDelay: 2
+  <ReturnToPoolDelay>k__BackingField: 2
   _autoreturnToPool: 1
 --- !u!114 &8160873626925939976
 MonoBehaviour:
@@ -24810,8 +24810,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 0.9
+      scalar: 4
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -29560,7 +29560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09d6a8c0437f714898764211d07663e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _returnToPoolDelay: 2
+  <ReturnToPoolDelay>k__BackingField: 2
   _autoreturnToPool: 1
 --- !u!114 &3442294513109550467
 MonoBehaviour:
@@ -29715,7 +29715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09d6a8c0437f714898764211d07663e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _returnToPoolDelay: 2
+  <ReturnToPoolDelay>k__BackingField: 2
   _autoreturnToPool: 1
 --- !u!198 &7125958905357816267 stripped
 ParticleSystem:
