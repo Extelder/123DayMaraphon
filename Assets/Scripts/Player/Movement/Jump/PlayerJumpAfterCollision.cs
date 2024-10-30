@@ -5,11 +5,13 @@ using Zenject;
 
 public class PlayerJumpAfterCollision : MonoBehaviour
 {
-    [SerializeField] private OverlapSettings _overlapSettings;
+    [SerializeField] private WallChecker _wallChecker;
     [Inject] private PlayerInputs _playerInputs;
     [SerializeField] private Transform _orientation;
-    [Space(10), Header("Velocity Settings")]
-    [SerializeField] private float _forceBack;
+
+    [Space(10), Header("Velocity Settings")] [SerializeField]
+    private float _forceBack;
+
     [SerializeField] private float _forceUpward;
     [SerializeField] private float _targetSpeed;
     [SerializeField] private float _speedChangeFactor;
@@ -27,14 +29,14 @@ public class PlayerJumpAfterCollision : MonoBehaviour
 
     public void TryJumpAfterCollision()
     {
-        OverlapSphere();
+        _wallChecker.CheckForWall(out Collider[] colliders, out int size);
         StopAllCoroutines();
         Vector3 inputDirection = new Vector3(_playerInputs.MovementHorizontal, 0, _playerInputs.MovementVertical);
-        Vector3 direction = _orientation.TransformDirection(inputDirection); 
- 
-        for (var i = 0; i < _overlapSettings.Size; i++)
+        Vector3 direction = _orientation.TransformDirection(inputDirection);
+
+        for (var i = 0; i < size; i++)
         {
-            var target = _overlapSettings.Colliders[i].gameObject;
+            var target = colliders[i].gameObject;
             if (target.TryGetComponent<Wall>(out Wall wall))
             {
                 if (inputDirection == Vector3.zero)
@@ -42,6 +44,7 @@ public class PlayerJumpAfterCollision : MonoBehaviour
                     direction = (target.transform.position - transform.position).normalized;
                     direction = new Vector3(direction.x, 0, direction.z);
                 }
+
                 Vector3 forceToApply = (direction * _forceBack + _orientation.up * _forceUpward);
                 StartCoroutine(SmoothlyLerpForce(forceToApply));
                 _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
@@ -66,16 +69,10 @@ public class PlayerJumpAfterCollision : MonoBehaviour
 
             yield return null;
         }
+
         _invertOrientationDashSpeed = _defaultInvertOrientionSpeed;
     }
 
-    private void OverlapSphere()
-    {
-        _overlapSettings.Colliders = new Collider[10];
-        _overlapSettings.Size = Physics.OverlapSphereNonAlloc(_overlapSettings._overlapPoint.position + _overlapSettings._positionOffset,
-            _overlapSettings._sphereRadius, _overlapSettings.Colliders,
-            _overlapSettings._searchLayer);
-    }
 
     private void OnEnable()
     {
@@ -92,8 +89,5 @@ public class PlayerJumpAfterCollision : MonoBehaviour
         TryJumpAfterCollision();
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(_overlapSettings._overlapPoint.position + _overlapSettings._positionOffset, _overlapSettings._sphereRadius);
-    }
+  
 }

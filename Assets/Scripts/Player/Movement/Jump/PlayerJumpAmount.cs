@@ -7,10 +7,11 @@ using UnityEngine;
 public class PlayerJumpAmount : MonoBehaviour
 {
     [SerializeField] private PlayerJump _jump;
+    [SerializeField] private WallChecker _wallChecker;
     [SerializeField] private float _costByJump;
     [SerializeField] private float _earnSpeed;
     [SerializeField] private float _delayAfterSpendToEarn = 0.1f;
-    [Range(0, 1)][SerializeField] private float _capacity;
+    [Range(0, 1)] [SerializeField] private float _capacity;
 
     private float _current;
 
@@ -29,7 +30,7 @@ public class PlayerJumpAmount : MonoBehaviour
         }
 
 
-        Debug.LogError(gameObject + " one more dashAmount");
+        Debug.LogError(gameObject + " one more jumpAmount");
     }
 
     private void OnEnable()
@@ -40,6 +41,16 @@ public class PlayerJumpAmount : MonoBehaviour
 
     public void FixedUpdate()
     {
+        _wallChecker.CheckForWall(out Collider[] colliders, out int size);
+        for (var i = 0; i < size; i++)
+        {
+            var target = colliders[i].gameObject;
+            if (target.TryGetComponent<Wall>(out Wall wall))
+            {
+                FullRecoverSpeed();
+            }
+        }
+
         if (_earn)
             Earn();
     }
@@ -48,7 +59,14 @@ public class PlayerJumpAmount : MonoBehaviour
     {
         _earn = false;
         _current += addibleSpeed;
+        if (_current > _capacity)
+            _current = _capacity;
         _earn = true;
+    }
+
+    public void FullRecoverSpeed()
+    {
+        RecoverSpeed(_capacity);
     }
 
     private void Earn()
