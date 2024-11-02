@@ -821,6 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _jump: {fileID: 5641981363132158727}
   _wallChecker: {fileID: 3968785331961818156}
+  _groundChecker: {fileID: 4964944240793527871}
   _costByJump: 0.33
   _earnSpeed: 0.005
   _delayAfterSpendToEarn: 0.2
@@ -6858,6 +6859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769683f897284c04fb892a445eaeea20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Transform>k__BackingField: {fileID: 4063892871993162728}
 --- !u!1 &4340680189375155563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9164,7 +9166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cefd3f26b01264490e76de2beb27ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponTransform: {fileID: 0}
+  weaponTransform: {fileID: 7072282785594033488}
   swayAmount: 0.22
   maxSwayAmount: 0.1
   swaySmooth: 5.54

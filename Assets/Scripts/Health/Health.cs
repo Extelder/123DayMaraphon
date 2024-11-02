@@ -10,6 +10,7 @@ public abstract class Health : MonoBehaviour
 
     public event Action<float> HealthValueChanged;
     public event Action<float> OnHealedToMax;
+    public event Action<float> Damaged;
 
     private void Awake()
     {
@@ -23,6 +24,7 @@ public abstract class Health : MonoBehaviour
 
     public void TakeDamage(float value)
     {
+        Damaged?.Invoke(CurrentValue);
         if (CurrentValue - value > 0)
         {
             ChangeHealthValue(CurrentValue - value);

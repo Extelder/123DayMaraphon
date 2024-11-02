@@ -8,6 +8,7 @@ public class PlayerJumpAmount : MonoBehaviour
 {
     [SerializeField] private PlayerJump _jump;
     [SerializeField] private WallChecker _wallChecker;
+    [SerializeField] private GroundChecker _groundChecker;
     [SerializeField] private float _costByJump;
     [SerializeField] private float _earnSpeed;
     [SerializeField] private float _delayAfterSpendToEarn = 0.1f;
@@ -36,7 +37,19 @@ public class PlayerJumpAmount : MonoBehaviour
     private void OnEnable()
     {
         _jump.Jumped += OnJumped;
+        _groundChecker.GroundDetected += OnGroundDetected;
         _current = _capacity;
+    }
+
+    private void OnDisable()
+    {
+        _jump.Jumped -= OnJumped;
+        _groundChecker.GroundDetected -= OnGroundDetected;
+    }
+
+    private void OnGroundDetected()
+    {
+        FullRecoverSpeed();
     }
 
     public void FixedUpdate()
@@ -116,10 +129,5 @@ public class PlayerJumpAmount : MonoBehaviour
     {
         yield return new WaitForSeconds(_delayAfterSpendToEarn);
         _earn = true;
-    }
-
-    private void OnDisable()
-    {
-        _jump.Jumped -= OnJumped;
     }
 }
