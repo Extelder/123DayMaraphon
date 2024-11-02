@@ -662,11 +662,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0a1fbdbaa02aa408abba45010d6a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  costByMove: 0.3
+  delayAfterSpendToEarn: 0.1
+  capacity: 1
+  earnSpeed: 0.005
   _dash: {fileID: 1947032898487497675}
-  _costByDash: 0.3
-  _earnSpeed: 0.005
-  _delayAfterSpendToEarn: 0.2
-  _capacity: 1
 --- !u!114 &5854053694570016890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,13 +819,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b32673f2698eb49bc9c6e92ba3b200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  costByMove: 0.3
+  delayAfterSpendToEarn: 0.1
+  capacity: 1
+  earnSpeed: 0.005
   _jump: {fileID: 5641981363132158727}
   _wallChecker: {fileID: 3968785331961818156}
   _groundChecker: {fileID: 4964944240793527871}
-  _costByJump: 0.33
-  _earnSpeed: 0.005
-  _delayAfterSpendToEarn: 0.2
-  _capacity: 1
 --- !u!114 &2355311876792254004
 MonoBehaviour:
   m_ObjectHideFlags: 0

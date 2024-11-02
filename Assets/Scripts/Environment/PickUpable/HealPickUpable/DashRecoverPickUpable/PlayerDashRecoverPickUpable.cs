@@ -8,7 +8,7 @@ public class PlayerDashRecoverPickUpable : MonoBehaviour, IPickupable
 
     public void PickUp()
     {
-        PlayerJumpAmount.Instance.RecoverSpeed(_valueToRecover);
+        PlayerDashAmount.Instance.RecoverSpeed(_valueToRecover);
         if (_destroyAfterRecover)
         {
             Destroy(gameObject);

@@ -4,19 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerJumpAmount : MonoBehaviour
+public class PlayerJumpAmount : PlayerStaminaAmount
 {
     [SerializeField] private PlayerJump _jump;
     [SerializeField] private WallChecker _wallChecker;
     [SerializeField] private GroundChecker _groundChecker;
-    [SerializeField] private float _costByJump;
-    [SerializeField] private float _earnSpeed;
-    [SerializeField] private float _delayAfterSpendToEarn = 0.1f;
-    [Range(0, 1)] [SerializeField] private float _capacity;
-
-    private float _current;
-
-    private bool _earn = true;
 
     public event Action<float> AmountChanged;
 
@@ -38,7 +30,6 @@ public class PlayerJumpAmount : MonoBehaviour
     {
         _jump.Jumped += OnJumped;
         _groundChecker.GroundDetected += OnGroundDetected;
-        _current = _capacity;
     }
 
     private void OnDisable()
@@ -64,33 +55,33 @@ public class PlayerJumpAmount : MonoBehaviour
             }
         }
 
-        if (_earn)
+        if (earn)
             Earn();
     }
 
     public void RecoverSpeed(float addibleSpeed)
     {
-        _earn = false;
-        _current += addibleSpeed;
-        if (_current > _capacity)
-            _current = _capacity;
-        _earn = true;
+        earn = false;
+        current += addibleSpeed;
+        if (current > capacity)
+            current = capacity;
+        earn = true;
     }
 
     public void FullRecoverSpeed()
     {
-        RecoverSpeed(_capacity);
+        RecoverSpeed(capacity);
     }
 
     private void Earn()
     {
-        _current += _earnSpeed;
+        current += earnSpeed;
 
-        if (_current > _capacity)
-            _current = _capacity;
+        if (current > capacity)
+            current = capacity;
 
-        AmountChanged?.Invoke(_current);
-        if (_current >= _costByJump)
+        AmountChanged?.Invoke(current);
+        if (current >= costByMove)
         {
             _jump.EnableJump();
         }
@@ -100,13 +91,13 @@ public class PlayerJumpAmount : MonoBehaviour
     {
         StopAllCoroutines();
 
-        Spend(_costByJump);
+        Spend(costByMove);
 
-        _earn = false;
+        earn = false;
 
         StartCoroutine(WaitForContinueEarning());
 
-        if (_current <= _costByJump)
+        if (current <= costByMove)
         {
             _jump.DisableJump();
         }
@@ -114,20 +105,20 @@ public class PlayerJumpAmount : MonoBehaviour
 
     private void Spend(float value)
     {
-        if (_current - value < 0)
+        if (current - value < 0)
         {
-            _current = 0;
-            AmountChanged?.Invoke(_current);
+            current = 0;
+            AmountChanged?.Invoke(current);
             return;
         }
 
-        _current -= value;
-        AmountChanged?.Invoke(_current);
+        current -= value;
+        AmountChanged?.Invoke(current);
     }
 
     private IEnumerator WaitForContinueEarning()
     {
-        yield return new WaitForSeconds(_delayAfterSpendToEarn);
-        _earn = true;
+        yield return new WaitForSeconds(delayAfterSpendToEarn);
+        earn = true;
     }
 }
