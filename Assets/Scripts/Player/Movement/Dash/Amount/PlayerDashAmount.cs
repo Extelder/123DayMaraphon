@@ -2,17 +2,9 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerDashAmount : MonoBehaviour
+public class PlayerDashAmount : PlayerStaminaAmount
 {
     [SerializeField] private PlayerDash _dash;
-    [SerializeField] private float _costByDash;
-    [SerializeField] private float _earnSpeed;
-    [SerializeField] private float _delayAfterSpendToEarn = 0.1f;
-    [Range(0, 1)][SerializeField] private float _capacity;
-
-    private float _current;
-
-    private bool _earn = true;
 
     public event Action<float> AmountChanged;
 
@@ -26,38 +18,27 @@ public class PlayerDashAmount : MonoBehaviour
             return;
         }
 
-
         Debug.LogError(gameObject + " one more dashAmount");
     }
+
 
     private void OnEnable()
     {
         _dash.Dashed += OnDashed;
-        _current = _capacity;
     }
 
-    public void FixedUpdate()
+    private void FixedUpdate()
     {
-        if (_earn)
+        if (earn)
             Earn();
-    }
-
-    public void RecoverSpeed(float addibleSpeed)
-    {
-        _earn = false;
-        _current += addibleSpeed;
-        _earn = true;
     }
 
     private void Earn()
     {
-        _current += _earnSpeed;
+        current += earnSpeed;
 
-        if (_current > _capacity)
-            _current = _capacity;
-
-        AmountChanged?.Invoke(_current);
-        if (_current >= _costByDash)
+        AmountChanged?.Invoke(current);
+        if (current >= costByMove)
         {
             _dash.EnableDash();
         }
@@ -67,35 +48,41 @@ public class PlayerDashAmount : MonoBehaviour
     {
         StopAllCoroutines();
 
-        Spend(_costByDash);
+        Spend(costByMove);
 
-        _earn = false;
+        earn = false;
 
         StartCoroutine(WaitForContinueEarning());
 
-        if (_current <= 0)
+        if (current <= costByMove)
         {
             _dash.DisableDash();
         }
     }
 
+    public void RecoverSpeed(float addibleSpeed)
+    {
+        earn = false;
+        current += addibleSpeed;
+        earn = true;
+    }
+
     private void Spend(float value)
     {
-        if (_current - value < 0)
+        if (current - value < 0)
         {
-            _current = 0;
-            AmountChanged?.Invoke(_current);
+            AmountChanged?.Invoke(current);
             return;
         }
 
-        _current -= value;
-        AmountChanged?.Invoke(_current);
+        current -= value;
+        AmountChanged?.Invoke(current);
     }
 
     private IEnumerator WaitForContinueEarning()
     {
-        yield return new WaitForSeconds(_delayAfterSpendToEarn);
-        _earn = true;
+        yield return new WaitForSeconds(delayAfterSpendToEarn);
+        earn = true;
     }
 
     private void OnDisable()
