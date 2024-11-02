@@ -8,8 +8,8 @@ using UnityEngine;
 public class PlayerWalk : MonoBehaviour
 {
     [field: Header("Speed")] [field: SerializeField]
-    public float WalkSpeed;
-
+    public float WalkSpeed; 
+    
     private Rigidbody _rigidbody;
 
     private void Start()

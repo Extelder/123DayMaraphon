@@ -15,15 +15,17 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
         _health.TakeDamage(raycastWeaponShoot.Weapon.DamagePerHit);
-        SpawningDecal(hit);
+        SpawningDecal(hit.point);
     }
 
     public void Visit(Projectile projectile)
     {
+        _health.TakeDamage(projectile.Damage);
+        SpawningDecal(transform.position);
     }
 
-    private void SpawningDecal(RaycastHit hit)
+    private void SpawningDecal(Vector3 spawnPoint)
     {
-        var currentObject = _pools.BloodExplodePool.GetFreeElement(hit.point, Quaternion.identity);
+        var currentObject = _pools.BloodExplodePool.GetFreeElement(spawnPoint, Quaternion.identity);
     }
 }
