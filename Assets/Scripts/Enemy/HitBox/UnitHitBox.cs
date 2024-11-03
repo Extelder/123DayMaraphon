@@ -14,12 +14,20 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
 
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
+        if (!_health)
+            return;
+        if (_health.IsDead())
+            return;
         _health.TakeDamage(raycastWeaponShoot.Weapon.DamagePerHit);
         SpawningDecal(hit.point);
     }
 
     public void Visit(Projectile projectile)
     {
+        if (!_health)
+            return;
+        if (_health.IsDead())
+            return;
         _health.TakeDamage(projectile.Damage);
         SpawningDecal(transform.position);
     }

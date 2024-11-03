@@ -53,6 +53,7 @@ public class Projectile : PoolObject
     {
         if (_explosived)
             return;
+        Debug.Log("Explosived");
         _cinemachineImpulseSource?.GenerateImpulse();
         _explosived = true;
         _disposable.Clear();

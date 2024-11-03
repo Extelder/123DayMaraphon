@@ -38,6 +38,10 @@ public class PlayerDashAmount : PlayerStaminaAmount
         current += earnSpeed;
 
         AmountChanged?.Invoke(current);
+
+        if (current > capacity)
+            current = capacity;
+
         if (current >= costByMove)
         {
             _dash.EnableDash();
@@ -64,6 +68,8 @@ public class PlayerDashAmount : PlayerStaminaAmount
     {
         earn = false;
         current += addibleSpeed;
+        if (current > capacity)
+            current = capacity;
         earn = true;
     }
 
