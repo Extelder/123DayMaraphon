@@ -7,7 +7,7 @@ public abstract class Health : MonoBehaviour
 {
     [field: SerializeField] public float MaxValue { get; private set; }
     protected float CurrentValue { get; private set; }
-
+    
     public event Action<float> HealthValueChanged;
     public event Action<float> OnHealedToMax;
     public event Action<float> Damaged;
@@ -45,6 +45,8 @@ public abstract class Health : MonoBehaviour
         HealToMax();
     }
 
+    public bool IsDead() => CurrentValue <= 0;
+    
     public void HealToMax()
     {
         ChangeHealthValue(MaxValue);

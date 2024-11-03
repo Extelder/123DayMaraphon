@@ -3833,7 +3833,7 @@ MonoBehaviour:
   <MaxValue>k__BackingField: 100
   _enemyAnimator: {fileID: 450403376}
   _explosionForce: 100
-  _ragdollParent: {fileID: 1283609154}
+  _ragdollParent: {fileID: 543450653271598122}
   _skinnedMeshRenderer: {fileID: 8164369869836523208}
   _headBone: {fileID: 6515712193999183827}
   _head: {fileID: 4028323154360039097}
