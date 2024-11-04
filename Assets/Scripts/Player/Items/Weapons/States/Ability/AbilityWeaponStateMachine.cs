@@ -6,6 +6,8 @@ public class AbilityWeaponStateMachine : WeaponStateMachine
 {
     [SerializeField] private State _ablityState;
 
+    [SerializeField] private WeaponAbilityAmount _weaponAbility;
+
     public override void OnEnable()
     {
         base.OnEnable();
@@ -20,7 +22,7 @@ public class AbilityWeaponStateMachine : WeaponStateMachine
 
     private void OnAbilityPressedDown()
     {
-        if (Item.TakeUpped)
+        if (Item.TakeUpped && _weaponAbility.Filled.Value)
         {
             CurrentState.CanChanged = true;
             ChangeState(_ablityState);

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public abstract class PlayerStaminaAmount : MonoBehaviour
+public abstract class Amount : MonoBehaviour
 {
     [SerializeField] protected float costByMove;
     [SerializeField] protected float delayAfterSpendToEarn = 0.1f;

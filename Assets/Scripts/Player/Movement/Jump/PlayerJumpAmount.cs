@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerJumpAmount : PlayerStaminaAmount
+public class PlayerJumpAmount : Amount
 {
     [SerializeField] private PlayerJump _jump;
     [SerializeField] private WallChecker _wallChecker;
