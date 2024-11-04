@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerDashAmount : PlayerStaminaAmount
+public class PlayerDashAmount : Amount
 {
     [SerializeField] private PlayerDash _dash;
 
