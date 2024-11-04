@@ -26,9 +26,6 @@ public class HealthBar : MonoBehaviour
     private void OnHealthValueChanged(float value)
     {
         float percent = _health.MaxValue / 100;
-    
-        Debug.Log(value / percent / 100);
-
         _healtBar.fillAmount = value / percent / 100;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class UnitHitBox : MonoBehaviour, IWeaponVisitor
+public class UnitHitBox : RaycastBehaviour, IWeaponVisitor
 {
     [SerializeField] private Health _health;
     [Inject] private Pools _pools;
