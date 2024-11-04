@@ -4,18 +4,18 @@ using Zenject;
 
 public class WeaponStateMachine : StateMachine
 {
-    [SerializeField] private ItemTakeUp _item;
+    [field: SerializeField] public ItemTakeUp Item { get; private set; }
 
     [Header("States")] [SerializeField] private State _idle;
-    [Inject] private PlayerInputs _playerInputs;
+    [Inject] public PlayerInputs PlayerInputs { get; private set; }
     [SerializeField] private WeaponShootState _shoot;
 
     public override void OnEnable()
     {
         base.OnEnable();
 
-        _playerInputs.MainShootPressedDown += OnMainShootPressedDown;
-        _playerInputs.MainShootPressedUp += OnMainShootPressedUp;
+        PlayerInputs.MainShootPressedDown += OnMainShootPressedDown;
+        PlayerInputs.MainShootPressedUp += OnMainShootPressedUp;
     }
 
     private void OnMainShootPressedUp()
@@ -35,7 +35,7 @@ public class WeaponStateMachine : StateMachine
     {
         while (true)
         {
-            if (_item.TakeUpped)
+            if (Item.TakeUpped)
                 ChangeState(_shoot);
             yield return new WaitForSeconds(0.05f);
         }
@@ -50,9 +50,9 @@ public class WeaponStateMachine : StateMachine
         }
     }
 
-    private void OnDisable()
+    public virtual void OnDisable()
     {
-        _playerInputs.MainShootPressedDown -= OnMainShootPressedDown;
-        _playerInputs.MainShootPressedUp -= OnMainShootPressedUp;
+        PlayerInputs.MainShootPressedDown -= OnMainShootPressedDown;
+        PlayerInputs.MainShootPressedUp -= OnMainShootPressedUp;
     }
 }

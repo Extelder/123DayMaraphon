@@ -9,23 +9,26 @@ public class PlayerInputs : MonoBehaviour
     [field: SerializeField] public KeyCode DasDownhKeyCode { get; private set; }
     [field: SerializeField] public KeyCode JumpKeyCode { get; private set; }
     [field: SerializeField] public KeyCode MainShootKeyCode { get; private set; }
+    [field: SerializeField] public KeyCode WeaponAbilityKeyCode { get; private set; }
     [field: SerializeField] public KeyCode ShotGunKeyCode { get; private set; }
     [field: SerializeField] public KeyCode RifleKeyCode { get; private set; }
     [field: SerializeField] public KeyCode RPGKeyCode { get; private set; }
 
     public bool MainShooting { get; private set; }
 
-    
+
     public event Action DashPressedDown;
     public event Action DashDownwardsPressedDown;
     public event Action JumpPressedDown;
 
     public event Action MainShootPressedDown;
     public event Action MainShootPressedUp;
-    
-     public event Action ShotGunKeyPressedDown;
-     public event Action RifleKeyPressedDown;
-     public event Action RPGKeyPressedDown;
+
+    public event Action WeaponAbilityPressedDown;
+
+    public event Action ShotGunKeyPressedDown;
+    public event Action RifleKeyPressedDown;
+    public event Action RPGKeyPressedDown;
 
     public void GetMovingInputs()
     {
@@ -47,6 +50,11 @@ public class PlayerInputs : MonoBehaviour
             MainShooting = false;
         }
 
+        if (Input.GetKeyDown(WeaponAbilityKeyCode))
+        {
+            WeaponAbilityPressedDown?.Invoke();
+        }
+
         if (Input.GetKeyDown(DashKeyCode))
         {
             DashPressedDown?.Invoke();
@@ -66,12 +74,12 @@ public class PlayerInputs : MonoBehaviour
         {
             ShotGunKeyPressedDown?.Invoke();
         }
-        
+
         if (Input.GetKeyDown(RifleKeyCode))
         {
             RifleKeyPressedDown?.Invoke();
         }
-        
+
         if (Input.GetKeyDown(RPGKeyCode))
         {
             RPGKeyPressedDown?.Invoke();
