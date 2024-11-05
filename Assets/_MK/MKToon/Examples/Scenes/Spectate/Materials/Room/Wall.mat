@@ -15,16 +15,27 @@ MonoBehaviour:
   version: 1
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Wall
   m_Shader: {fileID: 4800000, guid: df695d70c539c3d4c87b79de307ab7bb, type: 3}
-  m_ShaderKeywords: _EMISSION _GLOSSYREFLECTIONS_OFF _MK_DETAIL_BLEND_MIX _MK_DETAIL_MAP
-    _MK_DETAIL_MAP_MIX _MK_ENVIRONMENT_REFLECTIONS_ADVANCED _MK_LIGHT_STYLE_SIMPLE
-    _MK_RECEIVE_SHADOWS _RECEIVESHADOWS_ON
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _MK_ARTISTIC_ANIMATION_STUTTER
+  - _MK_DETAIL_BLEND_MIX
+  - _MK_DETAIL_MAP
+  - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
+  - _MK_RECEIVE_SHADOWS
+  m_InvalidKeywords:
+  - _EMISSION
+  - _GLOSSYREFLECTIONS_OFF
+  - _MK_DETAIL_MAP_MIX
+  - _MK_LIGHT_STYLE_SIMPLE
+  - _RECEIVESHADOWS_ON
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -33,6 +44,7 @@ Material:
     IGNOREPROJECTOR: False
     RenderType: Opaque
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -180,15 +192,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
+    - _AddPrecomputedVelocity: 0
     - _AdvancedTab: 1
     - _AlbedoMapIntensity: 1
+    - _AlembicMotionVectors: 0
     - _AlphaClipping: 0
     - _AlphaCutoff: 0.462
     - _Anisotropy: 0
     - _Artistic: 0
     - _ArtisticFrequency: 1
     - _ArtisticProjection: 0
+    - _ArtisticShadowFilter: 0
     - _ArtisticStyle: 0
     - _Blend: 0
     - _BlendDst: 0
@@ -200,7 +216,7 @@ Material:
     - _CSBMode: 0
     - _ColorGrading: 0
     - _Contrast: 1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.462
     - _DetailBlend: 0
     - _DetailMapBlendMode: 0
     - _DetailMix: 1
@@ -224,6 +240,7 @@ Material:
     - _GoochRampIntensity: 0.5
     - _HatchingMapScale: 1
     - _HeightMapScale: 0.5
+    - _Hue: 0
     - _IndirectFade: 1
     - _Initialized: 1
     - _InputTab: 1
@@ -250,6 +267,7 @@ Material:
     - _OcclusionMapScale: 1
     - _OptionsTab: 1
     - _Outline: 1
+    - _OutlineClipOffset: 0
     - _OutlineData: 0
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25

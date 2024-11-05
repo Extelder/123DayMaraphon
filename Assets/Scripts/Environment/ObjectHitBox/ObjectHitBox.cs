@@ -30,4 +30,8 @@ public class ObjectHitBox : MonoBehaviour, IWeaponVisitor
     {
         var currentObject = _pools.DefaultImpactPool.GetFreeElement(hit.point, Quaternion.identity);
     }
+
+    public void Visit(Ghost ghost, float damage)
+    {
+    }
 }

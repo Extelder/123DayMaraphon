@@ -32,6 +32,12 @@ public class UnitHitBox : RaycastBehaviour, IWeaponVisitor
         SpawningDecal(transform.position);
     }
 
+    public void Visit(Ghost ghost, float damage)
+    {
+        SpawningDecal(transform.position);
+        _health.TakeDamage(damage);
+    }
+
     private void SpawningDecal(Vector3 spawnPoint)
     {
         var currentObject = _pools.BloodExplodePool.GetFreeElement(spawnPoint, Quaternion.identity);
