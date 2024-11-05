@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,17 +15,17 @@ public class Ghost : MonoBehaviour
         StartCoroutine(CheckingForEnemies());
     }
 
-    private IEnumerator CheckingForEnemies() 
-    { 
+    private IEnumerator CheckingForEnemies()
+    {
         while (true)
         {
             yield return new WaitForSeconds(_checkRate);
             OverlapSphere();
             foreach (var other in _overlapSettings.Colliders)
             {
-                if(other == null)
+                if (other == null)
                     continue;
-                if(other.TryGetComponent<IGhostTrapable> (out IGhostTrapable trapable))
+                if (other.TryGetComponent<IGhostTrapable>(out IGhostTrapable trapable))
                 {
                     if (TrapedUnits.Contains(trapable))
                         continue;
@@ -54,8 +55,14 @@ public class Ghost : MonoBehaviour
             _overlapSettings._searchLayer);
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(_overlapSettings._overlapPoint.position, _overlapSettings._sphereRadius);
+    }
+
     private void OnDisable()
     {
         UnStunAllUnits();
+        TrapedUnits.Clear();
     }
 }

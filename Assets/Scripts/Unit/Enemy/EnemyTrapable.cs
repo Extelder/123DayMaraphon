@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(IWeaponVisitor))]
 public class EnemyTrapable : MonoBehaviour, IGhostTrapable
 {
 
@@ -9,7 +11,12 @@ public class EnemyTrapable : MonoBehaviour, IGhostTrapable
     [SerializeField] private EnemyTrapedState _trapedState;
     private bool _traped;
 
-    [field: SerializeField] public IWeaponVisitor ObjectVisitor { get ; set ; }
+    public IWeaponVisitor ObjectVisitor { get ; set;  }
+
+    private void Awake()
+    {
+        ObjectVisitor = GetComponent<IWeaponVisitor>();
+    }
 
     public void Trap()
     {

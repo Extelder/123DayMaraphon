@@ -28,6 +28,8 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
     {
         foreach (var traped in _ghost.TrapedUnits)
         {
+            if (traped == null)
+                return;
             traped.ObjectVisitor.Visit(_ghost, damage);
         }
     }

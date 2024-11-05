@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IGhostTrapable
 {
-    [field: SerializeField] public IWeaponVisitor ObjectVisitor { get; set; }
+    public IWeaponVisitor ObjectVisitor { get; }
 
     public void Trap();
     public void UnTrap();
