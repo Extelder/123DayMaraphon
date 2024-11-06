@@ -572,7 +572,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkSpeed: 15
-  _playerMovement: {fileID: 4206510036509519871}
 --- !u!114 &5641981363132158727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,11 +584,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48ff974a33da774c9379c6482675afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumps: 2
   _jumpForce: 16
   _jumpForceByJumpsMultiplayer: 0
   _resetRigidBodyYAfterJump: 1
-  _groundChecker: {fileID: 4964944240793527871}
 --- !u!114 &8522087793704030763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,11 +657,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0a1fbdbaa02aa408abba45010d6a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  costByMove: 0
+  delayAfterSpendToEarn: 0.1
+  capacity: 0
+  earnSpeed: 0
   _dash: {fileID: 1947032898487497675}
-  _costByDash: 0.3
-  _earnSpeed: 0.005
-  _delayAfterSpendToEarn: 0.2
-  _capacity: 1
 --- !u!114 &5854053694570016890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2605e651e3fc38449a4624811ab88972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _overlapSettings: {fileID: 7945746809305000252}
+  _wallChecker: {fileID: 0}
   _orientation: {fileID: 8726157497732438243}
   _forceBack: -30
   _forceUpward: 0.1
@@ -1545,7 +1542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startState: {fileID: 1474800283387674261}
-  _item: {fileID: 2937317531586693380}
+  <Item>k__BackingField: {fileID: 0}
   _idle: {fileID: 1474800283387674261}
   _shoot: {fileID: 3354817536897171287}
 --- !u!114 &1474800283387674261
@@ -2903,7 +2900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startState: {fileID: 1309777057274245923}
-  _item: {fileID: 5754290561732599916}
+  <Item>k__BackingField: {fileID: 0}
   _idle: {fileID: 1309777057274245923}
   _shoot: {fileID: 6508201918829019867}
 --- !u!114 &1309777057274245923
@@ -3437,7 +3434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startState: {fileID: 3718009088530074559}
-  _item: {fileID: 5754290561732599916}
+  <Item>k__BackingField: {fileID: 0}
   _idle: {fileID: 3718009088530074559}
   _shoot: {fileID: 4790951523656600414}
 --- !u!114 &3718009088530074559
@@ -4108,7 +4105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startState: {fileID: 5281985551822062462}
-  _item: {fileID: 5754290561732599916}
+  <Item>k__BackingField: {fileID: 0}
   _idle: {fileID: 5281985551822062462}
   _shoot: {fileID: 1844518493131980979}
 --- !u!114 &5281985551822062462
@@ -4587,7 +4584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2492742538076508474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6400,6 +6397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769683f897284c04fb892a445eaeea20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Transform>k__BackingField: {fileID: 0}
 --- !u!1 &4340680189375155563
 GameObject:
   m_ObjectHideFlags: 0
@@ -8802,7 +8800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startState: {fileID: 4837592715498660126}
-  _item: {fileID: 1655120035542009783}
+  <Item>k__BackingField: {fileID: 0}
   _idle: {fileID: 4837592715498660126}
   _shoot: {fileID: 4155217248066667139}
 --- !u!114 &4837592715498660126
@@ -12377,7 +12375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startState: {fileID: 5586404855298466204}
-  _item: {fileID: 5754290561732599916}
+  <Item>k__BackingField: {fileID: 0}
   _idle: {fileID: 5586404855298466204}
   _shoot: {fileID: 5120729000631435336}
 --- !u!114 &5586404855298466204

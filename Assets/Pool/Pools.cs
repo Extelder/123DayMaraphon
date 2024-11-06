@@ -13,4 +13,5 @@ public class Pools : MonoBehaviour
     [field: SerializeField] public Pool DashDownPool { get; private set; }
     [field: SerializeField] public Pool DashPool { get; private set; }
     [field: SerializeField] public Pool TrailPool { get; private set; }
+    [field: SerializeField] public Pool BloodSplatPool { get; private set; }
 }

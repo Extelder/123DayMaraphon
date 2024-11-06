@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
 {
     [SerializeField] private Health _health;
     [Inject] private Pools _pools;
+
+    public event Action Hit;
 
     public void Visit(WeaponShoot weaponShoot)
     {
@@ -20,6 +23,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
             return;
         _health.TakeDamage(raycastWeaponShoot.Weapon.DamagePerHit);
         SpawningDecal(hit.point);
+        Hit?.Invoke();
     }
 
     public void Visit(Projectile projectile)
@@ -30,12 +34,14 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
             return;
         _health.TakeDamage(projectile.Damage);
         SpawningDecal(transform.position);
+        Hit?.Invoke();
     }
 
     public void Visit(Ghost ghost, float damage)
     {
         SpawningDecal(transform.position);
         _health.TakeDamage(damage);
+        Hit?.Invoke();
     }
 
     private void SpawningDecal(Vector3 spawnPoint)
