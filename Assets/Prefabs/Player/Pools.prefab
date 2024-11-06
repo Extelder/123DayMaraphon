@@ -30203,6 +30203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198027391745543122, guid: 3b517eddec185dd4a830743a742ad00b,
         type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198027391745543122, guid: 3b517eddec185dd4a830743a742ad00b,
+        type: 3}
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -30225,6 +30230,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 198087647727163214, guid: 3b517eddec185dd4a830743a742ad00b,
+        type: 3}
+      propertyPath: looping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198087647727163214, guid: 3b517eddec185dd4a830743a742ad00b,
         type: 3}
@@ -30875,6 +30885,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198027391745543122, guid: 3b517eddec185dd4a830743a742ad00b,
         type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198027391745543122, guid: 3b517eddec185dd4a830743a742ad00b,
+        type: 3}
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -30897,6 +30912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 198087647727163214, guid: 3b517eddec185dd4a830743a742ad00b,
+        type: 3}
+      propertyPath: looping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198087647727163214, guid: 3b517eddec185dd4a830743a742ad00b,
         type: 3}
