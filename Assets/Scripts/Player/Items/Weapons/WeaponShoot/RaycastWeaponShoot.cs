@@ -27,7 +27,6 @@ public class RaycastWeaponShoot : WeaponShoot
             if (GetHitColliderWithOffset(out Collider collider, CurrentShootOffset, out RaycastHit hit))
             {
                 ShootPerformedWithRaycastHit?.Invoke(hit);
-                Debug.Log(collider.gameObject.name);
                 if (collider.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor weaponVisitor))
                 {
                     _hit = hit;

@@ -17,11 +17,6 @@ public abstract class Health : MonoBehaviour
         CurrentValue = MaxValue;
     }
 
-    private void Update()
-    {
-        Debug.Log(gameObject.name + CurrentValue);
-    }
-
     public void TakeDamage(float value)
     {
         Damaged?.Invoke(CurrentValue);
