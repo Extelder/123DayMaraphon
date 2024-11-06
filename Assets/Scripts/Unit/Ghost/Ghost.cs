@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 
 public class Ghost : MonoBehaviour
@@ -8,7 +10,7 @@ public class Ghost : MonoBehaviour
     [SerializeField] private OverlapSettings _overlapSettings;
 
     [SerializeField] private float _checkRate;
-    public List<IGhostTrapable> TrapedUnits { get; private set; } = new List<IGhostTrapable>();
+    [field: SerializeField] public List<IGhostTrapable> TrapedUnits { get; private set; } = new List<IGhostTrapable>();
 
     private void OnEnable()
     {
@@ -30,7 +32,7 @@ public class Ghost : MonoBehaviour
                     if (TrapedUnits.Contains(trapable))
                         continue;
                     TrapedUnits.Add(trapable);
-                    trapable.Trap();
+                    trapable.Trap(this);
                 }
             }
         }
