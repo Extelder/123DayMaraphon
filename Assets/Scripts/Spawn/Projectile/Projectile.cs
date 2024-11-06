@@ -69,6 +69,7 @@ public class Projectile : PoolObject
                 if (_onlyPlayerHealth)
                     continue;
                 Accept(visitor);
+                continue;
             }
 
             if (other.TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
