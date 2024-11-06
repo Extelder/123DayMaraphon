@@ -229,7 +229,7 @@ MonoBehaviour:
   _autoreturnToPool: 0
   _cinemachineImpulseSource: {fileID: 7682043583596646492}
   _projectileGFX: {fileID: 6154914944091458934}
-  <Damage>k__BackingField: 25
+  <Damage>k__BackingField: 100
   <ExplosionForce>k__BackingField: 1000
   _explosionRange: 7
   _onlyPlayerHealth: 0
