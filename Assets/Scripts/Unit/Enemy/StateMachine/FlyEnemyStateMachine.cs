@@ -16,4 +16,16 @@ public class FlyEnemyStateMachine : StateMachine
     {
         ChangeState(_shootingState);
     }
+
+    public void Pause()
+    {
+        ChangeState(_defaultState);
+        CurrentState.CanChanged = false;
+    }
+
+    public void UnPause()
+    {
+        CurrentState.CanChanged = true;
+        ChangeState(_shootingState);
+    }
 }

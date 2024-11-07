@@ -31,12 +31,22 @@ public class EnemyTrapable : MonoBehaviour, IGhostTrapable
         _ghost = ghost;
         _stateMachine.Trap();
         _traped = true;
+        OnTrapped();
+    }
+
+    public virtual void OnTrapped()
+    {
+    }
+
+    public virtual void OnUnTrapped()
+    {
+        _trapedState.OnUnTraped();
     }
 
     public void UnTrap()
     {
         _traped = false;
-        _trapedState.OnUnTraped();
+        OnUnTrapped();
     }
 
     private void OnDisable()
