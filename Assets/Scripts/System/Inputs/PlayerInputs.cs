@@ -13,6 +13,7 @@ public class PlayerInputs : MonoBehaviour
     [field: SerializeField] public KeyCode ShotGunKeyCode { get; private set; }
     [field: SerializeField] public KeyCode RifleKeyCode { get; private set; }
     [field: SerializeField] public KeyCode RPGKeyCode { get; private set; }
+    [field: SerializeField] public KeyCode RailgunKeyCode { get; private set; }
 
     public bool MainShooting { get; private set; }
 
@@ -29,6 +30,7 @@ public class PlayerInputs : MonoBehaviour
     public event Action ShotGunKeyPressedDown;
     public event Action RifleKeyPressedDown;
     public event Action RPGKeyPressedDown;
+    public event Action RailgunKeyPressedDown;
 
     public void GetMovingInputs()
     {
@@ -83,6 +85,11 @@ public class PlayerInputs : MonoBehaviour
         if (Input.GetKeyDown(RPGKeyCode))
         {
             RPGKeyPressedDown?.Invoke();
+        }
+
+        if (Input.GetKeyDown(RailgunKeyCode))
+        {
+            RailgunKeyPressedDown?.Invoke();
         }
     }
 }
