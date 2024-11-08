@@ -43,10 +43,11 @@ public class Projectile : PoolObject
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.TryGetComponent<PlayerMovement>(out PlayerMovement playerMovement))
-        {
+        if (_onlyPlayerHealth)
             Explode();
-        }
+
+        if (!other.TryGetComponent<PlayerMovement>(out PlayerMovement movement) && !_onlyPlayerHealth)
+            Explode();
     }
 
     public void Explode()

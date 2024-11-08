@@ -1240,6 +1240,7 @@ MonoBehaviour:
   _trapedState: {fileID: 0}
   _lineStartPointOffset: {x: 0, y: 0, z: 0}
   _enemyStateMachine: {fileID: 581373481}
+  _lookAtPlayer: {fileID: 581373488}
 --- !u!1001 &125220133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3748,7 +3749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427432231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.824}
+  m_LocalPosition: {x: 0, y: 0, z: 2.878}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5266,6 +5267,7 @@ GameObject:
   - component: {fileID: 581373480}
   - component: {fileID: 581373479}
   - component: {fileID: 581373483}
+  - component: {fileID: 581373488}
   - component: {fileID: 581373478}
   - component: {fileID: 581373482}
   - component: {fileID: 581373484}
@@ -5287,7 +5289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581373476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.737, y: 2.451, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5318,7 +5320,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
@@ -5335,10 +5337,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanChanged: 1
-  _projectilePool: {fileID: 0}
   _shootPoint: {fileID: 427432232}
   _stateMachine: {fileID: 581373481}
   _maxRandomToChangeState: 8
+  _range: 500
 --- !u!114 &581373480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5367,7 +5369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b038100f3a5f65f4d9005be751037ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startState: {fileID: 581373480}
+  _startState: {fileID: 581373479}
   _shootingState: {fileID: 581373479}
   _defaultState: {fileID: 581373480}
 --- !u!136 &581373482
@@ -5481,6 +5483,18 @@ MonoBehaviour:
   _hitBox: {fileID: 581373483}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
+--- !u!114 &581373488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581373476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65116c5b6d6c5c4ea871f9414042cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &588473555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10436,10 +10450,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 635547659545568360, guid: 5cc23346ff155884eb6bc5c75c37aebd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5cc23346ff155884eb6bc5c75c37aebd,
         type: 3}
       propertyPath: m_Name
       value: Bado
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5cc23346ff155884eb6bc5c75c37aebd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11789,7 +11813,7 @@ Transform:
   m_GameObject: {fileID: 1203924614}
   m_LocalRotation: {x: 0.000000029802315, y: -0.000000022351736, z: 0.00000006332992,
     w: 1}
-  m_LocalPosition: {x: -0.09, y: 0.18400002, z: 0.36}
+  m_LocalPosition: {x: -0.09000048, y: 0.18400025, z: 0.36}
   m_LocalScale: {x: 0.38360998, y: 0.38360998, z: 0.38360998}
   m_ConstrainProportionsScale: 0
   m_Children: []

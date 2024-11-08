@@ -29,13 +29,13 @@ public class EnemyTrapable : MonoBehaviour, IGhostTrapable
         _lineRenderer.SetPosition(0, transform.position + _lineStartPointOffset);
         _lineRenderer.SetPosition(1, ghost.transform.position);
         _ghost = ghost;
-        _stateMachine.Trap();
         _traped = true;
         OnTrapped();
     }
 
     public virtual void OnTrapped()
     {
+        _stateMachine.Trap();
     }
 
     public virtual void OnUnTrapped()
