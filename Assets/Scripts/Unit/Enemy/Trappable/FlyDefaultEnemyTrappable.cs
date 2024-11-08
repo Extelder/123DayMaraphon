@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyDefaultEnemyTrappable : DefaultEnemyTrapable
+public class FlyDefaultEnemyTrappable : EnemyTrapable
 {
     [SerializeField] private FlyEnemyStateMachine _enemyStateMachine;
     [SerializeField] private LookAtPlayer _lookAtPlayer;
