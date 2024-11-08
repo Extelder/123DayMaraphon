@@ -9,6 +9,7 @@ public class PlayerPredictableDashDownIndicator : MonoBehaviour
     [SerializeField] private GroundChecker _groundChecker;
     [SerializeField] private Transform _indicatorTransform;
     [SerializeField] private Vector3 _offset;
+
     private RaycastHit _hit;
 
     private void Update()

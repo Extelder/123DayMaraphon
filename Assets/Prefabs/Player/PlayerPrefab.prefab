@@ -8230,6 +8230,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Transform>k__BackingField: {fileID: 4063892871993162728}
+  _rayRange: 1000
+  _layer:
+    serializedVersion: 2
+    m_Bits: 64
+  _offset: {x: 0, y: 0.5, z: 0}
 --- !u!1 &4340680189375155563
 GameObject:
   m_ObjectHideFlags: 0

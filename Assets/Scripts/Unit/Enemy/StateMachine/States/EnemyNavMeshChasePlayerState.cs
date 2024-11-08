@@ -12,13 +12,6 @@ public class EnemyNavMeshChasePlayerState : EnemyState
 
     [Inject] private PlayerCharacter _character;
 
-    private Transform _target;
-
-    private void Start()
-    {
-        _target = _character.Transform;
-    }
-
     public override void Enter()
     {
         Animator.Move();
@@ -40,7 +33,7 @@ public class EnemyNavMeshChasePlayerState : EnemyState
         while (true)
         {
             yield return new WaitForSeconds(_updateTargetMovePositionRate);
-            _navMeshAgent.SetDestination(_target.position);
+            _navMeshAgent.SetDestination(_character.PlayerPositionForNavMesh);
         }
     }
 }
