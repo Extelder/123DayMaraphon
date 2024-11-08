@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerMovementInputs : MonoBehaviour
 {
-    [SerializeField] private PlayerInputs _inputs;
     [field: SerializeField] public KeyCode DashKeyCode { get; private set; }
     [field: SerializeField] public KeyCode DasDownhKeyCode { get; private set; }
     [field: SerializeField] public KeyCode JumpKeyCode { get; private set; }

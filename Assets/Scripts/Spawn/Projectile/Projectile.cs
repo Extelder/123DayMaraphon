@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UniRx;
 using UnityEngine;
+using Zenject;
 
 public class Projectile : PoolObject
 {
@@ -71,6 +72,15 @@ public class Projectile : PoolObject
                     continue;
                 Accept(visitor);
                 continue;
+            }
+
+            if (other.TryGetComponent<PlayerHitBox>(out PlayerHitBox playerHitBox))
+            {
+                if (_onlyPlayerHealth)
+                {
+                    playerHitBox.TakeDamage(Damage);
+                    return;
+                }
             }
 
             if (other.TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
