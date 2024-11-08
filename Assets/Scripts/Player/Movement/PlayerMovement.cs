@@ -19,22 +19,22 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        _inputs.GetMovingInputs();
-        _walk.Walk(new Vector3(_inputs.MovementHorizontal, 0, _inputs.MovementVertical));
+        _inputs.PlayerMovementInputs.GetMovingInputs();
+        _walk.Walk(new Vector3(_inputs.PlayerMovementInputs.MovementHorizontal, 0, _inputs.PlayerMovementInputs.MovementVertical));
     }
 
     private void OnEnable()
     {
-        _inputs.DashPressedDown += Dashing;
-        _inputs.DashDownwardsPressedDown += DashingDown;
-        _inputs.JumpPressedDown += Jumping;
+        _inputs.PlayerMovementInputs.DashPressedDown += Dashing;
+        _inputs.PlayerMovementInputs.DashDownwardsPressedDown += DashingDown;
+        _inputs.PlayerMovementInputs.JumpPressedDown += Jumping;
     }
 
     private void OnDisable()
     {
-        _inputs.DashPressedDown -= Dashing;
-        _inputs.DashDownwardsPressedDown -= DashingDown;
-        _inputs.JumpPressedDown -= Jumping;
+        _inputs.PlayerMovementInputs.DashPressedDown -= Dashing;
+        _inputs.PlayerMovementInputs.DashDownwardsPressedDown -= DashingDown;
+        _inputs.PlayerMovementInputs.JumpPressedDown -= Jumping;
     }
 
     private void Dashing()

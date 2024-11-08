@@ -14,8 +14,8 @@ public class WeaponStateMachine : StateMachine
     {
         base.OnEnable();
 
-        PlayerInputs.MainShootPressedDown += OnMainShootPressedDown;
-        PlayerInputs.MainShootPressedUp += OnMainShootPressedUp;
+        PlayerInputs.PlayerWeaponInputs.MainShootPressedDown += OnMainShootPressedDown;
+        PlayerInputs.PlayerWeaponInputs.MainShootPressedUp += OnMainShootPressedUp;
     }
 
     private void OnMainShootPressedUp()
@@ -52,7 +52,7 @@ public class WeaponStateMachine : StateMachine
 
     public virtual void OnDisable()
     {
-        PlayerInputs.MainShootPressedDown -= OnMainShootPressedDown;
-        PlayerInputs.MainShootPressedUp -= OnMainShootPressedUp;
+        PlayerInputs.PlayerWeaponInputs.MainShootPressedDown -= OnMainShootPressedDown;
+        PlayerInputs.PlayerWeaponInputs.MainShootPressedUp -= OnMainShootPressedUp;
     }
 }

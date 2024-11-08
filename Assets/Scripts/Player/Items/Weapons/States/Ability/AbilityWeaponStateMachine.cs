@@ -11,13 +11,13 @@ public class AbilityWeaponStateMachine : WeaponStateMachine
     public override void OnEnable()
     {
         base.OnEnable();
-        PlayerInputs.WeaponAbilityPressedDown += OnAbilityPressedDown;
+        PlayerInputs.PlayerWeaponInputs.WeaponAbilityPressedDown += OnAbilityPressedDown;
     }
 
     public override void OnDisable()
     {
         base.OnDisable();
-        PlayerInputs.WeaponAbilityPressedDown -= OnAbilityPressedDown;
+        PlayerInputs.PlayerWeaponInputs.WeaponAbilityPressedDown -= OnAbilityPressedDown;
     }
 
     private void OnAbilityPressedDown()

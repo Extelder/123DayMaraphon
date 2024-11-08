@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1825240427612699629}
   - component: {fileID: 3367053164615976230}
+  - component: {fileID: 512028109374759233}
+  - component: {fileID: 1402096065416874425}
   m_Layer: 0
   m_Name: PlayerInputs
   m_TagString: Untagged
@@ -44,9 +46,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e2a2cc4695ae04391e04a3737cd805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <PlayerMovementInputs>k__BackingField: {fileID: 512028109374759233}
+  <PlayerWeaponInputs>k__BackingField: {fileID: 1402096065416874425}
+--- !u!114 &512028109374759233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993935611311211705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f629924a87dfd141a0e93f5befab320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputs: {fileID: 3367053164615976230}
   <DashKeyCode>k__BackingField: 304
   <DasDownhKeyCode>k__BackingField: 306
   <JumpKeyCode>k__BackingField: 32
+--- !u!114 &1402096065416874425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993935611311211705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: defd0fdae2498b44d9aab1b06d966352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   <MainShootKeyCode>k__BackingField: 323
   <WeaponAbilityKeyCode>k__BackingField: 324
   <ShotGunKeyCode>k__BackingField: 49

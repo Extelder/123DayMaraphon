@@ -24,7 +24,7 @@ public class PlayerDash : Dashing
 
         Dashed?.Invoke();
 
-        Vector3 inputDirection = new Vector3(_playerInputs.MovementHorizontal, 0, _playerInputs.MovementVertical);
+        Vector3 inputDirection = new Vector3(_playerInputs.PlayerMovementInputs.MovementHorizontal, 0, _playerInputs.PlayerMovementInputs.MovementVertical);
 
         Vector3 direction = orientation.TransformDirection(inputDirection);
 

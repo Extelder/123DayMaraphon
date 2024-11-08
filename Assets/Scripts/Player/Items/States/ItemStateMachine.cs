@@ -22,7 +22,7 @@ public class ItemStateMachine : StateMachine
         Observable.EveryUpdate().Subscribe(_ =>
         {
             bool movingOnGround =
-                (Mathf.Abs(_inputs.MovementHorizontal) > 0 || Mathf.Abs(_inputs.MovementVertical) > 0) &&
+                (Mathf.Abs(_inputs.PlayerMovementInputs.MovementHorizontal) > 0 || Mathf.Abs(_inputs.PlayerMovementInputs.MovementVertical) > 0) &&
                 _groundChecker.Detected;
 
             if (movingOnGround)

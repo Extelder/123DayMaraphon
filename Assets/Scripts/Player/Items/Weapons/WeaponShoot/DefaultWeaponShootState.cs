@@ -47,7 +47,7 @@ public class DefaultWeaponShootState : WeaponShootState
     {
         while (true)
         {
-            if (_playerInputs.MainShooting)
+            if (_playerInputs.PlayerWeaponInputs.MainShooting)
             {
                 _alreadyShooting = true;
                 Animator.Shoot();

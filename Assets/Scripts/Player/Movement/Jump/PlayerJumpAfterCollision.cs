@@ -31,7 +31,7 @@ public class PlayerJumpAfterCollision : MonoBehaviour
     {
         _wallChecker.CheckForWall(out Collider[] colliders, out int size);
         StopAllCoroutines();
-        Vector3 inputDirection = new Vector3(_playerInputs.MovementHorizontal, 0, _playerInputs.MovementVertical);
+        Vector3 inputDirection = new Vector3(_playerInputs.PlayerMovementInputs.MovementHorizontal, 0, _playerInputs.PlayerMovementInputs.MovementVertical);
         Vector3 direction = _orientation.TransformDirection(inputDirection);
 
         for (var i = 0; i < size; i++)
@@ -76,12 +76,12 @@ public class PlayerJumpAfterCollision : MonoBehaviour
 
     private void OnEnable()
     {
-        _playerInputs.JumpPressedDown += OnJumpPressedDown;
+        _playerInputs.PlayerMovementInputs.JumpPressedDown += OnJumpPressedDown;
     }
 
     private void OnDisable()
     {
-        _playerInputs.JumpPressedDown -= OnJumpPressedDown;
+        _playerInputs.PlayerMovementInputs.JumpPressedDown -= OnJumpPressedDown;
     }
 
     private void OnJumpPressedDown()
