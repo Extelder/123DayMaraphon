@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
@@ -35,6 +33,7 @@ public class SplatBloodForUnitHitBox : MonoBehaviour
             }
         }
     }
+
 
     private Vector3 ChangeScale()
     {

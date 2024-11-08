@@ -18,18 +18,18 @@ public class WeaponSwitch : MonoBehaviour
 
     private void OnEnable()
     {
-        _inputs.PlayerWeaponInputs.ShotGunKeyPressedDown += ShotGun;
-        _inputs.PlayerWeaponInputs.RifleKeyPressedDown += Rifle;
-        _inputs.PlayerWeaponInputs.RPGKeyPressedDown += RPG;
-        _inputs.PlayerWeaponInputs.RailgunKeyPressedDown += Railgun;
+        _inputs.PlayerSwitchWeaponInputs.ShotGunKeyPressedDown += ShotGun;
+        _inputs.PlayerSwitchWeaponInputs.RifleKeyPressedDown += Rifle;
+        _inputs.PlayerSwitchWeaponInputs.RPGKeyPressedDown += RPG;
+        _inputs.PlayerSwitchWeaponInputs.RailgunKeyPressedDown += Railgun;
     }
 
     private void OnDisable()
     {
-        _inputs.PlayerWeaponInputs.ShotGunKeyPressedDown -= ShotGun;
-        _inputs.PlayerWeaponInputs.RifleKeyPressedDown -= Rifle;
-        _inputs.PlayerWeaponInputs.RPGKeyPressedDown -= RPG;
-        _inputs.PlayerWeaponInputs.RailgunKeyPressedDown -= Railgun;
+        _inputs.PlayerSwitchWeaponInputs.ShotGunKeyPressedDown -= ShotGun;
+        _inputs.PlayerSwitchWeaponInputs.RifleKeyPressedDown -= Rifle;
+        _inputs.PlayerSwitchWeaponInputs.RPGKeyPressedDown -= RPG;
+        _inputs.PlayerSwitchWeaponInputs.RailgunKeyPressedDown -= Railgun;
     }
 
     public void ShotGun() => ChangeWeapon(_shotGun);
