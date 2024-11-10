@@ -1,15 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerWalk : MonoBehaviour
+public class PlayerWalk : MovementSpeedLerping
 {
-    [field: Header("Speed")] [field: SerializeField]
-    public float WalkSpeed; 
-    
     private Rigidbody _rigidbody;
 
     private void Start()
@@ -19,7 +18,8 @@ public class PlayerWalk : MonoBehaviour
 
     public void Walk(Vector3 input)
     {
-        _rigidbody.velocity = transform.rotation * new Vector3(input.x * WalkSpeed,
-            _rigidbody.velocity.y, input.z * WalkSpeed);
+        StartCoroutine(SmoothlyLerpMoveSpeed());
+        _rigidbody.velocity = transform.rotation * new Vector3(input.x * moveSpeed,
+            _rigidbody.velocity.y, input.z * moveSpeed);
     }
 }

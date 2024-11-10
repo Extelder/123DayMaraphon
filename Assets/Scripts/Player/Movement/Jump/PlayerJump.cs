@@ -5,9 +5,8 @@ using UnityEngine;
 using Zenject;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerJump : MonoBehaviour
+public class PlayerJump : MovementSpeedLerping
 {
-    [SerializeField] private float _jumpForce;
     [SerializeField] private float _jumpForceByJumpsMultiplayer;
     [SerializeField] private bool _resetRigidBodyYAfterJump;
 
@@ -27,11 +26,12 @@ public class PlayerJump : MonoBehaviour
     {
         if (!_canJump)
             return;
+        StartCoroutine(SmoothlyLerpMoveSpeed());
 
         if (_resetRigidBodyYAfterJump)
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, 0, _rigidbody.velocity.z);
 
-        _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+        _rigidbody.AddForce(Vector3.up * moveSpeed, ForceMode.Impulse);
         Jumped?.Invoke();
     }
 
