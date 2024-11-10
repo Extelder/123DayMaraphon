@@ -5158,7 +5158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee1518dd298aab44ac1854c25c9ffb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healtBar: {fileID: 5414315206546045954}
+  _healtBar: {fileID: 6335325316673762973}
   _health: {fileID: 0}
   _healthText: {fileID: 9195643184030762288}
 --- !u!1 &2385418029185453443
