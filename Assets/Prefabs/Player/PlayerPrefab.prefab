@@ -8252,6 +8252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Transform>k__BackingField: {fileID: 4063892871993162728}
   _rayRange: 1000
+  _randomNavMeshRadius: 0
   _layer:
     serializedVersion: 2
     m_Bits: 64
@@ -11090,7 +11091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7072282785594033488
 Transform:
   m_ObjectHideFlags: 0
