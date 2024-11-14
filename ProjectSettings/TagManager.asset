@@ -16,8 +16,8 @@ TagManager:
   - PlayerProjectile
   - Trapped
   - FlyEnemy
-  - 
-  - 
+  - NonOutline
+  - CustomFlyEnemyOutline
   - 
   - 
   - 

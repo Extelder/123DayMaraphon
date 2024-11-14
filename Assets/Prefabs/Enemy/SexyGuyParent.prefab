@@ -1957,7 +1957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4700683058213910338}
   - component: {fileID: 308118315670794072}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pCylinder24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2973,10 +2973,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5d5b2ec2bc9e74aa8922f6f45d1bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stateMachine: {fileID: 3867802216181005913}
   _lineRenderer: {fileID: 8272781990435328811}
-  _trapedState: {fileID: 5055150782221788803}
   _lineStartPointOffset: {x: 0, y: 2, z: 0}
+  _stateMachine: {fileID: 3867802216181005913}
+  _trapedState: {fileID: 5055150782221788803}
 --- !u!114 &6087158640239261781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3581,7 +3581,7 @@ Transform:
   m_Children:
   - {fileID: 246332893010538848}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7122208830832447619
 GameObject:
@@ -3673,7 +3673,7 @@ Transform:
   m_GameObject: {fileID: 7278852819763534198}
   m_LocalRotation: {x: 0.000000029802315, y: -0.000000022351736, z: 0.00000006332992,
     w: 1}
-  m_LocalPosition: {x: -1.2217236, y: 4.6628165, z: 0.85334015}
+  m_LocalPosition: {x: -1.2217221, y: 4.6628146, z: 0.8533459}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
