@@ -79,7 +79,7 @@ public class Projectile : PoolObject
                 if (_onlyPlayerHealth)
                 {
                     playerHitBox.TakeDamage(Damage);
-                    return;
+                    continue;
                 }
             }
 

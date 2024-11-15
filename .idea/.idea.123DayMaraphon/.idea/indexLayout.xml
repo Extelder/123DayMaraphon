@@ -8,6 +8,7 @@
       <Path>Library/PackageCache/com.unity.cinemachine@2.9.7</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@2.5.2</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.6</Path>
+      <Path>Library/PackageCache/com.unity.film-internal-utilities@0.18.4-preview</Path>
       <Path>Library/PackageCache/com.unity.ide.rider@3.0.21</Path>
       <Path>Library/PackageCache/com.unity.ide.visualstudio@2.0.18</Path>
       <Path>Library/PackageCache/com.unity.ide.vscode@1.2.5</Path>
@@ -44,13 +45,17 @@
       <Path>Library/PackageCache/com.unity.modules.vr@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.modules.wind@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.modules.xr@1.0.0</Path>
+      <Path>Library/PackageCache/com.unity.probuilder@5.0.7</Path>
+      <Path>Library/PackageCache/com.unity.progrids@3.0.3-preview.6</Path>
       <Path>Library/PackageCache/com.unity.render-pipelines.core@14.0.8</Path>
       <Path>Library/PackageCache/com.unity.render-pipelines.universal@14.0.8</Path>
       <Path>Library/PackageCache/com.unity.searcher@4.9.2</Path>
+      <Path>Library/PackageCache/com.unity.settings-manager@2.0.1</Path>
       <Path>Library/PackageCache/com.unity.shadergraph@14.0.8</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.1.33</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@3.0.6</Path>
       <Path>Library/PackageCache/com.unity.timeline@1.7.4</Path>
+      <Path>Library/PackageCache/com.unity.toonshader@0.10.0-preview</Path>
       <Path>Library/PackageCache/com.unity.ugui@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.visualscripting@1.8.0</Path>
       <Path>ProjectSettings</Path>
@@ -59,6 +64,7 @@
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Logs</Path>
+      <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
     </explicitExcludes>
