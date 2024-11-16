@@ -18,17 +18,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1023
   outlineSettings:
-    outlineColor: {r: 1, g: 1, b: 1, a: 0.22745098}
-    outlineScale: 0.5
+    outlineColor: {r: 1, g: 1, b: 1, a: 0.078431375}
+    outlineScale: 0.8
     depthThreshold: 100
     robertsCrossMultiplier: 500
-    normalThreshold: 0.282
+    normalThreshold: 0.5
     steepAngleThreshold: 0.2
     steepAngleMultiplier: 25
     colorFormat: 0
     depthBufferBits: 0
     filterMode: 1
-    backgroundColor: {r: 1, g: 0.023584902, b: 0.023584902, a: 0}
+    backgroundColor: {r: 1, g: 0, b: 0, a: 0}
     perObjectData: 0
     enableDynamicBatching: 1
     enableInstancing: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
     Source: 1
     NormalSamples: 1
     Intensity: 1.22
-    DirectLightingStrength: 0.213
+    DirectLightingStrength: 0
     Radius: 0.25
     Samples: 0
     BlurQuality: 0
