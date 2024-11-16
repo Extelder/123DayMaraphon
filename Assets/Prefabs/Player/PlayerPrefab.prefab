@@ -1478,7 +1478,7 @@ GameObject:
   - component: {fileID: 8521709509323396207}
   - component: {fileID: 8159226258125005788}
   - component: {fileID: 2902230770639601164}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2308,7 +2308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 108353466987326276}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: weapon_scyfi_shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5421,7 +5421,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 8320
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6573,7 +6573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4976687215441900547}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: TrailSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6972,7 +6972,7 @@ GameObject:
   - component: {fileID: 1706786196496782221}
   - component: {fileID: 8203924078239498408}
   - component: {fileID: 4788701386556101603}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: prop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7894,7 +7894,7 @@ GameObject:
   - component: {fileID: 7858594758378594385}
   - component: {fileID: 308949697739131810}
   - component: {fileID: 4088646275173960869}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: wires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11091,7 +11091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7072282785594033488
 Transform:
   m_ObjectHideFlags: 0
@@ -14234,7 +14234,7 @@ GameObject:
   - component: {fileID: 2050973709449957632}
   - component: {fileID: 6766311184798133469}
   - component: {fileID: 4488917694944054762}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20886,7 +20886,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 067bd86b55211714f8c6db4609a8d090,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 067bd86b55211714f8c6db4609a8d090,
         type: 3}
@@ -22232,19 +22232,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1116040971840050, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1222506973823736, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1234649754841732, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1306587544184404, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1336949550903370, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
       propertyPath: m_Name
@@ -22252,19 +22252,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1336949550903370, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1404526102996912, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1462184510508918, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1701918230128312, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4639870034382688, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
       propertyPath: m_RootOrder
