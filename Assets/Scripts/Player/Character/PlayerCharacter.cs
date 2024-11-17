@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class PlayerCharacter : MonoBehaviour
 {
     [field: SerializeField] public Transform Transform { get; private set; }
+    [field: SerializeField] public PlayerLevelCheckPoint PlayerLevelCheckPoint { get; private set; }
     public Vector3 PlayerPositionForNavMesh { get; private set; }
     [SerializeField] private float _rayRange;
     [SerializeField] private float _randomNavMeshRadius;

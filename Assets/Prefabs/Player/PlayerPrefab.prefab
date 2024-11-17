@@ -632,7 +632,7 @@ MonoBehaviour:
   _checkRate: 0.1
   _checkLayer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _maxObjectsToCheck: 10
   _groundChecker: {fileID: 4964944240793527871}
 --- !u!114 &1947032898487497675
@@ -792,7 +792,7 @@ MonoBehaviour:
   _rayRange: Infinity
   _layer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 2112
   _groundChecker: {fileID: 4964944240793527871}
   _indicatorTransform: {fileID: 8723173710512202165}
   _offset: {x: 0, y: 1, z: 0}
@@ -8211,6 +8211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8964689684812152432}
   - component: {fileID: 5056383746007185974}
+  - component: {fileID: 5269098643553466132}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -8251,12 +8252,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Transform>k__BackingField: {fileID: 4063892871993162728}
+  <PlayerLevelCheckPoint>k__BackingField: {fileID: 5269098643553466132}
   _rayRange: 1000
   _randomNavMeshRadius: 0
   _layer:
     serializedVersion: 2
     m_Bits: 64
   _offset: {x: 0, y: 0.5, z: 0}
+--- !u!114 &5269098643553466132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185866198232910469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdf98edff2aff04e825571a4d67199a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4340680189375155563
 GameObject:
   m_ObjectHideFlags: 0
@@ -13246,7 +13260,7 @@ MonoBehaviour:
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
-  m_Antialiasing: 1
+  m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
