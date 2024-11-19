@@ -792,7 +792,7 @@ MonoBehaviour:
   _rayRange: Infinity
   _layer:
     serializedVersion: 2
-    m_Bits: 2112
+    m_Bits: 2113
   _groundChecker: {fileID: 4964944240793527871}
   _indicatorTransform: {fileID: 8723173710512202165}
   _offset: {x: 0, y: 1, z: 0}
