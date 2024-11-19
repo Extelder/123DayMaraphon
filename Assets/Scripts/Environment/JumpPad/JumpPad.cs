@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class JumpPad : MonoBehaviour
 {
+    [SerializeField] private Vector3 _velocity;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<PlayerCharacter> (out PlayerCharacter playerCharacter))
+        if (other.TryGetComponent<PlayerJump> (out PlayerJump playerJump))
         {
-            Debug.Log("азазаз");
+            playerJump.Jump(_velocity);
         }
     }
 }

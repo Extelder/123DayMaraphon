@@ -589,9 +589,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53a137c216a75047aa2b314f842a369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 20
   speedChangeFactor: 1
-  targetMoveSpeed: 20
+  targetMoveSpeed: 26
 --- !u!114 &5641981363132158727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,7 +607,6 @@ MonoBehaviour:
   moveSpeed: 5
   speedChangeFactor: 12
   targetMoveSpeed: 17
-  _jumpForceByJumpsMultiplayer: 0
   _resetRigidBodyYAfterJump: 1
 --- !u!114 &8522087793704030763
 MonoBehaviour:
@@ -792,7 +791,7 @@ MonoBehaviour:
   _rayRange: Infinity
   _layer:
     serializedVersion: 2
-    m_Bits: 2112
+    m_Bits: 2113
   _groundChecker: {fileID: 4964944240793527871}
   _indicatorTransform: {fileID: 8723173710512202165}
   _offset: {x: 0, y: 1, z: 0}
@@ -5324,7 +5323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6262593091823086674
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5538,7 +5537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2019882368841927770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11105,7 +11104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7072282785594033488
 Transform:
   m_ObjectHideFlags: 0
