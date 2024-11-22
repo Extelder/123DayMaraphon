@@ -450,6 +450,7 @@ GameObject:
   - component: {fileID: 8597016111715556592}
   - component: {fileID: 2355311876792254004}
   - component: {fileID: 1270522298645833487}
+  - component: {fileID: 9058767008571983997}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -856,6 +857,18 @@ MonoBehaviour:
   _timeToDefaultValue: 5
   _angle: 3
   _cinemachineVirtualCamera: {fileID: 3993687150684033421}
+--- !u!114 &9058767008571983997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86614837546828997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdf98edff2aff04e825571a4d67199a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &102123699467024614
 GameObject:
   m_ObjectHideFlags: 0
