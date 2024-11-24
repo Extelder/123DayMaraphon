@@ -591,8 +591,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
+  startValue: 20
   speedChangeFactor: 1
-  targetMoveSpeed: 26
+  targetMoveSpeed: 30
 --- !u!114 &5641981363132158727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,9 +606,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48ff974a33da774c9379c6482675afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 10
+  startValue: 10
   speedChangeFactor: 12
-  targetMoveSpeed: 17
+  targetMoveSpeed: 20
   _resetRigidBodyYAfterJump: 1
 --- !u!114 &8522087793704030763
 MonoBehaviour:

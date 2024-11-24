@@ -11,11 +11,13 @@ public class PlayerMovementInputs : MonoBehaviour
     public event Action DashPressedDown;
     public event Action DashDownwardsPressedDown;
     public event Action JumpPressedDown;
+    public bool IsMoving { get; set; }
 
     public void GetMovingInputs()
     {
         MovementHorizontal = Input.GetAxis("Horizontal");
         MovementVertical = Input.GetAxis("Vertical");
+        IsMoving = true;
     }
 
     private void Update()
