@@ -48,10 +48,13 @@ public class PlayerJumpAmount : Amount
         _wallChecker.CheckForWall(out Collider[] colliders, out int size);
         for (var i = 0; i < size; i++)
         {
+            if (colliders[i] == null)
+                continue;
             var target = colliders[i].gameObject;
             if (target.TryGetComponent<Wall>(out Wall wall))
             {
                 FullRecoverSpeed();
+                return;
             }
         }
 
