@@ -3398,7 +3398,7 @@ namespace Zenject
                 using (ProfileTimers.CreateTimedBlock("User Code"))
 #endif
                 {
-                    gameObj.SetActive(true);
+                        gameObj.SetActive(true);
                 }
             }
 

@@ -2,17 +2,34 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HouseWindow
   m_Shader: {fileID: 4800000, guid: 7633a2fd8a3bed44791c9e952ff86e5d, type: 3}
-  m_ShaderKeywords: _FRESNELHIGHLIGHTS_ON _MK_DETAIL_BLEND_MIX _MK_DIFFUSE_MINNAERT
-    _MK_EMISSION _MK_ENVIRONMENT_REFLECTIONS_ADVANCED _MK_FRESNEL_HIGHLIGHTS _MK_LIGHT_RAMP
-    _MK_OUTLINE_HULL_CLIP _MK_OUTLINE_NOISE _MK_RECEIVE_SHADOWS _MK_SPECULAR_ISOTROPIC
-    _MK_THRESHOLD_MAP _MK_WRAPPED_DIFFUSE _RECEIVESHADOWS_ON _WRAPPEDLIGHTING_ON
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _MK_ARTISTIC_ANIMATION_STUTTER
+  - _MK_ARTISTIC_PROJECTION_SCREEN_SPACE
+  - _MK_DETAIL_BLEND_MIX
+  - _MK_DIFFUSE_MINNAERT
+  - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
+  - _MK_FRESNEL_HIGHLIGHTS
+  - _MK_LIGHT_RAMP
+  - _MK_OUTLINE_HULL_CLIP
+  - _MK_OUTLINE_NOISE
+  - _MK_RECEIVE_SHADOWS
+  - _MK_SPECULAR_ISOTROPIC
+  - _MK_THRESHOLD_MAP
+  - _MK_WRAPPED_DIFFUSE
+  m_InvalidKeywords:
+  - _FRESNELHIGHLIGHTS_ON
+  - _MK_EMISSION
+  - _RECEIVESHADOWS_ON
+  - _WRAPPEDLIGHTING_ON
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -21,6 +38,7 @@ Material:
     IGNOREPROJECTOR: False
     RenderType: Opaque
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -176,15 +194,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
+    - _AddPrecomputedVelocity: 0
     - _AdvancedTab: 0
     - _AlbedoMapIntensity: 1
+    - _AlembicMotionVectors: 0
     - _AlphaClipping: 0
     - _AlphaCutoff: 0.5
     - _Anisotropy: 0
     - _Artistic: 0
     - _ArtisticFrequency: 1
     - _ArtisticProjection: 1
+    - _ArtisticShadowFilter: 0
     - _Blend: 0
     - _BlendDst: 0
     - _BlendDstAlpha: 0
@@ -217,6 +239,7 @@ Material:
     - _GlossyReflections: 1
     - _GoochRampIntensity: 0.5
     - _HatchingMapScale: 1
+    - _Hue: 0
     - _IndirectFade: 1
     - _Initialized: 1
     - _InputTab: 1
@@ -240,6 +263,7 @@ Material:
     - _OcclusionStrength: 1
     - _OptionsTab: 1
     - _Outline: 3
+    - _OutlineClipOffset: 0
     - _OutlineData: 0
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25
@@ -286,7 +310,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AlbedoColor: {r: 1, g: 0.959195, b: 0, a: 1}
-    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _Color: {r: 1, g: 0.95919496, b: 0, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 2.6390157, g: 2.059467, b: 0, a: 1}
