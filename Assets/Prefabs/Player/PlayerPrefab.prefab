@@ -8271,7 +8271,7 @@ MonoBehaviour:
   _randomNavMeshRadius: 0
   _layer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 65
   _offset: {x: 0, y: 0.5, z: 0}
 --- !u!114 &5269098643553466132
 MonoBehaviour:

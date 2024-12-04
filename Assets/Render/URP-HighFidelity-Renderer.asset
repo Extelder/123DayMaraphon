@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2327be5f7f17944a94d0c0bcfe9c4e3, type: 3}
-  m_Name: ScreenSpaceOutlines4
+  m_Name: ScreenSpaceOutlines
   m_EditorClassIdentifier: 
   m_Active: 1
   renderPassEvent: 350
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2327be5f7f17944a94d0c0bcfe9c4e3, type: 3}
-  m_Name: ScreenSpaceOutlines2
+  m_Name: ScreenSpaceOutlines
   m_EditorClassIdentifier: 
   m_Active: 1
   renderPassEvent: 350
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2327be5f7f17944a94d0c0bcfe9c4e3, type: 3}
-  m_Name: ScreenSpaceOutlines3
+  m_Name: ScreenSpaceOutlines
   m_EditorClassIdentifier: 
   m_Active: 1
   renderPassEvent: 350
