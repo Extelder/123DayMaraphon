@@ -1,0 +1,14 @@
+# Blender 4.0.2 MTL File: 'Sci-Fi_Pipes_Armored.blend'
+# www.blender.org
+
+newmtl Connector.001
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd F:/projects/private/Sci-Fi Pack/Textures_Sci-Fi Pack/Painted_Textures/Connector/Connector_BaseColor.png
+map_Ns F:/projects/private/Sci-Fi Pack/Textures_Sci-Fi Pack/Painted_Textures/Connector/Connector_Roughness.png
+map_refl F:/projects/private/Sci-Fi Pack/Textures_Sci-Fi Pack/Painted_Textures/Connector/Connector_Metallic.png
+map_Bump -bm 1.000000 F:/projects/private/Sci-Fi Pack/Textures_Sci-Fi Pack/Painted_Textures/Connector/Connector_Normal.png
