@@ -149,6 +149,8 @@ MonoBehaviour:
   <TrailPool>k__BackingField: {fileID: 8820672995997532464}
   <RailgunTrailPool>k__BackingField: {fileID: 5598864274706905171}
   <BloodSplatPool>k__BackingField: {fileID: 3873938871105435398}
+  <TextPool>k__BackingField: {fileID: 0}
+  <ConfettiPool>k__BackingField: {fileID: 0}
 --- !u!1 &867610021694839846
 GameObject:
   m_ObjectHideFlags: 0

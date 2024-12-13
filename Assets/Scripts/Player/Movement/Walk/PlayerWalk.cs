@@ -29,7 +29,6 @@ public class PlayerWalk : MovementSpeedLerping
                 }
                 _smoothlyLerpMoveSpeedCoroutine =
                     StartCoroutine(SmoothlyLerpMoveSpeed());
-                Debug.Log("moving");
                 return;
             }
 
@@ -38,7 +37,6 @@ public class PlayerWalk : MovementSpeedLerping
                 StopCoroutine(_smoothlyLerpMoveSpeedCoroutine);
                 _smoothlyLerpMoveSpeedToStartValue =
                     StartCoroutine(SmoothlyLerpMoveSpeedToStartValue());
-                Debug.Log("notmoving");
             }
         }).AddTo(_walkDisposable);
     }
