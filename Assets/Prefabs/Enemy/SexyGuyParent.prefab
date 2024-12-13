@@ -223,7 +223,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 5484591401155685009}
   _bloodSplatterPerHit: 3
@@ -738,7 +738,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 1390913517746270812}
   _bloodSplatterPerHit: 3
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 4039397554889301478}
   _bloodSplatterPerHit: 3
@@ -1418,7 +1418,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 8372374540308486182}
   _bloodSplatterPerHit: 3
@@ -1744,7 +1744,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 4292284691606249683}
   _bloodSplatterPerHit: 3
@@ -1942,7 +1942,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 225774591818122859}
   _bloodSplatterPerHit: 3
@@ -2689,7 +2689,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 8426775652627663647}
   _bloodSplatterPerHit: 3
@@ -2920,7 +2920,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 3794543544747716567}
   _bloodSplatterPerHit: 3
@@ -3026,7 +3026,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 6087158640239261781}
   _bloodSplatterPerHit: 3
@@ -3222,7 +3222,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 8054498922849146734}
   _bloodSplatterPerHit: 3
@@ -3483,7 +3483,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 4075441436092497612}
   _bloodSplatterPerHit: 3
@@ -3581,7 +3581,7 @@ Transform:
   m_Children:
   - {fileID: 246332893010538848}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7122208830832447619
 GameObject:
@@ -3673,7 +3673,7 @@ Transform:
   m_GameObject: {fileID: 7278852819763534198}
   m_LocalRotation: {x: 0.000000029802315, y: -0.000000022351736, z: 0.00000006332992,
     w: 1}
-  m_LocalPosition: {x: -1.2217221, y: 4.6628146, z: 0.8533459}
+  m_LocalPosition: {x: -1.2217236, y: 4.6628165, z: 0.85334015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3997,7 +3997,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 759194010511792522}
   _bloodSplatterPerHit: 3
@@ -4360,7 +4360,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 9061520219044615664}
   _bloodSplatterPerHit: 3
@@ -4588,7 +4588,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 1807373725456891426}
   _bloodSplatterPerHit: 3
@@ -4754,7 +4754,7 @@ MonoBehaviour:
   _rayRange: 11
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 6381431456939002316}
   _bloodSplatterPerHit: 3

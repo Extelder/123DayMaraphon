@@ -594,7 +594,7 @@ MonoBehaviour:
   moveSpeed: 20
   startValue: 20
   speedChangeFactor: 1
-  targetMoveSpeed: 30
+  targetMoveSpeed: 23
 --- !u!114 &5641981363132158727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1661,7 +1661,7 @@ MonoBehaviour:
   m_VerticalAxis:
     Value: 0
     m_SpeedMode: 1
-    m_MaxSpeed: 1
+    m_MaxSpeed: 0.4
     m_AccelTime: 0
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -1685,7 +1685,7 @@ MonoBehaviour:
   m_HorizontalAxis:
     Value: 0
     m_SpeedMode: 1
-    m_MaxSpeed: 1
+    m_MaxSpeed: 0.4
     m_AccelTime: 0
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -8239,6 +8239,7 @@ GameObject:
   - component: {fileID: 8964689684812152432}
   - component: {fileID: 5056383746007185974}
   - component: {fileID: 5269098643553466132}
+  - component: {fileID: 3338078079682817988}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -8284,7 +8285,7 @@ MonoBehaviour:
   _randomNavMeshRadius: 0
   _layer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 2113
   _offset: {x: 0, y: 0.5, z: 0}
 --- !u!114 &5269098643553466132
 MonoBehaviour:
@@ -8298,6 +8299,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fdf98edff2aff04e825571a4d67199a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3338078079682817988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185866198232910469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42029f7be632bb4f9aaa90f1bd3451b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warmingUpWeapons:
+  - {fileID: 6017530754978124383}
+  - {fileID: 1235429584808236178}
+  - {fileID: 1464812312732249026}
+  - {fileID: 124217274184793415}
+  _warmingUpTime: 1
 --- !u!1 &4340680189375155563
 GameObject:
   m_ObjectHideFlags: 0
@@ -11132,7 +11151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7072282785594033488
 Transform:
   m_ObjectHideFlags: 0
