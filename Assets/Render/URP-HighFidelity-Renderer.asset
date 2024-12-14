@@ -48,7 +48,7 @@ MonoBehaviour:
   renderPassEvent: 350
   outlinesLayerMask:
     serializedVersion: 2
-    m_Bits: 1023
+    m_Bits: 15
   outlineSettings:
     outlineColor: {r: 1, g: 1, b: 1, a: 0.078431375}
     outlineScale: 0.8
