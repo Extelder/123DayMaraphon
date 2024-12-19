@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class PlayerCharacter : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlayerCharacter : MonoBehaviour
     [field: SerializeField] public PlayerLevelCheckPoint PlayerLevelCheckPoint { get; private set; }
     
     [field: SerializeField] public Transform PlaceForTextLerping { get; private set; }
+    [field: SerializeField] public PlayerHints Hints { get; private set; }
 
     public Vector3 PlayerPositionForNavMesh { get; private set; }
     [SerializeField] private float _rayRange;
