@@ -22,12 +22,14 @@ public class PlayerWarmingUp : MonoBehaviour
         for (int i = 0; i < _warmingUpWeapons.Length; i++)
         {
             _warmingUpWeapons[i].SetActive(true);
-        }   
+        }
+
         yield return new WaitForSeconds(_warmingUpTime);
         for (int i = 0; i < _warmingUpWeapons.Length; i++)
         {
             _warmingUpWeapons[i].SetActive(false);
         }
+
         WarmingUpEnded?.Invoke();
     }
 }
