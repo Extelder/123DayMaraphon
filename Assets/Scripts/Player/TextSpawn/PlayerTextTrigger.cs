@@ -18,9 +18,6 @@ public class PlayerTextTrigger : PlayerTrigger
     [SerializeField] private Transform _spawnPlace;
     [SerializeField] private Transform _particleSpawnPlace;
     [SerializeField] private float _scaleChangeFactor;
-    
-    public event Action PlayerTriggered;
-    public event Action PlayerUntriggered;
     public override void Triggered()
     {
         var instance = _textPool.GetFreeElement(_spawnPlace.position);
@@ -31,7 +28,6 @@ public class PlayerTextTrigger : PlayerTrigger
             ChangeScale(instance);
         }).AddTo(_disposable);
         _confettiPool.GetFreeElement(_particleSpawnPlace.position);
-        PlayerTriggered?.Invoke();
     }
 
     private void ChangeScale(PoolObject instance)
@@ -44,7 +40,6 @@ public class PlayerTextTrigger : PlayerTrigger
     private void OnDisable()
     {
         _disposable.Clear();
-        PlayerUntriggered?.Invoke();
         DestroyComponentAfterTriggered = true;
         DestroyGameObjectAfterTriggered = true;
     }

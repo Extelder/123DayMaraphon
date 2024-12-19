@@ -5188,6 +5188,7 @@ GameObject:
   - component: {fileID: 4701540711235914752}
   - component: {fileID: 6165106175649434492}
   - component: {fileID: 3095088638332821221}
+  - component: {fileID: 1891272932422648087}
   m_Layer: 7
   m_Name: Hint
   m_TagString: Untagged
@@ -5203,8 +5204,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2323986646770458063}
   m_LocalRotation: {x: -0.6050049, y: 0.18448894, z: 0.38766542, w: 0.6705583}
-  m_LocalPosition: {x: 0, y: 0, z: 0.9604}
-  m_LocalScale: {x: 0.00038536586, y: -0.00038536586, z: 0.00038536586}
+  m_LocalPosition: {x: 0, y: 0, z: 0.9544}
+  m_LocalScale: {x: 0.00025252253, y: -0.00025252253, z: 0.00025252253}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 70394811116800956}
@@ -5212,7 +5213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -72.635, y: -47.959, z: 96.277}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.8166, y: -10.3098}
+  m_AnchoredPosition: {x: -17.8199, y: -10.3095}
   m_SizeDelta: {x: 340.8, y: 173}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6165106175649434492
@@ -5247,9 +5248,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 9568ece128856a54cbc1060379ab498d, type: 3}
     m_FontSize: 70
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 153
+    m_MaxSize: 70
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -5257,6 +5258,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: HINT
+--- !u!114 &1891272932422648087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2323986646770458063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b274b4b6a5198944bf57fbd324c8d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hintText: {fileID: 3095088638332821221}
 --- !u!1 &2385418029185453443
 GameObject:
   m_ObjectHideFlags: 0
@@ -5673,7 +5687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2492742538076508474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8348,6 +8362,7 @@ MonoBehaviour:
   <Transform>k__BackingField: {fileID: 4063892871993162728}
   <PlayerLevelCheckPoint>k__BackingField: {fileID: 5269098643553466132}
   <PlaceForTextLerping>k__BackingField: {fileID: 2828551417129132083}
+  <Hints>k__BackingField: {fileID: 1891272932422648087}
   _rayRange: 1000
   _randomNavMeshRadius: 0
   _layer:
@@ -15554,7 +15569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8916756508123861856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 6.25}
+  m_LocalPosition: {x: 0, y: 2.5, z: 10.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
