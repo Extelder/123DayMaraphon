@@ -150,7 +150,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 6678883323451590575}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &6678883323451590575
@@ -347,7 +347,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 6291137300413330841}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &6291137300413330841
@@ -605,7 +605,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 457264817955515406}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &457264817955515406
@@ -768,7 +768,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 7433440278153934918}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &7433440278153934918
@@ -1091,7 +1091,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 1543124347449710323}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &1543124347449710323
@@ -1392,7 +1392,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 8206666993702708119}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &8206666993702708119
@@ -1589,7 +1589,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 3222058001771318431}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &3222058001771318431
@@ -1787,7 +1787,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 8839291011218438356}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &8839291011218438356
@@ -2079,7 +2079,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 6998449858275173951}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &6998449858275173951
@@ -2277,7 +2277,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 4070728404392640075}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &4070728404392640075
@@ -2505,7 +2505,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 4312189966856309498}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &4312189966856309498
@@ -3042,7 +3042,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 5910706111334891211}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &5910706111334891211
@@ -3272,7 +3272,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 3810998365481791521}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &3810998365481791521
@@ -3429,7 +3429,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 1553191275194701712}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &1553191275194701712
@@ -3595,7 +3595,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 0}
+  _hitBox: {fileID: 1994126362629828760}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &1994126362629828760
@@ -4169,7 +4169,7 @@ PrefabInstance:
     - target: {fileID: 1835544579513650967, guid: 27be060f72809074abdca38e53562600,
         type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1835544579513650967, guid: 27be060f72809074abdca38e53562600,
         type: 3}
@@ -4644,7 +4644,7 @@ PrefabInstance:
     - target: {fileID: 3170157928809411441, guid: 27be060f72809074abdca38e53562600,
         type: 3}
       propertyPath: m_Speed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3516014785674275728, guid: 27be060f72809074abdca38e53562600,
         type: 3}

@@ -14,6 +14,7 @@ public class EnemyRagdollHealth : Health
     [SerializeField] private SkinnedMeshRenderer _skinnedMeshRenderer;
     [SerializeField] private Transform _headBone;
     [SerializeField] private GameObject _head;
+    [SerializeField] private GameObject _enemyParent;
     [SerializeField] private RagdollOperations _ragdollOperations;
 
     [Inject] private PlayerCharacter _character;
@@ -46,5 +47,6 @@ public class EnemyRagdollHealth : Health
         _skinnedMeshRenderer.updateWhenOffscreen = true;
 
         Destroy(gameObject);
+        Destroy(_enemyParent);
     }
 }

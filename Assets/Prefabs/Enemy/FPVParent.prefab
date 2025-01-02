@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: {fileID: 1726630549384246363}
+  _health: {fileID: 647266885175963954}
 --- !u!65 &1870187283910255390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 1750362081178469623}
   - component: {fileID: 8184772017943406073}
   - component: {fileID: 8030849939682591230}
-  - component: {fileID: 1726630549384246363}
   - component: {fileID: 589810121640649101}
   m_Layer: 0
   m_Name: FPV
@@ -195,7 +194,7 @@ MonoBehaviour:
   CanChanged: 1
   _shootPoint: {fileID: 2830054342774701681}
   _stateMachine: {fileID: 761856347449456984}
-  _maxRandomToChangeState: 8
+  _maxRandomToChangeState: 1
   _range: 500
 --- !u!114 &1777864945760988143
 MonoBehaviour:
@@ -209,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: {fileID: 1726630549384246363}
+  _health: {fileID: 647266885175963954}
 --- !u!114 &1204492747956071910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,19 +313,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1494238, y: 0.6009619, z: 1}
   m_Center: {x: 1.424712, y: 0.029325962, z: 0}
---- !u!114 &1726630549384246363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2971361638338529019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6aa4a2e8b99bec49bcdf58c26b8ddf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 50
 --- !u!114 &589810121640649101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5598131787329193029}
+  - component: {fileID: 647266885175963954}
   m_Layer: 0
   m_Name: FPVParent
   m_TagString: Untagged
@@ -570,8 +557,21 @@ Transform:
   m_Children:
   - {fileID: 1550446654900962803}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &647266885175963954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100232563279092234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6aa4a2e8b99bec49bcdf58c26b8ddf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MaxValue>k__BackingField: 50
 --- !u!1 &9179874346588095712
 GameObject:
   m_ObjectHideFlags: 0

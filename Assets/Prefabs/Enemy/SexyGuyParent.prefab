@@ -4149,6 +4149,7 @@ MonoBehaviour:
   _skinnedMeshRenderer: {fileID: 308118315670794072}
   _headBone: {fileID: 5958003544042376598}
   _head: {fileID: 4702562227464442605}
+  _enemyParent: {fileID: 7060299810476122125}
   _ragdollOperations: {fileID: 7428836422257971228}
 --- !u!114 &441099799384260358
 MonoBehaviour:
