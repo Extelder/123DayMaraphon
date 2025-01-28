@@ -23,8 +23,8 @@ public class OnWeaponShootVolumeChange : MonoBehaviour
     private void OnDisable()
     {
         _weaponShoot.ShootPerformed -= OnShootPerformed;
-        _volume.weight = 0;
-        _targetVolumeWeight = 0;
+        _volume.weight = 0.1f;
+        _targetVolumeWeight = 0.1f;
         _disposable.Clear();
     }
 
@@ -32,7 +32,7 @@ public class OnWeaponShootVolumeChange : MonoBehaviour
     {
         _disposable.Clear();
         _targetVolumeWeight = 1;
-        CoolDown.Timer(_backToDefaultVolumeTime, () => { _targetVolumeWeight = 0; }, _disposable);
+        CoolDown.Timer(_backToDefaultVolumeTime, () => { _targetVolumeWeight = 0.1f; }, _disposable);
     }
 
     private void Update()

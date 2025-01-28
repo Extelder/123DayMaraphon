@@ -1,20 +1,33 @@
+using System;
 using UnityEngine;
 using Zenject;
+using Random = UnityEngine.Random;
 
 public class PlayerHealPickUpable : MonoBehaviour, IPickupable
 {
-    [Inject] private PlayerHealth _playerHealth;
     [SerializeField] private float _valueToHeal;
 
     [SerializeField] private bool _destroyAfterHeal;
+    [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private float _upwardForce;
+    [SerializeField] private float _randomForceMax;
+    [SerializeField] private float _randomForceMin;
+
+    private void OnEnable()
+    {
+        _rigidbody.AddForce(
+            new Vector3(Random.Range(_randomForceMin, _randomForceMax), _upwardForce, Random.Range(_randomForceMin, _randomForceMax)),
+            ForceMode.Impulse);
+    }
 
     public void PickUp()
     {
-        _playerHealth.Heal(_valueToHeal);
+        PlayerHealth.Instance.Heal(_valueToHeal);
 
         if (_destroyAfterHeal)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            _rigidbody.velocity = new Vector3(0, 0, 0);
         }
     }
 }

@@ -19,8 +19,8 @@ TagManager:
   - NonOutline
   - CustomFlyEnemyOutline
   - CustomShotGunOverlayoutline
-  - 
-  - 
+  - GroundChecker
+  - Turret
   - 
   - 
   - 

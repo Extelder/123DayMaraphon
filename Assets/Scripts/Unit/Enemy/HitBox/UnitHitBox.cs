@@ -11,6 +11,8 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
 
     public event Action Hit;
 
+    public static event Action UnitHitted;
+
     public void Visit(WeaponShoot weaponShoot)
     {
     }
@@ -24,6 +26,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         _health.TakeDamage(raycastWeaponShoot.Weapon.DamagePerHit);
         SpawningDecal(hit.point);
         Hit?.Invoke();
+        UnitHitted?.Invoke();
     }
 
     public void Visit(Projectile projectile)
@@ -35,6 +38,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         _health.TakeDamage(projectile.Damage);
         SpawningDecal(transform.position);
         Hit?.Invoke();
+        UnitHitted?.Invoke();
     }
 
     public void Visit(Ghost ghost, float damage)
@@ -42,6 +46,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         SpawningDecal(transform.position);
         _health.TakeDamage(damage);
         Hit?.Invoke();
+        UnitHitted?.Invoke();
     }
 
     private void SpawningDecal(Vector3 spawnPoint)

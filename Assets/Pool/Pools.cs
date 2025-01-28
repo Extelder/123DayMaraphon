@@ -8,6 +8,7 @@ public class Pools : MonoBehaviour
     [field: SerializeField] public Pool DefaultImpactPool { get; private set; }
     [field: SerializeField] public Pool DefaultProjectilePool { get; private set; }
     [field: SerializeField] public Pool FPVProjectilePool { get; private set; }
+    [field: SerializeField] public Pool TURRETProjectilePool { get; private set; }
     [field: SerializeField] public Pool GhostPool { get; private set; }
     [field: SerializeField] public Pool BloodExplodePool { get; private set; }
     [field: SerializeField] public Pool GhostBloodExplodePool { get; private set; }
@@ -16,4 +17,11 @@ public class Pools : MonoBehaviour
     [field: SerializeField] public Pool TrailPool { get; private set; }
     [field: SerializeField] public Pool RailgunTrailPool { get; private set; }
     [field: SerializeField] public Pool BloodSplatPool { get; private set; }
+    [field: SerializeField] public Pool HealPickupPool { get; private set; }
+    [field: SerializeField] public Pool JumpSoundPool { get; private set; }
+    [field: SerializeField] public Pool DashSoundPool { get; private set; }
+    [field: SerializeField] public Pool ShotGunPool { get; private set; }
+    [field: SerializeField] public Pool RailgunPool { get; private set; }
+    [field: SerializeField] public Pool RiflePool { get; private set; }
+    [field: SerializeField] public Pool RPGPool { get; private set; }
 }

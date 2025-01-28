@@ -15,8 +15,8 @@ public class PlayerMovementInputs : MonoBehaviour
 
     public void GetMovingInputs()
     {
-        MovementHorizontal = Input.GetAxis("Horizontal");
-        MovementVertical = Input.GetAxis("Vertical");
+        MovementHorizontal = Input.GetAxisRaw("Horizontal");
+        MovementVertical = Input.GetAxisRaw("Vertical");
         IsMoving = true;
     }
 

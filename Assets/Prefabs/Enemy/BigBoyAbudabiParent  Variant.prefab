@@ -76,7 +76,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.0054297224, y: 0.3151498, z: 0.38821876}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.59603184, y: 0.0074053407, z: -0.0013142824}
   serializedVersion: 2
   m_SwingAxis: {x: -0.4098091, y: -0.71099365, z: 0.5714415}
   m_TwistLimitSpring:
@@ -149,9 +149,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 6678883323451590575}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &6678883323451590575
 MonoBehaviour:
@@ -275,7 +275,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.0029838607, y: 0.22910944, z: 0.73083824}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.5477752, y: 0.0030495226, z: 0.0051808357}
   serializedVersion: 2
   m_SwingAxis: {x: -0.66216385, y: 0.71581423, z: -0.2216963}
   m_TwistLimitSpring:
@@ -346,9 +346,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 6291137300413330841}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &6291137300413330841
 MonoBehaviour:
@@ -373,7 +373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5789922207341697069}
   - component: {fileID: 5783398629441463444}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: hip1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.0036986172, y: 0.5563731, z: -0.42113417}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.5477809, y: -0.0030498505, z: -0.005184889}
   serializedVersion: 2
   m_SwingAxis: {x: -0.7514622, y: 0.39501137, z: 0.5284614}
   m_TwistLimitSpring:
@@ -604,9 +604,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 457264817955515406}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &457264817955515406
 MonoBehaviour:
@@ -696,7 +696,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.19674428, y: -0.3688525, z: 0.908427}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.8594649, y: -0.18461938, z: -0.008021012}
   serializedVersion: 2
   m_SwingAxis: {x: -0.6718302, y: -0.6241095, z: -0.39891273}
   m_TwistLimitSpring:
@@ -767,9 +767,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 7433440278153934918}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &7433440278153934918
 MonoBehaviour:
@@ -857,7 +857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 334659574541238619}
   - component: {fileID: 8934065372973848073}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.086526394, y: -0.1038454, z: 0.9908226}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.18555982, y: 0.00000015646219, z: -0.00000011920929}
   serializedVersion: 2
   m_SwingAxis: {x: 0.3299001, y: 0.9414276, z: 0.06985892}
   m_TwistLimitSpring:
@@ -1090,9 +1090,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 1543124347449710323}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &1543124347449710323
 MonoBehaviour:
@@ -1117,7 +1117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3176511058756698322}
   - component: {fileID: 7324282724563810964}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1318,7 +1318,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.005068317, y: -0.18083364, z: -0.42946795}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.59603405, y: -0.0074068755, z: 0.0013131201}
   serializedVersion: 2
   m_SwingAxis: {x: 0.524394, y: 0.7869427, z: -0.3251649}
   m_TwistLimitSpring:
@@ -1391,9 +1391,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 8206666993702708119}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &8206666993702708119
 MonoBehaviour:
@@ -1515,7 +1515,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.0057370067, y: 0.08147398, z: 0.996659}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.29231545, y: 0.012316406, z: -0.00000013038516}
   serializedVersion: 2
   m_SwingAxis: {x: -0.789847, y: 0.61161745, z: -0.045451462}
   m_TwistLimitSpring:
@@ -1588,9 +1588,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 3222058001771318431}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &3222058001771318431
 MonoBehaviour:
@@ -1713,7 +1713,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.0038628448, y: -0.2485537, z: 0.35187}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.58771867, y: -0.03227484, z: 0.6012417}
   serializedVersion: 2
   m_SwingAxis: {x: -0.69746727, y: -0.5816852, z: -0.4185472}
   m_TwistLimitSpring:
@@ -1786,9 +1786,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 8839291011218438356}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &8839291011218438356
 MonoBehaviour:
@@ -2005,7 +2005,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.004283674, y: 0.26429552, z: -0.4535491}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.53935796, y: -0.12561092, z: -0.6099377}
   serializedVersion: 2
   m_SwingAxis: {x: 0.48214892, y: 0.7549585, z: 0.44448882}
   m_TwistLimitSpring:
@@ -2078,9 +2078,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 6998449858275173951}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &6998449858275173951
 MonoBehaviour:
@@ -2205,7 +2205,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.10767217, y: -0.0038184375, z: 0.99417925}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.2893015, y: -0.000000044703484, z: 0.000000008381903}
   serializedVersion: 2
   m_SwingAxis: {x: -0.9935547, y: 0.035233855, z: 0.10773981}
   m_TwistLimitSpring:
@@ -2276,9 +2276,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 4070728404392640075}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &4070728404392640075
 MonoBehaviour:
@@ -2433,7 +2433,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.6496368, y: 0.02303797, z: 0.75989574}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.289302, y: -0.00000035762787, z: -0.00000031664968}
   serializedVersion: 2
   m_SwingAxis: {x: -0.75941837, y: 0.026931524, z: -0.6500453}
   m_TwistLimitSpring:
@@ -2504,9 +2504,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 4312189966856309498}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &4312189966856309498
 MonoBehaviour:
@@ -2563,7 +2563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3285616269512372795}
   - component: {fileID: 212721145260047149}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2657,7 +2657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3139289817621222957}
   - component: {fileID: 4170070593689168147}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: head1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2808,7 +2808,8 @@ GameObject:
   m_Component:
   - component: {fileID: 958936395579864594}
   - component: {fileID: 6257232682542974186}
-  m_Layer: 0
+  - component: {fileID: 4293662969711979001}
+  m_Layer: 12
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2894,6 +2895,24 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.07320759, y: 0.80983937, z: -0.110328436}
     m_Extent: {x: 0.54107404, y: 0.7540345, z: 0.56261134}
   m_DirtyAABB: 0
+--- !u!114 &4293662969711979001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4625993562056477565}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.15686275, g: 0, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4789570010566815855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,7 +2989,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.09985569, y: -0.34238216, z: 0.93423945}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.0024791881, y: 0.53993386, z: -0.02878638}
   serializedVersion: 2
   m_SwingAxis: {x: -0.41157377, y: -0.8406285, z: -0.35206625}
   m_TwistLimitSpring:
@@ -3041,9 +3060,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 5910706111334891211}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &5910706111334891211
 MonoBehaviour:
@@ -3198,7 +3217,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.19243686, y: 0.56589246, z: 0.8017069}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.1855588, y: 0.00000047683716, z: 0.00000028312206}
   serializedVersion: 2
   m_SwingAxis: {x: 0.6220506, y: 0.56151754, z: -0.545666}
   m_TwistLimitSpring:
@@ -3271,9 +3290,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 3810998365481791521}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &3810998365481791521
 MonoBehaviour:
@@ -3428,9 +3447,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 1553191275194701712}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &1553191275194701712
 MonoBehaviour:
@@ -3521,7 +3540,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.31819248, y: 0.515205, z: 0.7958125}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.29231557, y: 0.012316108, z: 0.000000026077032}
   serializedVersion: 2
   m_SwingAxis: {x: -0.18387392, y: 0.789962, z: -0.5849365}
   m_TwistLimitSpring:
@@ -3594,9 +3613,9 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 65
-  _randomRangeMultiplier: 1
+  _randomRangeMultiplier: 2
   _hitBox: {fileID: 1994126362629828760}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
 --- !u!114 &1994126362629828760
 MonoBehaviour:
@@ -3621,7 +3640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 279903080557591795}
   - component: {fileID: 2501185472851886215}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4173,18 +4192,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1835544579513650967, guid: 27be060f72809074abdca38e53562600,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835544579513650967, guid: 27be060f72809074abdca38e53562600,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835544579513650967, guid: 27be060f72809074abdca38e53562600,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835544579513650967, guid: 27be060f72809074abdca38e53562600,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.478027
+      value: -2.9780273
       objectReference: {fileID: 0}
     - target: {fileID: 1835544579513650967, guid: 27be060f72809074abdca38e53562600,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.275867
+      value: -4.8100014
       objectReference: {fileID: 0}
     - target: {fileID: 1835544579513650967, guid: 27be060f72809074abdca38e53562600,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.74185
+      value: 9.241852
       objectReference: {fileID: 0}
     - target: {fileID: 1835544579513650967, guid: 27be060f72809074abdca38e53562600,
         type: 3}
@@ -4325,6 +4359,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.017207513
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386947232960387629, guid: 27be060f72809074abdca38e53562600,
+        type: 3}
+      propertyPath: _bloodSplatterPerHit
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2569968941108624538, guid: 27be060f72809074abdca38e53562600,
         type: 3}
@@ -5456,6 +5495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigBoyAbudabiParent  Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7060299810476122125, guid: 27be060f72809074abdca38e53562600,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7140158421642235723, guid: 27be060f72809074abdca38e53562600,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5804,6 +5848,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7428836422257971228, guid: 27be060f72809074abdca38e53562600, type: 3}
     - {fileID: 4314590085152740935, guid: 27be060f72809074abdca38e53562600, type: 3}
+    - {fileID: 6152479371301110755, guid: 27be060f72809074abdca38e53562600, type: 3}
     m_RemovedGameObjects:
     - {fileID: 718350713466659971, guid: 27be060f72809074abdca38e53562600, type: 3}
     m_AddedGameObjects:
@@ -5811,7 +5856,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 938859330270422396}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7060299810476122125, guid: 27be060f72809074abdca38e53562600,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4561186055727378326}
   m_SourcePrefab: {fileID: 100100000, guid: 27be060f72809074abdca38e53562600, type: 3}
 --- !u!195 &417165299516067305 stripped
 NavMeshAgent:
@@ -5849,3 +5898,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5b5a244873feb46bb956491f33ed14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5750957307332337301 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7060299810476122125, guid: 27be060f72809074abdca38e53562600,
+    type: 3}
+  m_PrefabInstance: {fileID: 3329488842533437080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4561186055727378326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5750957307332337301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b05b965d6c265e4eb812b5dfaefa14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 4293662969711979001}

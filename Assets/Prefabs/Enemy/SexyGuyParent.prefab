@@ -226,7 +226,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 5484591401155685009}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &522779597625004776
 GameObject:
@@ -545,6 +545,37 @@ Transform:
   m_Father: {fileID: 5827444954547533853}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &857919982707356072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7324590990427714388}
+  m_Layer: 0
+  m_Name: HealSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7324590990427714388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857919982707356072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.79, y: 7.76, z: 0.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 246332893010538848}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &864783891852652873
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +772,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 1390913517746270812}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &929361191164615499
 GameObject:
@@ -1160,7 +1191,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 4039397554889301478}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &2365552053771914736
 GameObject:
@@ -1421,7 +1452,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 8372374540308486182}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &2745631337406419773
 GameObject:
@@ -1747,7 +1778,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 4292284691606249683}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &3132992196894733893
 GameObject:
@@ -1945,7 +1976,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 225774591818122859}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &3341792945915790131
 GameObject:
@@ -1957,6 +1988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4700683058213910338}
   - component: {fileID: 308118315670794072}
+  - component: {fileID: 1914403350252927583}
   m_Layer: 11
   m_Name: pCylinder24
   m_TagString: Untagged
@@ -2084,6 +2116,24 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0027136924, y: -0.0034945887, z: 0.010568578}
     m_Extent: {x: 0.020318586, y: 0.034580864, z: 0.017833995}
   m_DirtyAABB: 0
+--- !u!114 &1914403350252927583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341792945915790131}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.15686275, g: 0, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &3485127465741204281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2692,7 +2742,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 8426775652627663647}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &5519617451984292184
 GameObject:
@@ -2923,7 +2973,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 3794543544747716567}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &5966397720975410261
 GameObject:
@@ -3225,7 +3275,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 8054498922849146734}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &6169071508829309642
 GameObject:
@@ -3486,7 +3536,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 4075441436092497612}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &6534369490363442383
 GameObject:
@@ -3560,6 +3610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1835544579513650967}
+  - component: {fileID: 6152479371301110755}
   m_Layer: 0
   m_Name: SexyGuyParent
   m_TagString: Untagged
@@ -3583,6 +3634,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6152479371301110755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7060299810476122125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b05b965d6c265e4eb812b5dfaefa14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 1914403350252927583}
 --- !u!1 &7122208830832447619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4000,7 +4064,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 759194010511792522}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &8004698896793647617
 GameObject:
@@ -4018,6 +4082,7 @@ GameObject:
   - component: {fileID: 6201593042569904016}
   - component: {fileID: 1419260712717226229}
   - component: {fileID: 441099799384260358}
+  - component: {fileID: 5378240491697579978}
   m_Layer: 0
   m_Name: SexyGuy
   m_TagString: Untagged
@@ -4041,6 +4106,7 @@ Transform:
   - {fileID: 4253392346171377421}
   - {fileID: 732091847277388400}
   - {fileID: 3707128530633909090}
+  - {fileID: 7324590990427714388}
   m_Father: {fileID: 1835544579513650967}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4069,8 +4135,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 8004698896793647617}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.3
-  m_Speed: 7
+  m_Radius: 3
+  m_Speed: 11
   m_Acceleration: 1032.14
   avoidancePriority: 50
   m_AngularSpeed: 1032.14
@@ -4170,6 +4236,19 @@ MonoBehaviour:
     m_Bits: 8
   _enemyStateMachine: {fileID: 3867802216181005913}
   _chekingRate: 0.2
+--- !u!114 &5378240491697579978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8004698896793647617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a43590c4db333408e6c9a38901cb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnPoint: {fileID: 7324590990427714388}
 --- !u!1 &8332951011656202039
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,7 +4443,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 9061520219044615664}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &8578823234216668054
 GameObject:
@@ -4592,7 +4671,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 1807373725456891426}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &9073859857633450655
 GameObject:
@@ -4758,7 +4837,7 @@ MonoBehaviour:
     m_Bits: 2113
   _randomRangeMultiplier: 1
   _hitBox: {fileID: 6381431456939002316}
-  _bloodSplatterPerHit: 3
+  _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &9132847858459770116
 GameObject:

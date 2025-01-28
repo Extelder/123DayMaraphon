@@ -6,6 +6,9 @@ using Zenject;
 public class PlayerJumpAfterCollision : MonoBehaviour
 {
     [SerializeField] private WallChecker _wallChecker;
+    [SerializeField] private LayerMask _checkLayerMask;
+    [SerializeField] private float _raycastDistance;
+    [SerializeField] private PlayerWalk _walk;
     [Inject] private PlayerInputs _playerInputs;
     [SerializeField] private Transform _orientation;
 
@@ -29,25 +32,90 @@ public class PlayerJumpAfterCollision : MonoBehaviour
 
     public void TryJumpAfterCollision()
     {
-        _wallChecker.CheckForWall(out Collider[] colliders, out int size);
-        StopAllCoroutines();
-        Vector3 inputDirection = new Vector3(_playerInputs.PlayerMovementInputs.MovementHorizontal, 0, _playerInputs.PlayerMovementInputs.MovementVertical);
-        Vector3 direction = _orientation.TransformDirection(inputDirection);
+        RaycastHit hit;
 
-        for (var i = 0; i < size; i++)
+        Vector3 direction;
+        if (Physics.Raycast(transform.position, transform.right, out hit, _raycastDistance, _checkLayerMask))
         {
-            var target = colliders[i].gameObject;
-            if (target.TryGetComponent<Wall>(out Wall wall))
+            if (hit.collider.TryGetComponent<Wall>(out Wall wall))
             {
-                if (inputDirection == Vector3.zero)
-                {
-                    direction = (target.transform.position - transform.position).normalized;
-                    direction = new Vector3(direction.x, 0, direction.z);
-                }
+                Debug.DrawRay(transform.position, transform.right * _raycastDistance, Color.green, 5f);
+                Debug.DrawRay(hit.point, hit.normal, Color.yellow, 5f);
+                direction = hit.normal;
+                //Debug.DrawRay(transform.position, direction, Color.yellow, 5f);
+                // direction = (hit.point - transform.position).normalized;
+                // direction.Normalize();
+                // direction = new Vector3(direction.x, 0, direction.z);
 
                 Vector3 forceToApply = (direction * _forceBack + _orientation.up * _forceUpward);
-                StartCoroutine(SmoothlyLerpForce(forceToApply));
-                _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
+                _walk.SetVelocity(forceToApply);
+
+                return;
+                // StartCoroutine(SmoothlyLerpForce(forceToApply));
+                // _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
+            }
+        }
+
+        if (Physics.Raycast(transform.position, -transform.right, out hit, _raycastDistance, _checkLayerMask))
+        {
+            if (hit.collider.TryGetComponent<Wall>(out Wall wall))
+            {
+                Debug.DrawRay(transform.position, -transform.right * _raycastDistance, Color.green, 5f);
+                Debug.DrawRay(hit.point, hit.normal, Color.yellow, 5f);
+                direction = hit.normal;
+                //Debug.DrawRay(transform.position, direction, Color.yellow, 5f);
+                // direction = (hit.point - transform.position).normalized;
+                // direction.Normalize();
+                // direction = new Vector3(direction.x, 0, direction.z);
+
+                Vector3 forceToApply = (direction * _forceBack + _orientation.up * _forceUpward);
+                _walk.SetVelocity(forceToApply);
+
+                return;
+                // StartCoroutine(SmoothlyLerpForce(forceToApply));
+                // _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
+            }
+        }
+        
+        if (Physics.Raycast(transform.position, transform.forward, out hit, _raycastDistance, _checkLayerMask))
+        {
+            if (hit.collider.TryGetComponent<Wall>(out Wall wall))
+            {
+                Debug.DrawRay(transform.position, transform.forward * _raycastDistance, Color.green, 5f);
+                Debug.DrawRay(hit.point, hit.normal, Color.yellow, 5f);
+                direction = hit.normal;
+                //Debug.DrawRay(transform.position, direction, Color.yellow, 5f);
+                // direction = (hit.point - transform.position).normalized;
+                // direction.Normalize();
+                // direction = new Vector3(direction.x, 0, direction.z);
+
+                Vector3 forceToApply = (direction * _forceBack + _orientation.up * _forceUpward);
+                _walk.SetVelocity(forceToApply);
+
+                return;
+                // StartCoroutine(SmoothlyLerpForce(forceToApply));
+                // _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
+            }
+        }
+        
+        if (Physics.Raycast(transform.position, -transform.forward, out hit, _raycastDistance, _checkLayerMask))
+        {
+            if (hit.collider.TryGetComponent<Wall>(out Wall wall))
+            {
+                Debug.DrawRay(transform.position, -transform.forward * _raycastDistance, Color.green, 5f);
+                Debug.DrawRay(hit.point, hit.normal, Color.yellow, 5f);
+                direction = hit.normal;
+                //Debug.DrawRay(transform.position, direction, Color.yellow, 5f);
+                // direction = (hit.point - transform.position).normalized;
+                // direction.Normalize();
+                // direction = new Vector3(direction.x, 0, direction.z);
+
+                Vector3 forceToApply = (direction * _forceBack + _orientation.up * _forceUpward);
+                _walk.SetVelocity(forceToApply);
+
+                return;
+                // StartCoroutine(SmoothlyLerpForce(forceToApply));
+                // _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
             }
         }
     }
@@ -88,6 +156,4 @@ public class PlayerJumpAfterCollision : MonoBehaviour
     {
         TryJumpAfterCollision();
     }
-
-  
 }

@@ -7,18 +7,22 @@ public abstract class Health : MonoBehaviour
 {
     [field: SerializeField] public float MaxValue { get; private set; }
     protected float CurrentValue { get; private set; }
-    
+
     public event Action<float> HealthValueChanged;
     public event Action<float> OnHealedToMax;
     public event Action<float> Damaged;
+    public event Action Dead;
 
-    private void Awake()
+    private void Start()
     {
         CurrentValue = MaxValue;
     }
 
     public void TakeDamage(float value)
     {
+        if (IsDead())
+            return;
+
         Damaged?.Invoke(CurrentValue);
         if (CurrentValue - value > 0)
         {
@@ -26,11 +30,14 @@ public abstract class Health : MonoBehaviour
             return;
         }
 
+        Dead?.Invoke();
         Death();
     }
 
     public void Heal(float value)
     {
+        if (IsDead())
+            return;
         if (CurrentValue + value < MaxValue)
         {
             ChangeHealthValue(CurrentValue + value);
@@ -41,9 +48,11 @@ public abstract class Health : MonoBehaviour
     }
 
     public bool IsDead() => CurrentValue <= 0;
-    
+
     public void HealToMax()
     {
+        if (IsDead())
+            return;
         ChangeHealthValue(MaxValue);
         OnHealedToMax?.Invoke(MaxValue);
     }
