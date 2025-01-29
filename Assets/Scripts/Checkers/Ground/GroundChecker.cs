@@ -17,7 +17,6 @@ public class GroundChecker : MonoBehaviour
     {
         if (other.gameObject == _player)
             return;
-        Debug.Log("GROUNDED");
         GroundDetected?.Invoke();
         Detected = true;
     }

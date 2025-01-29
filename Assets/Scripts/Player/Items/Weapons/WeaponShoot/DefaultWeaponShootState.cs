@@ -6,6 +6,8 @@ using Zenject;
 
 public class DefaultWeaponShootState : WeaponShootState
 {
+    [SerializeField] private bool _kunitana;
+
     [Inject] private PlayerInputs _playerInputs;
 
     public event Action ShootPerformed;
@@ -29,7 +31,6 @@ public class DefaultWeaponShootState : WeaponShootState
         ShootPerformed?.Invoke();
     }
 
-
     public void AnimationEndStartChecking()
     {
         _alreadyShooting = false;
@@ -52,7 +53,14 @@ public class DefaultWeaponShootState : WeaponShootState
     {
         while (true)
         {
-            if (_playerInputs.PlayerWeaponInputs.MainShooting)
+            if (_kunitana && _playerInputs.PlayerWeaponInputs.KunitanaAttacking)
+            {
+                _alreadyShooting = true;
+                Animator.Shoot();
+                yield break;
+            }
+
+            if (!_kunitana && _playerInputs.PlayerWeaponInputs.MainShooting)
             {
                 _alreadyShooting = true;
                 Animator.Shoot();

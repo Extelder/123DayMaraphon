@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 8184772017943406073}
   - component: {fileID: 8030849939682591230}
   - component: {fileID: 589810121640649101}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: FPV
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,9 +5,10 @@ using UniRx;
 using UnityEngine;
 using Zenject;
 
-public class Projectile : PoolObject
+public class Projectile : PoolObject, IWeaponVisitor
 {
     [SerializeField] private CinemachineImpulseSource _cinemachineImpulseSource;
+    [SerializeField] private LayerMask _layerMask;
     [SerializeField] private GameObject _projectileGFX;
     [field: SerializeField] public float Damage { get; private set; }
     [field: SerializeField] public float ExplosionForce { get; private set; }
@@ -53,13 +54,17 @@ public class Projectile : PoolObject
 
     public void Explode()
     {
+        Explode(1);
+    }
+
+    public void Explode(float damageMultiplier)
+    {
         if (_explosived)
             return;
-        Debug.Log("Explosived");
         _cinemachineImpulseSource?.GenerateImpulse();
         _explosived = true;
         _disposable.Clear();
-        Physics.OverlapSphereNonAlloc(transform.position, _explosionRange, colliders);
+        Physics.OverlapSphereNonAlloc(transform.position, _explosionRange, colliders, _layerMask);
 
         foreach (var other in colliders)
         {
@@ -78,7 +83,7 @@ public class Projectile : PoolObject
             {
                 if (_onlyPlayerHealth)
                 {
-                    playerHitBox.TakeDamage(Damage);
+                    playerHitBox.TakeDamage(Damage * damageMultiplier);
                     continue;
                 }
             }
@@ -92,12 +97,14 @@ public class Projectile : PoolObject
             {
                 if (health is PlayerHealth && _onlyPlayerHealth)
                 {
-                    health.TakeDamage(Damage / Vector3.SqrMagnitude(transform.position - health.transform.position));
+                    health.TakeDamage(Damage * damageMultiplier /
+                                      Vector3.SqrMagnitude(transform.position - health.transform.position));
                     continue;
                 }
 
                 if (health != this)
-                    health.TakeDamage(Damage / Vector3.SqrMagnitude(transform.position - health.transform.position));
+                    health.TakeDamage(Damage * damageMultiplier /
+                                      Vector3.SqrMagnitude(transform.position - health.transform.position));
             }
         }
 
@@ -105,7 +112,6 @@ public class Projectile : PoolObject
         _projectileGFX.SetActive(false);
         Invoke(nameof(ReturnToPool), ReturnToPoolDelay);
     }
-
 
     private void OnDrawGizmos()
     {
@@ -115,5 +121,23 @@ public class Projectile : PoolObject
     public void Accept(IWeaponVisitor visitor)
     {
         visitor.Visit(this);
+    }
+
+    public void Visit(WeaponShoot weaponShoot)
+    {
+    }
+
+    public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
+    {
+        Explode(5);
+        PlayerTime.Instance.TimeStop(0.2f);
+    }
+
+    public void Visit(Projectile projectile)
+    {
+    }
+
+    public void Visit(Ghost ghost, float damage)
+    {
     }
 }

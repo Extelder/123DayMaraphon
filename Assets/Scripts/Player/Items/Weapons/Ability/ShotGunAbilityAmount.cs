@@ -13,7 +13,7 @@ public class ShotGunAbilityAmount : WeaponAbilityAmount
 
     private void OnEnable()
     {
-        Filled.Subscribe(filled => { Debug.Log(filled); _ghost.SetActive(filled); }).AddTo(_disposable);
+        Filled.Subscribe(filled => { _ghost.SetActive(filled); }).AddTo(_disposable);
         _shotGunAbility.AbilityPerformed += OnAbilityPerformed;
     }
 

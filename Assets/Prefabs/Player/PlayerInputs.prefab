@@ -62,7 +62,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f629924a87dfd141a0e93f5befab320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputs: {fileID: 3367053164615976230}
   <DashKeyCode>k__BackingField: 304
   <DasDownhKeyCode>k__BackingField: 306
   <JumpKeyCode>k__BackingField: 32
@@ -79,6 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MainShootKeyCode>k__BackingField: 323
+  <KunitanaShootKeyCode>k__BackingField: 102
   <WeaponAbilityKeyCode>k__BackingField: 324
 --- !u!114 &4619585280954486031
 MonoBehaviour:

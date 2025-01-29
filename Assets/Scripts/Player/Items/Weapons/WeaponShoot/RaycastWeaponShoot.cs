@@ -20,6 +20,7 @@ public class RaycastWeaponShoot : WeaponShoot
         base.OnShootPerformed();
         CameraShakeInvoke();
 
+        KunitanShoot.Instance.SetLastShoot(this);
         for (int i = 0; i < Weapon.HitsPerShot; i++)
         {
             CurrentShootOffset = Random.insideUnitCircle * Weapon.RandomRangeMultiplayer;

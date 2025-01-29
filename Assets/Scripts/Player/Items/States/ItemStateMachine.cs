@@ -28,7 +28,6 @@ public class ItemStateMachine : StateMachine
             if (movingOnGround)
             {
                 ChangeState(_move);
-                Debug.Log("Moving");
                 return;
             }
 
