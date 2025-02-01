@@ -28,4 +28,9 @@ public abstract class UnitAnimator : MonoBehaviour
     {
         Animator.SetTrigger(name);
     }
+
+    public void ResetAnimationTrigger(string name)
+    {
+        Animator.ResetTrigger(name);
+    }
 }
