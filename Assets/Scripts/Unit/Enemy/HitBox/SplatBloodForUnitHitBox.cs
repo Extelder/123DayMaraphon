@@ -39,8 +39,8 @@ public class SplatBloodForUnitHitBox : MonoBehaviour
     {
         return new Vector3
         {
-            x = Random.Range(-_spreadFactor, _spreadFactor),
-            y = Random.Range(-_spreadFactor, _spreadFactor),
+            x = Random.Range(1, _spreadFactor),
+            y = Random.Range(1, _spreadFactor),
             z = 1
         };
     }
