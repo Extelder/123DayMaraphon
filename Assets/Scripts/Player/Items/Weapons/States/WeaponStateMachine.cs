@@ -5,6 +5,8 @@ using Zenject;
 
 public class WeaponStateMachine : StateMachine
 {
+    [SerializeField] private bool _kuinitana;
+
     [field: SerializeField] public ItemTakeUp Item { get; private set; }
 
     [Header("States")] [SerializeField] private State _idle;
@@ -15,8 +17,19 @@ public class WeaponStateMachine : StateMachine
     {
         base.OnEnable();
 
-        PlayerInputs.PlayerWeaponInputs.MainShootPressedDown += OnMainShootPressedDown;
-        PlayerInputs.PlayerWeaponInputs.MainShootPressedUp += OnMainShootPressedUp;
+        if (_kuinitana)
+        {
+            PlayerInputs.PlayerWeaponInputs.KunitanaShootPressedDown += OnMainShootPressedDown;
+            PlayerInputs.PlayerWeaponInputs.KunitanaShootPressedUp += OnMainShootPressedUp;
+
+            return;
+        }
+
+        if (!_kuinitana)
+        {
+            PlayerInputs.PlayerWeaponInputs.MainShootPressedDown += OnMainShootPressedDown;
+            PlayerInputs.PlayerWeaponInputs.MainShootPressedUp += OnMainShootPressedUp;
+        }
     }
 
     private void OnMainShootPressedUp()
@@ -53,7 +66,17 @@ public class WeaponStateMachine : StateMachine
 
     public virtual void OnDisable()
     {
-        PlayerInputs.PlayerWeaponInputs.MainShootPressedDown -= OnMainShootPressedDown;
-        PlayerInputs.PlayerWeaponInputs.MainShootPressedUp -= OnMainShootPressedUp;
+        if (_kuinitana)
+        {
+            PlayerInputs.PlayerWeaponInputs.KunitanaShootPressedDown -= OnMainShootPressedDown;
+            PlayerInputs.PlayerWeaponInputs.KunitanaShootPressedUp -= OnMainShootPressedUp;
+            return;
+        }
+
+        if (!_kuinitana)
+        {
+            PlayerInputs.PlayerWeaponInputs.MainShootPressedDown -= OnMainShootPressedDown;
+            PlayerInputs.PlayerWeaponInputs.MainShootPressedUp -= OnMainShootPressedUp;
+        }
     }
 }

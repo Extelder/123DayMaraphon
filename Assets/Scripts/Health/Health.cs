@@ -23,14 +23,12 @@ public abstract class Health : MonoBehaviour
         if (IsDead())
             return;
 
+        Damaged?.Invoke(CurrentValue);
         if (CurrentValue - value > 0)
         {
             ChangeHealthValue(CurrentValue - value);
-            Damaged?.Invoke(CurrentValue);
             return;
         }
-
-        Damaged?.Invoke(CurrentValue);
 
         Dead?.Invoke();
         Death();

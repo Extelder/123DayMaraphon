@@ -38,14 +38,6 @@ public class DefaultWeaponShootState : WeaponShootState
         StartCoroutine(AnimationEndChecking());
     }
 
-    public void AnimationEndWithoutChecking()
-    {
-        StopAllCoroutines();
-
-        CanChanged = true;
-        CanShoot = true;
-    }
-
     public void AnimationEndStopChecking()
     {
         StopAllCoroutines();
