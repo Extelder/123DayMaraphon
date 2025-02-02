@@ -11,6 +11,7 @@ public class EnemyPlayerShootAttackState : EnemyState
     [SerializeField] private float _range = 500f;
     [SerializeField] private EnemyStateMachine _enemyStateMachine;
     [SerializeField] private LookAtController _lookAtPlayer;
+    [SerializeField] private SmoothlyLookAtPlayer _smoothlyLookAtPlayer;
 
     [Inject] private Pools _pools;
 
@@ -20,11 +21,15 @@ public class EnemyPlayerShootAttackState : EnemyState
     {
         Animator.Attack();
         _agent.isStopped = true;
+        _agent.updateRotation = false;
+        _smoothlyLookAtPlayer.enabled = true;
     }
 
     public override void Exit()
     {
         _agent.isStopped = false;
+        _agent.updateRotation = true;
+        _smoothlyLookAtPlayer.enabled = false;
     }
 
     public void AnimationEnd()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
@@ -7,6 +8,7 @@ using Zenject;
 
 public class Projectile : PoolObject, IWeaponVisitor
 {
+    [SerializeField] private TrailRenderer _trail;
     [SerializeField] private CinemachineImpulseSource _cinemachineImpulseSource;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private GameObject _projectileGFX;
@@ -18,28 +20,33 @@ public class Projectile : PoolObject, IWeaponVisitor
     [SerializeField] private float _speed;
 
     private Collider[] colliders = new Collider[50];
-    private CompositeDisposable _disposable = new CompositeDisposable();
     private bool _explosived;
+
+    private float _trailTime;
+
+    [SerializeField] private Rigidbody _rigidbody;
+
+    private void Awake()
+    {
+        _trailTime = _trail.time;
+    }
 
     public void Initiate(Vector3 targetPosition)
     {
+        _trail.time = 0;
+
+        _trail.enabled = true;
+        _trail.time = _trailTime;
         _projectileGFX.SetActive(true);
-        _disposable?.Clear();
+        _rigidbody.velocity = new Vector3(0, 0, 0);
         transform.LookAt(targetPosition, transform.forward);
-        Observable.EveryLateUpdate().Subscribe(_ =>
-        {
-            transform.position =
-                Vector3.Lerp(transform.position, targetPosition, _speed * Time.deltaTime);
-            if (Vector3.SqrMagnitude(transform.position - targetPosition) <= 2)
-            {
-                Explode();
-            }
-        }).AddTo(_disposable);
+        _rigidbody.AddForce(transform.forward * _speed, ForceMode.Impulse);
     }
 
     private void OnDisable()
     {
-        _disposable.Clear();
+        _trail.time = 0;
+        _trail.enabled = false;
         _explosived = false;
     }
 
@@ -61,9 +68,10 @@ public class Projectile : PoolObject, IWeaponVisitor
     {
         if (_explosived)
             return;
+        _trail.time = 0;
+
         _cinemachineImpulseSource?.GenerateImpulse();
         _explosived = true;
-        _disposable.Clear();
         Physics.OverlapSphereNonAlloc(transform.position, _explosionRange, colliders, _layerMask);
 
         foreach (var other in colliders)

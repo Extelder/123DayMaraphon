@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UniRx;
@@ -6,11 +7,8 @@ using Zenject;
 
 public class SmoothlyLookAtPlayer : MonoBehaviour
 {
-    
     [Inject] private PlayerCharacter _playerCharacter;
     [SerializeField] private float _turnSpeed;
-
-    private CompositeDisposable _disposable = new CompositeDisposable();
 
     private Transform _player;
 
@@ -19,19 +17,11 @@ public class SmoothlyLookAtPlayer : MonoBehaviour
         _player = _playerCharacter.Transform;
     }
 
-    private void OnEnable()
+    private void Update()
     {
-        Observable.EveryUpdate().Subscribe(_ =>
-            {
-                Vector3 direction = (_player.position - transform.position).normalized;
-                Quaternion goalRotation = Quaternion.LookRotation(direction);
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, goalRotation.y, 0), _turnSpeed);
-            })
-            .AddTo(_disposable);
-    }
-
-    private void OnDisable()
-    {
-        _disposable.Clear();
+        Vector3 targetDir = _player.position - transform.position;
+        targetDir.y = transform.position.y;
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetDir),
+            Time.deltaTime * _turnSpeed);
     }
 }
