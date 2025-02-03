@@ -179,7 +179,7 @@ MonoBehaviour:
   CanChanged: 1
   _rigidbody: {fileID: 696573002826648352}
   _stateMachine: {fileID: 761856347449456984}
-  _randomImpulse: 0.3
+  _randomImpulse: 30
 --- !u!114 &3919889674743235195
 MonoBehaviour:
   m_ObjectHideFlags: 0

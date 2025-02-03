@@ -33,14 +33,19 @@ public class Projectile : PoolObject, IWeaponVisitor
 
     public void Initiate(Vector3 targetPosition)
     {
-        _trail.time = 0;
-
-        _trail.enabled = true;
-        _trail.time = _trailTime;
         _projectileGFX.SetActive(true);
+        _trail.enabled = true;
+        _trail.time = -1;
         _rigidbody.velocity = new Vector3(0, 0, 0);
+        StartCoroutine(WaitingForFrame());
         transform.LookAt(targetPosition, transform.forward);
         _rigidbody.AddForce(transform.forward * _speed, ForceMode.Impulse);
+    }
+
+    private IEnumerator WaitingForFrame()
+    {
+        yield return new WaitForEndOfFrame();
+        _trail.time = _trailTime;
     }
 
     private void OnDisable()
@@ -69,6 +74,8 @@ public class Projectile : PoolObject, IWeaponVisitor
         if (_explosived)
             return;
         _trail.time = 0;
+
+        _rigidbody.velocity = new Vector3(0, 0, 0);
 
         _cinemachineImpulseSource?.GenerateImpulse();
         _explosived = true;

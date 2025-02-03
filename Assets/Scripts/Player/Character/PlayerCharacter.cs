@@ -10,8 +10,9 @@ public class PlayerCharacter : MonoBehaviour
 {
     [field: SerializeField] public Transform Transform { get; private set; }
     [field: SerializeField] public PlayerLevelCheckPoint PlayerLevelCheckPoint { get; private set; }
-    
+
     [field: SerializeField] public Transform PlaceForTextLerping { get; private set; }
+    [field: SerializeField] public WeaponSwitch WeaponSwitch { get; private set; }
     [field: SerializeField] public PlayerHints Hints { get; private set; }
 
     public Vector3 PlayerPositionForNavMesh { get; private set; }
@@ -19,7 +20,7 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] private float _randomNavMeshRadius;
     [SerializeField] private LayerMask _layer;
     [SerializeField] private Vector3 _offset;
-    
+
 
     private RaycastHit _hit;
 
