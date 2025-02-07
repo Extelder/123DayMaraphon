@@ -40,7 +40,8 @@ public class PlayerTime : MonoBehaviour
         _stopTimeEffect.SetActive(true);
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(time);
-        Time.timeScale = 1;
+        if (!PlayerHealth.Instance.IsDead)
+            Time.timeScale = 1;
         _stopTimeEffect.SetActive(false);
     }
 }

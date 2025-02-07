@@ -8,8 +8,11 @@ public class UnitLastOutline : MonoBehaviour
     [SerializeField] private Outline _outline;
 
 
+    private int _defaultLayerMask;
+
     private void Start()
     {
+        _defaultLayerMask = _outline.gameObject.layer;
         StartCoroutine(Checking());
     }
 
@@ -35,10 +38,12 @@ public class UnitLastOutline : MonoBehaviour
     public void EnableOutline()
     {
         _outline.enabled = true;
+        _outline.gameObject.layer = LayerMask.NameToLayer("Overlay");
     }
 
     public void DisableOutline()
     {
         _outline.enabled = false;
+        _outline.gameObject.layer = _defaultLayerMask;
     }
 }

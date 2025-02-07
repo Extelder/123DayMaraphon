@@ -142,6 +142,12 @@ public class Projectile : PoolObject, IWeaponVisitor
     {
     }
 
+    public void Visit(KunitanShoot kunitanShoot)
+    {
+        Explode(5);
+        PlayerTime.Instance.TimeStop(0.2f);
+    }
+
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
         Explode(5);

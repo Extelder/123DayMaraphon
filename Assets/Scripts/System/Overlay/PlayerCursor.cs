@@ -5,6 +5,20 @@ using UnityEngine;
 
 public class PlayerCursor : MonoBehaviour
 {
+    public static  PlayerCursor Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+            return;
+        }
+        
+        Debug.LogError("There`s one more PlayerCursor in scene");
+        Debug.Break();
+    }
+
     private void OnEnable()
     {
         Hide();

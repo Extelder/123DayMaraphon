@@ -17,6 +17,18 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
     {
     }
 
+    public void Visit(KunitanShoot kunitanShoot)
+    {
+        if (!_health)
+            return;
+        if (_health.IsDead())
+            return;
+        _health.TakeDamage(kunitanShoot.Damage);
+        SpawningDecal(transform.position);
+        Hit?.Invoke();
+        UnitHitted?.Invoke();
+    }
+
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
         if (!_health)

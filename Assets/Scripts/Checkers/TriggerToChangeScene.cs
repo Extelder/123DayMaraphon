@@ -7,7 +7,7 @@ public class TriggerToChangeScene : PlayerTrigger
 {
     public override void Triggered()
     {
-        var index = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(index + 1);
+        PlayerPrefs.SetInt("CurrentScene", SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("SceneSwitcher");
     }
 }
