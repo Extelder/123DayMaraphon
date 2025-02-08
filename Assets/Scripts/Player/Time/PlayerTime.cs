@@ -2,14 +2,32 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class PlayerTime : MonoBehaviour
 {
     [SerializeField] private GameObject _stopTimeEffect;
 
+    [Inject] private PlayerHealth _health;
+
     private Coroutine _currentCoroutine;
 
     public static PlayerTime Instance { get; private set; }
+
+    private void OnEnable()
+    {
+        _health.Dead += OnDead;
+    }
+
+    private void OnDisable()
+    {
+        _health.Dead -= OnDead;
+    }
+
+    private void OnDead()
+    {
+        StopAllCoroutines();
+    }
 
     private void Awake()
     {
@@ -19,9 +37,17 @@ public class PlayerTime : MonoBehaviour
             return;
         }
 
+        _stopTimeEffect.SetActive(false);
+
         Debug.Break();
         Debug.LogError("There`s one more PlayerTime in scene");
         Debug.LogError(this);
+    }
+
+    public void PauseTimeStop()
+    {
+        StopAllCoroutines();
+        Time.timeScale = 0;
     }
 
     public void TimeStop(float time)

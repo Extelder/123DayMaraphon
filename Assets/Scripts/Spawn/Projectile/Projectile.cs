@@ -33,6 +33,7 @@ public class Projectile : PoolObject, IWeaponVisitor
 
     public void Initiate(Vector3 targetPosition)
     {
+        StopAllCoroutines();
         _projectileGFX.SetActive(true);
         _trail.enabled = true;
         _trail.time = -1;
@@ -57,6 +58,8 @@ public class Projectile : PoolObject, IWeaponVisitor
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.TryGetComponent<Projectile>(out Projectile projectile))
+            return;
         if (_onlyPlayerHealth)
             Explode();
 
@@ -79,6 +82,7 @@ public class Projectile : PoolObject, IWeaponVisitor
 
         _cinemachineImpulseSource?.GenerateImpulse();
         _explosived = true;
+        colliders = new Collider[35];
         Physics.OverlapSphereNonAlloc(transform.position, _explosionRange, colliders, _layerMask);
 
         foreach (var other in colliders)

@@ -39,6 +39,7 @@ public class KunitanShoot : MonoBehaviour
 
     private void OnEnable()
     {
+        
         _weaponShootState.ShootPerformed += OnShootPerformed;
     }
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using SlimUI.ModernMenu;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,9 +11,11 @@ public class Settings : MonoBehaviour
 {
     [SerializeField] private GameObject _settingsCanvas;
     [SerializeField] private CinemachineVirtualCamera _cinemachineVirtual;
+    [SerializeField] private ThemedUIData _themeController;
 
-    [SerializeField] private Scrollbar _sensetivitySlider;
-    [SerializeField] private Scrollbar _volumeSlider;
+    [SerializeField] private Slider _sensetivitySlider;
+    [SerializeField] private Slider _volumeSlider;
+    [SerializeField] private PlayerDeath _death;
 
     private CinemachinePOV _cameraModule;
 
@@ -40,6 +43,9 @@ public class Settings : MonoBehaviour
 
     private void Start()
     {
+        _themeController.currentColor = _themeController.custom1.graphic1;
+
+
         _sensetivitySlider.value = PlayerPrefs.GetFloat("Sensetivity", 1f) / 2;
         if (_cameraModule != null) _cameraModule.m_VerticalAxis.m_MaxSpeed = PlayerPrefs.GetFloat("Sensetivity", 1f);
         if (_cameraModule != null) _cameraModule.m_HorizontalAxis.m_MaxSpeed = PlayerPrefs.GetFloat("Sensetivity", 1f);
@@ -48,20 +54,30 @@ public class Settings : MonoBehaviour
         _volumeSlider.value = AudioListener.volume;
     }
 
+    public void OpenCloseSettings()
+    {
+        if (_death.Dead)
+            return;
+        _settingsCanvas.SetActive(!_settingsCanvas.activeSelf);
+        Open = _settingsCanvas.activeSelf;
+        if (_settingsCanvas.activeSelf)
+        {
+            PlayerTime.Instance.PauseTimeStop();
+            Opened?.Invoke();
+        }
+        else
+        {
+            Time.timeScale = 1;
+            Closed?.Invoke();
+        }
+    }
+
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            _settingsCanvas.SetActive(!_settingsCanvas.activeSelf);
-            Open = _settingsCanvas.activeSelf;
-            if (_settingsCanvas.activeSelf)
-            {
-                Opened?.Invoke();
-            }
-            else
-            {
-                Closed?.Invoke();
-            }
+            OpenCloseSettings();
         }
     }
 

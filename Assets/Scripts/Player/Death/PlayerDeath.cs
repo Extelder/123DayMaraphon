@@ -8,6 +8,8 @@ public class PlayerDeath : MonoBehaviour
 {
     [SerializeField] private GameObject _deadCanvas;
 
+    public bool Dead { get; private set; }
+    
     private void Start()
     {
         PlayerHealth.Instance.Dead += OnDead;
@@ -16,13 +18,17 @@ public class PlayerDeath : MonoBehaviour
     private void OnDead()
     {
         _deadCanvas.SetActive(true);
+        Dead = true;
         GameCursor.Instance.Show();
         Time.timeScale = 0;
+        AudioListener.volume = 0;
     }
 
     private void OnDisable()
     {
+        Dead = false;
         Time.timeScale = 1;
+        AudioListener.volume = 1;
         GameCursor.Instance.Hide();
         PlayerHealth.Instance.Dead -= OnDead;
     }
