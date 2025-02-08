@@ -24,6 +24,8 @@ public class Projectile : PoolObject, IWeaponVisitor
 
     private float _trailTime;
 
+    public event Action Exploded;
+
     [SerializeField] private Rigidbody _rigidbody;
 
     private void Awake()
@@ -122,7 +124,9 @@ public class Projectile : PoolObject, IWeaponVisitor
                                       Vector3.SqrMagnitude(transform.position - health.transform.position));
             }
         }
+        
 
+        Exploded?.Invoke();
         _explosiveParticle?.Play();
         _projectileGFX.SetActive(false);
         Invoke(nameof(ReturnToPool), ReturnToPoolDelay);

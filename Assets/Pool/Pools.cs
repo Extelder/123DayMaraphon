@@ -24,4 +24,12 @@ public class Pools : MonoBehaviour
     [field: SerializeField] public Pool RailgunPool { get; private set; }
     [field: SerializeField] public Pool RiflePool { get; private set; }
     [field: SerializeField] public Pool RPGPool { get; private set; }
+    [field: SerializeField] public Pool DashDownSoundPool { get; private set; }
+    [field: SerializeField] public Pool BigBoySoundPool { get; private set; }
+    [field: SerializeField] public Pool SexyGuyPunchSoundPool { get; private set; }
+    [field: SerializeField] public Pool FPVDroneShotSoundPool { get; private set; }
+    [field: SerializeField] public Pool TurretShotSoundPool { get; private set; }
+    [field: SerializeField] public Pool RaperShotSoundPool { get; private set; }
+    [field: SerializeField] public Pool GhostSoundPool { get; private set; }
+    [field: SerializeField] public Pool ProjectileSoundPool { get; private set; }
 }

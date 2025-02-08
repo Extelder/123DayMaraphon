@@ -25,6 +25,7 @@ public class PlayerDashDown : Dashing
 
     public event Action Stashed;
 
+    
     public void DashDown()
     {
         if (_groundChecker.Detected)

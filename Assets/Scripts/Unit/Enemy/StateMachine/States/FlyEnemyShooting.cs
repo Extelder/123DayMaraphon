@@ -14,10 +14,13 @@ public class FlyEnemyShooting : State
 
     [Inject] private Pools _pools;
 
+    public event Action Attacked;
+
     public override void Enter()
     {
         StopAllCoroutines();
 
+        Attacked?.Invoke();
         Vector3 direction = _shootPoint.position + _shootPoint.forward * _range;
         Projectile projectile = _pools.FPVProjectilePool
             .GetFreeElement(_shootPoint.position, Quaternion.FromToRotation(_shootPoint.position, direction))

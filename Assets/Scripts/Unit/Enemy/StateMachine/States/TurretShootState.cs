@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class TurretShootState : State
     [SerializeField] private float _range = 500f;
 
     [Inject] private Pools _pools;
+
+    public event Action Attacked;
 
     public override void Enter()
     {
@@ -33,6 +36,7 @@ public class TurretShootState : State
         while (true)
         {
             yield return new WaitForSeconds(_maxRandomToShoot);
+            Attacked?.Invoke();
             Vector3 direction = _shootPoint.position + _shootPoint.forward * _range;
             Projectile projectile = _pools.TURRETProjectilePool
                 .GetFreeElement(_shootPoint.position, Quaternion.FromToRotation(_shootPoint.position, direction))

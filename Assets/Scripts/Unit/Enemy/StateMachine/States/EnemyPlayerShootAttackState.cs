@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,8 @@ public class EnemyPlayerShootAttackState : EnemyState
     [Inject] private Pools _pools;
 
     private Vector3 _startSpineParentEulerAngles;
+
+    public event Action Attacked;
 
     public override void Enter()
     {
@@ -40,6 +43,7 @@ public class EnemyPlayerShootAttackState : EnemyState
 
     public void Attack()
     {
+        Attacked?.Invoke();
         Vector3 direction = _shootPoint.position + _shootPoint.forward * _range;
         Projectile projectile = _pools.FPVProjectilePool
             .GetFreeElement(_shootPoint.position, Quaternion.FromToRotation(_shootPoint.position, direction))
