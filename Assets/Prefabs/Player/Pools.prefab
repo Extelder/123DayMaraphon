@@ -10358,7 +10358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 5787254314949625638}
   _container: {fileID: 8144767293679657079}
-  _minObjectsCapacity: 10
+  _minObjectsCapacity: 200
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &2223473267932492650
@@ -10408,7 +10408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 1792328631876822513}
   _container: {fileID: 5674870657079738341}
-  _minObjectsCapacity: 10
+  _minObjectsCapacity: 200
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &2384531209254804703
@@ -16614,7 +16614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 1951800916276069021}
   _container: {fileID: 3973152026410369490}
-  _minObjectsCapacity: 10
+  _minObjectsCapacity: 200
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &3737723170723239185
@@ -22432,7 +22432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 1929126294875592281}
   _container: {fileID: 4768065016449393229}
-  _minObjectsCapacity: 10
+  _minObjectsCapacity: 200
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &5108021959525408390
@@ -37579,7 +37579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 7744974687049297746}
   _container: {fileID: 3150745730754627077}
-  _minObjectsCapacity: 10
+  _minObjectsCapacity: 200
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &6731918188384763417
@@ -37830,7 +37830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 5168145389535105533}
   _container: {fileID: 557354752906758478}
-  _minObjectsCapacity: 10
+  _minObjectsCapacity: 200
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &6887018326251611849
@@ -47845,7 +47845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 4999857314576219187}
   _container: {fileID: 7654416703136072501}
-  _minObjectsCapacity: 10
+  _minObjectsCapacity: 1000
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &8335415183545121247
