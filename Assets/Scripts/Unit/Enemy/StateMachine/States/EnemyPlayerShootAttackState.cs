@@ -43,11 +43,15 @@ public class EnemyPlayerShootAttackState : EnemyState
 
     public void Attack()
     {
-        Attacked?.Invoke();
         Vector3 direction = _shootPoint.position + _shootPoint.forward * _range;
         Projectile projectile = _pools.FPVProjectilePool
             .GetFreeElement(_shootPoint.position, Quaternion.FromToRotation(_shootPoint.position, direction))
             .GetComponent<Projectile>();
         projectile.Initiate(direction);
+    }
+
+    public void PlaySound()
+    {
+        Attacked?.Invoke();
     }
 }
