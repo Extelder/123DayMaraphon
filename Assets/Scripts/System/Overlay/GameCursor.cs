@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public struct CursorState
 {
@@ -31,6 +32,10 @@ public class GameCursor : MonoBehaviour
     private void OnEnable()
     {
         Hide();
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Show();
+        }
     }
 
     public void ToPrevState()
