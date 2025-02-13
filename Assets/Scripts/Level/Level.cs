@@ -16,5 +16,6 @@ public class Level : MonoBehaviour
     {
         Instance = this;
         _character.Hints.AcceptNewHint("Level - " + _name);
+        PlayerPrefs.SetString(_name, "Unlocked");
     }
 }

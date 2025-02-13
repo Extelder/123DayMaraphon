@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0c39d6d2aa3f1544e905cd0af2a7e50c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cyberform Super-Italic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 76501e9925e4f3a4790c8854f858f963, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

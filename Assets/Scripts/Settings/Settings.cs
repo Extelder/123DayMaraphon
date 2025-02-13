@@ -32,7 +32,7 @@ public class Settings : MonoBehaviour
         {
             Instance = this;
 
-            _cameraModule = _cinemachineVirtual.GetCinemachineComponent<CinemachinePOV>();
+            _cameraModule = _cinemachineVirtual?.GetCinemachineComponent<CinemachinePOV>();
             return;
         }
 
@@ -56,8 +56,9 @@ public class Settings : MonoBehaviour
 
     public void OpenCloseSettings()
     {
-        if (_death.Dead)
-            return;
+        if (_death != null)
+            if (_death.Dead)
+                return;
         _settingsCanvas.SetActive(!_settingsCanvas.activeSelf);
         Open = _settingsCanvas.activeSelf;
         if (_settingsCanvas.activeSelf)

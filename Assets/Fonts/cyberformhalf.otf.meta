@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ff93e04cea08b64419d92a4a42fd4a52
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cyberform Halftone
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: dcc60c68658640a4b95510cd248ae31a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
