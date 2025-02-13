@@ -55925,6 +55925,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3053664777278148117, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}
+      propertyPath: m_Mass
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053664777278148117, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053664777278148117, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
@@ -56046,7 +56056,7 @@ PrefabInstance:
     - target: {fileID: 8770932165466361121, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}
       propertyPath: _layerMask.m_Bits
-      value: 66816
+      value: 1792
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

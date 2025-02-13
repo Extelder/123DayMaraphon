@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b038100f3a5f65f4d9005be751037ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startState: {fileID: 3919889674743235195}
+  _startState: {fileID: 5439213385284901700}
   _shootingState: {fileID: 3919889674743235195}
   _defaultState: {fileID: 5439213385284901700}
 --- !u!114 &5439213385284901700
@@ -180,7 +180,7 @@ MonoBehaviour:
   CanChanged: 1
   _rigidbody: {fileID: 696573002826648352}
   _stateMachine: {fileID: 761856347449456984}
-  _randomImpulse: 30
+  _randomImpulse: 5
 --- !u!114 &3919889674743235195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
