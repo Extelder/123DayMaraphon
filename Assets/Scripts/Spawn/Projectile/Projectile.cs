@@ -61,6 +61,17 @@ public class Projectile : PoolObject, IWeaponVisitor
         _explosived = false;
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.TryGetComponent<Projectile>(out Projectile projectile))
+            return;
+        if (_onlyPlayerHealth)
+            Explode();
+
+        if (!other.gameObject.TryGetComponent<PlayerMovement>(out PlayerMovement movement) && !_onlyPlayerHealth)
+            Explode();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Projectile>(out Projectile projectile))

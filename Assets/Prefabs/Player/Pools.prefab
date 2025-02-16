@@ -53637,6 +53637,11 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.63359123
       objectReference: {fileID: 0}
+    - target: {fileID: 584302938806424439, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 891130732422709857, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}
       propertyPath: m_IsActive
@@ -56428,6 +56433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: -0.63359123
+      objectReference: {fileID: 0}
+    - target: {fileID: 584302938806424439, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 891130732422709857, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}
