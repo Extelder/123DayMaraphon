@@ -22,6 +22,8 @@ public class Projectile : PoolObject, IWeaponVisitor
     private Collider[] colliders = new Collider[50];
     private bool _explosived;
 
+    private float _defaultDamage;
+
     private float _trailTime;
 
     public event Action Exploded;
@@ -30,6 +32,7 @@ public class Projectile : PoolObject, IWeaponVisitor
 
     private void Awake()
     {
+        _defaultDamage = Damage;
         _trailTime = _trail.time;
     }
 
@@ -71,11 +74,13 @@ public class Projectile : PoolObject, IWeaponVisitor
 
     public void Explode()
     {
+        Damage = _defaultDamage;
         Explode(1);
     }
 
     public void Explode(float damageMultiplier)
     {
+        Damage *= damageMultiplier;
         if (_explosived)
             return;
         _trail.time = 0;
@@ -128,7 +133,7 @@ public class Projectile : PoolObject, IWeaponVisitor
                                       Vector3.SqrMagnitude(transform.position - health.transform.position));
             }
         }
-        
+
 
         Exploded?.Invoke();
         _explosiveParticle?.Play();

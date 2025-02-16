@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: fb176142af8bd5d4687eb0ae008aaf6e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cyberform Gradient Italic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0868ad93c72f8164bbbc9ba0bb1fd979, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

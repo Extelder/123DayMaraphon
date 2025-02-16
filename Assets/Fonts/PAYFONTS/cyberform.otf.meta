@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f5d49dc5df6aa774eae458e759b2de80
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cyberform
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 850dbc41ed3f6424886c5387184f1ee7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

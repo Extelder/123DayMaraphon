@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ec04e4cb8ade5b04ba8a338303c18c53
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cyberform Semi-Leftalic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a1c4a622f09d33943b9f24affa1c08f4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
