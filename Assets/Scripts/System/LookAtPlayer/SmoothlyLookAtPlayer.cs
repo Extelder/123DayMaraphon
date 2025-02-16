@@ -7,14 +7,13 @@ using Zenject;
 
 public class SmoothlyLookAtPlayer : MonoBehaviour
 {
-    [Inject] private PlayerCharacter _playerCharacter;
     [SerializeField] private float _turnSpeed;
 
     private Transform _player;
 
     private void Awake()
     {
-        _player = _playerCharacter.Transform;
+        _player = PlayerCharacter.Instance.Transform;
     }
 
     private void Update()

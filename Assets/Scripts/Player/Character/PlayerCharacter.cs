@@ -22,6 +22,19 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] private Vector3 _offset;
     
     private RaycastHit _hit;
+    public static PlayerCharacter Instance { get; private set; }
+
+
+    private void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+            return;
+        }
+
+        Debug.LogError("THERE`s one more PlAYERCHARACTER");
+    }
 
     public static PlayerCharacter Instance { get; private set; }
 
