@@ -23,6 +23,19 @@ public class PlayerCharacter : MonoBehaviour
 
 
     private RaycastHit _hit;
+    public static PlayerCharacter Instance { get; private set; }
+
+
+    private void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+            return;
+        }
+
+        Debug.LogError("THERE`s one more PlAYERCHARACTER");
+    }
 
     private void Update()
     {
