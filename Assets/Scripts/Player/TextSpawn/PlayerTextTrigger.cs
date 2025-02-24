@@ -21,10 +21,11 @@ public class PlayerTextTrigger : PlayerTrigger
     public override void Triggered()
     {
         var instance = _textPool.GetFreeElement(_spawnPlace.position);
+        var placeForTextLerping = _character.PlaceForTextLerping.transform;
         Observable.EveryUpdate().Subscribe(_ =>
         {
             instance.transform.position = Vector3.Lerp(instance.transform.position,
-                _character.PlaceForTextLerping.transform.position, _textMoveSpeed * Time.deltaTime);
+                placeForTextLerping.position, _textMoveSpeed * Time.deltaTime);
             ChangeScale(instance);
         }).AddTo(_disposable);
         _confettiPool.GetFreeElement(_particleSpawnPlace.position);
@@ -40,7 +41,6 @@ public class PlayerTextTrigger : PlayerTrigger
     private void OnDisable()
     {
         _disposable.Clear();
-        DestroyComponentAfterTriggered = true;
         DestroyGameObjectAfterTriggered = true;
     }
 }

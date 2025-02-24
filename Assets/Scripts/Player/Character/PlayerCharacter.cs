@@ -15,7 +15,7 @@ public class PlayerCharacter : MonoBehaviour
     [field: SerializeField] public Transform PlaceForTextLerping { get; private set; }
     [field: SerializeField] public WeaponSwitch WeaponSwitch { get; private set; }
     [field: SerializeField] public PlayerHints Hints { get; private set; }
-
+    
     public Vector3 PlayerPositionForNavMesh { get; private set; }
     [SerializeField] private float _rayRange;
     [SerializeField] private float _randomNavMeshRadius;
