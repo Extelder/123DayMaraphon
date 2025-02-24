@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class FPVDroneEnemyHealth : Health
 {
+    [SerializeField] private FlyDefaultEnemyTrappable _enemyTrappable;
     public event Action Dead;
     public override void Death()
     {
+        _enemyTrappable.OnTrapped();
         Dead?.Invoke();
     }
 }

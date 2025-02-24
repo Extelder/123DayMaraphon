@@ -5,6 +5,11 @@ public class StateMachine : MonoBehaviour
     [SerializeField] private State _startState;
     public State CurrentState { get; private set; }
 
+    public void DefaultState()
+    {
+        ChangeState(_startState);
+    }
+
     public virtual void OnEnable()
     {
         CurrentState = _startState;

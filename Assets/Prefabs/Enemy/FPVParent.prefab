@@ -10569,6 +10569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MaxValue>k__BackingField: 50
+  _enemyTrappable: {fileID: 5367030205455967674}
 --- !u!1 &9179874346588095712
 GameObject:
   m_ObjectHideFlags: 0
