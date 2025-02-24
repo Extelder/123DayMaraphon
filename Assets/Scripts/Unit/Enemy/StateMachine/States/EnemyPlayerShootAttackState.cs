@@ -5,9 +5,16 @@ using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 
+public enum ProjectileType
+{
+    FPVProjectile,
+    SlashProjectile
+}
+
 public class EnemyPlayerShootAttackState : EnemyState
 {
     [SerializeField] private NavMeshAgent _agent;
+    [SerializeField] private ProjectileType _projectileType;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private float _range = 500f;
     [SerializeField] private EnemyStateMachine _enemyStateMachine;
@@ -15,6 +22,8 @@ public class EnemyPlayerShootAttackState : EnemyState
     [SerializeField] private SmoothlyLookAtPlayer _smoothlyLookAtPlayer;
 
     [Inject] private Pools _pools;
+
+    private Pool _currentPool;
 
     private Vector3 _startSpineParentEulerAngles;
 
@@ -44,10 +53,26 @@ public class EnemyPlayerShootAttackState : EnemyState
     public void Attack()
     {
         Vector3 direction = _shootPoint.position + _shootPoint.forward * _range;
-        Projectile projectile = _pools.FPVProjectilePool
-            .GetFreeElement(_shootPoint.position, Quaternion.FromToRotation(_shootPoint.position, direction))
-            .GetComponent<Projectile>();
-        projectile.Initiate(direction);
+        switch (_projectileType)
+        {
+            case ProjectileType.FPVProjectile:
+                _currentPool = _pools.FPVProjectilePool;
+                Projectile projectile = _currentPool
+                    .GetFreeElement(_shootPoint.position, Quaternion.FromToRotation(_shootPoint.position, direction))
+                    .GetComponent<Projectile>();
+
+                projectile.Initiate(direction);
+
+                break;
+            case ProjectileType.SlashProjectile:
+                _currentPool = _pools.SlashProjectilePool;
+                SlashProjectile slashProjectile = _currentPool
+                    .GetFreeElement(_shootPoint.position, Quaternion.FromToRotation(_shootPoint.position, direction))
+                    .GetComponent<SlashProjectile>();
+
+                slashProjectile.Initiate(direction);
+                break;
+        }
     }
 
     public void PlaySound()

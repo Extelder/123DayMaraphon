@@ -22,8 +22,8 @@ TagManager:
   - GroundChecker
   - Turret
   - Enemy
-  - 
-  - 
+  - CollisionOnlyWithPlayer
+  - CollisionOnlyWithPlayerAndLevel
   - 
   - 
   - 

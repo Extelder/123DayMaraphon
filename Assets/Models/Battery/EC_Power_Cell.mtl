@@ -1,0 +1,17 @@
+# Blender MTL File: 'EC_Power_Cell.blend'
+# Material Count: 1
+
+newmtl Power_Cell
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump textures\\EC_Power_Cell_Normal.jpg
+map_Kd textures\\EC_Power_Cell_Color_Blue.jpg
+map_Ke textures\\EC_Power_Cell_Emission_Blue.jpg
+map_Ns textures\\EC_Power_Cell_Roughness.jpg
+refl textures\\EC_Power_Cell_Metallic.jpg

@@ -4,17 +4,21 @@ using System.Collections.Generic;
 using Cinemachine;
 using SlimUI.ModernMenu;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
     [SerializeField] private GameObject _settingsCanvas;
+    [SerializeField] private AudioMixer _mixer;
     [SerializeField] private CinemachineVirtualCamera _cinemachineVirtual;
     [SerializeField] private ThemedUIData _themeController;
 
     [SerializeField] private Slider _sensetivitySlider;
-    [SerializeField] private Slider _volumeSlider;
+    [SerializeField] private Slider _masterVolumeSlider;
+    [SerializeField] private Slider _musicVolumeSlider;
+    [SerializeField] private Slider _effectsVolumeSlider;
     [SerializeField] private PlayerDeath _death;
 
     private CinemachinePOV _cameraModule;
@@ -45,13 +49,13 @@ public class Settings : MonoBehaviour
     {
         _themeController.currentColor = _themeController.custom1.graphic1;
 
-
         _sensetivitySlider.value = PlayerPrefs.GetFloat("Sensetivity", 1f) / 2;
         if (_cameraModule != null) _cameraModule.m_VerticalAxis.m_MaxSpeed = PlayerPrefs.GetFloat("Sensetivity", 1f);
         if (_cameraModule != null) _cameraModule.m_HorizontalAxis.m_MaxSpeed = PlayerPrefs.GetFloat("Sensetivity", 1f);
 
-        AudioListener.volume = PlayerPrefs.GetFloat("Volume", 0.4f);
-        _volumeSlider.value = AudioListener.volume;
+        _masterVolumeSlider.value = PlayerPrefs.GetFloat("MasterVolume");
+        _musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        _effectsVolumeSlider.value = PlayerPrefs.GetFloat("EffectVolume");
     }
 
     public void OpenCloseSettings()
@@ -89,10 +93,45 @@ public class Settings : MonoBehaviour
         PlayerPrefs.SetFloat("Sensetivity", value * 2);
     }
 
-    public void OnSoundSliderValueChanged(float value)
+    public void OnMasterVolumeSliderValueChanged(float value)
     {
-        AudioListener.volume = value;
-        PlayerPrefs.SetFloat("Volume", value);
+        PlayerPrefs.SetFloat("MasterVolume", value);
+        if (value == 0)
+        {
+            _mixer.SetFloat("MasterVolume", -80);
+        }
+        else
+        {
+            _mixer.SetFloat("MasterVolume", Mathf.Log10(value) * 20);
+        }
+    }
+
+    public void OnMusicVolumeSliderValueChanged(float value)
+    {
+        PlayerPrefs.SetFloat("MusicVolume", value);
+
+        if (value == 0)
+        {
+            _mixer.SetFloat("MusicVolume", -80);
+        }
+        else
+        {
+            _mixer.SetFloat("MusicVolume", Mathf.Log10(value) * 20);
+        }
+    }
+
+    public void OnEffectsVolumeSliderValueChanged(float value)
+    {
+        PlayerPrefs.SetFloat("EffectVolume", value);
+
+        if (value == 0)
+        {
+            _mixer.SetFloat("EffectVolume", -80);
+        }
+        else
+        {
+            _mixer.SetFloat("EffectVolume", Mathf.Log10(value) * 20);
+        }
     }
 
     public void Exit()

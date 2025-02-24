@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PlayerDashAmountUI : MonoBehaviour
 {
     [SerializeField] private PlayerDashAmount _dashAmount;
-    [SerializeField] private Image _bar;
+    [SerializeField] private GameObject _chargeObject;
 
     private void OnEnable()
     {
@@ -13,7 +13,8 @@ public class PlayerDashAmountUI : MonoBehaviour
 
     private void OnAmountChanged(float value)
     {
-        _bar.fillAmount = value;
+        _chargeObject.transform.localScale = new Vector3(_chargeObject.transform.localScale.x, value,
+            _chargeObject.transform.localScale.z);
     }
 
     private void OnDisable()
