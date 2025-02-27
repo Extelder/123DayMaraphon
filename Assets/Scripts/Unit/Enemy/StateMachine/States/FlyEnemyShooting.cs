@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using Zenject;
+using Random = UnityEngine.Random;
 
 public class FlyEnemyShooting : State
 {
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private FlyEnemyStateMachine _stateMachine;
     [SerializeField] private float _maxRandomToChangeState;
+    [SerializeField] private float _minRandomToChangeState;
     [SerializeField] private float _range = 500f;
 
     [Inject] private Pools _pools;
@@ -42,7 +44,7 @@ public class FlyEnemyShooting : State
 
     private IEnumerator WaitingForChangeState()
     {
-        yield return new WaitForSeconds(_maxRandomToChangeState);
+        yield return new WaitForSeconds(Random.Range(_minRandomToChangeState, _maxRandomToChangeState));
         _stateMachine.DefaultState();
     }
 }

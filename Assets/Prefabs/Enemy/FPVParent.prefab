@@ -248,7 +248,8 @@ MonoBehaviour:
   CanChanged: 1
   _shootPoint: {fileID: 2830054342774701681}
   _stateMachine: {fileID: 761856347449456984}
-  _maxRandomToChangeState: 1
+  _maxRandomToChangeState: 2
+  _minRandomToChangeState: 1
   _range: 500
 --- !u!114 &1777864945760988143
 MonoBehaviour:

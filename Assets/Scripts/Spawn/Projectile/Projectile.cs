@@ -20,6 +20,7 @@ public class Projectile : PoolObject, IWeaponVisitor
     [SerializeField] private float _speed;
 
     private Collider[] colliders = new Collider[50];
+    private Collider _collider;
     private bool _explosived;
 
     private float _defaultDamage;
@@ -34,11 +35,13 @@ public class Projectile : PoolObject, IWeaponVisitor
     {
         _defaultDamage = Damage;
         _trailTime = _trail.time;
+        _collider = GetComponent<Collider>();
     }
 
     public void Initiate(Vector3 targetPosition)
     {
         StopAllCoroutines();
+        _collider.enabled = true;
         _projectileGFX.SetActive(true);
         _trail.enabled = true;
         _trail.time = -1;
@@ -94,6 +97,7 @@ public class Projectile : PoolObject, IWeaponVisitor
         Damage *= damageMultiplier;
         if (_explosived)
             return;
+        _collider.enabled = false;
         _trail.time = 0;
 
         _rigidbody.velocity = new Vector3(0, 0, 0);
@@ -168,6 +172,8 @@ public class Projectile : PoolObject, IWeaponVisitor
 
     public void Visit(KunitanShoot kunitanShoot)
     {
+        if (_onlyPlayerHealth)
+            return;
         Explode(5);
         PlayerTime.Instance.TimeStop(0.2f);
     }
