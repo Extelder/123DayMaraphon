@@ -30,7 +30,7 @@ public class UnitLastOutline : MonoBehaviour
                 continue;
 
             yield return new WaitUntil(() =>
-                EnemyWaveSystem.CurrentWaveSystem.HowEnemyLost() <= EnemyWaveSystem.CurrentWaveSystem.EnemyForOutline);
+                EnemyWaveSystem.CurrentWaveSystem.HowMuchEnemyLost() <= EnemyWaveSystem.CurrentWaveSystem.EnemyForOutline);
             EnableOutline();
         }
     }

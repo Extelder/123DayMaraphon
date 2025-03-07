@@ -13,6 +13,7 @@ public class Loading : MonoBehaviour
     private int _currentSceneIndex;
     private AsyncOperation _asyncOperation;
 
+
     private void Start()
     {
         StopAllCoroutines();

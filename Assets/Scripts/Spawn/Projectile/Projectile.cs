@@ -22,6 +22,7 @@ public class Projectile : PoolObject, IWeaponVisitor
     private Collider[] colliders = new Collider[50];
     private Collider _collider;
     private bool _explosived;
+    private bool _useGravity;
 
     private float _defaultDamage;
 
@@ -33,6 +34,7 @@ public class Projectile : PoolObject, IWeaponVisitor
 
     private void Awake()
     {
+        _useGravity = _rigidbody.useGravity;
         _defaultDamage = Damage;
         _trailTime = _trail.time;
         _collider = GetComponent<Collider>();
@@ -45,6 +47,7 @@ public class Projectile : PoolObject, IWeaponVisitor
         _projectileGFX.SetActive(true);
         _trail.enabled = true;
         _trail.time = -1;
+        _rigidbody.useGravity = _useGravity;
         _rigidbody.velocity = new Vector3(0, 0, 0);
         StartCoroutine(WaitingForFrame());
         transform.LookAt(targetPosition, transform.forward);
@@ -100,6 +103,7 @@ public class Projectile : PoolObject, IWeaponVisitor
         _collider.enabled = false;
         _trail.time = 0;
 
+        _rigidbody.useGravity = false;
         _rigidbody.velocity = new Vector3(0, 0, 0);
 
         _cinemachineImpulseSource?.GenerateImpulse();

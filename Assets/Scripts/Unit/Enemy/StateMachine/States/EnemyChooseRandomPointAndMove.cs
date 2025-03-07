@@ -11,18 +11,21 @@ public class EnemyChooseRandomPointAndMove : EnemyState
     [SerializeField] private float _walkRadius;
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private EnemyStateMachine _enemyStateMachine;
+    [SerializeField] private AudioSource _walkAudio;
 
     private NavMeshHit _hit;
     
 
     public override void Enter()
     {
+        _walkAudio.Play();
         Animator.Move();
         StartCoroutine(ChooseRandomPoint());
     }
     
     public override void Exit()
     {
+        _walkAudio.Stop();
         StopAllCoroutines();
     }
 
