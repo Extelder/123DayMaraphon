@@ -58,7 +58,7 @@ public class EnemyWaveSystem : MonoBehaviour
         return true;
     }
 
-    public int HowEnemyLost()
+    public int HowMuchEnemyLost()
     {
         int lost = 0;
 
