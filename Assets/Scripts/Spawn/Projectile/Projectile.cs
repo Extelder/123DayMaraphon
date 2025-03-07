@@ -180,6 +180,8 @@ public class Projectile : PoolObject, IWeaponVisitor
 
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
+        if (_onlyPlayerHealth)
+            return;
         Explode(5);
         PlayerTime.Instance.TimeStop(0.2f);
     }
