@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class PUSPunchState : State
 {
-    [SerializeField] private PusFirstStageAnimator _animator;
+    [SerializeField] private PusAnimator _animator;
     [SerializeField] private PUSSmoothlyLookAt _smoothlyLookAt;
     [SerializeField] private LayerMask _groundCheckMask;
 

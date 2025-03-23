@@ -25,8 +25,11 @@ public class SlashProjectile : PoolObject
         _rigidbody = GetComponent<Rigidbody>();
     }
 
+
     public void Initiate(Vector3 targetPosition)
     {
+        transform.eulerAngles = new Vector3(0, 0, 0);
+
         _rigidbody.velocity = new Vector3(0, 0, 0);
         transform.LookAt(targetPosition, transform.forward);
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);

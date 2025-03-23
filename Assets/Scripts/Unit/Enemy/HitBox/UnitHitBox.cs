@@ -61,7 +61,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         UnitHitted?.Invoke();
     }
 
-    private void SpawningDecal(Vector3 spawnPoint)
+    public virtual void SpawningDecal(Vector3 spawnPoint)
     {
         var currentObject = _pools.BloodExplodePool.GetFreeElement(spawnPoint, Quaternion.identity);
     }

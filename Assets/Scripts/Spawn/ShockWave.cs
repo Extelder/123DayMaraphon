@@ -29,7 +29,7 @@ public class ShockWave : MonoBehaviour
 
     private void OnDisable()
     {
-        _disposable.Clear();
         transform.localScale = new Vector3(0, 0, 0);
+        _disposable.Clear();
     }
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
+    [SerializeField] private bool _notStartOnEnable;
     [SerializeField] private State _startState;
     public State CurrentState { get; private set; }
 
@@ -12,6 +13,13 @@ public class StateMachine : MonoBehaviour
 
     public virtual void OnEnable()
     {
+        if (_notStartOnEnable)
+        {
+            CurrentState = _startState;
+
+            return;
+        }
+
         CurrentState = _startState;
         CurrentState.Enter();
     }

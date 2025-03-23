@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PUSShootState : State
 {
-    [SerializeField] private PusFirstStageAnimator _animator;
+    [SerializeField] private PusAnimator _animator;
     [SerializeField] private Pool _projectilePool;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private float _shootRate;
@@ -12,23 +12,31 @@ public class PUSShootState : State
 
     public override void Enter()
     {
+        StopAllCoroutines();
+
         CanChanged = false;
+        Debug.LogError(CanChanged);
+
         _animator.Shoot();
     }
 
     public override void Exit()
     {
         StopAllCoroutines();
+        CanChanged = true;
+        Debug.LogError(CanChanged);
     }
 
     public void StartShooting()
     {
+        StopAllCoroutines();
         StartCoroutine(Shooting());
     }
 
     public void StopShooting()
     {
         CanChanged = true;
+        Debug.LogError(CanChanged);
         StopAllCoroutines();
     }
 

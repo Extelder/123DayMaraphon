@@ -5,7 +5,7 @@ public class OverlapSettings : MonoBehaviour
 {
     public Collider[] Colliders = new Collider[10];
     public int Size;
-    [Range(0f, 10f)] public float _sphereRadius;
+     public float _sphereRadius;
 
     public LayerMask _searchLayer;
     public Transform _overlapPoint;
