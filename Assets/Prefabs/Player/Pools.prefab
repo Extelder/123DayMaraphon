@@ -57663,10 +57663,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4843244583347041299}
-    - targetCorrespondingSourceObject: {fileID: 4818011281796268143, guid: 2c4a954ac18ba9445b847a21b4bd0795,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2992491733171728261}
   m_SourcePrefab: {fileID: 100100000, guid: 2c4a954ac18ba9445b847a21b4bd0795, type: 3}
 --- !u!4 &241702787377076648 stripped
 Transform:
@@ -57810,19 +57806,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectile: {fileID: 700154759506139667}
   _pools: {fileID: 1528374024075610752}
---- !u!114 &2992491733171728261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3662249915444664157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 747b6f50bcdd55d428595d63177ba05e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cooldown: 1
 --- !u!4 &4521459697150610219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5670204542867364889, guid: 2c4a954ac18ba9445b847a21b4bd0795,

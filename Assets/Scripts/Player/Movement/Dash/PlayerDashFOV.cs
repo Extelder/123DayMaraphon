@@ -12,6 +12,7 @@ public class PlayerDashFOV : MonoBehaviour
     [SerializeField] private float _lerpDashSpeed;
     [SerializeField] private float _lerpDefaultSpeed;
     [SerializeField] private CinemachineVirtualCamera _cinemachine;
+    [SerializeField] private PlayerFOV _playerFOV;
 
     private CompositeDisposable _disposable = new CompositeDisposable();
 
@@ -20,8 +21,14 @@ public class PlayerDashFOV : MonoBehaviour
 
     private void OnEnable()
     {
+        _playerFOV.OnFOVChanged += OnFOVChanged;
         _dash.Dashed += OnDashed;
-        _defaultFOV = _cinemachine.m_Lens.FieldOfView;
+    }
+
+    private void OnFOVChanged(float value)
+    {
+        _defaultFOV = value;
+        _disposable.Clear();
     }
 
     private void OnDashed()
@@ -47,6 +54,7 @@ public class PlayerDashFOV : MonoBehaviour
 
     private void OnDisable()
     {
+        _playerFOV.OnFOVChanged -= OnFOVChanged;
         _dash.Dashed += OnDashed;
         _disposable.Clear();
     }
