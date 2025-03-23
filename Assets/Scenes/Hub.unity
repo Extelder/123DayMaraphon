@@ -7799,11 +7799,25 @@ MonoBehaviour:
   _mixer: {fileID: 24100000, guid: f52253784b4fc7845a0853f4f6fc749d, type: 2}
   _cinemachineVirtual: {fileID: 0}
   _themeController: {fileID: 11400000, guid: e00c7d2bc58a2424b8dc09ecdafdb067, type: 2}
+  _playerFOV: {fileID: 0}
   _sensetivitySlider: {fileID: 62620335}
   _masterVolumeSlider: {fileID: 540316832}
   _musicVolumeSlider: {fileID: 1662023641}
   _effectsVolumeSlider: {fileID: 1957397328}
+  _fovSlider: {fileID: 0}
+  _resolutionDropdown: {fileID: 0}
   _death: {fileID: 0}
+  _onText: 
+  _offText: 
+  _outlineSwitchText: {fileID: 0}
+  _outlineRenders: []
+  _fullScreenOnOffTText: {fileID: 0}
+  _bloodSplatOnOffTText: {fileID: 0}
+  _sensetivityValueText: {fileID: 0}
+  _fovValueText: {fileID: 0}
+  _musicVolumeValueText: {fileID: 0}
+  _effectsVolumeValueText: {fileID: 0}
+  _masterVolumeValueText: {fileID: 0}
 --- !u!1001 &204766084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34597,7 +34611,7 @@ GameObject:
   - component: {fileID: 883932182}
   - component: {fileID: 883932181}
   - component: {fileID: 883932180}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66658,6 +66672,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 984d4a8f8d7aabb4487f8a1a7e9e342c,
         type: 2}
+    - target: {fileID: 851468221434216154, guid: 070c7f05360b6b54c88cd8eda1f42dff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 872933780667792835, guid: 070c7f05360b6b54c88cd8eda1f42dff,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -66923,6 +66942,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 316f403ed1b5ecb44955e42d4ea3511a,
         type: 2}
+    - target: {fileID: 3070759479845197343, guid: 070c7f05360b6b54c88cd8eda1f42dff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3113804263368341874, guid: 070c7f05360b6b54c88cd8eda1f42dff,
         type: 3}
       propertyPath: m_fontAsset
@@ -67434,6 +67458,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EffectsSlider
       objectReference: {fileID: 0}
+    - target: {fileID: 6204692044752234754, guid: 070c7f05360b6b54c88cd8eda1f42dff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6212891413747348735, guid: 070c7f05360b6b54c88cd8eda1f42dff,
         type: 3}
       propertyPath: m_fontAsset
@@ -67472,6 +67501,16 @@ PrefabInstance:
     - target: {fileID: 6553885735061334057, guid: 070c7f05360b6b54c88cd8eda1f42dff,
         type: 3}
       propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618080635124312914, guid: 070c7f05360b6b54c88cd8eda1f42dff,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618080635124312914, guid: 070c7f05360b6b54c88cd8eda1f42dff,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6690697391569840198, guid: 070c7f05360b6b54c88cd8eda1f42dff,
@@ -67663,12 +67702,22 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7441918860780524409, guid: 070c7f05360b6b54c88cd8eda1f42dff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7446673580535176915, guid: 070c7f05360b6b54c88cd8eda1f42dff,
         type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 316f403ed1b5ecb44955e42d4ea3511a,
         type: 2}
+    - target: {fileID: 7458415583048789900, guid: 070c7f05360b6b54c88cd8eda1f42dff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7522554946641965547, guid: 070c7f05360b6b54c88cd8eda1f42dff,
         type: 3}
       propertyPath: m_fontAsset
@@ -67755,6 +67804,11 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7851892717913225602, guid: 070c7f05360b6b54c88cd8eda1f42dff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7853139109059632150, guid: 070c7f05360b6b54c88cd8eda1f42dff,
         type: 3}
       propertyPath: m_fontAsset
@@ -67781,6 +67835,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955934126660224223, guid: 070c7f05360b6b54c88cd8eda1f42dff,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955934126660224223, guid: 070c7f05360b6b54c88cd8eda1f42dff,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8026515428243122226, guid: 070c7f05360b6b54c88cd8eda1f42dff,
         type: 3}
@@ -67899,6 +67963,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 316f403ed1b5ecb44955e42d4ea3511a,
         type: 2}
+    - target: {fileID: 8819303121031994641, guid: 070c7f05360b6b54c88cd8eda1f42dff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8898937418015094869, guid: 070c7f05360b6b54c88cd8eda1f42dff,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -94155,7 +94224,7 @@ GameObject:
   - component: {fileID: 3745622627364087805}
   - component: {fileID: 5334037118248210787}
   - component: {fileID: 4539702729348648380}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

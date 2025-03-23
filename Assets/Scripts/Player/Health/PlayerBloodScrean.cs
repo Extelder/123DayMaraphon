@@ -12,7 +12,7 @@ public class PlayerBloodScrean : MonoBehaviour
 
     private void OnEnable()
     {
-        _playerHealth.HealthValueChanged += OnHealthValueChanged;
+        _playerHealth.Damaged += OnHealthValueChanged;
     }
 
     private void OnHealthValueChanged(float value)
@@ -22,6 +22,6 @@ public class PlayerBloodScrean : MonoBehaviour
 
     private void OnDisable()
     {
-        _playerHealth.HealthValueChanged -= OnHealthValueChanged;
+        _playerHealth.Damaged -= OnHealthValueChanged;
     }
 }
