@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class PlayerFOV : MonoBehaviour
 {
-    public float FOV;
     public event Action<float> OnFOVChanged;
     [SerializeField] private CinemachineVirtualCamera _cinemachine;
     [SerializeField] private Camera _overlayCamera;

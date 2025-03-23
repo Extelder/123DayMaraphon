@@ -27,8 +27,8 @@ public class PlayerDashFOV : MonoBehaviour
 
     private void OnFOVChanged(float value)
     {
-        _defaultFOV = value;
         _disposable.Clear();
+        _defaultFOV = value;
     }
 
     private void OnDashed()
