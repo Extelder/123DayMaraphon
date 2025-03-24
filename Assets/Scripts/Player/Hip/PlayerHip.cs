@@ -6,13 +6,13 @@ public class PlayerHip : MonoBehaviour
 
     private GameObject _currentHip;
 
-    public void ChangeHip(GameObject hip)
+    public void ChangeHip(GameObject hip, Vector3 scaleFactor)
     {
         if (_currentHip != hip)
         {
             _currentHip?.SetActive(false);
             _currentHip = hip;
-            _killHipPool.transform.localScale = _currentHip.transform.localScale;
+            _killHipPool.transform.localScale = scaleFactor;
             _currentHip.SetActive(true);
         }
     }
