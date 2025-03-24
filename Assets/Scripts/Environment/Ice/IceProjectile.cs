@@ -7,12 +7,10 @@ using UnityEngine;
 
 public class IceProjectile : PoolObject
 {
-    [SerializeField] private IceHitBox _iceHitBox;
+    [SerializeField] private GameObject _parent;
     [field: SerializeField] public float Damage { get; private set; }
     [SerializeField] private float _speed;
     [SerializeField] private float _characterUpForce;
-
-    public event Action Triggered;
 
     private Rigidbody _rigidbody;
     [SerializeField] private Collider _collider;
@@ -31,10 +29,9 @@ public class IceProjectile : PoolObject
 
     public void Initiate()
     {
-        _iceHitBox.Hitted += OnHitted;
-        transform.eulerAngles = new Vector3(0, 0, 0);
+        transform.eulerAngles = new Vector3(-90, 0, 0);
+        transform.localPosition = new Vector3(0, 0, 0);
 
-        _collider.enabled = true;
         _rigidbody.velocity = new Vector3(0, 0, 0);
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
         _rigidbody.AddForce(Vector3.down * _speed, ForceMode.Impulse);
@@ -46,26 +43,14 @@ public class IceProjectile : PoolObject
                 hitBox.GetComponent<Rigidbody>()
                     .AddForce(hitBox.transform.up * _characterUpForce, ForceMode.Impulse);
                 hitBox.TakeDamage(Damage);
-                gameObject.SetActive(false);
-                _collider.enabled = false;
-                Triggered?.Invoke();
-            }
-            else
-            {
-                _collider.enabled = false;
+                _parent.SetActive(false);
+                _disposable.Clear();
             }
         }).AddTo(_disposable);
     }
 
-    private void OnHitted()
-    {
-        _disposable.Clear();
-    }
-
     private void OnDisable()
     {
-        _iceHitBox.Hitted -= OnHitted;
-        transform.eulerAngles = new Vector3(0, 0, 0);
         _disposable.Clear();
     }
 }

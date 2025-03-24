@@ -10,8 +10,10 @@ public class IceHitBox : MonoBehaviour, IWeaponVisitor
     [SerializeField] private GameObject _iceBrokentGFX;
     [SerializeField] private Collider _collider;
 
+    [SerializeField] private bool _disableCollider;
+
     public event Action Hitted;
-    
+
     public void Visit(WeaponShoot weaponShoot)
     {
     }
@@ -19,7 +21,8 @@ public class IceHitBox : MonoBehaviour, IWeaponVisitor
     public void Visit(KunitanShoot kunitanShoot)
     {
         Hitted?.Invoke();
-        _collider.enabled = false;
+        if (_disableCollider)
+            _collider.enabled = false;
         _iceExplodeEffect.Play();
         _iceGFX.SetActive(false);
         _iceBrokentGFX?.SetActive(true);

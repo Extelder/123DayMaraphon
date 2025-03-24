@@ -17,10 +17,17 @@ public class PlayerWeaponInputs : MonoBehaviour
     public event Action KunitanaShootPressedUp;
 
     public event Action WeaponAbilityPressedDown;
+    private Settings _settings;
 
+    private void Start()
+    {
+        _settings = Settings.Instance;
+    }
 
     private void Update()
     {
+        if (_settings.Open)
+            return;
         if (Input.GetKeyDown(KunitanaShootKeyCode))
         {
             KunitanaShootPressedDown?.Invoke();

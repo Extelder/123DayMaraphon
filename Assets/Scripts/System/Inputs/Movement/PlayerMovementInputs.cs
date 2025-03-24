@@ -13,6 +13,8 @@ public class PlayerMovementInputs : MonoBehaviour
     public event Action JumpPressedDown;
     public bool IsMoving { get; set; }
 
+    private Settings _settings;
+
     public void GetMovingInputs()
     {
         MovementHorizontal = Input.GetAxisRaw("Horizontal");
@@ -20,9 +22,15 @@ public class PlayerMovementInputs : MonoBehaviour
         IsMoving = true;
     }
 
+    private void Start()
+    {
+        _settings = Settings.Instance;
+    }
+
     private void Update()
     {
-
+        if (_settings.Open)
+            return;
         if (Input.GetKeyDown(DashKeyCode))
         {
             DashPressedDown?.Invoke();
