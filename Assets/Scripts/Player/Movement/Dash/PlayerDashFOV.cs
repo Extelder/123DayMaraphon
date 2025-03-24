@@ -43,6 +43,7 @@ public class PlayerDashFOV : MonoBehaviour
         {
             _cinemachine.m_Lens.FieldOfView =
                 Mathf.Lerp(_cinemachine.m_Lens.FieldOfView, _targetFOV, time * Time.deltaTime);
+            Debug.Log(_targetFOV);
 
             if (_targetFOV == calcululateDashFOV && calcululateDashFOV - _cinemachine.m_Lens.FieldOfView < 1)
             {

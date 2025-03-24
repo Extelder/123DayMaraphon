@@ -95,6 +95,8 @@ public class Settings : MonoBehaviour
         _musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1);
         _effectsVolumeSlider.value = PlayerPrefs.GetFloat("EffectVolume", 1);
         _fovSlider.value = PlayerPrefs.GetFloat("FOV", 100);
+        if (!_hub)
+            _playerFOV.ChangeFOV(PlayerPrefs.GetFloat("FOV", 100));
         QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality", 3));
         bool fullScreen = Convert.ToBoolean(PlayerPrefs.GetInt("FullScreen", 1));
         Screen.SetResolution(PlayerPrefs.GetInt("Width"), PlayerPrefs.GetInt("Height"), fullScreen);

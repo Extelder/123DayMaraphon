@@ -19707,12 +19707,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcbb0b62ef942f4b9669cc21ceadeed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sliderR: {fileID: 0}
-  _sliderG: {fileID: 0}
-  _sliderB: {fileID: 0}
-  _rText: {fileID: 0}
-  _gText: {fileID: 0}
-  _bText: {fileID: 0}
+  _sliderR: {fileID: 7876507790175242087}
+  _sliderG: {fileID: 5655142631006289244}
+  _sliderB: {fileID: 79649832465472844}
+  _rText: {fileID: 5278986621805541951}
+  _gText: {fileID: 6117469601343911658}
+  _bText: {fileID: 7474463462553115298}
   _r: HUDR
   _g: HUDG
   _b: HUDB
@@ -55448,12 +55448,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcbb0b62ef942f4b9669cc21ceadeed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sliderR: {fileID: 0}
-  _sliderG: {fileID: 0}
-  _sliderB: {fileID: 0}
-  _rText: {fileID: 0}
-  _gText: {fileID: 0}
-  _bText: {fileID: 0}
+  _sliderR: {fileID: 3503431820227029517}
+  _sliderG: {fileID: 6107212053747682632}
+  _sliderB: {fileID: 3042638302078111746}
+  _rText: {fileID: 5775740800658993995}
+  _gText: {fileID: 3007568739450451840}
+  _bText: {fileID: 2290323227133669779}
   _r: HealthR
   _g: HealthG
   _b: HealthB
