@@ -19,6 +19,7 @@ public class KunitanShoot : MonoBehaviour
     private Coroutine _coroutine;
 
     public event Action Shooted;
+    public event Action TimeStopped;
 
     private void OnDrawGizmosSelected()
     {
@@ -79,6 +80,7 @@ public class KunitanShoot : MonoBehaviour
         {
             _lastShoot.OnShootPerformed();
             PlayerTime.Instance.TimeStop(_stopTime);
+            TimeStopped?.Invoke();
         }
 
         OverlapSphere();

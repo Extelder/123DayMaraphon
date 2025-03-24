@@ -33,24 +33,26 @@ public class Settings : MonoBehaviour
     [SerializeField] private Slider _musicVolumeSlider;
     [SerializeField] private Slider _effectsVolumeSlider;
     [SerializeField] private Slider _fovSlider;
-    
+
     [SerializeField] private TMP_Dropdown _resolutionDropdown;
-    
+
     [SerializeField] private PlayerDeath _death;
 
     [SerializeField] private string _onText;
     [SerializeField] private string _offText;
     [SerializeField] private TextMeshProUGUI _outlineSwitchText;
-    
+
     [SerializeField] private OutlineRender[] _outlineRenders;
     [SerializeField] private TextMeshProUGUI _fullScreenOnOffTText;
     [SerializeField] private TextMeshProUGUI _bloodSplatOnOffTText;
-    
+
     [SerializeField] private TextMeshProUGUI _sensetivityValueText;
     [SerializeField] private TextMeshProUGUI _fovValueText;
     [SerializeField] private TextMeshProUGUI _musicVolumeValueText;
     [SerializeField] private TextMeshProUGUI _effectsVolumeValueText;
     [SerializeField] private TextMeshProUGUI _masterVolumeValueText;
+
+    [SerializeField] private bool _hub;
 
     private Resolution[] _resolutions;
     private List<Resolution> _filteredResolutions;
@@ -94,8 +96,8 @@ public class Settings : MonoBehaviour
         _effectsVolumeSlider.value = PlayerPrefs.GetFloat("EffectVolume", 1);
         _fovSlider.value = PlayerPrefs.GetFloat("FOV", 100);
         QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality", 3));
-        bool fullScreen = Convert.ToBoolean(PlayerPrefs.GetInt("FullScreen", 1)); 
-        Screen.SetResolution(PlayerPrefs.GetInt("Width"),PlayerPrefs.GetInt("Height"), fullScreen);
+        bool fullScreen = Convert.ToBoolean(PlayerPrefs.GetInt("FullScreen", 1));
+        Screen.SetResolution(PlayerPrefs.GetInt("Width"), PlayerPrefs.GetInt("Height"), fullScreen);
         SetResolutionReady();
         Screen.fullScreen = fullScreen;
         if (fullScreen)
@@ -107,14 +109,17 @@ public class Settings : MonoBehaviour
             _fullScreenOnOffTText.text = _onText;
         }
 
-        if (PlayerPrefs.GetInt("BloodSplat") == 0)
+
+        if (PlayerPrefs.GetInt("BloodSplat", 1) == 0)
         {
-            _pools.BloodSplatPool.transform.localScale = Vector3.zero;
+            if (!_hub)
+                _pools.BloodSplatPool.transform.localScale = Vector3.zero;
             _bloodSplatOnOffTText.text = _offText;
         }
         else
         {
-            _pools.BloodSplatPool.transform.localScale = new Vector3(0.4f,0.4f,0.4f);
+            if (!_hub)
+                _pools.BloodSplatPool.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             _bloodSplatOnOffTText.text = _onText;
         }
     }
@@ -166,6 +171,7 @@ public class Settings : MonoBehaviour
         {
             _mixer.SetFloat("MasterVolume", Mathf.Log10(value) * 20);
         }
+
         _masterVolumeValueText.text = value.ToString("0.00");
     }
 
@@ -181,6 +187,7 @@ public class Settings : MonoBehaviour
         {
             _mixer.SetFloat("MusicVolume", Mathf.Log10(value) * 20);
         }
+
         _musicVolumeValueText.text = value.ToString("0.00");
     }
 
@@ -199,7 +206,7 @@ public class Settings : MonoBehaviour
 
         _effectsVolumeValueText.text = value.ToString("0.00");
     }
-    
+
     public void QualityChange(int value)
     {
         bool active = false;
@@ -210,6 +217,7 @@ public class Settings : MonoBehaviour
                 active = _outlineRenders[i].ScriptableRendererFeature.isActive;
             }
         }
+
         PlayerPrefs.SetInt("Quality", value);
         QualitySettings.SetQualityLevel(value);
         for (int i = 0; i < _outlineRenders.Length; i++)
@@ -217,7 +225,7 @@ public class Settings : MonoBehaviour
             if (QualitySettings.GetQualityLevel() == _outlineRenders[i].QualityLevel)
             {
                 _outlineRenders[i].ScriptableRendererFeature.SetActive(active);
-                
+
                 if (_outlineRenders[i].ScriptableRendererFeature.isActive)
                 {
                     _outlineSwitchText.text = _offText;
@@ -226,6 +234,7 @@ public class Settings : MonoBehaviour
                 {
                     _outlineSwitchText.text = _onText;
                 }
+
                 return;
             }
         }
@@ -248,17 +257,18 @@ public class Settings : MonoBehaviour
                     text.text = _offText;
                     _outlineRenders[i].ScriptableRendererFeature.SetActive(true);
                 }
+
                 Debug.Log(_outlineRenders[i].ScriptableRendererFeature.isActive);
                 return;
             }
         }
     }
-    
+
     public void SetResolutionReady()
     {
         _resolutions = Screen.resolutions;
         _filteredResolutions = new List<Resolution>();
-        
+
         _resolutionDropdown.ClearOptions();
         _currentRefrashRate = Screen.currentResolution.refreshRate;
         for (int i = 0; i < _resolutions.Length; i++)
@@ -268,17 +278,19 @@ public class Settings : MonoBehaviour
                 _filteredResolutions.Add(_resolutions[i]);
             }
         }
+
         List<string> options = new List<string>();
         for (int i = 0; i < _filteredResolutions.Count; i++)
         {
-            string resolutionOption = _filteredResolutions[i].width + "x" + _filteredResolutions[i].height + " " + _filteredResolutions[i].refreshRate + "Hz";
+            string resolutionOption = _filteredResolutions[i].width + "x" + _filteredResolutions[i].height + " " +
+                                      _filteredResolutions[i].refreshRate + "Hz";
             options.Add(resolutionOption);
             if (_filteredResolutions[i].width == Screen.width && _filteredResolutions[i].height == Screen.height)
             {
                 _currentResolutionIndex = i;
             }
         }
-        
+
         _resolutionDropdown.AddOptions(options);
         _resolutionDropdown.value = _currentResolutionIndex;
         _resolutionDropdown.RefreshShownValue();
@@ -291,7 +303,7 @@ public class Settings : MonoBehaviour
         PlayerPrefs.SetInt("Height", resolution.height);
         PlayerPrefs.SetInt("Width", resolution.width);
     }
-    
+
     public void SwitchFullScreenSettings()
     {
         if (!Screen.fullScreen)
@@ -305,24 +317,29 @@ public class Settings : MonoBehaviour
             PlayerPrefs.SetInt("FullScreen", 0);
         }
     }
-    
+
     public void ChangeFOV(float value)
     {
         PlayerPrefs.SetFloat("FOV", value);
-        _playerFOV.ChangeFOV(value);
         _fovValueText.text = Mathf.Round(value).ToString();
+        if (!_hub)
+        {
+            _playerFOV.ChangeFOV(value);
+        }
     }
 
-    public void EnableBlood()
+    public void EnableDisableBlood()
     {
-        if (_pools.BloodSplatPool.transform.localScale != Vector3.zero)
+        if (PlayerPrefs.GetInt("BloodSplat") == 1)
         {
-            _pools.BloodSplatPool.transform.localScale = Vector3.zero;
+            if (!_hub)
+                _pools.BloodSplatPool.transform.localScale = Vector3.zero;
             PlayerPrefs.SetInt("BloodSplat", 0);
         }
         else
         {
-            _pools.BloodSplatPool.transform.localScale = new Vector3(0.4f,0.4f,0.4f);
+            if (!_hub)
+                _pools.BloodSplatPool.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             PlayerPrefs.SetInt("BloodSplat", 1);
         }
     }
@@ -339,7 +356,7 @@ public class Settings : MonoBehaviour
     {
         Application.Quit();
     }
-    
+
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
