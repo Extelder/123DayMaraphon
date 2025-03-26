@@ -60276,7 +60276,7 @@ MonoBehaviour:
   _sphereRadius: 1.38
   _searchLayer:
     serializedVersion: 2
-    m_Bits: 65792
+    m_Bits: 2162944
   _overlapPoint: {fileID: 3488518084430705654}
   _boxSize: {x: 0, y: 0, z: 0}
   _positionOffset: {x: 0, y: 0, z: 0}
