@@ -10,6 +10,7 @@ public class IceHitBox : MonoBehaviour, IWeaponVisitor
     [SerializeField] private GameObject _iceBrokentGFX;
     [SerializeField] private Collider _collider;
 
+    [SerializeField] private AudioSource _brokenIceSound;
     [SerializeField] private bool _disableCollider;
 
     public event Action Hitted;
@@ -26,6 +27,7 @@ public class IceHitBox : MonoBehaviour, IWeaponVisitor
         _iceExplodeEffect.Play();
         _iceGFX.SetActive(false);
         _iceBrokentGFX?.SetActive(true);
+        _brokenIceSound.Play();
     }
 
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)

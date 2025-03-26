@@ -38,4 +38,5 @@ public class Pools : MonoBehaviour
     [field: SerializeField] public Pool SelfHarmSoundPool { get; private set; }
     [field: SerializeField] public Pool WaveStopedSoundPool { get; private set; }
     [field: SerializeField] public Pool WaveStartedSoundPool { get; private set; }
+    [field: SerializeField] public Pool PUSSlamSoundPool { get; private set; }
 }

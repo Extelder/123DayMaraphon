@@ -12,6 +12,9 @@ public class PUSMoveUpState : State
 
     [SerializeField] private Transform _point;
 
+    public event Action PUSStartedMovingUp;
+    public event Action PUSStopedMovingUp;
+
     private Tween _tween;
 
     public override void Enter()
@@ -20,12 +23,14 @@ public class PUSMoveUpState : State
         _animator.MoveUp();
         _shootState.CanChanged = true;
         _shootState.Exit();
+        PUSStartedMovingUp?.Invoke();
         _tween = _pus.DOMove(_point.position, 1);
     }
 
     public void MoveUpAnimationEnd()
     {
         CanChanged = true;
+        PUSStopedMovingUp?.Invoke();
 
         _tween.Kill();
     }

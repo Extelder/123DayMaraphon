@@ -12,6 +12,9 @@ public class PUSMoveState : State
     [SerializeField] private float _moveDuration;
     [SerializeField] private PUSNearbyCheck _pusNearbyCheck;
 
+    public event Action PUSStartedMoving;
+    public event Action PUSStopedMoving;
+    
     private Tween _tween;
 
     public override void Enter()
@@ -20,7 +23,12 @@ public class PUSMoveState : State
         _pusNearbyCheck.enabled = false;
         _tween.Kill();
         Vector3 point = _points[Random.Range(0, _points.Length)].position;
-        _pus.DOMove(point, _moveDuration).OnComplete(() => { _pusNearbyCheck.enabled = true; });
+        PUSStartedMoving?.Invoke();
+        _pus.DOMove(point, _moveDuration).OnComplete(() =>
+        {
+            _pusNearbyCheck.enabled = true;
+            PUSStopedMoving?.Invoke();
+        });
     }
 
     public override void Exit()

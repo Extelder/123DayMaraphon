@@ -17,6 +17,8 @@ public class PUSPunchState : State
     [SerializeField] private Transform _leftPunchPoint;
     [SerializeField] private Transform _rightPunchPoint;
 
+    public event Action ArmSlamed;
+
     public override void Enter()
     {
         _smoothlyLookAt.Target = _forwardTarget;
@@ -48,6 +50,7 @@ public class PUSPunchState : State
         {
             _groundCrackPool.GetFreeElement(hit.point + new Vector3(0, 0f, 0));
             _shockWavePool.GetFreeElement(hit.point + new Vector3(0, 1f, 0));
+            ArmSlamed?.Invoke();
         }
     }
 
