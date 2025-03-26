@@ -16,6 +16,8 @@ public class PUSSlamState : State
     [SerializeField] private Transform _forwardTarget;
     [SerializeField] private Transform _slamPoint;
 
+    public event Action Slamed;
+
     public override void Enter()
     {
         _smoothlyLookAt.Target = _forwardTarget;
@@ -39,6 +41,7 @@ public class PUSSlamState : State
         {
             _groundCrackPool.GetFreeElement(hit.point + new Vector3(0, 0f, 0));
             _shockWavePool.GetFreeElement(hit.point + new Vector3(0, 1f, 0));
+            Slamed?.Invoke();
         }
     }
 

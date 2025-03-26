@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayAndStopAudio : MonoBehaviour
 {
     [SerializeField] private AudioSource _audio;
-    public void Play()
+    public void PlayAudio()
     {
         _audio.Play();
     }
 
-    public void Stop()
+    public void StopAudio()
     {
         _audio.Stop();
     }

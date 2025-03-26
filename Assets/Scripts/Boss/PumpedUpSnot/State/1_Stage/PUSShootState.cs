@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,9 @@ public class PUSShootState : State
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private float _shootRate;
     [SerializeField] private float _shootRange = 10000;
+
+    public event Action StartedShooting;
+    public event Action StoppedShooting;
 
     public override void Enter()
     {
@@ -31,6 +35,7 @@ public class PUSShootState : State
     {
         StopAllCoroutines();
         StartCoroutine(Shooting());
+        StartedShooting?.Invoke();
     }
 
     public void StopShooting()
@@ -38,6 +43,7 @@ public class PUSShootState : State
         CanChanged = true;
         Debug.LogError(CanChanged);
         StopAllCoroutines();
+        StoppedShooting?.Invoke();
     }
 
     private IEnumerator Shooting()

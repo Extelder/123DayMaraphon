@@ -15,6 +15,8 @@ public class IceProjectile : PoolObject
     private Rigidbody _rigidbody;
     [SerializeField] private Collider _collider;
 
+    public event Action IceBumped;
+
     private CompositeDisposable _disposable = new CompositeDisposable();
 
     private void Awake()
@@ -44,6 +46,10 @@ public class IceProjectile : PoolObject
                 hitBox.TakeDamage(Damage);
                 _parent.SetActive(false);
                 _disposable.Clear();
+            }
+            else
+            {
+                IceBumped?.Invoke();
             }
         }).AddTo(_disposable);
     }
