@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Health))]
 public class DeathHypeHandler : MonoBehaviour
 {
-    public IHypeMeasurable Measurable { get; private set; }
+    public float HypeValue { get; private set; }
 
     private Health _health;
 
@@ -22,6 +22,12 @@ public class DeathHypeHandler : MonoBehaviour
 
     private void OnDead()
     {
+        PlayerHypeSystem.Instance.Add(HypeValue);
+    }
+
+    public void SetHype(float value)
+    {
+        HypeValue = value;
     }
 
     private void OnDisable()

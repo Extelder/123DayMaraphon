@@ -6,6 +6,7 @@ using Zenject;
 
 public class UnitHitBox : MonoBehaviour, IWeaponVisitor
 {
+    [SerializeField] private DeathHypeHandler _deathHypeHandler;
     [SerializeField] private Health _health;
     [Inject] private Pools _pools;
 
@@ -14,6 +15,11 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
     public event Action Hit;
 
     public static event Action UnitHitted;
+
+    private void OnValidate()
+    {
+        _deathHypeHandler = GetComponentInParent<DeathHypeHandler>();
+    }
 
     public void Visit(WeaponShoot weaponShoot)
     {
@@ -32,8 +38,10 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         UnitHitted?.Invoke();
     }
 
-    public virtual void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage, float hypeValueMultiplier = 1)
     {
+        Debug.Log(CurrentHypeMeasurable.HypeValue * hypeValueMultiplier);
+        _deathHypeHandler.SetHype(CurrentHypeMeasurable.HypeValue * hypeValueMultiplier);
         _health.TakeDamage(damage);
     }
 

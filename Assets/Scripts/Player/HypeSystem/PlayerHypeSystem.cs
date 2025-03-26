@@ -11,6 +11,20 @@ public class PlayerHypeSystem : MonoBehaviour
     public float Current { get; private set; }
     public float Multiplyer { get; private set; }
 
+    public static PlayerHypeSystem Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+            return;
+        }
+
+        Debug.LogError("There`s one more PlayerHypeSystem");
+        Debug.Break();
+    }
+
     private void Start()
     {
         Current = 0;

@@ -8,8 +8,8 @@ public class UnitHeadHitBox : UnitHitBox
 {
     [SerializeField] private float _damageMultiply = 2;
 
-    public override void TakeDamage(float damage)
+    public override void TakeDamage(float damage, float multiplier)
     {
-        base.TakeDamage(damage * _damageMultiply);
+        base.TakeDamage(damage * _damageMultiply, multiplier * _damageMultiply);
     }
 }
