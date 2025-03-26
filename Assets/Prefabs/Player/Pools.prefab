@@ -319,7 +319,6 @@ MonoBehaviour:
   <SelfHarmSoundPool>k__BackingField: {fileID: 1078501959425327481}
   <WaveStopedSoundPool>k__BackingField: {fileID: 488877923636879037}
   <WaveStartedSoundPool>k__BackingField: {fileID: 2483506666720159220}
-  <TimeStopPanelSoundPool>k__BackingField: {fileID: 0}
 --- !u!1 &795391397900605128
 GameObject:
   m_ObjectHideFlags: 0
@@ -16625,6 +16624,73 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2901196415825235199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1732244481602403967}
+  - component: {fileID: 4967934259822030493}
+  - component: {fileID: 1086072265634851691}
+  m_Layer: 21
+  m_Name: ProjectileRaycastHit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1732244481602403967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2901196415825235199}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.9988, y: 1.9988, z: 1.9988}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4521459697150610219}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4967934259822030493
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2901196415825235199}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.43, y: 2.84, z: 4.06}
+  m_Center: {x: 0.03618687, y: -0.054078188, z: -0.63359123}
+--- !u!114 &1086072265634851691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2901196415825235199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97c62d2f1210284da3afaa679867771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectile: {fileID: 700154759506139667}
 --- !u!1 &2969625271058323568
 GameObject:
   m_ObjectHideFlags: 0
@@ -57655,6 +57721,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2540307399587662281}
+    - targetCorrespondingSourceObject: {fileID: 5670204542867364889, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1732244481602403967}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4818011281796268143, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}

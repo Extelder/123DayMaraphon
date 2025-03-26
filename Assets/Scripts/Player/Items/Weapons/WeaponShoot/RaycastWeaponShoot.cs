@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class RaycastWeaponShoot : WeaponShoot
+public class RaycastWeaponShoot : WeaponShoot, IHypeMeasurable
 {
+    [field: SerializeField] public float HypeValue { get; set; }= 0.1f;
     public event Action<RaycastHit?> ShootPerformedWithRaycastHit;
 
     private RaycastHit _hit;

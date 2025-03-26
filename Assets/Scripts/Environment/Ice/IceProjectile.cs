@@ -37,7 +37,6 @@ public class IceProjectile : PoolObject
         _rigidbody.AddForce(Vector3.down * _speed, ForceMode.Impulse);
         _collider.OnCollisionEnterAsObservable().Subscribe(other =>
         {
-            Debug.LogError(other.gameObject);
             if (other.gameObject.TryGetComponent<PlayerHitBox>(out PlayerHitBox hitBox))
             {
                 hitBox.GetComponent<Rigidbody>()

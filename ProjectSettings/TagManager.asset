@@ -26,8 +26,8 @@ TagManager:
   - CollisionOnlyWithPlayer
   - CollisionOnlyWithPlayerAndLevel
   - Chain
-  - 
-  - 
+  - HUDOverlay
+  - OnlyRaycast
   - 
   - 
   - 

@@ -6,8 +6,9 @@ using UniRx;
 using UnityEngine;
 using Zenject;
 
-public class Projectile : PoolObject, IWeaponVisitor
+public class Projectile : PoolObject, IHypeMeasurable
 {
+    [field: SerializeField] public float HypeValue { get; set; }= 0.1f;
     [SerializeField] private TrailRenderer _trail;
     [SerializeField] private CinemachineImpulseSource _cinemachineImpulseSource;
     [SerializeField] private LayerMask _layerMask;
@@ -165,36 +166,14 @@ public class Projectile : PoolObject, IWeaponVisitor
         Gizmos.DrawWireSphere(transform.position, _explosionRange);
     }
 
+    public void HitExplode()
+    {
+        Explode(5);
+        PlayerTime.Instance.TimeStop(0.2f);
+    }
+
     public void Accept(IWeaponVisitor visitor)
     {
         visitor.Visit(this);
-    }
-
-    public void Visit(WeaponShoot weaponShoot)
-    {
-    }
-
-    public void Visit(KunitanShoot kunitanShoot)
-    {
-        if (_onlyPlayerHealth)
-            return;
-        Explode(5);
-        PlayerTime.Instance.TimeStop(0.2f);
-    }
-
-    public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
-    {
-        if (_onlyPlayerHealth)
-            return;
-        Explode(5);
-        PlayerTime.Instance.TimeStop(0.2f);
-    }
-
-    public void Visit(Projectile projectile)
-    {
-    }
-
-    public void Visit(Ghost ghost, float damage)
-    {
     }
 }

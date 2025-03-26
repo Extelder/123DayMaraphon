@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KunitanShoot : MonoBehaviour
+public class KunitanShoot : MonoBehaviour, IHypeMeasurable
 {
+    [field: SerializeField] public float HypeValue { get; set; } = 0.1f;
+
     [SerializeField] private DefaultWeaponShootState _weaponShootState;
     [SerializeField] private OverlapSettings _overlapSettings;
     [SerializeField] private float _kayotTime = 0.1f;
@@ -94,4 +96,5 @@ public class KunitanShoot : MonoBehaviour
             }
         }
     }
+
 }

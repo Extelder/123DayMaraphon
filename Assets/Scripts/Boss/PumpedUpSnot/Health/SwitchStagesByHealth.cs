@@ -29,7 +29,6 @@ public class SwitchStagesByHealth : MonoBehaviour
     private void OnHealthValueChanged(float value)
     {
         float currentValueInProcent = value / _procent;
-        Debug.LogError(currentValueInProcent);
         for (int i = 0; i < _stageByProcents.Length; i++)
         {
             if (_stageByProcents[i].Procent <= currentValueInProcent)

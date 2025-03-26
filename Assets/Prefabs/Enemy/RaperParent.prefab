@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 4291285385762348420}
   - component: {fileID: 408825977735413579}
   - component: {fileID: 1268765481642930641}
-  - component: {fileID: 3966138048147401385}
+  - component: {fileID: 8993257935412011596}
   - component: {fileID: 7128822614525201596}
   m_Layer: 16
   m_Name: mixamorig:Head
@@ -900,7 +900,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.6
   m_Center: {x: 0, y: 0.4, z: 0.4}
---- !u!114 &3966138048147401385
+--- !u!114 &8993257935412011596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -909,10 +909,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1241919354804322250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
+  m_Script: {fileID: 11500000, guid: da0aece6a0c2d70488e487eb05377145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _health: {fileID: 3864246836606820053}
+  _damageMultiply: 2
 --- !u!114 &7128822614525201596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,7 +931,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2113
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 3966138048147401385}
+  _hitBox: {fileID: 8993257935412011596}
   _bloodSplatterPerHit: 7
   _spreadFactor: 1.2
 --- !u!1 &1517606528669982425
@@ -1156,6 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a948d0ed091caec46b1ae61261b81616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 5273193482418154346}
   _move: {fileID: 5273193482418154346}
   _attack: {fileID: 4366048186641800425}

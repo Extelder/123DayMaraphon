@@ -5,8 +5,9 @@ using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
 
-public class Ghost : MonoBehaviour
+public class Ghost : MonoBehaviour, IHypeMeasurable
 {
+    [field: SerializeField] public float HypeValue { get; set; } = 0.125f;
     [SerializeField] private OverlapSettings _overlapSettings;
 
     [SerializeField] private float _checkRate;

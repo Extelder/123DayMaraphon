@@ -5531,8 +5531,8 @@ GameObject:
   - component: {fileID: 1911572718164747295}
   - component: {fileID: 1320232561115477641}
   - component: {fileID: 6189956617943575198}
+  - component: {fileID: 2548841124758602269}
   - component: {fileID: 7918142084323566754}
-  - component: {fileID: 7433440278153934918}
   m_Layer: 16
   m_Name: head
   m_TagString: Untagged
@@ -5649,6 +5649,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.25
   m_Center: {x: -0.08442371, y: 0.043268047, z: -0.00071591977}
+--- !u!114 &2548841124758602269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297141104705555263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0aece6a0c2d70488e487eb05377145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 4433374298592865901}
+  _damageMultiply: 2
 --- !u!114 &7918142084323566754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5666,22 +5680,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 2
-  _hitBox: {fileID: 7433440278153934918}
+  _hitBox: {fileID: 2548841124758602269}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
---- !u!114 &7433440278153934918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297141104705555263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: {fileID: 4433374298592865901}
 --- !u!1 &1327133821843172541
 GameObject:
   m_ObjectHideFlags: 0

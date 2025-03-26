@@ -9,6 +9,8 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
     [SerializeField] private Health _health;
     [Inject] private Pools _pools;
 
+    public IHypeMeasurable CurrentHypeMeasurable { get; private set; }
+
     public event Action Hit;
 
     public static event Action UnitHitted;
@@ -23,10 +25,16 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
             return;
         if (_health.IsDead())
             return;
-        _health.TakeDamage(kunitanShoot.Damage);
+        CurrentHypeMeasurable = kunitanShoot;
+        TakeDamage(kunitanShoot.Damage);
         SpawningDecal(transform.position);
         Hit?.Invoke();
         UnitHitted?.Invoke();
+    }
+
+    public virtual void TakeDamage(float damage)
+    {
+        _health.TakeDamage(damage);
     }
 
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
@@ -35,7 +43,8 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
             return;
         if (_health.IsDead())
             return;
-        _health.TakeDamage(raycastWeaponShoot.Weapon.DamagePerHit);
+        CurrentHypeMeasurable = raycastWeaponShoot;
+        TakeDamage(raycastWeaponShoot.Weapon.DamagePerHit);
         SpawningDecal(hit.point);
         Hit?.Invoke();
         UnitHitted?.Invoke();
@@ -47,7 +56,8 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
             return;
         if (_health.IsDead())
             return;
-        _health.TakeDamage(projectile.Damage);
+        CurrentHypeMeasurable = projectile;
+        TakeDamage(projectile.Damage);
         SpawningDecal(transform.position);
         Hit?.Invoke();
         UnitHitted?.Invoke();
@@ -55,8 +65,9 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
 
     public void Visit(Ghost ghost, float damage)
     {
+        CurrentHypeMeasurable = ghost;
         SpawningDecal(transform.position);
-        _health.TakeDamage(damage);
+        TakeDamage(damage);
         Hit?.Invoke();
         UnitHitted?.Invoke();
     }

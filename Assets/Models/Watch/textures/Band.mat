@@ -19,6 +19,7 @@ Material:
   - _MK_FRESNEL_HIGHLIGHTS
   - _MK_LIGHT_CEL
   - _MK_NORMAL_MAP
+  - _MK_OUTLINE_HULL_CLIP
   - _MK_OUTLINE_NOISE
   - _MK_RECEIVE_SHADOWS
   - _MK_SPECULAR_ISOTROPIC
@@ -276,7 +277,7 @@ Material:
     - _OcclusionMapIntensity: 1
     - _OcclusionStrength: 1
     - _OptionsTab: 1
-    - _Outline: 1
+    - _Outline: 3
     - _OutlineClipOffset: 0
     - _OutlineData: 0
     - _OutlineFadeMax: 2

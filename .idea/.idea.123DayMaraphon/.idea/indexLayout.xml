@@ -3,6 +3,7 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
+      <Path>Assets</Path>
       <Path>Library/PackageCache/com.unity.ai.navigation@1.1.5</Path>
       <Path>Library/PackageCache/com.unity.burst@1.8.4</Path>
       <Path>Library/PackageCache/com.unity.cinemachine@2.9.7</Path>
@@ -63,12 +64,14 @@
       <Path>Library/PackageCache/com.unity.toonshader@0.10.0-preview</Path>
       <Path>Library/PackageCache/com.unity.ugui@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.visualscripting@1.8.0</Path>
+      <Path>Packages</Path>
       <Path>ProjectSettings</Path>
     </explicitIncludes>
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Build</Path>
+      <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>
       <Path>UserSettings</Path>
