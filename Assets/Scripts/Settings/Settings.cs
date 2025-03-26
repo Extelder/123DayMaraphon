@@ -67,6 +67,9 @@ public class Settings : MonoBehaviour
 
     public static Settings Instance { get; private set; }
 
+    public event Action<float> MasterValueChanged;
+    public event Action<float> EffectsValueChanged;
+
     private void Awake()
     {
         if (!Instance)
@@ -175,6 +178,7 @@ public class Settings : MonoBehaviour
         }
 
         _masterVolumeValueText.text = value.ToString("0.00");
+        MasterValueChanged?.Invoke(value);
     }
 
     public void OnMusicVolumeSliderValueChanged(float value)
@@ -207,6 +211,7 @@ public class Settings : MonoBehaviour
         }
 
         _effectsVolumeValueText.text = value.ToString("0.00");
+        EffectsValueChanged?.Invoke(value);
     }
 
     public void QualityChange(int value)

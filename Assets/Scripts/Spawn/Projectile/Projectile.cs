@@ -15,7 +15,7 @@ public class Projectile : PoolObject, IHypeMeasurable
     [SerializeField] private GameObject _projectileGFX;
     [field: SerializeField] public float Damage { get; private set; }
     [field: SerializeField] public float ExplosionForce { get; private set; }
-    [SerializeField] private float _explosionRange;
+    [field: SerializeField] public float ExplosionRange { get; set; }
     [SerializeField] private bool _onlyPlayerHealth;
     [SerializeField] private ParticleSystem _explosiveParticle;
     [SerializeField] private float _speed;
@@ -110,7 +110,7 @@ public class Projectile : PoolObject, IHypeMeasurable
         _cinemachineImpulseSource?.GenerateImpulse();
         _explosived = true;
         colliders = new Collider[35];
-        Physics.OverlapSphereNonAlloc(transform.position, _explosionRange, colliders, _layerMask);
+        Physics.OverlapSphereNonAlloc(transform.position, ExplosionRange, colliders, _layerMask);
 
         foreach (var other in colliders)
         {
@@ -136,7 +136,7 @@ public class Projectile : PoolObject, IHypeMeasurable
 
             if (other.TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
             {
-                rigidbody.AddExplosionForce(ExplosionForce, transform.position, _explosionRange);
+                rigidbody.AddExplosionForce(ExplosionForce, transform.position, ExplosionRange);
             }
 
             if (other.TryGetComponent<Health>(out Health health))
@@ -163,7 +163,7 @@ public class Projectile : PoolObject, IHypeMeasurable
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, _explosionRange);
+        Gizmos.DrawWireSphere(transform.position, ExplosionRange);
     }
 
     public void HitExplode()
