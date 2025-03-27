@@ -36672,6 +36672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hypeSystem: {fileID: 823349964608512692}
+  _updateRate: 0.2
 --- !u!114 &823349964608512692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36685,7 +36686,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MaxValue>k__BackingField: 5
-  <MinValue>k__BackingField: 2.3
+  <MinValue>k__BackingField: 0
+  <DecreaseValue>k__BackingField: 0.05
+  <DecreaseRate>k__BackingField: 0.1
 --- !u!1 &4187648180601507379
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,11 +16,6 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
 
     public static event Action UnitHitted;
 
-    private void OnValidate()
-    {
-        _deathHypeHandler = GetComponentInParent<DeathHypeHandler>();
-    }
-
     public void Visit(WeaponShoot weaponShoot)
     {
     }

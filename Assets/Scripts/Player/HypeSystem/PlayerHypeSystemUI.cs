@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHypeSystemUI : MonoBehaviour
 {
     [SerializeField] private PlayerHypeSystem _hypeSystem;
+    [SerializeField] private float _updateRate;
 
     private List<GameObject> lineList = new List<GameObject>();
 
@@ -27,6 +28,8 @@ public class PlayerHypeSystemUI : MonoBehaviour
         m_DataDiagram.PreDestroyLineEvent += (s, e) => { lineList.Remove(e.line); };
 
         AddALine();
+
+        StartCoroutine(nameof(Updating));
     }
 
     public void OnAddLine()
@@ -45,10 +48,13 @@ public class PlayerHypeSystemUI : MonoBehaviour
             lineList.Add(line);
     }
 
-    private void FixedUpdate()
+    private IEnumerator Updating()
     {
-        m_Input += Time.deltaTime;
-        ContinueInput(m_Input);
+        while (true)
+        {
+            yield return new WaitForSeconds(_updateRate);
+            ContinueInput(1);
+        }
     }
 
     private void ContinueInput(float f)

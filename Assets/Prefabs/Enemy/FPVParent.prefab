@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _deathHypeHandler: {fileID: 9162042059858179156}
   _health: {fileID: 8512145482612669077}
 --- !u!65 &1870187283910255390
 BoxCollider:
@@ -200,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b038100f3a5f65f4d9005be751037ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 5439213385284901700}
   _shootingState: {fileID: 3919889674743235195}
   _defaultState: {fileID: 5439213385284901700}
@@ -263,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _deathHypeHandler: {fileID: 9162042059858179156}
   _health: {fileID: 8512145482612669077}
 --- !u!114 &1204492747956071910
 MonoBehaviour:
@@ -10524,6 +10527,7 @@ GameObject:
   - component: {fileID: 4578457867053053388}
   - component: {fileID: 207559235172761944}
   - component: {fileID: 8512145482612669077}
+  - component: {fileID: 9162042059858179156}
   m_Layer: 0
   m_Name: FPVParent
   m_TagString: Untagged
@@ -10587,6 +10591,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxValue>k__BackingField: 50
   _enemyTrappable: {fileID: 5367030205455967674}
+--- !u!114 &9162042059858179156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100232563279092234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d613f7ce5fa294e9b26677fff88c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9179874346588095712
 GameObject:
   m_ObjectHideFlags: 0

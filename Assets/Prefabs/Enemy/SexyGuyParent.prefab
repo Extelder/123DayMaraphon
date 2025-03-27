@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da0aece6a0c2d70488e487eb05377145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
   _damageMultiply: 2
 --- !u!114 &8963519082962156290
@@ -756,7 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &2783799179505312542
 MonoBehaviour:
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &8967999193599417970
 MonoBehaviour:
@@ -6336,7 +6336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &3316709199496164241
 MonoBehaviour:
@@ -6663,7 +6663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &3847121689393498939
 MonoBehaviour:
@@ -6862,7 +6862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &6294947027548711915
 MonoBehaviour:
@@ -7629,7 +7629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &4988420727585711200
 MonoBehaviour:
@@ -12807,7 +12807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &1877650334305034214
 MonoBehaviour:
@@ -12893,7 +12893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!65 &7951521543473140455
 BoxCollider:
@@ -13142,7 +13142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &8459698245744726213
 MonoBehaviour:
@@ -13404,7 +13404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &195593777678383931
 MonoBehaviour:
@@ -13933,7 +13933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &6593487169162757675
 MonoBehaviour:
@@ -14373,7 +14373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &3495552692172859714
 MonoBehaviour:
@@ -14602,7 +14602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &7961432390817154452
 MonoBehaviour:
@@ -14769,7 +14769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 0}
+  _deathHypeHandler: {fileID: 6980538140319802905}
   _health: {fileID: 1419260712717226229}
 --- !u!114 &5068599529735922467
 MonoBehaviour:

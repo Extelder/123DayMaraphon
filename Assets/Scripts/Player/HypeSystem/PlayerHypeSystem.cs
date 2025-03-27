@@ -7,6 +7,8 @@ public class PlayerHypeSystem : MonoBehaviour
 {
     [field: SerializeField] public float MaxValue { get; private set; } = 5f;
     [field: SerializeField] public float MinValue { get; private set; } = 0f;
+    [field: SerializeField] public float DecreaseValue { get; private set; } = 0.05f;
+    [field: SerializeField] public float DecreaseRate { get; private set; } = 0.05f;
 
     public float Current { get; private set; }
     public float Multiplyer { get; private set; }
@@ -29,6 +31,16 @@ public class PlayerHypeSystem : MonoBehaviour
     {
         Current = 0;
         Multiplyer = 1;
+        StartCoroutine(Decreasing());
+    }
+
+    private IEnumerator Decreasing()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(DecreaseRate);
+            Remove(DecreaseValue);
+        }
     }
 
     public void Add(float value, bool shouldMultiply = true)
