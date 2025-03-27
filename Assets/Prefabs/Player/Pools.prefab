@@ -10857,8 +10857,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 3
-  MaxDistance: 5
+  MinDistance: 5
+  MaxDistance: 7
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -16695,8 +16695,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 12
-  MaxDistance: 18
+  MinDistance: 20
+  MaxDistance: 40
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -23796,7 +23796,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectile: {fileID: 700154759506139667}
   _projectileGFX: {fileID: 6826884165706457120}
-  _scaleFactor: 2
 --- !u!1 &4740677371905202284
 GameObject:
   m_ObjectHideFlags: 0
@@ -57955,6 +57954,11 @@ PrefabInstance:
       propertyPath: _layerMask.m_Bits
       value: 1792
       objectReference: {fileID: 0}
+    - target: {fileID: 8770932165466361121, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
+      propertyPath: _projectileExplosionGFX
+      value: 
+      objectReference: {fileID: 606425941697470551}
     - target: {fileID: 8770932165466361121, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}
       propertyPath: <ExplosionRange>k__BackingField

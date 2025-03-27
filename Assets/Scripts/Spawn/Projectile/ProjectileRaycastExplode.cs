@@ -8,7 +8,6 @@ public class ProjectileRaycastExplode : MonoBehaviour, IWeaponVisitor
 {
     [SerializeField] private Projectile _projectile;
     [SerializeField] private GameObject _projectileGFX;
-    [SerializeField] private float _scaleFactor;
     
     private float _defaultExplosionRange;
     private Vector3 _defaultEffectScale;
@@ -32,20 +31,12 @@ public class ProjectileRaycastExplode : MonoBehaviour, IWeaponVisitor
 
     public void Visit(KunitanShoot kunitanShoot)
     {
-        _projectile.HitExplode();
-        ScaleProjectile();
+        _projectile.SearchNearestEnemy();
     }
 
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
-        _projectile.HitExplode();
-        ScaleProjectile();
-    }
-
-    private void ScaleProjectile()
-    {
-        _projectile.ExplosionRange *= _scaleFactor;
-        _projectileGFX.transform.localScale *= _scaleFactor;
+        _projectile.SearchNearestEnemy();
     }
 
     public void Visit(Projectile projectile)
