@@ -18870,6 +18870,7 @@ GameObject:
   - component: {fileID: 6568995290795769856}
   - component: {fileID: 1638652578122498944}
   - component: {fileID: 772365102890239231}
+  - component: {fileID: 4620182022963623109}
   m_Layer: 9
   m_Name: GhostTrappable
   m_TagString: Untagged
@@ -18964,6 +18965,18 @@ MonoBehaviour:
   _hitBox: {fileID: 6568995290795769856}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
+--- !u!114 &4620182022963623109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563435459185911328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0f581a49494b04e83e80484e5d3d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6585015647074851193
 GameObject:
   m_ObjectHideFlags: 0

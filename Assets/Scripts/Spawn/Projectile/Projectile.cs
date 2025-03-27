@@ -11,9 +11,11 @@ public class Projectile : PoolObject, IHypeMeasurable
 {
     [field: SerializeField] public float HypeValue { get; set; }= 0.1f;
     [SerializeField] private TrailRenderer _trail;
+    [SerializeField] private TrailRenderer _magnitableTrail;
     [SerializeField] private CinemachineImpulseSource _cinemachineImpulseSource;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private LayerMask _enemiesMask;
+    [SerializeField] private LayerMask _ignoreEnemiesRaycastMask;
     [SerializeField] private GameObject _projectileGFX;
     [SerializeField] private float _searchingRange;
     [SerializeField] private float _maxDistance;
@@ -62,6 +64,7 @@ public class Projectile : PoolObject, IHypeMeasurable
         StartCoroutine(WaitingForFrame());
         transform.LookAt(targetPosition, transform.forward);
         _rigidbody.AddForce(transform.forward * _speed, ForceMode.Impulse);
+        _magnitableTrail.gameObject.SetActive(false);
     }
 
     private IEnumerator WaitingForFrame()
@@ -178,10 +181,14 @@ public class Projectile : PoolObject, IHypeMeasurable
         Physics.OverlapSphereNonAlloc(transform.position, _searchingRange, _enemiesColliders, _enemiesMask);
         foreach (var other in _enemiesColliders)
         {
+            if (other == null)
+            {
+                continue;
+            }
             if(other.TryGetComponent<ProjectileMagnitable>(out ProjectileMagnitable ProjectileMagnitable))
             {
                 if (Physics.Raycast(transform.position, (ProjectileMagnitable.transform.position - transform.position),
-                    out RaycastHit hit, _maxDistance))
+                    out RaycastHit hit , _maxDistance, ~_ignoreEnemiesRaycastMask))
                 {
                     if (hit.collider.TryGetComponent<ProjectileMagnitable>(out ProjectileMagnitable projectileMagnitable))
                     {
@@ -214,6 +221,8 @@ public class Projectile : PoolObject, IHypeMeasurable
         }
         else
         {
+            _magnitableTrail.gameObject.SetActive(true);
+            PlayerTime.Instance.TimeStop(0.2f);
             Observable.EveryUpdate().Subscribe(_ =>
             {
                 _rigidbody.MovePosition(projectileMagnitable.transform.position);

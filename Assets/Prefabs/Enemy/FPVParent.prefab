@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1870187283910255390}
   - component: {fileID: 1054016052058011597}
   - component: {fileID: 5367030205455967674}
+  - component: {fileID: 7494866558967395811}
   m_Layer: 9
   m_Name: GhostTrappable
   m_TagString: Untagged
@@ -107,6 +108,18 @@ MonoBehaviour:
   _lineStartPointOffset: {x: 0, y: 0, z: 0}
   _enemyStateMachine: {fileID: 761856347449456984}
   _lookAtPlayer: {fileID: 1204492747956071910}
+--- !u!114 &7494866558967395811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737805163889370052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0f581a49494b04e83e80484e5d3d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2755688322391149186
 GameObject:
   m_ObjectHideFlags: 0
