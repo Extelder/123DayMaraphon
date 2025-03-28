@@ -14,6 +14,7 @@ public class PlayerHypeSystem : MonoBehaviour
     public float Multiplyer { get; private set; }
 
     public static PlayerHypeSystem Instance { get; private set; }
+    public event Action<float> HypeChanged;
 
     private void Awake()
     {
@@ -51,6 +52,7 @@ public class PlayerHypeSystem : MonoBehaviour
             Current = MaxValue;
         else
             Current += value;
+        HypeChanged?.Invoke(Current);
     }
 
     public void Remove(float value, bool shouldMultiply = false)
@@ -61,6 +63,7 @@ public class PlayerHypeSystem : MonoBehaviour
             Current = MinValue;
         else
             Current -= value;
+        HypeChanged?.Invoke(Current);
     }
 
     public void Multiply(float value)
