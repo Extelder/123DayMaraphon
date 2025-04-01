@@ -14,7 +14,7 @@ public class PoolObject : MonoBehaviour
             Invoke("ReturnToPool", ReturnToPoolDelay);
     }
 
-    public void ReturnToPool()
+    public virtual void ReturnToPool()
     {
         gameObject.SetActive(false);
     }

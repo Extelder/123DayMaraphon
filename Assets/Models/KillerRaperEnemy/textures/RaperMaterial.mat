@@ -26,7 +26,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _MK_ALBEDO_MAP
-  - _MK_OUTLINE_HULL_CLIP
   - _MK_OUTLINE_NOISE
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -163,7 +162,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _OptionsTab: 1
-    - _Outline: 3
+    - _Outline: 1
     - _OutlineClipOffset: 0
     - _OutlineData: 0
     - _OutlineFadeMax: 2

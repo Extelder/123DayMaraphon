@@ -1192,7 +1192,6 @@ GameObject:
   - component: {fileID: 1270522298645833487}
   - component: {fileID: 9058767008571983997}
   - component: {fileID: 8850805262726844382}
-  - component: {fileID: 519250642238674452}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -1626,26 +1625,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46fb854f102540478fa3168b142d793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &519250642238674452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86614837546828997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058bb7a7f00b15b40b725c1e91628db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Damage>k__BackingField: 50
-  _playerHypeSystem: {fileID: 823349964608512692}
-  _cooldown: 5
-  _ultimateKeyCode: 114
-  _weapons: {fileID: 2081463827284962216}
-  _kunitanas: {fileID: 2435350837974199671}
-  _generalMixer: {fileID: 0}
-  _settings: {fileID: 0}
 --- !u!1 &102123699467024614
 GameObject:
   m_ObjectHideFlags: 0
@@ -36646,6 +36625,7 @@ GameObject:
   - component: {fileID: 452896392170831085}
   - component: {fileID: 2011748788201114180}
   - component: {fileID: 823349964608512692}
+  - component: {fileID: 3108039763164052494}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -36749,7 +36729,7 @@ MonoBehaviour:
   _themeController: {fileID: 11400000, guid: e00c7d2bc58a2424b8dc09ecdafdb067, type: 2}
   _playerFOV: {fileID: 452896392170831085}
   _sensetivitySlider: {fileID: 5517408106398254099}
-  MasterVolumeSlider: {fileID: 0}
+  MasterVolumeSlider: {fileID: 5593206649295061585}
   _musicVolumeSlider: {fileID: 3203845703939567970}
   _effectsVolumeSlider: {fileID: 1990054006824973530}
   _fovSlider: {fileID: 597765891099111885}
@@ -36886,6 +36866,25 @@ MonoBehaviour:
   <DecreaseValue>k__BackingField: 0
   <DecreaseRate>k__BackingField: 0.1
   <ResetDecreaseDelay>k__BackingField: 2
+--- !u!114 &3108039763164052494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185866198232910469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058bb7a7f00b15b40b725c1e91628db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Damage>k__BackingField: 100
+  _playerHypeSystem: {fileID: 823349964608512692}
+  _cooldown: 5
+  _ultimateKeyCode: 114
+  _weapons: {fileID: 2081463827284962216}
+  _kunitanas: {fileID: 2435350837974199671}
+  _masterMixer: {fileID: 24100000, guid: f52253784b4fc7845a0853f4f6fc749d, type: 2}
 --- !u!1 &4187648180601507379
 GameObject:
   m_ObjectHideFlags: 0

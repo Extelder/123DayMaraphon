@@ -34,7 +34,6 @@ public class PlayerSteppingSound : MonoBehaviour
         {
             _stepSound.Play();
             yield return new WaitForSeconds(_stepDelay);
-            Debug.Log("Played Step");
         }
     }
 }

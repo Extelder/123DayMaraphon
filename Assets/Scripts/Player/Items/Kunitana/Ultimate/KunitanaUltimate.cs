@@ -9,6 +9,7 @@ using Zenject;
 public class KunitanaUltimate : MonoBehaviour
 {
     [field: SerializeField] public float Damage { get; private set; }
+    [field: SerializeField] public bool Ultimating { get; private set; }
 
     [SerializeField] private PlayerHypeSystem _playerHypeSystem;
     [SerializeField] private float _cooldown;
@@ -18,20 +19,30 @@ public class KunitanaUltimate : MonoBehaviour
     [SerializeField] private GameObject _weapons;
     [SerializeField] private GameObject _kunitanas;
 
-    [SerializeField] private AudioMixer _generalMixer;
+    [SerializeField] private AudioMixer _masterMixer;
 
-    [SerializeField] private Settings _settings;
-
-    private float _masterVolume;
+    private float _masterPitch = 1;
 
     private bool _pressed = false;
     private CompositeDisposable _compositeDisposable = new CompositeDisposable();
     public static event Action Ultimated;
     public static event Action UltimateStoped;
+    
+    public static KunitanaUltimate Instance { get; private set; }
 
     private void OnEnable()
     {
         _playerHypeSystem.HypeChanged += OnHypeChanged;
+        _masterMixer.SetFloat("MasterPitch", _masterPitch);
+    }
+
+    private void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+            return;
+        }
     }
 
     private void Start()
@@ -63,6 +74,11 @@ public class KunitanaUltimate : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        Debug.Log(Ultimating);
+    }
+
     private IEnumerator StopUltimate()
     {
         yield return new WaitForSeconds(_cooldown);
@@ -70,21 +86,20 @@ public class KunitanaUltimate : MonoBehaviour
         UltimateStoped?.Invoke();
     }
 
-    private void Update()
-    {
-        Debug.Log(_masterVolume);
-    }
-
     private void KunitanaAttack()
     {
+        Ultimating = true;
         _weapons.SetActive(false);
         _kunitanas.SetActive(true);
+        _masterMixer.SetFloat("MasterPitch", _masterPitch / 1.2f);
     }
 
     private void ResetKunitanasAttack()
     {
+        Ultimating = false;
         _kunitanas.SetActive(false);
         _weapons.SetActive(true);
+        _masterMixer.SetFloat("MasterPitch", _masterPitch);
     }
 
     private void OnDisable()
