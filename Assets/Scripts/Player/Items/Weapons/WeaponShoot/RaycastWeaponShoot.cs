@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class RaycastWeaponShoot : WeaponShoot, IHypeMeasurable
+public class RaycastWeaponShoot : WeaponShoot
 {
-    [field: SerializeField] public float HypeValue { get; set; }= 0.1f;
     public event Action<RaycastHit?> ShootPerformedWithRaycastHit;
 
     private RaycastHit _hit;
@@ -40,6 +39,13 @@ public class RaycastWeaponShoot : WeaponShoot, IHypeMeasurable
                 ShootPerformedWithRaycastHit?.Invoke(null);
             }
         }
+    }
+
+    public void OnKunitanShootPerformed()
+    {
+        HypeValue *= KunitanShoot.Instance.HitHypeMultiplier;
+        OnShootPerformed();
+        HypeValue /= KunitanShoot.Instance.HitHypeMultiplier;
     }
 
     public override void Accept(IWeaponVisitor visitor)

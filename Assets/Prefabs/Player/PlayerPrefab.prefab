@@ -4715,6 +4715,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   <Range>k__BackingField: 1000
+  <HypeValue>k__BackingField: 0.1
   _weaponShootState: {fileID: 3354817536897171287}
   <Weapon>k__BackingField: {fileID: 0}
   CurrentShootOffset: {x: 0, y: 0, z: 0}
@@ -12546,11 +12547,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0
   _weaponShootState: {fileID: 6508201918829019867}
   <Weapon>k__BackingField: {fileID: 11400000, guid: fba12b8b04b9c7d4f912cc7dba8463f2,
     type: 2}
   CurrentShootOffset: {x: 0, y: 0, z: 0}
-  <HypeValue>k__BackingField: 0
 --- !u!95 &7592836397671185564
 Animator:
   serializedVersion: 5
@@ -15488,11 +15489,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0
   _weaponShootState: {fileID: 4790951523656600414}
   <Weapon>k__BackingField: {fileID: 11400000, guid: fba12b8b04b9c7d4f912cc7dba8463f2,
     type: 2}
   CurrentShootOffset: {x: 0, y: 0, z: 0}
-  <HypeValue>k__BackingField: 0
 --- !u!95 &5862420654571315292
 Animator:
   serializedVersion: 5
@@ -19367,11 +19368,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0
   _weaponShootState: {fileID: 1844518493131980979}
   <Weapon>k__BackingField: {fileID: 11400000, guid: fba12b8b04b9c7d4f912cc7dba8463f2,
     type: 2}
   CurrentShootOffset: {x: 0, y: 0, z: 0}
-  <HypeValue>k__BackingField: 0
 --- !u!95 &5219121794740604478
 Animator:
   serializedVersion: 5
@@ -36749,7 +36750,7 @@ MonoBehaviour:
   _themeController: {fileID: 11400000, guid: e00c7d2bc58a2424b8dc09ecdafdb067, type: 2}
   _playerFOV: {fileID: 452896392170831085}
   _sensetivitySlider: {fileID: 5517408106398254099}
-  MasterVolumeSlider: {fileID: 0}
+  MasterVolumeSlider: {fileID: 5593206649295061585}
   _musicVolumeSlider: {fileID: 3203845703939567970}
   _effectsVolumeSlider: {fileID: 1990054006824973530}
   _fovSlider: {fileID: 597765891099111885}
@@ -36883,8 +36884,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxValue>k__BackingField: 5
   <MinValue>k__BackingField: 0
-  <DecreaseValue>k__BackingField: 0
-  <DecreaseRate>k__BackingField: 0.1
+  <DecreaseValue>k__BackingField: 0.05
+  <DecreaseRate>k__BackingField: 0.3
   <ResetDecreaseDelay>k__BackingField: 2
 --- !u!1 &4187648180601507379
 GameObject:
@@ -49693,11 +49694,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4210700
   <Range>k__BackingField: 1000
+  <HypeValue>k__BackingField: 0.1
   _weaponShootState: {fileID: 1806215672519784806}
   <Weapon>k__BackingField: {fileID: 11400000, guid: 0d2964763c92e8142b6bde12c6829bac,
     type: 2}
   CurrentShootOffset: {x: 0, y: 0, z: 0}
-  <HypeValue>k__BackingField: 0.1
 --- !u!114 &8708280181532274565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54905,11 +54906,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4210700
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0.1
   _weaponShootState: {fileID: 4155217248066667139}
   <Weapon>k__BackingField: {fileID: 11400000, guid: bf3c78d8e854b6e4390cd3418c4169bf,
     type: 2}
   CurrentShootOffset: {x: 0, y: 0, z: 0}
-  <HypeValue>k__BackingField: 0.1
 --- !u!114 &3878853443293419341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60554,7 +60555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9606cace33ed984fa5c6dd2c396f481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <HypeValue>k__BackingField: 0.1
+  <HypeValue>k__BackingField: 0.3
+  <HitHypeMultiplier>k__BackingField: 1.1
   _weaponShootState: {fileID: 9187560661398838710}
   _overlapSettings: {fileID: 3441942452329656358}
   _kayotTime: 0.3
@@ -61731,11 +61733,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0
   _weaponShootState: {fileID: 8571587115518006524}
   <Weapon>k__BackingField: {fileID: 11400000, guid: bf3c78d8e854b6e4390cd3418c4169bf,
     type: 2}
   CurrentShootOffset: {x: 0, y: 0, z: 0}
-  <HypeValue>k__BackingField: 0
 --- !u!114 &6196261164792411022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80694,11 +80696,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0
   _weaponShootState: {fileID: 5120729000631435336}
   <Weapon>k__BackingField: {fileID: 11400000, guid: fba12b8b04b9c7d4f912cc7dba8463f2,
     type: 2}
   CurrentShootOffset: {x: 0, y: 0, z: 0}
-  <HypeValue>k__BackingField: 0
 --- !u!95 &7222634976093248279
 Animator:
   serializedVersion: 5

@@ -6,6 +6,7 @@ using UnityEngine;
 public class KunitanShoot : MonoBehaviour, IHypeMeasurable
 {
     [field: SerializeField] public float HypeValue { get; set; } = 0.1f;
+    [field: SerializeField] public float HitHypeMultiplier { get; set; } = 1.1f;
 
     [SerializeField] private DefaultWeaponShootState _weaponShootState;
     [SerializeField] private OverlapSettings _overlapSettings;
@@ -16,7 +17,7 @@ public class KunitanShoot : MonoBehaviour, IHypeMeasurable
 
     public static KunitanShoot Instance { get; private set; }
 
-    private WeaponShoot _lastShoot;
+    private RaycastWeaponShoot _lastShoot;
 
     private Coroutine _coroutine;
 
@@ -50,7 +51,7 @@ public class KunitanShoot : MonoBehaviour, IHypeMeasurable
         _weaponShootState.ShootPerformed -= OnShootPerformed;
     }
 
-    public void SetLastShoot(WeaponShoot weaponShoot)
+    public void SetLastShoot(RaycastWeaponShoot weaponShoot)
     {
         if (_coroutine != null)
             StopCoroutine(_coroutine);
@@ -80,7 +81,7 @@ public class KunitanShoot : MonoBehaviour, IHypeMeasurable
 
         if (_lastShoot != null)
         {
-            _lastShoot.OnShootPerformed();
+            _lastShoot.OnKunitanShootPerformed();
             PlayerTime.Instance.TimeStop(_stopTime);
             TimeStopped?.Invoke();
         }

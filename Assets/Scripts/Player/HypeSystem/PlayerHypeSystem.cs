@@ -38,6 +38,7 @@ public class PlayerHypeSystem : MonoBehaviour
         Current = 0;
         Multiplyer = 1;
         StartCoroutine(Decreasing());
+        Remove(1000000000);
     }
 
     private IEnumerator Decreasing()
