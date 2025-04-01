@@ -28,7 +28,7 @@ TagManager:
   - Chain
   - HUDOverlay
   - OnlyRaycast
-  - 
+  - PlayerTrigger
   - 
   - 
   - 

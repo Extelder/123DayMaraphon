@@ -72,7 +72,7 @@ public class PlayerWalk : MovementSpeedLerping
         _rigidbody.velocity =
             new Vector3(_currentVelocity.x, _rigidbody.velocity.y, _currentVelocity.z);
 
-        //_rigidbody.velocity = transform.rotation * new Vector3(input.x * moveSpeed, _rigidbody.velocity.y, input.z * moveSpeed);
+        //Rigidbody.velocity = transform.rotation * new Vector3(input.x * moveSpeed, Rigidbody.velocity.y, input.z * moveSpeed);
     }
 
     public void SetVelocity(Vector3 velocity)

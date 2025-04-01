@@ -52,7 +52,7 @@ public class PlayerJumpAfterCollision : MonoBehaviour
 
                 return;
                 // StartCoroutine(SmoothlyLerpForce(forceToApply));
-                // _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
+                // Rigidbody.AddForce(forceToApply, ForceMode.Impulse);
             }
         }
 
@@ -73,7 +73,7 @@ public class PlayerJumpAfterCollision : MonoBehaviour
 
                 return;
                 // StartCoroutine(SmoothlyLerpForce(forceToApply));
-                // _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
+                // Rigidbody.AddForce(forceToApply, ForceMode.Impulse);
             }
         }
         
@@ -94,7 +94,7 @@ public class PlayerJumpAfterCollision : MonoBehaviour
 
                 return;
                 // StartCoroutine(SmoothlyLerpForce(forceToApply));
-                // _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
+                // Rigidbody.AddForce(forceToApply, ForceMode.Impulse);
             }
         }
         
@@ -115,7 +115,7 @@ public class PlayerJumpAfterCollision : MonoBehaviour
 
                 return;
                 // StartCoroutine(SmoothlyLerpForce(forceToApply));
-                // _rigidbody.AddForce(forceToApply, ForceMode.Impulse);
+                // Rigidbody.AddForce(forceToApply, ForceMode.Impulse);
             }
         }
     }

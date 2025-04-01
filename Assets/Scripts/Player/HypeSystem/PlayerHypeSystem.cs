@@ -9,12 +9,17 @@ public class PlayerHypeSystem : MonoBehaviour
     [field: SerializeField] public float MinValue { get; private set; } = 0f;
     [field: SerializeField] public float DecreaseValue { get; private set; } = 0.05f;
     [field: SerializeField] public float DecreaseRate { get; private set; } = 0.05f;
+    [field: SerializeField] public float ResetDecreaseDelay { get; private set; } = 2f;
 
     public float Current { get; private set; }
     public float Multiplyer { get; private set; }
 
     public static PlayerHypeSystem Instance { get; private set; }
     public event Action<float> HypeChanged;
+
+    public bool CanDecreasing { get; private set; }
+
+    private Coroutine _resettingCoroutine;
 
     private void Awake()
     {
@@ -39,8 +44,9 @@ public class PlayerHypeSystem : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(DecreaseRate);
+            yield return new WaitUntil(() => CanDecreasing);
             Remove(DecreaseValue);
+            yield return new WaitForSeconds(DecreaseRate);
         }
     }
 
@@ -52,7 +58,17 @@ public class PlayerHypeSystem : MonoBehaviour
             Current = MaxValue;
         else
             Current += value;
+        CanDecreasing = false;
+        if (_resettingCoroutine != null)
+            StopCoroutine(_resettingCoroutine);
+        _resettingCoroutine = StartCoroutine(ResetDecreasing());
         HypeChanged?.Invoke(Current);
+    }
+
+    private IEnumerator ResetDecreasing()
+    {
+        yield return new WaitForSeconds(ResetDecreaseDelay);
+        CanDecreasing = true;
     }
 
     public void Remove(float value, bool shouldMultiply = false)

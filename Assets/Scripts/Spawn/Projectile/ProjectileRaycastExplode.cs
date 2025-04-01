@@ -6,21 +6,25 @@ using UnityEngine;
 
 public class ProjectileRaycastExplode : MonoBehaviour, IWeaponVisitor
 {
-    [SerializeField] private Projectile _projectile;
+    [SerializeField] private RPGProjectile _projectile;
     [SerializeField] private GameObject _projectileGFX;
-    
+    [SerializeField] private GameObject _hittedExplosionGFX;
+    [SerializeField] private GameObject _defaultExplosionGFX;
+
     private float _defaultExplosionRange;
     private Vector3 _defaultEffectScale;
 
-
-    private void Start()
+    private void Awake()
     {
         _defaultExplosionRange = _projectile.ExplosionRange;
         _defaultEffectScale = _projectileGFX.transform.localScale;
     }
 
-    private void OnDisable()
+    private void OnEnable()
     {
+        _hittedExplosionGFX.SetActive(false);
+        _defaultExplosionGFX.SetActive(true);
+        Debug.LogError(_defaultEffectScale);
         _projectile.ExplosionRange = _defaultExplosionRange;
         _projectileGFX.transform.localScale = _defaultEffectScale;
     }
@@ -31,11 +35,15 @@ public class ProjectileRaycastExplode : MonoBehaviour, IWeaponVisitor
 
     public void Visit(KunitanShoot kunitanShoot)
     {
+        _hittedExplosionGFX.SetActive(true);
+        _defaultExplosionGFX.SetActive(false);
         _projectile.SearchNearestEnemy();
     }
 
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
+        _hittedExplosionGFX.SetActive(true);
+        _defaultExplosionGFX.SetActive(false);
         _projectile.SearchNearestEnemy();
     }
 

@@ -36688,7 +36688,8 @@ MonoBehaviour:
   <MaxValue>k__BackingField: 5
   <MinValue>k__BackingField: 0
   <DecreaseValue>k__BackingField: 0.05
-  <DecreaseRate>k__BackingField: 0.1
+  <DecreaseRate>k__BackingField: 0.5
+  <ResetDecreaseDelay>k__BackingField: 2
 --- !u!1 &4187648180601507379
 GameObject:
   m_ObjectHideFlags: 0
@@ -49393,7 +49394,7 @@ MonoBehaviour:
   <Camera>k__BackingField: {fileID: 11070492389160087}
   <ToIgnore>k__BackingField:
     serializedVersion: 2
-    m_Bits: 16396
+    m_Bits: 4210700
   <Range>k__BackingField: 1000
   _weaponShootState: {fileID: 1806215672519784806}
   <Weapon>k__BackingField: {fileID: 11400000, guid: 0d2964763c92e8142b6bde12c6829bac,
@@ -54574,7 +54575,7 @@ MonoBehaviour:
   <Camera>k__BackingField: {fileID: 11070492389160087}
   <ToIgnore>k__BackingField:
     serializedVersion: 2
-    m_Bits: 16396
+    m_Bits: 4210700
   <Range>k__BackingField: 100
   _weaponShootState: {fileID: 4155217248066667139}
   <Weapon>k__BackingField: {fileID: 11400000, guid: bf3c78d8e854b6e4390cd3418c4169bf,
