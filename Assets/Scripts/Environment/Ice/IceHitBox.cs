@@ -30,6 +30,11 @@ public class IceHitBox : MonoBehaviour, IWeaponVisitor
         _brokenIceSound.Play();
     }
 
+    public void Visit(KunitanaUltimateAttack kunitanShoot)
+    {
+        
+    }
+
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
     }

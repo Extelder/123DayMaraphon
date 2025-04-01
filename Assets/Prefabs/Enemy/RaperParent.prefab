@@ -566,6 +566,7 @@ GameObject:
   - component: {fileID: 8146873211198032213}
   - component: {fileID: 4366048186641800425}
   - component: {fileID: 2186360251320578078}
+  - component: {fileID: 6337334795445588921}
   m_Layer: 0
   m_Name: RaperAnimator
   m_TagString: Untagged
@@ -708,6 +709,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _headWeight: 100
   _bodyWeight: 100
+--- !u!114 &6337334795445588921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387516045920397749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e296f7d0c16ff29459939d9a4ede140c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animatorSpeed: 0.1
 --- !u!1 &415436625320338463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,6 +1135,7 @@ GameObject:
   - component: {fileID: 7729257272932053262}
   - component: {fileID: 4778769356853816312}
   - component: {fileID: 3320232514636139407}
+  - component: {fileID: 2195913773555839200}
   m_Layer: 0
   m_Name: Raper
   m_TagString: Untagged
@@ -1312,6 +1327,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d613f7ce5fa294e9b26677fff88c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2195913773555839200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263981259362264330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62979a1dbc14fc14b9f4297ba9f5b56b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _navMeshSpeed: 0.7
 --- !u!1 &2631752828500134363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,6 +1450,7 @@ GameObject:
   - component: {fileID: 8724937872105237072}
   - component: {fileID: 7052839120387373509}
   - component: {fileID: 8303966736048713403}
+  - component: {fileID: 7644981833572575923}
   m_Layer: 9
   m_Name: GhostTrappable
   m_TagString: Untagged
@@ -1526,6 +1555,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c0f581a49494b04e83e80484e5d3d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7644981833572575923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2729793539967085449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7e1c58bb3179e4d9cf421d091685b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2939712037516640709

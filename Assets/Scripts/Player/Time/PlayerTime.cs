@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using Zenject;
 
@@ -13,7 +14,7 @@ public class PlayerTime : MonoBehaviour
     private Coroutine _currentCoroutine;
 
     public static PlayerTime Instance { get; private set; }
-
+    
     private void OnEnable()
     {
         _health.Dead += OnDead;

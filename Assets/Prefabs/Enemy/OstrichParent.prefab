@@ -4379,6 +4379,7 @@ GameObject:
   - component: {fileID: 1856160679103426488}
   - component: {fileID: 2000260151011671064}
   - component: {fileID: 5113478446633537598}
+  - component: {fileID: 2587045356120130601}
   m_Layer: 0
   m_Name: Ostrich
   m_TagString: Untagged
@@ -4460,6 +4461,19 @@ MonoBehaviour:
   _enemyStateMachine: {fileID: 3762258605199922344}
   _lookAtPlayer: {fileID: 2000260151011671064}
   _smoothlyLookAtPlayer: {fileID: 6564288498005374134}
+--- !u!114 &2587045356120130601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3485893665953193479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e296f7d0c16ff29459939d9a4ede140c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animatorSpeed: 0.1
 --- !u!1 &3493070819593060588
 GameObject:
   m_ObjectHideFlags: 0
@@ -18871,6 +18885,7 @@ GameObject:
   - component: {fileID: 1638652578122498944}
   - component: {fileID: 772365102890239231}
   - component: {fileID: 4620182022963623109}
+  - component: {fileID: 850346331642637312}
   m_Layer: 9
   m_Name: GhostTrappable
   m_TagString: Untagged
@@ -18975,6 +18990,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c0f581a49494b04e83e80484e5d3d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &850346331642637312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563435459185911328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7e1c58bb3179e4d9cf421d091685b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6585015647074851193
@@ -22099,6 +22126,7 @@ GameObject:
   - component: {fileID: 6813431729889694223}
   - component: {fileID: 8125000400797837390}
   - component: {fileID: 6564288498005374134}
+  - component: {fileID: 6129974129345838738}
   m_Layer: 0
   m_Name: Ostrich
   m_TagString: Untagged
@@ -22240,6 +22268,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _turnSpeed: 400
+--- !u!114 &6129974129345838738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8346064374011672959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62979a1dbc14fc14b9f4297ba9f5b56b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _navMeshSpeed: 0.4
 --- !u!1 &8433005356447507630
 GameObject:
   m_ObjectHideFlags: 0

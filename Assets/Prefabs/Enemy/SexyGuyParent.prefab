@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 6175195626350674861}
   - component: {fileID: 7428836422257971228}
   - component: {fileID: 4314590085152740935}
+  - component: {fileID: 1136286490239980999}
   m_Layer: 0
   m_Name: SexyGuyAnimator
   m_TagString: Untagged
@@ -516,6 +517,19 @@ MonoBehaviour:
   Animator: {fileID: 760218422722998646}
   _agent: {fileID: 3170157928809411441}
   _damage: 10
+--- !u!114 &1136286490239980999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718350713466659971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e296f7d0c16ff29459939d9a4ede140c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animatorSpeed: 0.1
 --- !u!1 &783615449574536191
 GameObject:
   m_ObjectHideFlags: 0
@@ -12843,6 +12857,7 @@ GameObject:
   - component: {fileID: 7951521543473140455}
   - component: {fileID: 2386947232960387629}
   - component: {fileID: 67514843827948044}
+  - component: {fileID: 5472162356757967144}
   m_Layer: 9
   m_Name: GhostTrappable
   m_TagString: Untagged
@@ -12949,6 +12964,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0f581a49494b04e83e80484e5d3d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5472162356757967144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5966397720975410261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7e1c58bb3179e4d9cf421d091685b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DashTransform: {fileID: 0}
 --- !u!1 &5998183256662926786
 GameObject:
   m_ObjectHideFlags: 0
@@ -13986,6 +14014,7 @@ GameObject:
   - component: {fileID: 441099799384260358}
   - component: {fileID: 5378240491697579978}
   - component: {fileID: 6980538140319802905}
+  - component: {fileID: 1577585511394577379}
   m_Layer: 0
   m_Name: SexyGuy
   m_TagString: Untagged
@@ -14166,6 +14195,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d613f7ce5fa294e9b26677fff88c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1577585511394577379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8004698896793647617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62979a1dbc14fc14b9f4297ba9f5b56b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _navMeshSpeed: 1.1
 --- !u!1 &8332951011656202039
 GameObject:
   m_ObjectHideFlags: 0

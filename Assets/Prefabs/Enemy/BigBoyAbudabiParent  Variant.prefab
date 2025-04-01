@@ -13676,6 +13676,7 @@ GameObject:
   - component: {fileID: 8793217365087721884}
   - component: {fileID: 1850695924342126732}
   - component: {fileID: 4810325955811256599}
+  - component: {fileID: 5835638619465624635}
   m_Layer: 0
   m_Name: BigBoyAbudabiAnimator
   m_TagString: Untagged
@@ -13798,6 +13799,19 @@ MonoBehaviour:
   Animator: {fileID: 2645986648911269870}
   _agent: {fileID: 417165299516067305}
   _damage: 30
+--- !u!114 &5835638619465624635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8110238303091326369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e296f7d0c16ff29459939d9a4ede140c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animatorSpeed: 0.1
 --- !u!1001 &3329488842533437080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14120,6 +14134,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.1252443
+      objectReference: {fileID: 0}
+    - target: {fileID: 1577585511394577379, guid: 27be060f72809074abdca38e53562600,
+        type: 3}
+      propertyPath: _navMeshSpeed
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1835544579513650967, guid: 27be060f72809074abdca38e53562600,
         type: 3}
