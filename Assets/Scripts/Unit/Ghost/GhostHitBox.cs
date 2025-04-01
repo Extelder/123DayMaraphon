@@ -19,6 +19,11 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
         DefaultHit(kunitanShoot.Damage, transform.position);
     }
 
+    public void Visit(KunitanaUltimateAttack kunitanShoot)
+    {
+        DefaultHit(kunitanShoot.Damage, transform.position);
+    }
+
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
         DefaultHit(raycastWeaponShoot.Weapon.DamagePerHit, hit.point);

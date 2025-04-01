@@ -29,7 +29,7 @@ public class Settings : MonoBehaviour
     [SerializeField] private PlayerFOV _playerFOV;
 
     [SerializeField] private Slider _sensetivitySlider;
-    [SerializeField] private Slider _masterVolumeSlider;
+    [field:SerializeField] public Slider MasterVolumeSlider;
     [SerializeField] private Slider _musicVolumeSlider;
     [SerializeField] private Slider _effectsVolumeSlider;
     [SerializeField] private Slider _fovSlider;
@@ -94,7 +94,7 @@ public class Settings : MonoBehaviour
         if (_cameraModule != null) _cameraModule.m_VerticalAxis.m_MaxSpeed = PlayerPrefs.GetFloat("Sensetivity", 1f);
         if (_cameraModule != null) _cameraModule.m_HorizontalAxis.m_MaxSpeed = PlayerPrefs.GetFloat("Sensetivity", 1f);
 
-        _masterVolumeSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1);
+        MasterVolumeSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1);
         _musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1);
         _effectsVolumeSlider.value = PlayerPrefs.GetFloat("EffectVolume", 1);
         _fovSlider.value = PlayerPrefs.GetFloat("FOV", 100);

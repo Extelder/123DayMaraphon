@@ -40,6 +40,11 @@ public class ProjectileRaycastExplode : MonoBehaviour, IWeaponVisitor
         _projectile.SearchNearestEnemy();
     }
 
+    public void Visit(KunitanaUltimateAttack kunitanShoot)
+    {
+        
+    }
+
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
         _hittedExplosionGFX.SetActive(true);

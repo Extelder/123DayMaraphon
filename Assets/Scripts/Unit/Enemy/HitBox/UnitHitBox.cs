@@ -32,6 +32,18 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         Hit?.Invoke();
         UnitHitted?.Invoke();
     }
+    public void Visit(KunitanaUltimateAttack kunitanaUltimateAttack)
+    {
+        if (!_health)
+            return;
+        if (_health.IsDead())
+            return;
+        CurrentHypeMeasurable = kunitanaUltimateAttack;
+        TakeDamage(kunitanaUltimateAttack.Damage);
+        SpawningDecal(transform.position);
+        Hit?.Invoke();
+        UnitHitted?.Invoke();
+    }
 
     public virtual void TakeDamage(float damage, float hypeValueMultiplier = 1)
     {

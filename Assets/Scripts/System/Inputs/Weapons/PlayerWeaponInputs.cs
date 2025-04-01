@@ -6,10 +6,10 @@ public class PlayerWeaponInputs : MonoBehaviour
     [field: SerializeField] public KeyCode MainShootKeyCode { get; private set; }
     [field: SerializeField] public KeyCode KunitanaShootKeyCode { get; private set; }
     [field: SerializeField] public KeyCode WeaponAbilityKeyCode { get; private set; }
+    [field: SerializeField] public KeyCode KunitanaUltimateShootKeyCode { get; private set; }
 
     public bool MainShooting { get; private set; }
     public bool KunitanaAttacking { get; private set; }
-
     public event Action MainShootPressedDown;
     public event Action MainShootPressedUp;
 
@@ -17,6 +17,8 @@ public class PlayerWeaponInputs : MonoBehaviour
     public event Action KunitanaShootPressedUp;
 
     public event Action WeaponAbilityPressedDown;
+    public event Action KunitanaUltimateKeyDowm;
+    public event Action KunitanaUltimateKeyUp;
     private Settings _settings;
 
     private void Start()
@@ -55,6 +57,16 @@ public class PlayerWeaponInputs : MonoBehaviour
         if (Input.GetKeyDown(WeaponAbilityKeyCode))
         {
             WeaponAbilityPressedDown?.Invoke();
+        }
+
+        if (Input.GetKeyUp(KunitanaUltimateShootKeyCode))
+        {
+            KunitanaUltimateKeyUp?.Invoke();
+        }
+        
+        if (Input.GetKeyDown(KunitanaUltimateShootKeyCode))
+        {
+            KunitanaUltimateKeyDowm?.Invoke();
         }
     }
 }

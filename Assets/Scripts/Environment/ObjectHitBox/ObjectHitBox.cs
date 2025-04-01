@@ -16,6 +16,11 @@ public class ObjectHitBox : MonoBehaviour, IWeaponVisitor
         
     }
 
+    public void Visit(KunitanaUltimateAttack kunitanShoot)
+    {
+        
+    }
+
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
         DefaultRaycastVisit(hit);

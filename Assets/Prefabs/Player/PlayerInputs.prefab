@@ -80,6 +80,7 @@ MonoBehaviour:
   <MainShootKeyCode>k__BackingField: 323
   <KunitanaShootKeyCode>k__BackingField: 102
   <WeaponAbilityKeyCode>k__BackingField: 324
+  <KunitanaUltimateShootKeyCode>k__BackingField: 323
 --- !u!114 &4619585280954486031
 MonoBehaviour:
   m_ObjectHideFlags: 0
