@@ -24,7 +24,6 @@ public class ProjectileRaycastExplode : MonoBehaviour, IWeaponVisitor
     {
         _hittedExplosionGFX.SetActive(false);
         _defaultExplosionGFX.SetActive(true);
-        Debug.LogError(_defaultEffectScale);
         _projectile.ExplosionRange = _defaultExplosionRange;
         _projectileGFX.transform.localScale = _defaultEffectScale;
     }

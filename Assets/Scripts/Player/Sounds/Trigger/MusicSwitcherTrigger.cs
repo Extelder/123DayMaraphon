@@ -40,12 +40,6 @@ public class MusicSwitcherTrigger : MonoBehaviour
         _switchAudioTween = _mainAudio.DOFade(1, _time);
     }
 
-
-    private void Update()
-    {
-        Debug.Log(_mainAudio.volume);
-    }
-
     private void OnDisable()
     {
         _switchAudioTween?.Kill();

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5618584982857234390}
   - component: {fileID: 5263208562793926090}
   - component: {fileID: 6383681060831185625}
+  - component: {fileID: 4813634089981709087}
   m_Layer: 0
   m_Name: ExplosionParent
   m_TagString: Untagged
@@ -70,6 +71,19 @@ MonoBehaviour:
   _projectile: {fileID: 425933351093115595}
   _animator: {fileID: 5263208562793926090}
   _triggername: IsExploading
+--- !u!114 &4813634089981709087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123391982008553441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e296f7d0c16ff29459939d9a4ede140c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animatorSpeed: 0.1
 --- !u!1 &359633896602276258
 GameObject:
   m_ObjectHideFlags: 0
@@ -24676,6 +24690,7 @@ GameObject:
   - component: {fileID: 8315325423670520096}
   - component: {fileID: 4317123043521758341}
   - component: {fileID: 2899918895613380113}
+  - component: {fileID: 4086570394564929942}
   m_Layer: 0
   m_Name: ExplosionParent
   m_TagString: Untagged
@@ -24735,6 +24750,19 @@ MonoBehaviour:
   _projectile: {fileID: 8205239527092269371}
   _animator: {fileID: 4317123043521758341}
   _triggername: IsExploading
+--- !u!114 &4086570394564929942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5475431050357139857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e296f7d0c16ff29459939d9a4ede140c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animatorSpeed: 0.1
 --- !u!1 &5533056236756206062
 GameObject:
   m_ObjectHideFlags: 0
@@ -55586,6 +55614,7 @@ GameObject:
   - component: {fileID: 1171277618503377842}
   - component: {fileID: 1149987389454304823}
   - component: {fileID: 5765167558742323956}
+  - component: {fileID: 8943463830968409598}
   m_Layer: 17
   m_Name: SlashCollider
   m_TagString: Untagged
@@ -55748,6 +55777,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 32.829285, y: 6.816819, z: 8.269234}
   m_Center: {x: -0.24719238, y: -0.7452041, z: 4.694519}
+--- !u!114 &8943463830968409598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9045205979312932393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6f3abe96c19c54a80c6240a08bd8bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9162016541319467400
 GameObject:
   m_ObjectHideFlags: 0
@@ -56175,6 +56216,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7703120079474237492}
+    - targetCorrespondingSourceObject: {fileID: 4818011281796268143, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3007887782706617591}
   m_SourcePrefab: {fileID: 100100000, guid: 2c4a954ac18ba9445b847a21b4bd0795, type: 3}
 --- !u!54 &2451799168217707023 stripped
 Rigidbody:
@@ -56312,6 +56357,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectile: {fileID: 8205239527092269371}
   _pools: {fileID: 1528374024075610752}
+--- !u!114 &3007887782706617591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5384970408249605237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90760c2b97ef944d85100d31feedd14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectile: {fileID: 8205239527092269371}
 --- !u!114 &8205239527092269371 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8770932165466361121, guid: 2c4a954ac18ba9445b847a21b4bd0795,
@@ -58219,6 +58277,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3053664777278148117, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053664777278148117, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
       propertyPath: m_Mass
       value: 0.5
       objectReference: {fileID: 0}
@@ -58506,7 +58569,7 @@ MonoBehaviour:
     m_Bits: 512
   _ignoreEnemiesRaycastMask:
     serializedVersion: 2
-    m_Bits: 16396
+    m_Bits: 4277260
   _searchingRange: 1031.17
   _maxDistance: Infinity
   _projectileExplosionGFX: {fileID: 606425941697470551}
@@ -59084,6 +59147,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2804823702998908582}
+    - targetCorrespondingSourceObject: {fileID: 4818011281796268143, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1229134625122701262}
   m_SourcePrefab: {fileID: 100100000, guid: 2c4a954ac18ba9445b847a21b4bd0795, type: 3}
 --- !u!114 &425933351093115595 stripped
 MonoBehaviour:
@@ -59233,6 +59300,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectile: {fileID: 425933351093115595}
   _pools: {fileID: 1528374024075610752}
+--- !u!114 &1229134625122701262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4507161830581639045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90760c2b97ef944d85100d31feedd14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectile: {fileID: 425933351093115595}
 --- !u!54 &6210868069787982335 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3053664777278148117, guid: 2c4a954ac18ba9445b847a21b4bd0795,

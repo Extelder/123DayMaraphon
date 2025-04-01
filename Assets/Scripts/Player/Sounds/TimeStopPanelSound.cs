@@ -23,6 +23,5 @@ public class TimeStopPanelSound : MonoBehaviour
     private void OnTimeStopped()
     {
         _timeStopSound.Play();
-        Debug.Log("Time Stopped");
     }
 }

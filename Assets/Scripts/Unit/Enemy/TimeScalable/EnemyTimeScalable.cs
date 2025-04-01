@@ -18,6 +18,10 @@ public class EnemyTimeScalable : MonoBehaviour
 
     private void OnEnable()
     {
+        if (KunitanaUltimate.Instance.Ultimating)
+        {
+            OnUltimated();
+        }
         KunitanaUltimate.Ultimated += OnUltimated;
         KunitanaUltimate.UltimateStoped += OnUltimateStoped;
     }

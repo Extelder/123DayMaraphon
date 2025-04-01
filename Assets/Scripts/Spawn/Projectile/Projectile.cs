@@ -7,7 +7,7 @@ using UniRx;
 using UnityEngine;
 using Zenject;
 
-public class Projectile : PoolObject, IHypeMeasurable
+public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
 {
     [field: SerializeField] public float HypeValue { get; set; }= 0.1f;
     [field: SerializeField] public float DefaultHypeValue { get; set; }= 0.1f;
@@ -33,6 +33,7 @@ public class Projectile : PoolObject, IHypeMeasurable
     private float _trailTime;
 
     public event Action Exploded;
+    public event Action Initiated;
 
     [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
 
@@ -58,6 +59,7 @@ public class Projectile : PoolObject, IHypeMeasurable
         StartCoroutine(WaitingForFrame());
         transform.LookAt(targetPosition, transform.forward);
         Rigidbody.AddForce(transform.forward * _speed, ForceMode.Impulse);
+        Initiated?.Invoke();
     }
 
     private IEnumerator WaitingForFrame()

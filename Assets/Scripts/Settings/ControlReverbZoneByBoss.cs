@@ -23,8 +23,6 @@ public class ControlReverbZoneByBoss : MonoBehaviour
         _masterValue = PlayerPrefs.GetFloat("MasterVolume", 1);
         _effectsValue = PlayerPrefs.GetFloat("EffectVolume", 1);
         EnableDisableReverbZone();
-        Debug.Log(_masterValue);
-        Debug.Log(_effectsValue);
     }
 
     private void OnMasterValueChanged(float masterValue)
