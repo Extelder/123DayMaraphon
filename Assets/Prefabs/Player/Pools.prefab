@@ -58270,6 +58270,11 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.63359123
       objectReference: {fileID: 0}
+    - target: {fileID: 584302938806424439, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 891130732422709857, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}
       propertyPath: m_IsActive
@@ -58569,7 +58574,7 @@ MonoBehaviour:
     m_Bits: 512
   _ignoreEnemiesRaycastMask:
     serializedVersion: 2
-    m_Bits: 4277260
+    m_Bits: 4277516
   _searchingRange: 1031.17
   _maxDistance: Infinity
   _projectileExplosionGFX: {fileID: 606425941697470551}

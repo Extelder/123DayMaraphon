@@ -78,6 +78,8 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
 
     private void OnCollisionEnter(Collision other)
     {
+        if(other.collider.material.bounciness >= 0.95f)
+            return;;
         if (other.gameObject.TryGetComponent<Projectile>(out Projectile projectile))
             return;
         if (_onlyPlayerHealth)
@@ -89,6 +91,8 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.material.bounciness >= 0.95f)
+            return;;
         if (other.TryGetComponent<Projectile>(out Projectile projectile))
             return;
         if (_onlyPlayerHealth)
