@@ -1644,6 +1644,7 @@ MonoBehaviour:
   _ultimateKeyCode: 114
   _weapons: {fileID: 2081463827284962216}
   _kunitanas: {fileID: 2435350837974199671}
+  _generalMixer: {fileID: 0}
   _settings: {fileID: 0}
 --- !u!1 &102123699467024614
 GameObject:
@@ -36748,7 +36749,7 @@ MonoBehaviour:
   _themeController: {fileID: 11400000, guid: e00c7d2bc58a2424b8dc09ecdafdb067, type: 2}
   _playerFOV: {fileID: 452896392170831085}
   _sensetivitySlider: {fileID: 5517408106398254099}
-  _masterVolumeSlider: {fileID: 5593206649295061585}
+  MasterVolumeSlider: {fileID: 0}
   _musicVolumeSlider: {fileID: 3203845703939567970}
   _effectsVolumeSlider: {fileID: 1990054006824973530}
   _fovSlider: {fileID: 597765891099111885}
@@ -36884,6 +36885,7 @@ MonoBehaviour:
   <MinValue>k__BackingField: 0
   <DecreaseValue>k__BackingField: 0
   <DecreaseRate>k__BackingField: 0.1
+  <ResetDecreaseDelay>k__BackingField: 2
 --- !u!1 &4187648180601507379
 GameObject:
   m_ObjectHideFlags: 0
@@ -49689,7 +49691,7 @@ MonoBehaviour:
   <Camera>k__BackingField: {fileID: 11070492389160087}
   <ToIgnore>k__BackingField:
     serializedVersion: 2
-    m_Bits: 16396
+    m_Bits: 4210700
   <Range>k__BackingField: 1000
   _weaponShootState: {fileID: 1806215672519784806}
   <Weapon>k__BackingField: {fileID: 11400000, guid: 0d2964763c92e8142b6bde12c6829bac,
@@ -54901,7 +54903,7 @@ MonoBehaviour:
   <Camera>k__BackingField: {fileID: 11070492389160087}
   <ToIgnore>k__BackingField:
     serializedVersion: 2
-    m_Bits: 16396
+    m_Bits: 4210700
   <Range>k__BackingField: 100
   _weaponShootState: {fileID: 4155217248066667139}
   <Weapon>k__BackingField: {fileID: 11400000, guid: bf3c78d8e854b6e4390cd3418c4169bf,
