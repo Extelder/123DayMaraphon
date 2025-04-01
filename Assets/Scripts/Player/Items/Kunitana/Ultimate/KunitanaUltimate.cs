@@ -79,17 +79,12 @@ public class KunitanaUltimate : MonoBehaviour
     {
         _weapons.SetActive(false);
         _kunitanas.SetActive(true);
-        _masterVolume = _settings.MasterVolumeSlider.value;
-        _masterVolume /= 2;
-        PlayerPrefs.SetFloat("MasterVolume", _masterVolume);
     }
 
     private void ResetKunitanasAttack()
     {
         _kunitanas.SetActive(false);
         _weapons.SetActive(true);
-        _masterVolume *= 2;
-        PlayerPrefs.SetFloat("MasterVolume", _masterVolume);
     }
 
     private void OnDisable()
