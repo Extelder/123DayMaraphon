@@ -58601,7 +58601,7 @@ MonoBehaviour:
     m_Bits: 512
   _ignoreEnemiesRaycastMask:
     serializedVersion: 2
-    m_Bits: 4277516
+    m_Bits: 4310284
   _searchingRange: 1031.17
   _maxDistance: Infinity
   _projectileExplosionGFX: {fileID: 606425941697470551}
