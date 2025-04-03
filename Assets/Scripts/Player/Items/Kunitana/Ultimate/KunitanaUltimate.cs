@@ -13,7 +13,7 @@ public class KunitanaUltimate : MonoBehaviour
 
     [SerializeField] private PlayerHypeSystem _playerHypeSystem;
     [SerializeField] private float _cooldown;
-    
+
     [SerializeField] private KeyCode _ultimateKeyCode;
 
     [SerializeField] private GameObject _weapons;
@@ -27,7 +27,7 @@ public class KunitanaUltimate : MonoBehaviour
     private CompositeDisposable _compositeDisposable = new CompositeDisposable();
     public static event Action Ultimated;
     public static event Action UltimateStoped;
-    
+
     public static KunitanaUltimate Instance { get; private set; }
 
     private void OnEnable()
@@ -64,8 +64,9 @@ public class KunitanaUltimate : MonoBehaviour
                         KunitanaAttack();
                         Ultimated?.Invoke();
                         StartCoroutine(StopUltimate());
+                        _compositeDisposable.Clear();
                     }
-                }).AddTo(_compositeDisposable);   
+                }).AddTo(_compositeDisposable);
             }
         }
         else
@@ -96,6 +97,7 @@ public class KunitanaUltimate : MonoBehaviour
 
     private void ResetKunitanasAttack()
     {
+        _pressed = false;
         Ultimating = false;
         _kunitanas.SetActive(false);
         _weapons.SetActive(true);

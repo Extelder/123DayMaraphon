@@ -15,11 +15,7 @@ public class IceHitBox : MonoBehaviour, IWeaponVisitor
 
     public event Action Hitted;
 
-    public void Visit(WeaponShoot weaponShoot)
-    {
-    }
-
-    public void Visit(KunitanShoot kunitanShoot)
+    private void Break()
     {
         Hitted?.Invoke();
         if (_disableCollider)
@@ -30,9 +26,19 @@ public class IceHitBox : MonoBehaviour, IWeaponVisitor
         _brokenIceSound.Play();
     }
 
+
+    public void Visit(WeaponShoot weaponShoot)
+    {
+    }
+
+    public void Visit(KunitanShoot kunitanShoot)
+    {
+        Break();
+    }
+
     public void Visit(KunitanaUltimateAttack kunitanShoot)
     {
-        
+        Break();
     }
 
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)

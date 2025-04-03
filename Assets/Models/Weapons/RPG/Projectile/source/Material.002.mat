@@ -291,7 +291,7 @@ Material:
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25
     - _OutlineNoise: 0
-    - _OutlineSize: 100
+    - _OutlineSize: 800
     - _OutlineTab: 1
     - _Parallax: 0.02
     - _QueueOffset: 0
@@ -340,12 +340,12 @@ Material:
     - _Color: {r: 0.27981484, g: 0.3284754, b: 0.45283014, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+    - _EmissionColor: {r: 0.25204003, g: 0.35462227, b: 0.68576443, a: 1}
     - _GoochBrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _GoochDarkColor: {r: 0, g: 0, b: 0, a: 1}
     - _IridescenceColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _LightTransmissionColor: {r: 1, g: 0.65, b: 0, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.2784314, g: 0.32941177, b: 0.45098042, a: 1}
     - _RimBrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimDarkColor: {r: 0, g: 0, b: 0, a: 1}

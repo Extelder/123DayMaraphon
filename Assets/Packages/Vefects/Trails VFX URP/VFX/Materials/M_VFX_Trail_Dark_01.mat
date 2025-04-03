@@ -92,7 +92,7 @@ Material:
     - _DistortionMaskIntensity: 1
     - _Distortion_Amount: 0
     - _DstBlend: 0
-    - _EmissiveIntensity: 3
+    - _EmissiveIntensity: 10
     - _Erosion_Intensity: 1.3
     - _Erosion_Intensity1: 1
     - _Erosion_Multiply: 1.5

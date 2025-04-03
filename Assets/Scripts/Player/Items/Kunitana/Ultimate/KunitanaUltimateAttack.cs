@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
@@ -8,6 +9,7 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(Animator))]
 public class KunitanaUltimateAttack : MonoBehaviour, IHypeMeasurable
 {
+    [SerializeField] private CinemachineImpulseSource _impulseSource;
     [Inject] private PlayerInputs _inputs;
     [field: SerializeField] public float Damage { get; private set; }
 
@@ -44,6 +46,7 @@ public class KunitanaUltimateAttack : MonoBehaviour, IHypeMeasurable
     public void PerformShoot()
     {
         _animator.SetInteger("States", Random.Range(1, 3));
+        _impulseSource.GenerateImpulse();
         OverlapSphere();
         foreach (var other in _overlapSettings.Colliders)
         {
@@ -61,7 +64,7 @@ public class KunitanaUltimateAttack : MonoBehaviour, IHypeMeasurable
         _animator.SetInteger("States", Random.Range(1, 3));
         _animator.SetBool("Attack", true);
     }
-    
+
     private void OnKunitanaShootPressedUp()
     {
         _animator.SetInteger("States", 0);
