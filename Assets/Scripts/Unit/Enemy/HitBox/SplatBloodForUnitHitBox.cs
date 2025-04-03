@@ -22,7 +22,6 @@ public class SplatBloodForUnitHitBox : MonoBehaviour
 
     private void SplatBlood()
     {
-        Debug.Log("blood splat");
         _currentRaycastOffset = Random.insideUnitSphere * _randomRangeMultiplier;
         if (Physics.Raycast(transform.position, _currentRaycastOffset, out _hit, _rayRange, _layer))
         {

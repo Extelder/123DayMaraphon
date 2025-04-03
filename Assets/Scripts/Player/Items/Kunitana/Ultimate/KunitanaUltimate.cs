@@ -75,11 +75,6 @@ public class KunitanaUltimate : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        Debug.Log(Ultimating);
-    }
-
     private IEnumerator StopUltimate()
     {
         yield return new WaitForSeconds(_cooldown);

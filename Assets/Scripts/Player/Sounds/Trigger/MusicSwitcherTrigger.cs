@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using UniRx;
 using UnityEngine;
 
 public class MusicSwitcherTrigger : MonoBehaviour
@@ -11,9 +10,6 @@ public class MusicSwitcherTrigger : MonoBehaviour
     [SerializeField] private AudioClip _audioToSwitch;
     [SerializeField] private float _time;
 
-    private CompositeDisposable _compositeDisposable;
-    
-    private int _defaultVolume;
     private Tween _changeVolumeTween;
     private Tween _switchAudioTween;
 
