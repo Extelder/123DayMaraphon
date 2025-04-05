@@ -45,11 +45,6 @@ public class KunitanaUltimate : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        _playerHypeSystem.Add(100000000000);
-    }
-
     private void OnHypeChanged(float value)
     {
         if (value >= 4.9f)

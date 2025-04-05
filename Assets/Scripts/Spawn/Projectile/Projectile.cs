@@ -10,6 +10,7 @@ using Zenject;
 public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
 {
     [field: SerializeField] public float HypeValue { get; set; }= 0.1f;
+    [field: SerializeField] public HypeType HypeType { get; set; }
     [field: SerializeField] public float DefaultHypeValue { get; set; }= 0.1f;
     [SerializeField] private TrailRenderer _trail;
     [SerializeField] private CinemachineImpulseSource _cinemachineImpulseSource;

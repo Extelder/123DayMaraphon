@@ -27,7 +27,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         if (_health.IsDead())
             return;
         CurrentHypeMeasurable = kunitanShoot;
-        TakeDamage(kunitanShoot.Damage);
+        TakeDamage(kunitanShoot.Damage, CurrentHypeMeasurable.HypeType);
         SpawningDecal(transform.position);
         Hit?.Invoke();
         UnitHitted?.Invoke();
@@ -39,16 +39,16 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         if (_health.IsDead())
             return;
         CurrentHypeMeasurable = kunitanaUltimateAttack;
-        TakeDamage(kunitanaUltimateAttack.Damage);
+        TakeDamage(kunitanaUltimateAttack.Damage, CurrentHypeMeasurable.HypeType);
         SpawningDecal(transform.position);
         Hit?.Invoke();
         UnitHitted?.Invoke();
     }
 
-    public virtual void TakeDamage(float damage, float hypeValueMultiplier = 1)
+    public virtual void TakeDamage(float damage, HypeType hypeType, float hypeValueMultiplier = 1)
     {
         Debug.Log(CurrentHypeMeasurable.HypeValue * hypeValueMultiplier);
-        _deathHypeHandler.SetHype(CurrentHypeMeasurable.HypeValue * hypeValueMultiplier);
+        _deathHypeHandler.SetHype(CurrentHypeMeasurable.HypeValue * hypeValueMultiplier, hypeType);
         _health.TakeDamage(damage);
     }
 
@@ -59,7 +59,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         if (_health.IsDead())
             return;
         CurrentHypeMeasurable = raycastWeaponShoot;
-        TakeDamage(raycastWeaponShoot.Weapon.DamagePerHit);
+        TakeDamage(raycastWeaponShoot.Weapon.DamagePerHit, CurrentHypeMeasurable.HypeType);
         SpawningDecal(hit.point);
         Hit?.Invoke();
         UnitHitted?.Invoke();
@@ -72,7 +72,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         if (_health.IsDead())
             return;
         CurrentHypeMeasurable = projectile;
-        TakeDamage(projectile.Damage);
+        TakeDamage(projectile.Damage, CurrentHypeMeasurable.HypeType);
         SpawningDecal(transform.position);
         Hit?.Invoke();
         UnitHitted?.Invoke();
@@ -82,7 +82,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
     {
         CurrentHypeMeasurable = ghost;
         SpawningDecal(transform.position);
-        TakeDamage(damage);
+        TakeDamage(damage, CurrentHypeMeasurable.HypeType);
         Hit?.Invoke();
         UnitHitted?.Invoke();
     }

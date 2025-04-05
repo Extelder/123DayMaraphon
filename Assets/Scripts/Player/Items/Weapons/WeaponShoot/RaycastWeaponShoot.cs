@@ -44,8 +44,10 @@ public class RaycastWeaponShoot : WeaponShoot
     public void OnKunitanShootPerformed()
     {
         HypeValue *= KunitanShoot.Instance.HitHypeMultiplier;
+        HypeType = HypeType.KunitanDouble;
         OnShootPerformed();
         HypeValue /= KunitanShoot.Instance.HitHypeMultiplier;
+        HypeType = HypeType.Kill;
     }
 
     public override void Accept(IWeaponVisitor visitor)

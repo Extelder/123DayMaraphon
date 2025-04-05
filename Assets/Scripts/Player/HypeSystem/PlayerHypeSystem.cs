@@ -3,8 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum HypeType
+{
+    Kill,
+    HeadKill,
+    Explode,
+    KunitanDouble,
+    KunitanKill,
+    DoubleKill,
+    TripleKill,
+    QuadroKill,
+    RAMPAGE,
+    MEGAKILL,
+    GODLIKE
+}
+
 public class PlayerHypeSystem : MonoBehaviour
 {
+    [SerializeField] private PlayerHypeRunningLine _runningLine;
+
     [field: SerializeField] public float MaxValue { get; private set; } = 5f;
     [field: SerializeField] public float MinValue { get; private set; } = 0f;
     [field: SerializeField] public float DecreaseValue { get; private set; } = 0.05f;
@@ -51,8 +69,9 @@ public class PlayerHypeSystem : MonoBehaviour
         }
     }
 
-    public void Add(float value, bool shouldMultiply = true)
+    public void Add(float value, HypeType type, bool shouldMultiply = true)
     {
+        AddHypeType(type);
         if (shouldMultiply)
             value *= Multiplyer;
         if (Current + value >= MaxValue)
@@ -70,6 +89,11 @@ public class PlayerHypeSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(ResetDecreaseDelay);
         CanDecreasing = true;
+    }
+
+    public void AddHypeType(HypeType hypeType)
+    {
+        _runningLine.AddHype(hypeType);
     }
 
     public void Remove(float value, bool shouldMultiply = false)

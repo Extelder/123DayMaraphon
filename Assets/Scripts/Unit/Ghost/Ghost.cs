@@ -8,6 +8,8 @@ using UnityEngine;
 public class Ghost : MonoBehaviour, IHypeMeasurable
 {
     [field: SerializeField] public float HypeValue { get; set; } = 0.125f;
+    [field: SerializeField] public HypeType HypeType { get; set; }
+
     [SerializeField] private OverlapSettings _overlapSettings;
 
     [SerializeField] private float _checkRate;

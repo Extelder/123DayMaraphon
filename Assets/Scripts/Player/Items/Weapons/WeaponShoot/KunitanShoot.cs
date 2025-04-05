@@ -6,6 +6,7 @@ using UnityEngine;
 public class KunitanShoot : MonoBehaviour, IHypeMeasurable
 {
     [field: SerializeField] public float HypeValue { get; set; } = 0.1f;
+    [field: SerializeField] public HypeType HypeType { get; set; }
     [field: SerializeField] public float HitHypeMultiplier { get; set; } = 1.1f;
 
     [SerializeField] private DefaultWeaponShootState _weaponShootState;

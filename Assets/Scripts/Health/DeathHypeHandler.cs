@@ -7,6 +7,7 @@ using UnityEngine;
 public class DeathHypeHandler : MonoBehaviour
 {
     public float HypeValue { get; private set; }
+    public HypeType HypeType { get; private set; }
 
     private Health _health;
 
@@ -22,12 +23,13 @@ public class DeathHypeHandler : MonoBehaviour
 
     private void OnDead()
     {
-        PlayerHypeSystem.Instance.Add(HypeValue);
+        PlayerHypeSystem.Instance.Add(HypeValue, HypeType);
     }
 
-    public void SetHype(float value)
+    public void SetHype(float value, HypeType hypeType)
     {
         HypeValue = value;
+        HypeType = hypeType;
     }
 
     private void OnDisable()

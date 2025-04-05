@@ -58172,6 +58172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <HypeValue>k__BackingField: 0.125
+  <HypeType>k__BackingField: 0
   _overlapSettings: {fileID: 4201487991155412838}
   _checkRate: 0.1
 --- !u!114 &4201487991155412838
@@ -58581,6 +58582,7 @@ MonoBehaviour:
   <ReturnToPoolDelay>k__BackingField: 2
   _autoreturnToPool: 0
   <HypeValue>k__BackingField: 0.1
+  <HypeType>k__BackingField: 2
   <DefaultHypeValue>k__BackingField: 0.1
   _trail: {fileID: 8550064555103459554}
   _cinemachineImpulseSource: {fileID: 1915145497821759342}

@@ -12,6 +12,7 @@ public class KunitanaUltimateAttack : MonoBehaviour, IHypeMeasurable
     [SerializeField] private CinemachineImpulseSource _impulseSource;
     [Inject] private PlayerInputs _inputs;
     [field: SerializeField] public float Damage { get; private set; }
+    [field: SerializeField] public HypeType HypeType { get; set; }
 
     [SerializeField] private OverlapSettings _overlapSettings;
 
