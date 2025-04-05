@@ -10,6 +10,7 @@ public class ProjectileRaycastExplode : MonoBehaviour, IWeaponVisitor
     [SerializeField] private GameObject _projectileGFX;
     [SerializeField] private GameObject _hittedExplosionGFX;
     [SerializeField] private GameObject _defaultExplosionGFX;
+    public static event Action ProjectileShooted;
 
     private float _defaultExplosionRange;
     private Vector3 _defaultEffectScale;
@@ -37,6 +38,7 @@ public class ProjectileRaycastExplode : MonoBehaviour, IWeaponVisitor
         _hittedExplosionGFX.SetActive(true);
         _defaultExplosionGFX.SetActive(false);
         _projectile.SearchNearestEnemy();
+        ProjectileShooted?.Invoke();
     }
 
     public void Visit(KunitanaUltimateAttack kunitanShoot)
@@ -49,6 +51,7 @@ public class ProjectileRaycastExplode : MonoBehaviour, IWeaponVisitor
         _hittedExplosionGFX.SetActive(true);
         _defaultExplosionGFX.SetActive(false);
         _projectile.SearchNearestEnemy();
+        ProjectileShooted?.Invoke();
     }
 
     public void Visit(Projectile projectile)
