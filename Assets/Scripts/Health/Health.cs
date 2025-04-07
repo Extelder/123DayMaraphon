@@ -18,7 +18,7 @@ public abstract class Health : MonoBehaviour
         CurrentValue = MaxValue;
     }
 
-    public void TakeDamage(float value)
+    public virtual void TakeDamage(float value)
     {
         if (IsDead())
             return;

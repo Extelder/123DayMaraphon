@@ -7,6 +7,7 @@ using UnityEngine;
 public enum HypeType
 {
     Kill,
+    Ghost,
     HeadKill,
     Explode,
     KunitanDouble,
@@ -110,5 +111,10 @@ public class PlayerHypeSystem : MonoBehaviour
     public void Multiply(float value)
     {
         Multiplyer *= value;
+    }
+
+    public void Divide(float value)
+    {
+        Multiplyer /= value;
     }
 }

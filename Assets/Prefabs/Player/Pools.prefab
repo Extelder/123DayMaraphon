@@ -56192,7 +56192,7 @@ PrefabInstance:
     - target: {fileID: 8770932165466361121, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}
       propertyPath: _layerMask.m_Bits
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8770932165466361121, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}
@@ -56213,6 +56213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: <ExplosionForce>k__BackingField
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8770932165466361121, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
+      propertyPath: <ExplosionRange>k__BackingField
+      value: 2.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -58172,7 +58177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <HypeValue>k__BackingField: 0.125
-  <HypeType>k__BackingField: 0
+  <HypeType>k__BackingField: 1
   _overlapSettings: {fileID: 4201487991155412838}
   _checkRate: 0.1
 --- !u!114 &4201487991155412838
@@ -59142,7 +59147,7 @@ PrefabInstance:
     - target: {fileID: 8770932165466361121, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}
       propertyPath: _layerMask.m_Bits
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8770932165466361121, guid: 2c4a954ac18ba9445b847a21b4bd0795,
         type: 3}
@@ -59168,6 +59173,11 @@ PrefabInstance:
         type: 3}
       propertyPath: <ExplosionForce>k__BackingField
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8770932165466361121, guid: 2c4a954ac18ba9445b847a21b4bd0795,
+        type: 3}
+      propertyPath: <ExplosionRange>k__BackingField
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7682043583596646492, guid: 2c4a954ac18ba9445b847a21b4bd0795, type: 3}

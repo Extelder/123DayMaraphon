@@ -38042,7 +38042,9 @@ MonoBehaviour:
   - {fileID: 2793338393023193088}
   - {fileID: 4543791982442273409}
   _kunitanaHarakiriState: {fileID: 4858288843575502137}
+  _hypeSystem: {fileID: 823349964608512692}
   _damage: 40
+  _multiplier: 1.5
   _animatorSpeedMultipier: 1.4
   _boostRecovery: 10
 --- !u!114 &3986596030218241735
@@ -84058,7 +84060,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.65
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -84115,7 +84117,7 @@ MonoBehaviour:
   <ReturnToPoolDelay>k__BackingField: 4
   _autoreturnToPool: 1
   _runningLine: {fileID: 5774170216942055965}
-  _speed: -0.01
+  _speed: -0.04
   _text: {fileID: 4745986659466560935}
 --- !u!1 &9222406922810549845
 GameObject:
