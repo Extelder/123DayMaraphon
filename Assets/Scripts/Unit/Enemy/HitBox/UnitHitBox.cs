@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using Zenject;
 
@@ -15,6 +16,11 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
     public event Action Hit;
 
     public static event Action UnitHitted;
+
+    public void OnDrawGizmos()
+    {
+        _deathHypeHandler = GetComponentInParent<DeathHypeHandler>();
+    }
 
     public void Visit(WeaponShoot weaponShoot)
     {
@@ -32,6 +38,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         Hit?.Invoke();
         UnitHitted?.Invoke();
     }
+
     public void Visit(KunitanaUltimateAttack kunitanaUltimateAttack)
     {
         if (!_health)
