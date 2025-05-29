@@ -3,7 +3,7 @@ using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
 
-public class PlayerHealPickUpable : MonoBehaviour, IPickupable
+public class PlayerHealPickUpable : Magnitable, IPickupable
 {
     [SerializeField] private float _valueToHeal;
 
@@ -13,10 +13,12 @@ public class PlayerHealPickUpable : MonoBehaviour, IPickupable
     [SerializeField] private float _randomForceMax;
     [SerializeField] private float _randomForceMin;
 
-    private void OnEnable()
+    public override void OnEnable()
     {
+        base.OnEnable();
         _rigidbody.AddForce(
-            new Vector3(Random.Range(_randomForceMin, _randomForceMax), _upwardForce, Random.Range(_randomForceMin, _randomForceMax)),
+            new Vector3(Random.Range(_randomForceMin, _randomForceMax), _upwardForce,
+                Random.Range(_randomForceMin, _randomForceMax)),
             ForceMode.Impulse);
     }
 

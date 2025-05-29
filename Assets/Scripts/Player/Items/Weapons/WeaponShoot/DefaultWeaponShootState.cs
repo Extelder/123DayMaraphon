@@ -17,7 +17,6 @@ public class DefaultWeaponShootState : WeaponShootState
     public override void Enter()
     {
         CanChanged = false;
-        CanShoot = false;
         Animator.Shoot();
     }
 
@@ -43,7 +42,6 @@ public class DefaultWeaponShootState : WeaponShootState
         StopAllCoroutines();
 
         CanChanged = true;
-        CanShoot = true;
     }
 
     public void AnimationEndStopChecking()
@@ -54,13 +52,18 @@ public class DefaultWeaponShootState : WeaponShootState
             return;
 
         CanChanged = true;
-        CanShoot = true;
     }
 
     private IEnumerator AnimationEndChecking()
     {
         while (true)
         {
+            if (!CanShoot)
+            {
+                CanChanged = true;
+                yield break;
+            }
+
             if (_kunitana && _playerInputs.PlayerWeaponInputs.KunitanaAttacking)
             {
                 _alreadyShooting = true;

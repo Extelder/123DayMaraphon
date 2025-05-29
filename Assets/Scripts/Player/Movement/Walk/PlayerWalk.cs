@@ -27,7 +27,7 @@ public class PlayerWalk : MovementSpeedLerping
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        // _moving.Subscribe(_ =>
+        // Moving.Subscribe(_ =>
         // {
         //     if (_)
         //     {

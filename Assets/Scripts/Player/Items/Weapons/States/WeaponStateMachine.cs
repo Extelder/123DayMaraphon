@@ -22,6 +22,8 @@ public class WeaponStateMachine : StateMachine
     private void OnMainShootPressedUp()
     {
         StopAllCoroutines();
+        if (_shoot.CanShoot == false)
+            ChangeState(_idle);
         StartCoroutine(TryingToExitShoot());
     }
 
@@ -36,7 +38,13 @@ public class WeaponStateMachine : StateMachine
     {
         while (true)
         {
-            if (Item.TakeUpped)
+            if (_shoot.CanShoot == false)
+            {
+                ChangeState(_idle);
+                break;
+            }
+
+            if (Item.TakeUpped && _shoot.CanShoot)
                 ChangeState(_shoot);
             yield return new WaitForSeconds(0.05f);
         }
