@@ -11,6 +11,7 @@ public abstract class Health : MonoBehaviour
     public event Action<float> HealthValueChanged;
     public event Action<float> OnHealedToMax;
     public event Action<float> Damaged;
+    public event Action<float> Healed;
     public event Action Dead;
 
     private void Start()
@@ -42,11 +43,13 @@ public abstract class Health : MonoBehaviour
             return;
         if (CurrentValue + value < MaxValue)
         {
+            Healed?.Invoke(CurrentValue);
             ChangeHealthValue(CurrentValue + value);
             return;
         }
 
         HealToMax();
+        Healed?.Invoke(CurrentValue);
     }
 
     public bool IsDead() => CurrentValue <= 0;

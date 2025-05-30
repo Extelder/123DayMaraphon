@@ -28,7 +28,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BloodDamageScrean
+  m_Name: HealDamageScrean
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsDamaged
@@ -36,7 +36,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -148,7 +148,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0a617ae0c0b9191449bb6f90475fb148, type: 2}
+  m_Motion: {fileID: 7400000, guid: ec95416bb033fbd41990df05ac46ab3c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
