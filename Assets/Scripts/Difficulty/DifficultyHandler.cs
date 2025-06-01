@@ -55,11 +55,30 @@ public class DifficultyHandler : MonoBehaviour
         }
     }
 
+    public void Easy()
+    {
+        ChangeDifficulty(_easyDifficulty);
+    }
+
+    public void Medium()
+    {
+        ChangeDifficulty(_mediumDifficulty);
+    }
+
+    public void Hard()
+    {
+        ChangeDifficulty(_hardDifficulty);
+    }
+
+
     public void ChangeDifficulty(Difficulty difficulty)
     {
         if (CurrentDifficulty != difficulty)
         {
+            CurrentDifficulty = difficulty;
             DifficultyChanged?.Invoke(CurrentDifficulty = difficulty);
+            Debug.Log(Convert.ToInt16(CurrentDifficulty.Type));
+            PlayerPrefs.SetInt("Difficulty", Convert.ToInt16(CurrentDifficulty.Type));
         }
     }
 }
