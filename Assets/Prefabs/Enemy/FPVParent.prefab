@@ -93,6 +93,7 @@ MonoBehaviour:
   _hitBox: {fileID: 7170611439302710317}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &5367030205455967674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,6 +418,7 @@ MonoBehaviour:
   _hitBox: {fileID: 1777864945760988143}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &3203893093490151391
 MonoBehaviour:
   m_ObjectHideFlags: 0

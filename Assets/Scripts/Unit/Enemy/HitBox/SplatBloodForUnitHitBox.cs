@@ -12,6 +12,7 @@ public class SplatBloodForUnitHitBox : MonoBehaviour
     [SerializeField] private float _spreadFactor;
 
     private Vector3 _currentRaycastOffset;
+    private int _spawnedBloodDecals;
     private RaycastHit _hit;
 
     private void SpawningDecal(Vector3 spawnPoint)
@@ -26,9 +27,14 @@ public class SplatBloodForUnitHitBox : MonoBehaviour
         if (Physics.Raycast(transform.position, _currentRaycastOffset, out _hit, _rayRange, _layer))
         {
             var hitCollider = _hit.collider;
+            if (_spawnedBloodDecals >= 4)
+            {
+                return;
+            }
             if (hitCollider.TryGetComponent<BloodSplatableObject>(out BloodSplatableObject bloodSplatable))
             {
                 SpawningDecal(_hit.point);
+                _spawnedBloodDecals++;
             }
         }
     }

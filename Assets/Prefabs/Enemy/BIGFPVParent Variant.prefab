@@ -23,10 +23,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5.2996473
       objectReference: {fileID: 0}
+    - target: {fileID: 589810121640649101, guid: 2e038841cad57ea4c9134a27406cc8f7,
+        type: 3}
+      propertyPath: _maxBloodDecals
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 647266885175963954, guid: 2e038841cad57ea4c9134a27406cc8f7,
         type: 3}
       propertyPath: <MaxValue>k__BackingField
       value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054016052058011597, guid: 2e038841cad57ea4c9134a27406cc8f7,
+        type: 3}
+      propertyPath: _maxBloodDecals
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1777864945760988143, guid: 2e038841cad57ea4c9134a27406cc8f7,
         type: 3}
