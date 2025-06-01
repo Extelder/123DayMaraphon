@@ -15,5 +15,6 @@ MonoBehaviour:
   Name: Railgun
   Id: 3
   DamagePerHit: 100
+  DefaultDamagePerHit: 100
   RandomRangeMultiplayer: 0.02
   HitsPerShot: 1

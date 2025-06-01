@@ -7,4 +7,5 @@ public class Difficulty : ScriptableObject
 {
     public DifficultyType Type;
     public float DamageMultiplier;
+    public float HealthDamageMultiplier;
 }

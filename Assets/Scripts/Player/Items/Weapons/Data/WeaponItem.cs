@@ -9,23 +9,16 @@ public class WeaponItem : ScriptableObject
     public string Name;
     public int Id;
     public float DamagePerHit;
-
-    private float _defaultDamage;
-
-
-    private void OnDisable()
-    {
-        DamagePerHit = _defaultDamage;
-    }
+    public float DefaultDamagePerHit;
 
     public void ResetDamage()
     {
-        DamagePerHit = _defaultDamage;
+        DamagePerHit = DefaultDamagePerHit;
     }
 
     public void MultipliDamage(float multiplier)
     {
-        _defaultDamage = DamagePerHit;
+        ResetDamage();
         DamagePerHit *= multiplier;
     }
 }

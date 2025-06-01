@@ -30,7 +30,7 @@ public class Settings : MonoBehaviour
     [SerializeField] private PlayerFOV _playerFOV;
 
     [SerializeField] private Slider _sensetivitySlider;
-    [field:SerializeField] public Slider MasterVolumeSlider;
+    [field: SerializeField] public Slider MasterVolumeSlider;
     [SerializeField] private Slider _musicVolumeSlider;
     [SerializeField] private Slider _effectsVolumeSlider;
     [SerializeField] private Slider _fovSlider;
@@ -92,6 +92,9 @@ public class Settings : MonoBehaviour
 
     private void Start()
     {
+        if (_hub)
+            Time.timeScale = 1;
+
         _monitorCount = Display.displays.Length;
         _themeController.currentColor = _themeController.custom1.graphic1;
 
@@ -309,9 +312,9 @@ public class Settings : MonoBehaviour
         _resolutionDropdown.value = _currentResolutionIndex;
         _resolutionDropdown.RefreshShownValue();
     }
-    
+
     public void BootstrapDisplay()
-    {   
+    {
         _displayDropdown.ClearOptions();
         List<string> display = new List<string>();
         _monitorCount = Display.displays.Length;
@@ -331,10 +334,12 @@ public class Settings : MonoBehaviour
                 if (Display.displays[i].active)
                 {
                     Display.displays[i].Activate();
-                    Display.displays[i].SetRenderingResolution(Display.displays[i].systemWidth, Display.displays[i].systemHeight);
+                    Display.displays[i].SetRenderingResolution(Display.displays[i].systemWidth,
+                        Display.displays[i].systemHeight);
                 }
             }
         }
+
         _displayDropdown.AddOptions(display);
         _displayDropdown.value = _monitorCount;
         _displayDropdown.RefreshShownValue();
@@ -344,7 +349,8 @@ public class Settings : MonoBehaviour
     public void SwitchDisplay(int displayIndex)
     {
         Display.displays[displayIndex].Activate();
-        Display.displays[displayIndex].SetRenderingResolution(Display.displays[displayIndex].systemWidth, Display.displays[displayIndex].systemHeight);
+        Display.displays[displayIndex].SetRenderingResolution(Display.displays[displayIndex].systemWidth,
+            Display.displays[displayIndex].systemHeight);
         SetResolutionReady();
     }
 

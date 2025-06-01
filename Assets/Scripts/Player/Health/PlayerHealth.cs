@@ -5,12 +5,19 @@ using UnityEngine;
 
 public class PlayerHealth : Health
 {
+    public float DamageMultiplier { get; private set; } = 1;
+
     public static PlayerHealth Instance { get; private set; }
 
     public event Action Dead;
     public event Action<float> PlayerDamaged;
 
     public bool IsDead { get; private set; }
+
+    public void SetDamageMultiplier(float multiplier)
+    {
+        DamageMultiplier = multiplier;
+    }
 
     private void Awake()
     {
@@ -20,12 +27,15 @@ public class PlayerHealth : Health
             return;
         }
 
+
         Debug.LogError("There`s one more PlayerHealth in scene");
         Debug.Break();
     }
 
     public override void TakeDamage(float value)
     {
+        value *= DamageMultiplier;
+
         base.TakeDamage(value);
         if (value > 100)
         {
