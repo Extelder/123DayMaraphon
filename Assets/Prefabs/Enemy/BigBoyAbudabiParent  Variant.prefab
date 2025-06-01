@@ -153,6 +153,7 @@ MonoBehaviour:
   _hitBox: {fileID: 6678883323451590575}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &6678883323451590575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,6 +352,7 @@ MonoBehaviour:
   _hitBox: {fileID: 6291137300413330841}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &6291137300413330841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5508,6 +5510,7 @@ MonoBehaviour:
   _hitBox: {fileID: 457264817955515406}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &457264817955515406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5687,6 +5690,7 @@ MonoBehaviour:
   _hitBox: {fileID: 2548841124758602269}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!1 &1327133821843172541
 GameObject:
   m_ObjectHideFlags: 0
@@ -5997,6 +6001,7 @@ MonoBehaviour:
   _hitBox: {fileID: 1543124347449710323}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &1543124347449710323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6299,6 +6304,7 @@ MonoBehaviour:
   _hitBox: {fileID: 8206666993702708119}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &8206666993702708119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6497,6 +6503,7 @@ MonoBehaviour:
   _hitBox: {fileID: 3222058001771318431}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &3222058001771318431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6696,6 +6703,7 @@ MonoBehaviour:
   _hitBox: {fileID: 8839291011218438356}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &8839291011218438356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6989,6 +6997,7 @@ MonoBehaviour:
   _hitBox: {fileID: 6998449858275173951}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &6998449858275173951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12101,6 +12110,7 @@ MonoBehaviour:
   _hitBox: {fileID: 4070728404392640075}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &4070728404392640075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12330,6 +12340,7 @@ MonoBehaviour:
   _hitBox: {fileID: 4312189966856309498}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &4312189966856309498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12951,6 +12962,7 @@ MonoBehaviour:
   _hitBox: {fileID: 5910706111334891211}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &5910706111334891211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13227,6 +13239,7 @@ MonoBehaviour:
   _hitBox: {fileID: 3810998365481791521}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &3810998365481791521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13385,6 +13398,7 @@ MonoBehaviour:
   _hitBox: {fileID: 1553191275194701712}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &1553191275194701712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13552,6 +13566,7 @@ MonoBehaviour:
   _hitBox: {fileID: 1994126362629828760}
   _bloodSplatterPerHit: 10
   _spreadFactor: 1.2
+  _maxBloodDecals: 1
 --- !u!114 &1994126362629828760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14314,6 +14329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.017207513
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386947232960387629, guid: 27be060f72809074abdca38e53562600,
+        type: 3}
+      propertyPath: _maxBloodDecals
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2386947232960387629, guid: 27be060f72809074abdca38e53562600,
         type: 3}
