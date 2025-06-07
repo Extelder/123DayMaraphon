@@ -18,6 +18,7 @@ public class KunitanaUltimate : MonoBehaviour
 
     [SerializeField] private GameObject _weapons;
     [SerializeField] private GameObject _kunitanas;
+    [SerializeField] private GameObject _hint;
 
     [SerializeField] private AudioMixer _masterMixer;
 
@@ -52,6 +53,7 @@ public class KunitanaUltimate : MonoBehaviour
             Debug.Log("canUltimate");
             if (_pressed == false)
             {
+                _hint.SetActive(true);
                 Debug.Log("Ultimate");
                 Observable.EveryUpdate().Subscribe(_ =>
                 {
@@ -59,6 +61,7 @@ public class KunitanaUltimate : MonoBehaviour
                     _pressed = true;
                     if (Input.GetKeyDown(_ultimateKeyCode))
                     {
+                        _hint.SetActive(false);
                         Debug.Log("Kukich");
                         KunitanaAttack();
                         Ultimated?.Invoke();

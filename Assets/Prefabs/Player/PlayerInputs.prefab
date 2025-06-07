@@ -95,5 +95,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ShotGunKeyCode>k__BackingField: 49
   <RifleKeyCode>k__BackingField: 50
-  <RPGKeyCode>k__BackingField: 51
-  <RailgunKeyCode>k__BackingField: 52
+  <RPGKeyCode>k__BackingField: 50
+  <RailgunKeyCode>k__BackingField: 51
