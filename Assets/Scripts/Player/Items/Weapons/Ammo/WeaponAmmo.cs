@@ -22,8 +22,6 @@ public class WeaponAmmo : Ammo
 
     private void OnValueChanged(int value)
     {
-        Debug.Log(CurrentAmmo);
-        
         if (IsOut())
         {
             _weaponShootState.CanShoot = false;
