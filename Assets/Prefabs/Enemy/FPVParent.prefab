@@ -93,7 +93,6 @@ MonoBehaviour:
   _hitBox: {fileID: 7170611439302710317}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
-  _maxBloodDecals: 1
 --- !u!114 &5367030205455967674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,7 +417,6 @@ MonoBehaviour:
   _hitBox: {fileID: 1777864945760988143}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
-  _maxBloodDecals: 1
 --- !u!114 &3203893093490151391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,7 +487,7 @@ Transform:
   m_GameObject: {fileID: 4179122581948146997}
   m_LocalRotation: {x: 0.000000029802315, y: -0.000000022351736, z: 0.00000006332992,
     w: 1}
-  m_LocalPosition: {x: -0.09000048, y: 0.18400025, z: 0.36}
+  m_LocalPosition: {x: -0.08999929, y: 0.18399966, z: 0.36}
   m_LocalScale: {x: 0.38360998, y: 0.38360998, z: 0.38360998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10572,7 +10570,7 @@ Transform:
   m_GameObject: {fileID: 8100232563279092234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14, y: 12, z: -24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2917, y: 1.2917, z: 1.2917}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1550446654900962803}

@@ -19,7 +19,7 @@ public class PlayerHealthHype : MonoBehaviour
 
     private void OnPlayerDamaged(float damage)
     {
-        float convertedDamage = damage / 100 * 2;
+        float convertedDamage = damage / 100;
         Debug.Log(convertedDamage);
         PlayerHypeSystem.Instance.Remove(convertedDamage);
     }
