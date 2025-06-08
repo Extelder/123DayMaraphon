@@ -36,7 +36,6 @@ public class Settings : MonoBehaviour
     [SerializeField] private Slider _fovSlider;
 
     [SerializeField] private TMP_Dropdown _resolutionDropdown;
-    [SerializeField] private TMP_Dropdown _displayDropdown;
 
     [SerializeField] private PlayerDeath _death;
 
@@ -61,7 +60,6 @@ public class Settings : MonoBehaviour
     private float _currentRefrashRate;
     private int _currentResolutionIndex = 0;
     private CinemachinePOV _cameraModule;
-    private int _monitorCount;
     private int _monitorIndex;
 
     public event Action Opened;
@@ -95,7 +93,6 @@ public class Settings : MonoBehaviour
         if (_hub)
             Time.timeScale = 1;
 
-        _monitorCount = Display.displays.Length;
         _themeController.currentColor = _themeController.custom1.graphic1;
 
         _sensetivitySlider.value = PlayerPrefs.GetFloat("Sensetivity", 1f) / 2;
@@ -112,8 +109,6 @@ public class Settings : MonoBehaviour
         bool fullScreen = Convert.ToBoolean(PlayerPrefs.GetInt("FullScreen", 1));
         Screen.SetResolution(PlayerPrefs.GetInt("Width"), PlayerPrefs.GetInt("Height"), fullScreen);
         SetResolutionReady();
-        BootstrapDisplay();
-        Display.displays[PlayerPrefs.GetInt("Display", _monitorIndex)].Activate();
         Screen.fullScreen = fullScreen;
         if (fullScreen)
         {
@@ -311,47 +306,6 @@ public class Settings : MonoBehaviour
         _resolutionDropdown.AddOptions(options);
         _resolutionDropdown.value = _currentResolutionIndex;
         _resolutionDropdown.RefreshShownValue();
-    }
-
-    public void BootstrapDisplay()
-    {
-        _displayDropdown.ClearOptions();
-        List<string> display = new List<string>();
-        _monitorCount = Display.displays.Length;
-        if (_monitorCount <= 1)
-        {
-            Display.displays[0].Activate();
-            string displayName = "Display" + " " + _monitorIndex;
-            display.Add(displayName);
-        }
-        else
-        {
-            for (int i = 1; i < _monitorCount; i++)
-            {
-                _monitorIndex = i;
-                string displayName = "Display" + " " + _monitorIndex;
-                display.Add(displayName);
-                if (Display.displays[i].active)
-                {
-                    Display.displays[i].Activate();
-                    Display.displays[i].SetRenderingResolution(Display.displays[i].systemWidth,
-                        Display.displays[i].systemHeight);
-                }
-            }
-        }
-
-        _displayDropdown.AddOptions(display);
-        _displayDropdown.value = _monitorCount;
-        _displayDropdown.RefreshShownValue();
-        PlayerPrefs.SetInt("Display", _monitorIndex);
-    }
-
-    public void SwitchDisplay(int displayIndex)
-    {
-        Display.displays[displayIndex].Activate();
-        Display.displays[displayIndex].SetRenderingResolution(Display.displays[displayIndex].systemWidth,
-            Display.displays[displayIndex].systemHeight);
-        SetResolutionReady();
     }
 
     public void ChangeResolutions(int resolutionIndex)
