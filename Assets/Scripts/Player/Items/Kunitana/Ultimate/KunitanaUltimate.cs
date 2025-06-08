@@ -50,19 +50,15 @@ public class KunitanaUltimate : MonoBehaviour
     {
         if (value >= 4.5f)
         {
-            Debug.Log("canUltimate");
             if (_pressed == false)
             {
                 _hint.SetActive(true);
-                Debug.Log("Ultimate");
                 Observable.EveryUpdate().Subscribe(_ =>
                 {
-                    Debug.Log("Kukich2");
                     _pressed = true;
                     if (Input.GetKeyDown(_ultimateKeyCode))
                     {
                         _hint.SetActive(false);
-                        Debug.Log("Kukich");
                         KunitanaAttack();
                         Ultimated?.Invoke();
                         StartCoroutine(StopUltimate());
@@ -73,6 +69,7 @@ public class KunitanaUltimate : MonoBehaviour
         }
         else
         {
+            _hint.SetActive(false);
             _pressed = false;
             _compositeDisposable.Clear();
         }
