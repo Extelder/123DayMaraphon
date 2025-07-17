@@ -48,5 +48,6 @@ public class EnemyRagdollHealth : Health
 
         Destroy(gameObject);
         Destroy(_enemyParent);
+        Destroy(_ragdollParent.gameObject, 10);
     }
 }

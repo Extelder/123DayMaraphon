@@ -78,7 +78,12 @@ public class RPGProjectile : Projectile
         else
         {
             _magnitableTrail.gameObject.SetActive(true);
-            HypeValue *= 2;
+            if (!(HypeValue / 2 > DefaultHypeValue))
+            {
+                HypeValue *= 2;
+            }
+
+            Debug.Log(HypeValue);
             PlayerTime.Instance.TimeStop(0.2f);
             Observable.EveryUpdate()
                 .Subscribe(_ => { Rigidbody.MovePosition(projectileMagnitable.transform.position); }).AddTo(Disposable);

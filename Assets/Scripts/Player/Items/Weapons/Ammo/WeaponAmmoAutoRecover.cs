@@ -12,16 +12,13 @@ public class WeaponAmmoAutoRecover : MonoBehaviour
     private void OnEnable()
     {
         _ammo.Spended += OnSpended;
-    }
-
-    private void Start()
-    {
         StartCoroutine(Recovering());
     }
 
     private void OnDisable()
     {
         _ammo.Spended -= OnSpended;
+        StopAllCoroutines();
     }
 
     private void OnSpended(int value)
