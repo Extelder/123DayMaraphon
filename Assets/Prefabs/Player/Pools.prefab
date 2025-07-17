@@ -540,7 +540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 6337836049898530207}
   _container: {fileID: 5524309286237310558}
-  _minObjectsCapacity: 100
+  _minObjectsCapacity: 10
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &1204177259864120028
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 5850964723402854977}
   _container: {fileID: 1509723765088333339}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 100
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &1729264383984672430
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 1050883367330760266}
   _container: {fileID: 2524949147397008281}
-  _minObjectsCapacity: 100
+  _minObjectsCapacity: 50
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &1775536597267163791
@@ -10749,7 +10749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 5787254314949625638}
   _container: {fileID: 8144767293679657079}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 10
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &2223473267932492650
@@ -10799,7 +10799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 1792328631876822513}
   _container: {fileID: 5674870657079738341}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 20
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &2291025683842443583
@@ -11057,7 +11057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 8881919132434780134}
   _container: {fileID: 2684668936387645500}
-  _minObjectsCapacity: 100
+  _minObjectsCapacity: 20
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &2488976094889799002
@@ -15987,7 +15987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 2572420177411326287}
   _container: {fileID: 940963876078127273}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 20
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &2647699018913419098
@@ -16037,7 +16037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 4493510037622511907}
   _container: {fileID: 3428466239713252959}
-  _minObjectsCapacity: 100
+  _minObjectsCapacity: 10
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &2688634604281129956
@@ -16101,7 +16101,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a3692891f50f0f6479e33559947f34cc, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16245,7 +16245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 1780480710658208733}
   _container: {fileID: 6718302328628790092}
-  _minObjectsCapacity: 100
+  _minObjectsCapacity: 10
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &2752503241690277911
@@ -17574,7 +17574,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a96ac42dc912bbf479d09fb95283b042, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -17876,7 +17876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 1951800916276069021}
   _container: {fileID: 3973152026410369490}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 50
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &3676997024728524221
@@ -22918,7 +22918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 4366236560124841300}
   _container: {fileID: 8258491953092009543}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 20
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &3815325009634301823
@@ -23001,7 +23001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 7666186268430462953}
   _container: {fileID: 8300472321271321722}
-  _minObjectsCapacity: 100
+  _minObjectsCapacity: 10
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &4078091976165847065
@@ -23184,7 +23184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 486921047237818715}
   _container: {fileID: 604356873680389620}
-  _minObjectsCapacity: 100
+  _minObjectsCapacity: 10
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &4269819222211139645
@@ -23235,7 +23235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 4531338903580928703}
   _container: {fileID: 7270883798155288924}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 20
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &4329966230877229085
@@ -23735,7 +23735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 9058809745368003641}
   _container: {fileID: 522714555316519336}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 20
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &4405250157466233397
@@ -24287,7 +24287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 1929126294875592281}
   _container: {fileID: 4768065016449393229}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 10
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &5108021959525408390
@@ -24403,7 +24403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 4876768029566812176}
   _container: {fileID: 2275601434577378331}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 50
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &5224203800213181296
@@ -24694,7 +24694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 5941371125248307690}
   _container: {fileID: 2950501289225538728}
-  _minObjectsCapacity: 100
+  _minObjectsCapacity: 20
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &5475431050357139857
@@ -24934,7 +24934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 5474869423281947486}
   _container: {fileID: 1368731744275706102}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 20
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &5642366556185262362
@@ -24984,7 +24984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 2762253207516053562}
   _container: {fileID: 3844203742786631017}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 20
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &5668338738283400399
@@ -25105,7 +25105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 5771725619176829066}
   _container: {fileID: 4748279495414863722}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 50
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &5991425716266473767
@@ -39829,7 +39829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 7744974687049297746}
   _container: {fileID: 3150745730754627077}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 50
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &6543711118129341977
@@ -40271,7 +40271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 5168145389535105533}
   _container: {fileID: 557354752906758478}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 5
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &6826884165706457120
@@ -40570,7 +40570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 8205239527092269371}
   _container: {fileID: 6351987623426059483}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 100
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &7000516557977708255
@@ -40690,7 +40690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 8281885032344954497}
   _container: {fileID: 3953387057273989773}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 10
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &7108923112251512615
@@ -50505,7 +50505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 425933351093115595}
   _container: {fileID: 7216576657799709756}
-  _minObjectsCapacity: 200
+  _minObjectsCapacity: 50
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &8031368121743955216
@@ -50555,7 +50555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 4999857314576219187}
   _container: {fileID: 7654416703136072501}
-  _minObjectsCapacity: 1000
+  _minObjectsCapacity: 100
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &8335415183545121247
@@ -55558,7 +55558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPoolObject: {fileID: 8603573196343319480}
   _container: {fileID: 2643258759322763607}
-  _minObjectsCapacity: 50
+  _minObjectsCapacity: 10
   _maxObjectsCapacity: 2147483647
   _autoExpand: 1
 --- !u!1 &9023299061714431634
