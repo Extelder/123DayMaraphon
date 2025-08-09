@@ -40,6 +40,13 @@ public class LevelSelector : MonoBehaviour
         _text.enabled = true;
     }
 
+    public void RetryCurrentLevel()
+    {
+        PlayerPrefs.SetString(_currentLevelInfo.LevelBuildIndex + "Level", "");
+        PlayerPrefs.SetInt("CurrentScene", _currentLevelInfo.LevelBuildIndex);
+        SceneManager.LoadScene("SceneSwitcher");
+    }
+
     public void PlayCurrentLevel()
     {
         PlayerPrefs.SetInt("CurrentScene", _currentLevelInfo.LevelBuildIndex);

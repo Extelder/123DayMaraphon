@@ -6,6 +6,10 @@ using Zenject;
 
 public class KunitanStateMachine : StateMachine
 {
+    [SerializeField] private Animator _animator;
+    [SerializeField] private string _attackVariantIntAnimatorName = "AttackVariant";
+
+    [SerializeField] private KunitanShoot _kunitanaShoot;
     [field: SerializeField] public ItemTakeUp Item { get; private set; }
 
     [Header("States")] [SerializeField] private State _idle;
@@ -56,6 +60,15 @@ public class KunitanStateMachine : StateMachine
     {
         while (true)
         {
+            if (_kunitanaShoot.IsLastShooted())
+            {
+                _animator.SetInteger(_attackVariantIntAnimatorName, 0);
+            }
+            else
+            {
+                _animator.SetInteger(_attackVariantIntAnimatorName, 1);
+            }
+
             if (Item.TakeUpped)
                 ChangeState(_shoot);
             yield return new WaitForSeconds(0.05f);

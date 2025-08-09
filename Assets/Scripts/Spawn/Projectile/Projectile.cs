@@ -130,7 +130,6 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
         {
             if (!other)
                 continue;
-
             if (other.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
             {
                 if (_onlyPlayerHealth)
@@ -173,7 +172,7 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
         PlayerTime.Instance.TimeStop(0.2f);
     }
 
-    public void Accept(IWeaponVisitor visitor)
+    public virtual void Accept(IWeaponVisitor visitor)
     {
         visitor.Visit(this);
     }

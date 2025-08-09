@@ -90,6 +90,15 @@ public class RPGProjectile : Projectile
         }
     }
 
+    public override void Accept(IWeaponVisitor visitor)
+    {
+        base.Accept(visitor);
+        if (visitor is GhostHitBox ghostHitBox)
+        {
+            Debug.LogError("IS GHOSTY");
+        }
+    }
+
     public void ScaleProjectile()
     {
         ExplosionRange *= _scaleFactor;

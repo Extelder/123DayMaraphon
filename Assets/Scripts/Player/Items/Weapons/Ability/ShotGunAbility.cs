@@ -4,6 +4,7 @@ using Zenject;
 public class ShotGunAbility : WeaponAbility
 {
     [SerializeField] private Transform _ghostSpawnPoint;
+    [SerializeField] private Transform _camera;
 
     [Inject] private Pools _pools;
 
@@ -11,6 +12,6 @@ public class ShotGunAbility : WeaponAbility
     {
         base.OnAbilityUsed();
         CameraShakeInvoke();
-        _pools.GhostPool.GetFreeElement(_ghostSpawnPoint.position);
+        _pools.GhostPool.GetFreeElement(_ghostSpawnPoint.position, _camera.transform.rotation);
     }
 }

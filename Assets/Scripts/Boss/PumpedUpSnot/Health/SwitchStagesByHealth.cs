@@ -22,16 +22,17 @@ public class SwitchStagesByHealth : MonoBehaviour
 
     private void OnEnable()
     {
-        _procent = _health.MaxValue / 100;
+        _procent = _health.MaxValue;
         _health.HealthValueChanged += OnHealthValueChanged;
     }
 
     private void OnHealthValueChanged(float value)
     {
-        float currentValueInProcent = value / _procent;
+        float currentValueInProcent = (value / _procent) * 100f;
+        Debug.LogError(currentValueInProcent);
         for (int i = 0; i < _stageByProcents.Length; i++)
         {
-            if (_stageByProcents[i].Procent <= currentValueInProcent)
+            if (_stageByProcents[i].Procent >= currentValueInProcent)
             {
                 _stageMachineSwitcher.SwitchState(_stageByProcents[i].Stage);
                 return;

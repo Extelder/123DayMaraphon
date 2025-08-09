@@ -15,6 +15,8 @@ public class Ghost : MonoBehaviour, IHypeMeasurable
     [SerializeField] private float _checkRate;
     [field: SerializeField] public List<IGhostTrapable> TrapedUnits { get; private set; } = new List<IGhostTrapable>();
 
+    public int GhostRadiusMultiplier { get; set; } = 1;
+
     private void OnEnable()
     {
         StartCoroutine(CheckingForEnemies());
@@ -56,7 +58,7 @@ public class Ghost : MonoBehaviour, IHypeMeasurable
         _overlapSettings.Colliders = new Collider[10];
         _overlapSettings.Size = Physics.OverlapSphereNonAlloc(
             _overlapSettings._overlapPoint.position + _overlapSettings._positionOffset,
-            _overlapSettings._sphereRadius, _overlapSettings.Colliders,
+            _overlapSettings._sphereRadius * GhostRadiusMultiplier, _overlapSettings.Colliders,
             _overlapSettings._searchLayer);
     }
 
@@ -67,6 +69,8 @@ public class Ghost : MonoBehaviour, IHypeMeasurable
 
     private void OnDisable()
     {
+        GhostRadiusMultiplier = 1;
+        transform.localEulerAngles = new Vector3(0.1f, 0.1f, 0.1f);
         UnStunAllUnits();
         TrapedUnits.Clear();
     }

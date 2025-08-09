@@ -76,6 +76,8 @@ public class KunitanShoot : MonoBehaviour, IHypeMeasurable
             _overlapSettings._searchLayer);
     }
 
+    public bool IsLastShooted() => _lastShoot != null;
+
     public virtual void OnShootPerformed()
     {
         Shooted?.Invoke();
@@ -98,5 +100,4 @@ public class KunitanShoot : MonoBehaviour, IHypeMeasurable
             }
         }
     }
-
 }

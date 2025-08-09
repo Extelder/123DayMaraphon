@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,19 @@ using Zenject;
 
 public class GhostHitBox : MonoBehaviour, IWeaponVisitor
 {
+    [SerializeField] private WeaponItem _railGunWeaponItem;
+
+    [SerializeField] private Animator _animator;
+    [SerializeField] private string _rpgShootedTriggetName = "RpgShoot";
+
     [SerializeField] private Ghost _ghost;
     [SerializeField] private Pools _pools;
+
+    private void OnDisable()
+    {
+        _animator.ResetTrigger(_rpgShootedTriggetName);
+    }
+
 
     public void Visit(WeaponShoot weaponShoot)
     {
@@ -27,10 +39,17 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
         DefaultHit(raycastWeaponShoot.Weapon.DamagePerHit, hit.point);
+
+        if (raycastWeaponShoot.Weapon == _railGunWeaponItem)
+        {
+            _ghost.GhostRadiusMultiplier = 2;
+            _animator.SetTrigger(_rpgShootedTriggetName);
+        }
     }
 
     public void Visit(Projectile projectile)
     {
+        Debug.LogError("Ghost");
         DefaultHit(projectile.Damage, transform.position);
     }
 

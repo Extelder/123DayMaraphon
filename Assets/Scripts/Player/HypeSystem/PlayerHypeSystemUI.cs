@@ -15,7 +15,7 @@ public class PlayerHypeSystemUI : MonoBehaviour
 
     private float m_Input = 0f;
     private float h = 0;
-
+    
     private void Start()
     {
         GameObject dd = GameObject.Find("DataDiagram");
@@ -55,11 +55,11 @@ public class PlayerHypeSystemUI : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(_updateRate);
-            ContinueInput(1);
+            ContinueInput();
         }
     }
 
-    private void ContinueInput(float f)
+    private void ContinueInput()
     {
         if (null == m_DataDiagram)
             return;

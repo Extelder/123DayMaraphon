@@ -5,8 +5,10 @@ using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
 
-public class IceProjectile : PoolObject
+public class IceProjectile : PoolObject, IWeaponVisitor
 {
+    [SerializeField] private Pool _destroyVFxPool;
+
     [SerializeField] private GameObject _parent;
     [field: SerializeField] public float Damage { get; private set; }
     [SerializeField] private float _speed;
@@ -22,6 +24,12 @@ public class IceProjectile : PoolObject
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+    }
+
+    public override void ReturnToPool()
+    {
+        _destroyVFxPool.GetFreeElement(transform.position);
+        base.ReturnToPool();
     }
 
     private void OnEnable()
@@ -45,6 +53,7 @@ public class IceProjectile : PoolObject
                     .AddForce(hitBox.transform.up * _characterUpForce, ForceMode.Impulse);
                 hitBox.TakeDamage(Damage);
                 _parent.SetActive(false);
+                _destroyVFxPool.GetFreeElement(transform.position);
                 _disposable.Clear();
             }
             else
@@ -57,5 +66,35 @@ public class IceProjectile : PoolObject
     private void OnDisable()
     {
         _disposable.Clear();
+    }
+
+    public void Visit(WeaponShoot weaponShoot)
+    {
+    }
+
+    public void Visit(KunitanShoot kunitanShoot)
+    {
+        _parent.SetActive(false);
+        _disposable.Clear();
+        _destroyVFxPool.GetFreeElement(transform.position);
+    }
+
+    public void Visit(KunitanaUltimateAttack kunitanShoot)
+    {
+        _parent.SetActive(false);
+        _disposable.Clear();
+        _destroyVFxPool.GetFreeElement(transform.position);
+    }
+
+    public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
+    {
+    }
+
+    public void Visit(Projectile projectile)
+    {
+    }
+
+    public void Visit(Ghost ghost, float damage)
+    {
     }
 }

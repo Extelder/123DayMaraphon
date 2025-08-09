@@ -16,6 +16,7 @@ public class PlayerCheckPoint : PlayerTrigger
 
     private void Awake()
     {
+        Debug.LogError(PlayerPrefs.GetString(SceneManager.GetActiveScene().name) + " CheckPoint");
         _collider = GetComponent<Collider>();
         if (PlayerPrefs.GetString(SceneManager.GetActiveScene().name) == gameObject.name)
         {

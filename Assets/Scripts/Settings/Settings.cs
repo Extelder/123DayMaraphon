@@ -22,6 +22,8 @@ public class OutlineRender
 
 public class Settings : MonoBehaviour
 {
+    [SerializeField] private CinemachineImpulseListener _cinemachineImpulseListener;
+
     [Inject] private Pools _pools;
     [SerializeField] private GameObject _settingsCanvas;
     [SerializeField] private AudioMixer _mixer;
@@ -46,6 +48,7 @@ public class Settings : MonoBehaviour
     [SerializeField] private OutlineRender[] _outlineRenders;
     [SerializeField] private TextMeshProUGUI _fullScreenOnOffTText;
     [SerializeField] private TextMeshProUGUI _bloodSplatOnOffTText;
+    [SerializeField] private TextMeshProUGUI _cameraShakeOnOffTText;
 
     [SerializeField] private TextMeshProUGUI _sensetivityValueText;
     [SerializeField] private TextMeshProUGUI _fovValueText;
@@ -110,13 +113,28 @@ public class Settings : MonoBehaviour
         Screen.SetResolution(PlayerPrefs.GetInt("Width"), PlayerPrefs.GetInt("Height"), fullScreen);
         SetResolutionReady();
         Screen.fullScreen = fullScreen;
-        if (fullScreen)
+
+
+        if (PlayerPrefs.GetInt("CameraShake", 1) == 1)
         {
-            _fullScreenOnOffTText.text = _offText;
+            if (!_hub)
+                _cinemachineImpulseListener.enabled = true;
+            _cameraShakeOnOffTText.text = _onText;
         }
         else
         {
+            if (!_hub)
+                _cinemachineImpulseListener.enabled = false;
+            _cameraShakeOnOffTText.text = _offText;
+        }
+
+        if (fullScreen)
+        {
             _fullScreenOnOffTText.text = _onText;
+        }
+        else
+        {
+            _fullScreenOnOffTText.text = _offText;
         }
 
 
@@ -153,6 +171,10 @@ public class Settings : MonoBehaviour
         }
     }
 
+    public void ClearPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 
     private void Update()
     {
@@ -240,11 +262,11 @@ public class Settings : MonoBehaviour
 
                 if (_outlineRenders[i].ScriptableRendererFeature.isActive)
                 {
-                    _outlineSwitchText.text = _offText;
+                    _outlineSwitchText.text = _onText;
                 }
                 else
                 {
-                    _outlineSwitchText.text = _onText;
+                    _outlineSwitchText.text = _offText;
                 }
 
                 return;
@@ -261,12 +283,12 @@ public class Settings : MonoBehaviour
                 Debug.Log(_outlineRenders[i].ScriptableRendererFeature.isActive);
                 if (_outlineRenders[i].ScriptableRendererFeature.isActive)
                 {
-                    text.text = _onText;
+                    text.text = _offText;
                     _outlineRenders[i].ScriptableRendererFeature.SetActive(false);
                 }
                 else
                 {
-                    text.text = _offText;
+                    text.text = _onText;
                     _outlineRenders[i].ScriptableRendererFeature.SetActive(true);
                 }
 
@@ -353,6 +375,22 @@ public class Settings : MonoBehaviour
             if (!_hub)
                 _pools.BloodSplatPool.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             PlayerPrefs.SetInt("BloodSplat", 1);
+        }
+    }
+
+    public void EnableDisableCameraShake()
+    {
+        if (PlayerPrefs.GetInt("CameraShake", 1) == 1)
+        {
+            if (!_hub)
+                _cinemachineImpulseListener.enabled = false;
+            PlayerPrefs.SetInt("CameraShake", 0);
+        }
+        else
+        {
+            if (!_hub)
+                _cinemachineImpulseListener.enabled = true;
+            PlayerPrefs.SetInt("CameraShake", 1);
         }
     }
 

@@ -58508,17 +58508,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 067bd86b55211714f8c6db4609a8d090,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.9976
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 067bd86b55211714f8c6db4609a8d090,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.9976
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 067bd86b55211714f8c6db4609a8d090,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.9976
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 067bd86b55211714f8c6db4609a8d090,
         type: 3}
@@ -58625,6 +58625,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8054334631231253394}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 067bd86b55211714f8c6db4609a8d090,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 326318093803381365}
   m_SourcePrefab: {fileID: 100100000, guid: 067bd86b55211714f8c6db4609a8d090, type: 3}
 --- !u!1 &7396496980707390261 stripped
 GameObject:
@@ -58708,7 +58712,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -58726,6 +58730,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b671a47cdf8094d9bc137349c8356c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _railGunWeaponItem: {fileID: 11400000, guid: 0d2964763c92e8142b6bde12c6829bac, type: 2}
+  _animator: {fileID: 326318093803381365}
+  _rpgShootedTriggetName: RpgShoot
   _ghost: {fileID: 8378522673008964145}
   _pools: {fileID: 1528374024075610752}
 --- !u!114 &8054334631231253394
@@ -58741,6 +58748,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pools: {fileID: 1528374024075610752}
+--- !u!95 &326318093803381365
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7396496980707390261}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 15ebcd8221f31db418c0364c2a0f35c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &7921394672967117199 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 067bd86b55211714f8c6db4609a8d090,
