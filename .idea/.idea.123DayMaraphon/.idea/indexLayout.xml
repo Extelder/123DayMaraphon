@@ -69,7 +69,6 @@
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Build</Path>
-      <Path>KLITTER</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>
       <Path>UserSettings</Path>

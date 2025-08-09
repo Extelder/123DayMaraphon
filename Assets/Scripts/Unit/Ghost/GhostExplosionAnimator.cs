@@ -1,17 +1,16 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileExplosionAnimator : MonoBehaviour
+public class GhostExplosionAnimator : MonoBehaviour
 {
-    [SerializeField] private Projectile _projectile;
+    [SerializeField] private GhostHitBox _ghostHitBox;
     [SerializeField] private Animator _animator;
     [SerializeField] private string _triggername;
 
     private void OnEnable()
     {
-        _projectile.Exploded += OnExploded;
+        _ghostHitBox.RPGProjectilHitted += OnExploded;
     }
 
     private void OnExploded()
@@ -22,6 +21,6 @@ public class ProjectileExplosionAnimator : MonoBehaviour
     private void OnDisable()
     {
         _animator.SetBool(_triggername, false);
-        _projectile.Exploded -= OnExploded;
+        _ghostHitBox.RPGProjectilHitted -= OnExploded;
     }
 }

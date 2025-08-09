@@ -16,6 +16,9 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
     [SerializeField] private Ghost _ghost;
     [SerializeField] private Pools _pools;
 
+    public event Action RailGunHitted;
+    public event Action RPGProjectilHitted;
+
     private void OnDisable()
     {
         _animator.ResetTrigger(_rpgShootedTriggetName);
@@ -42,6 +45,7 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
 
         if (raycastWeaponShoot.Weapon == _railGunWeaponItem)
         {
+            RailGunHitted?.Invoke();
             _ghost.GhostRadiusMultiplier = 2;
             _animator.SetTrigger(_rpgShootedTriggetName);
         }
@@ -49,7 +53,8 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
 
     public void Visit(Projectile projectile)
     {
-        Debug.LogError("Ghost");
+        RPGProjectilHitted?.Invoke();
+        DamageTrapedUnits(projectile.Damage * 2);
         DefaultHit(projectile.Damage, transform.position);
     }
 
