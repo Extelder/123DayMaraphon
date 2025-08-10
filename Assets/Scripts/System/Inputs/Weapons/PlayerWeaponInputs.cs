@@ -17,6 +17,7 @@ public class PlayerWeaponInputs : MonoBehaviour
     public event Action KunitanaShootPressedUp;
 
     public event Action WeaponAbilityPressedDown;
+    public event Action WeaponAbilityPressedUp;
     public event Action KunitanaUltimateKeyDowm;
     public event Action KunitanaUltimateKeyUp;
     private Settings _settings;
@@ -59,11 +60,16 @@ public class PlayerWeaponInputs : MonoBehaviour
             WeaponAbilityPressedDown?.Invoke();
         }
 
+        if (Input.GetKeyUp(WeaponAbilityKeyCode))
+        {
+            WeaponAbilityPressedUp?.Invoke();
+        }
+
         if (Input.GetKeyUp(KunitanaUltimateShootKeyCode))
         {
             KunitanaUltimateKeyUp?.Invoke();
         }
-        
+
         if (Input.GetKeyDown(KunitanaUltimateShootKeyCode))
         {
             KunitanaUltimateKeyDowm?.Invoke();

@@ -42,7 +42,6 @@ public class WeaponAbilityAmount : Amount
         if (current - value <= 0)
         {
             current = 0;
-            Debug.Log("FALSE");
             return;
         }
 

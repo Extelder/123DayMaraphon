@@ -67,7 +67,7 @@ public class PlayerHypeSystemUI : MonoBehaviour
         float d = 0f;
         foreach (GameObject l in lineList)
         {
-            m_DataDiagram.InputPoint(l, new Vector2(0.5f,
+            m_DataDiagram.InputPoint(l, new Vector2(2f,
                 _hypeSystem.Current));
         }
     }

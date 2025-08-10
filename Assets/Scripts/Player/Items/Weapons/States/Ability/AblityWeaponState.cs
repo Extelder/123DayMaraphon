@@ -6,19 +6,20 @@ using Zenject;
 
 public class AblityWeaponState : State
 {
-    [Inject] private PlayerInputs _playerInputs;
-    [SerializeField] private AbilityWeaponAnimator _animator;
+    [Inject] public PlayerInputs PlayerInputs { get; private set; }
+    [field: SerializeField] public AbilityWeaponAnimator Animator { get; private set; }
 
     public event Action AbilityUsed;
 
     public override void Enter()
     {
         CanChanged = false;
-        _animator.Ability();
+        Animator.Ability();
     }
 
     public void PerformAbility()
     {
+        Debug.LogError("Preformed");
         AbilityUsed?.Invoke();
     }
 
