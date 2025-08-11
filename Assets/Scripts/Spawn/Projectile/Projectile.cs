@@ -9,9 +9,9 @@ using Zenject;
 
 public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
 {
-    [field: SerializeField] public float HypeValue { get; set; }= 0.1f;
+    [field: SerializeField] public float HypeValue { get; set; } = 0.1f;
     [field: SerializeField] public HypeType HypeType { get; set; }
-    [field: SerializeField] public float DefaultHypeValue { get; set; }= 0.1f;
+    [field: SerializeField] public float DefaultHypeValue { get; set; } = 0.1f;
     [SerializeField] private TrailRenderer _trail;
     [SerializeField] private CinemachineImpulseSource _cinemachineImpulseSource;
     [SerializeField] private LayerMask _layerMask;
@@ -27,7 +27,7 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
     private Collider _collider;
     private bool _explosived;
     private bool _useGravity;
-    public CompositeDisposable Disposable { get; private set; }= new CompositeDisposable();
+    public CompositeDisposable Disposable { get; private set; } = new CompositeDisposable();
 
     private float _defaultDamage;
 
@@ -47,7 +47,7 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
         _collider = GetComponent<Collider>();
     }
 
-    public virtual void Initiate(Vector3 targetPosition)
+    public virtual void Initiate(Vector3 targetPosition, bool useTargetPosition = true)
     {
         StopAllCoroutines();
         HypeValue = DefaultHypeValue;
@@ -58,7 +58,8 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
         Rigidbody.useGravity = _useGravity;
         Rigidbody.velocity = new Vector3(0, 0, 0);
         StartCoroutine(WaitingForFrame());
-        transform.LookAt(targetPosition, transform.forward);
+        if (useTargetPosition)
+            transform.LookAt(targetPosition, transform.forward);
         Rigidbody.AddForce(transform.forward * _speed, ForceMode.Impulse);
         Initiated?.Invoke();
     }
@@ -79,8 +80,9 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
 
     private void OnCollisionEnter(Collision other)
     {
-        if(other.collider.material.bounciness >= 0.95f)
-            return;;
+        if (other.collider.material.bounciness >= 0.95f)
+            return;
+        ;
         if (other.gameObject.TryGetComponent<Projectile>(out Projectile projectile))
             return;
         if (_onlyPlayerHealth)
@@ -92,8 +94,9 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.material.bounciness >= 0.95f)
-            return;;
+        if (other.material.bounciness >= 0.95f)
+            return;
+        ;
         if (other.TryGetComponent<Projectile>(out Projectile projectile))
             return;
         if (_onlyPlayerHealth)

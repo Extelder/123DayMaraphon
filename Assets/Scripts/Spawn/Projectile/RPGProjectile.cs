@@ -22,7 +22,7 @@ public class RPGProjectile : Projectile
 
     private float _defaultHypeValue;
 
-    public override void Initiate(Vector3 targetPosition)
+    public override void Initiate(Vector3 targetPosition, bool use = true)
     {
         base.Initiate(targetPosition);
         _magnitableTrail.gameObject.SetActive(false);

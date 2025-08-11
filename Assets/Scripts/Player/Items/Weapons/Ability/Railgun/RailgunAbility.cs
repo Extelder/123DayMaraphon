@@ -5,6 +5,18 @@ using Zenject;
 
 public class RailgunAbility : WeaponAbility
 {
+    [Inject] private Pools _pools;
+
+    [SerializeField] private Transform _camera;
+    [SerializeField] private Transform _spawnPoint;
+
+    public void PerformSpawnLightningBall()
+    {
+        Projectile projectile = _pools.LightingProjectilePool.GetFreeElement(_spawnPoint.position, _camera.rotation)
+            .GetComponent<Projectile>();
+        projectile.Initiate(_camera.position + _camera.forward * 150, false);
+    }
+
     public override void OnAbilityUsed()
     {
         base.OnAbilityUsed();

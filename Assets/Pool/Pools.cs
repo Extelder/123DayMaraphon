@@ -7,6 +7,7 @@ public class Pools : MonoBehaviour
 {
     [field: SerializeField] public Pool DefaultImpactPool { get; private set; }
     [field: SerializeField] public Pool DefaultProjectilePool { get; private set; }
+    [field: SerializeField] public Pool LightingProjectilePool { get; private set; }
     [field: SerializeField] public Pool FPVProjectilePool { get; private set; }
     [field: SerializeField] public Pool SlashProjectilePool { get; private set; }
     [field: SerializeField] public Pool TURRETProjectilePool { get; private set; }
