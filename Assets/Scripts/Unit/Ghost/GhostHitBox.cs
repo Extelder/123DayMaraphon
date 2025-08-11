@@ -12,6 +12,7 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
 
     [SerializeField] private Animator _animator;
     [SerializeField] private string _rpgShootedTriggetName = "RpgShoot";
+    [SerializeField] private string _lightningShootedTriggetName = "LightningShoot";
 
     [SerializeField] private Ghost _ghost;
     [SerializeField] private Pools _pools;
@@ -19,9 +20,18 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
     public event Action RailGunHitted;
     public event Action RPGProjectilHitted;
 
+    private Vector3 _defaultScale;
+
+    private void Awake()
+    {
+        _defaultScale = transform.localScale;
+    }
+
     private void OnDisable()
     {
         _animator.ResetTrigger(_rpgShootedTriggetName);
+        _animator.ResetTrigger(_lightningShootedTriggetName);
+        transform.localScale = _defaultScale;
     }
 
 
@@ -53,10 +63,18 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
 
     public void Visit(Projectile projectile)
     {
+        if (projectile as LightningBall)
+        {
+            Debug.LogError("Ghost");
+            _ghost.GhostRadiusMultiplier = 3;
+            _animator.SetTrigger(_lightningShootedTriggetName);
+        }
+
         RPGProjectilHitted?.Invoke();
         DamageTrapedUnits(projectile.Damage * 2);
         DefaultHit(projectile.Damage, transform.position);
     }
+
 
     public void Visit(Ghost ghost, float damage)
     {

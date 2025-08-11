@@ -76,6 +76,12 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
         _trail.time = 0;
         _trail.enabled = false;
         _explosived = false;
+        OnDisableVirtual();
+    }
+
+    public virtual void OnDisableVirtual()
+    {
+        
     }
 
     private void OnCollisionEnter(Collision other)
