@@ -18,6 +18,8 @@ public class DynamicCrosshair : MonoBehaviour
         _weaponShoot.ShootPerformed += OnShootPerformed;
         UnitHitBox.UnitHitted += OnUnitHitted;
         LightningBall.Hitted += OnLightningBallHitted;
+        GhostHitBox.RailUniqueHit += OnLightningBallHitted;
+        GhostHitBox.RpgUniqueHit += OnLightningBallHitted;
     }
 
     private void OnProjectileShooted()
@@ -44,6 +46,8 @@ public class DynamicCrosshair : MonoBehaviour
         UnitHitBox.UnitHitted -= OnUnitHitted;
         LightningBall.Hitted -= OnLightningBallHitted;
         ProjectileRaycastExplode.ProjectileShooted -= OnProjectileShooted;
+        GhostHitBox.RailUniqueHit -= OnLightningBallHitted;
+        GhostHitBox.RpgUniqueHit -= OnLightningBallHitted;
     }
 
     private void OnShootPerformed()

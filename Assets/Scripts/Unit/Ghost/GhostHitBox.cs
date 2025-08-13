@@ -22,6 +22,9 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
 
     private Vector3 _defaultScale;
 
+    public static event Action RailUniqueHit;
+    public static event Action RpgUniqueHit;
+    
     private void Awake()
     {
         _defaultScale = transform.localScale;
@@ -55,6 +58,7 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
 
         if (raycastWeaponShoot.Weapon == _railGunWeaponItem)
         {
+            RailUniqueHit?.Invoke();
             RailGunHitted?.Invoke();
             _ghost.GhostRadiusMultiplier = 2;
             _animator.SetTrigger(_rpgShootedTriggetName);
@@ -69,7 +73,7 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
             _ghost.GhostRadiusMultiplier = 3;
             _animator.SetTrigger(_lightningShootedTriggetName);
         }
-
+        RpgUniqueHit?.Invoke();
         RPGProjectilHitted?.Invoke();
         DamageTrapedUnits(projectile.Damage * 2);
         DefaultHit(projectile.Damage, transform.position);
