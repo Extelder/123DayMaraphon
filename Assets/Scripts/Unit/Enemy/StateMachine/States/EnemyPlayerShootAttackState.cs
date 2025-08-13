@@ -65,12 +65,12 @@ public class EnemyPlayerShootAttackState : EnemyState
 
                 break;
             case ProjectileType.SlashProjectile:
-                _currentPool = _pools.SlashProjectilePool;
-                SlashProjectile slashProjectile = _currentPool
+                _currentPool = _pools.EnemySlashProjectilePool;
+                EnemySlashProjectile enemySlashProjectile = _currentPool
                     .GetFreeElement(_shootPoint.position, Quaternion.FromToRotation(_shootPoint.position, direction))
-                    .GetComponent<SlashProjectile>();
+                    .GetComponent<EnemySlashProjectile>();
 
-                slashProjectile.Initiate(direction);
+                enemySlashProjectile.Initiate(direction);
                 break;
         }
     }

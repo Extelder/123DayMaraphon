@@ -18,6 +18,11 @@ public class WeaponAbility : MonoBehaviour
     private void OnDisable()
     {
         _weaponAbilityState.AbilityUsed -= OnAbilityUsed;
+        OnDisableVirtual();
+    }
+
+    protected virtual void OnDisableVirtual()
+    {
     }
 
     public virtual void OnAbilityUsed()

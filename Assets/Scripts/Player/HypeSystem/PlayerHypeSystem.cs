@@ -10,6 +10,7 @@ public enum HypeType
     Ghost,
     HeadKill,
     Explode,
+    AHHHHHHH,
     KunitanDouble,
     KunitanKill,
     DoubleKill,
