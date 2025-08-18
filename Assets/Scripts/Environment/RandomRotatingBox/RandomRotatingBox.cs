@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 
 public class RandomRotatingBox : MonoBehaviour
 {
+    [SerializeField] private Ease _rotationEase;
+
     [SerializeField] private float _rotateTime;
 
     [SerializeField] private float _startDelay = 5;
@@ -47,10 +49,15 @@ public class RandomRotatingBox : MonoBehaviour
             }
 
 
-            _currentTween = transform.DOLocalRotate(targetEluerAngles, _rotateTime);
+            _currentTween = transform.DOLocalRotate(targetEluerAngles, _rotateTime).SetEase(_rotationEase);
             yield return new WaitForSeconds(0.1f);
             yield return new WaitUntil(() => !_currentTween.active);
             yield return new WaitForSeconds(_delay);
         }
+    }
+
+    private void OnDisable()
+    {
+        _currentTween?.Kill();
     }
 }
