@@ -9,6 +9,7 @@ public class RandomRotatingBox : MonoBehaviour
 {
     [SerializeField] private float _rotateTime;
 
+    [SerializeField] private float _startDelay = 5;
     [SerializeField] private float _delay;
 
     private Tween _currentTween;
@@ -20,20 +21,28 @@ public class RandomRotatingBox : MonoBehaviour
 
     private IEnumerator RotatingWithDelay()
     {
+        yield return new WaitForSeconds(_startDelay);
+
         while (true)
         {
             Vector3 targetEluerAngles = transform.localEulerAngles;
 
-            switch (Random.Range(1, 3))
+            switch (Random.Range(1, 5))
             {
                 case 1:
-                    targetEluerAngles += new Vector3(0, 90, 0);
+                    targetEluerAngles += new Vector3(90, 0, 0);
                     break;
                 case 2:
                     targetEluerAngles += new Vector3(90, 0, 0);
                     break;
                 case 3:
                     targetEluerAngles += new Vector3(0, 0, 90);
+                    break;
+                case 4:
+                    targetEluerAngles += new Vector3(0, 0, 90);
+                    break;
+                case 5:
+                    targetEluerAngles += new Vector3(90, 0, 0);
                     break;
             }
 
