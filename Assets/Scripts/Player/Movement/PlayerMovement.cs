@@ -7,8 +7,7 @@ using Zenject;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Components")]
-    [SerializeField]
+    [Header("Components")] [SerializeField]
     private PlayerWalk _walk;
 
     [SerializeField] private PlayerDash _dash;
@@ -17,10 +16,24 @@ public class PlayerMovement : MonoBehaviour
 
     [Inject] private PlayerInputs _inputs;
 
+    private bool _canDash = true;
+    private bool _canJump = true;
+
+    public void SetCanDash(bool value)
+    {
+        _canDash = value;
+    }
+
+    public void SetCanJump(bool value)
+    {
+        _canJump = value;
+    }
+
     private void Update()
     {
         _inputs.PlayerMovementInputs.GetMovingInputs();
-        _walk.Walk(new Vector3(_inputs.PlayerMovementInputs.MovementHorizontal, 0, _inputs.PlayerMovementInputs.MovementVertical));
+        _walk.Walk(new Vector3(_inputs.PlayerMovementInputs.MovementHorizontal, 0,
+            _inputs.PlayerMovementInputs.MovementVertical));
     }
 
     private void OnEnable()
@@ -39,7 +52,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Dashing()
     {
-        _dash.Dash();
+        if (_canDash)
+            _dash.Dash();
     }
 
     private void DashingDown()
@@ -49,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jumping()
     {
-        _jump.Jump();
+        if (_canJump)
+            _jump.Jump();
     }
 }

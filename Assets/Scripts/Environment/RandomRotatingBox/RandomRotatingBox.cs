@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 public class RandomRotatingBox : MonoBehaviour
@@ -16,8 +18,15 @@ public class RandomRotatingBox : MonoBehaviour
 
     private Tween _currentTween;
 
+    private NavMeshSurface[] _surfaces;
+    private NavMeshAgent[] _agents;
+
+
     private void Start()
     {
+        _surfaces = GetComponentsInChildren<NavMeshSurface>();
+        _agents = GetComponentsInChildren<NavMeshAgent>(true);
+
         StartCoroutine(RotatingWithDelay());
     }
 
@@ -49,9 +58,31 @@ public class RandomRotatingBox : MonoBehaviour
             }
 
 
+            for (int i = 0; i < _agents.Length; i++)
+            {
+                if (_agents[i] != null)
+                    _agents[i].enabled = false;
+            }
+
+            for (int i = 0; i < _surfaces.Length; i++)
+            {
+                _surfaces[i].enabled = false;
+            }
+
             _currentTween = transform.DOLocalRotate(targetEluerAngles, _rotateTime).SetEase(_rotationEase);
             yield return new WaitForSeconds(0.1f);
             yield return new WaitUntil(() => !_currentTween.active);
+            for (int i = 0; i < _surfaces.Length; i++)
+            {
+                _surfaces[i].enabled = true;
+            }
+
+            for (int i = 0; i < _agents.Length; i++)
+            {
+                if (_agents[i] != null)
+                    _agents[i].enabled = true;
+            }
+
             yield return new WaitForSeconds(_delay);
         }
     }
