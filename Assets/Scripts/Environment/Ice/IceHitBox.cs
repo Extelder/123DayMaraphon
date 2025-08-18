@@ -52,4 +52,8 @@ public class IceHitBox : MonoBehaviour, IWeaponVisitor
     public void Visit(Ghost ghost, float damage)
     {
     }
+
+    public void Visit(PlayerSlashProjectile slashProjectile, float damage)
+    {
+    }
 }

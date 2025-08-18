@@ -5,15 +5,19 @@ using Cinemachine;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
+using Zenject;
 
-public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisitor
+public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisitor, IHypeMeasurable
 {
     [field: SerializeField] public float Damage { get; set; }
     [field: SerializeField] public float Speed { get; set; }
     [field: SerializeField] public float CharacterUpForce { get; set; }
     [field: SerializeField] public Collider Collider { get; set; }
+    [field: SerializeField] public float HypeValue { get; set; }
+    [field: SerializeField] public HypeType HypeType { get; set; }
+
     
-    [SerializeField] private float _hypeMultiplier;
+    private PlayerCharacter _playerCharacter;
 
     public event Action Triggered;
 
@@ -23,6 +27,7 @@ public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisito
 
     private void Awake()
     {
+        _playerCharacter = PlayerCharacter.Instance;
         _rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -32,15 +37,14 @@ public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisito
         transform.eulerAngles = new Vector3(0, 0, 0);
 
         _rigidbody.velocity = new Vector3(0, 0, 0);
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
+        transform.eulerAngles = _playerCharacter.Camera.eulerAngles;
         _rigidbody.AddForce(transform.forward * Speed, ForceMode.Impulse);
         Collider.OnTriggerEnterAsObservable().Subscribe(other =>
         {
-            if (other.TryGetComponent<UnitHitBox>(out UnitHitBox hitBox))
+            if (other.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
             {
-                hitBox.GetComponent<Rigidbody>()
-                    .AddForce(hitBox.transform.up * CharacterUpForce, ForceMode.Impulse);
-                hitBox.TakeDamage(Damage, HypeType.AHHHHHHH, _hypeMultiplier);
+                Debug.Log("watafak");
+                visitor.Visit(this, Damage);
                 Triggered?.Invoke();
             }
         }).AddTo(_disposable);
@@ -49,6 +53,7 @@ public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisito
     private void OnDisable()
     {
         transform.eulerAngles = new Vector3(0, 0, 0);
+        transform.localScale = new Vector3(0, 0, 0);
         _disposable.Clear();
     }
 
@@ -73,6 +78,10 @@ public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisito
     }
 
     public void Visit(Ghost ghost, float damage)
+    {
+    }
+
+    public void Visit(PlayerSlashProjectile slashProjectile, float damage)
     {
     }
 }

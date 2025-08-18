@@ -11066,11 +11066,10 @@ GameObject:
   - component: {fileID: 5921184191310385336}
   - component: {fileID: 5833286088319407188}
   - component: {fileID: 3606083565796421828}
-  - component: {fileID: 695969763405586654}
   - component: {fileID: 1395748872979602891}
-  - component: {fileID: 3808410153419150222}
   - component: {fileID: 2655863936016302620}
-  m_Layer: 17
+  - component: {fileID: 7344676679899653899}
+  m_Layer: 8
   m_Name: SlashCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11172,27 +11171,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!95 &695969763405586654
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064205386296325096}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f27b5a5c60eee194db11d483dce76367, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 1
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!65 &1395748872979602891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11214,18 +11192,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 32.829285, y: 6.816819, z: 8.269234}
   m_Center: {x: -0.24719238, y: -0.7452041, z: 4.694519}
---- !u!114 &3808410153419150222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064205386296325096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb6f3abe96c19c54a80c6240a08bd8bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2655863936016302620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11240,11 +11206,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ReturnToPoolDelay>k__BackingField: 23
   _autoreturnToPool: 1
-  <Damage>k__BackingField: 100
-  <Speed>k__BackingField: 100
-  <CharacterUpForce>k__BackingField: 1
+  <Damage>k__BackingField: 10
+  <Speed>k__BackingField: 30
+  <CharacterUpForce>k__BackingField: 0
   <Collider>k__BackingField: {fileID: 1395748872979602891}
-  _hypeMultiplier: 2
+  <HypeValue>k__BackingField: 0.15
+  <HypeType>k__BackingField: 4
+--- !u!95 &7344676679899653899
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064205386296325096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf559e55b237ae04aba9f95cdd37c748, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2223473267932492650
 GameObject:
   m_ObjectHideFlags: 0
@@ -23528,7 +23516,7 @@ GameObject:
   - component: {fileID: 7303312595397504346}
   - component: {fileID: 5576558353550158193}
   - component: {fileID: 7337416620182055767}
-  m_Layer: 17
+  m_Layer: 8
   m_Name: SlashProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24211,7 +24199,7 @@ GameObject:
   - component: {fileID: 5881119588777411436}
   - component: {fileID: 2054013891337345415}
   - component: {fileID: 6501657683472555839}
-  m_Layer: 17
+  m_Layer: 8
   m_Name: SlashProjectile (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35619,7 +35607,7 @@ GameObject:
   - component: {fileID: 2931446449069632081}
   - component: {fileID: 5737159536151971887}
   - component: {fileID: 5827587694095424201}
-  m_Layer: 17
+  m_Layer: 8
   m_Name: Circle.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

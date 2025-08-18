@@ -44,4 +44,8 @@ public class ObjectHitBox : MonoBehaviour, IWeaponVisitor
     public void Visit(Ghost ghost, float damage)
     {
     }
+
+    public void Visit(PlayerSlashProjectile slashProjectile, float damage)
+    {
+    }
 }

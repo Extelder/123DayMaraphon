@@ -94,6 +94,18 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         UnitHitted?.Invoke();
     }
 
+    public void Visit(PlayerSlashProjectile slashProjectile, float damage)
+    {
+        if (!_health)
+            return;
+        if (_health.IsDead())
+            return;
+        CurrentHypeMeasurable = slashProjectile;
+        TakeDamage(slashProjectile.Damage, CurrentHypeMeasurable.HypeType);
+        Hit?.Invoke();
+        UnitHitted?.Invoke();
+    }
+
     public virtual void SpawningDecal(Vector3 spawnPoint)
     {
         var currentObject = _pools.BloodExplodePool.GetFreeElement(spawnPoint, Quaternion.identity);

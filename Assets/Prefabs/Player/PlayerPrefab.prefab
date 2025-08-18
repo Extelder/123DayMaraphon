@@ -4160,7 +4160,8 @@ MonoBehaviour:
   _weaponAbilityState: {fileID: 1998538451741683343}
   _slashSpawnPoint: {fileID: 8419399626100700581}
   _camera: {fileID: 11070492389160087}
-  _cooldown: 0.5
+  _cooldown: 0.2
+  _indicator: {fileID: 2334235247590894680}
 --- !u!114 &1108823897810379392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10334,7 +10335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4527533214777322488
 Transform:
   m_ObjectHideFlags: 0
@@ -15669,6 +15670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 908399998634862028}
+  - component: {fileID: 3906928157291709389}
   m_Layer: 8
   m_Name: GFX
   m_TagString: Untagged
@@ -15699,6 +15701,18 @@ Transform:
   m_Father: {fileID: 6936604156887406982}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 4.452, y: -9.274, z: -25.073}
+--- !u!114 &3906928157291709389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334235247590894680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7cb49d4078b94419df08920f3ffd14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2347695677744621349
 GameObject:
   m_ObjectHideFlags: 0
@@ -28095,6 +28109,7 @@ MonoBehaviour:
   <Rigidbody>k__BackingField: {fileID: 1036759230452235383}
   <PlayerLevelCheckPoint>k__BackingField: {fileID: 5269098643553466132}
   <PlaceForTextLerping>k__BackingField: {fileID: 2828551417129132083}
+  <Camera>k__BackingField: {fileID: 11070492389160087}
   <WeaponSwitch>k__BackingField: {fileID: 259153463143571494}
   <Hints>k__BackingField: {fileID: 1891272932422648087}
   _rayRange: 1000
@@ -38250,7 +38265,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7237422397782008591, guid: f52253784b4fc7845a0853f4f6fc749d,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: e641dfc243620494283e4ddfcbe0c7de, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7bda9f092c7258442950b184e4846e4f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
