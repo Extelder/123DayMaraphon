@@ -84,6 +84,10 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
     {
     }
 
+    public void Visit(PlayerSlashProjectile slashProjectile, float damage)
+    {
+    }
+
     private void DefaultHit(float damage, Vector3 vfxPosition)
     {
         DamageTrapedUnits(damage);

@@ -51,11 +51,11 @@ public class PUSShootState : State
         while (true)
         {
             Vector3 direction = _shootPoint.position + _shootPoint.forward * _shootRange;
-            SlashProjectile slashProjectile = _projectilePool
+            EnemySlashProjectile enemySlashProjectile = _projectilePool
                 .GetFreeElement(_shootPoint.position, Quaternion.FromToRotation(_shootPoint.position, direction))
-                .GetComponent<SlashProjectile>();
+                .GetComponent<EnemySlashProjectile>();
 
-            slashProjectile.Initiate(direction);
+            enemySlashProjectile.Initiate(direction);
             yield return new WaitForSeconds(_shootRate);
         }
     }
