@@ -1037,14 +1037,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.0666667
+  - time: 1
     functionName: AnimationEnd
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.0666667
+  - time: 1
     functionName: StopAbility
     data: 
     objectReferenceParameter: {fileID: 0}

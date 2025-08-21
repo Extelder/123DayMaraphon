@@ -16,6 +16,7 @@ public class LightningBall : Projectile, IWeaponVisitor
     [SerializeField] private float _railGunRangeMultipier;
     [SerializeField] private float _rpgDamageMultipier;
     [SerializeField] private float _railGunDamageMultipier;
+    [SerializeField] private float _slashDamageMultiplier;
 
     private float _defaultRange;
     private Vector3 _defaultScale;
@@ -94,7 +95,14 @@ public class LightningBall : Projectile, IWeaponVisitor
     {
     }
 
-    public void Visit(PlayerSlashProjectile slashProjectile, float damage)
+    public void Visit(PlayerSlashProjectile slashProjectile)
     {
+        _defaultExplosion.SetActive(false);
+        _hitExplosion.SetActive(true);
+        _hitExplosion.transform.localScale *= _rpgRangeMultipier;
+        ExplosionRange *= _rpgRangeMultipier;
+        Hitted?.Invoke();
+        Explode(_slashDamageMultiplier);
+        PlayerTime.Instance.TimeStop(0.3f);
     }
 }

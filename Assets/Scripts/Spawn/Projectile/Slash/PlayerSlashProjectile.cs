@@ -11,7 +11,7 @@ public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisito
 {
     [field: SerializeField] public float Damage { get; set; }
     [field: SerializeField] public float Speed { get; set; }
-    [field: SerializeField] public float CharacterUpForce { get; set; }
+    [field: SerializeField] public float CharacterForce { get; set; }
     [field: SerializeField] public Collider Collider { get; set; }
     [field: SerializeField] public float HypeValue { get; set; }
     [field: SerializeField] public HypeType HypeType { get; set; }
@@ -43,8 +43,7 @@ public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisito
         {
             if (other.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
             {
-                Debug.Log("watafak");
-                visitor.Visit(this, Damage);
+                visitor.Visit(this);
                 Triggered?.Invoke();
             }
         }).AddTo(_disposable);
@@ -81,7 +80,7 @@ public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisito
     {
     }
 
-    public void Visit(PlayerSlashProjectile slashProjectile, float damage)
+    public void Visit(PlayerSlashProjectile slashProjectile)
     {
     }
 }

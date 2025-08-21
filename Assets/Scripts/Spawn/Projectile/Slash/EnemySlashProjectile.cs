@@ -11,7 +11,7 @@ public class EnemySlashProjectile : PoolObject, ISlashProjectile
 {
     [field: SerializeField] public float Damage { get; set; }
     [field: SerializeField] public float Speed { get; set; }
-    [field: SerializeField] public float CharacterUpForce { get; set; }
+    [field: SerializeField] public float CharacterForce { get; set; }
     [field: SerializeField] public Collider Collider { get; set; }
 
     public event Action Triggered;
@@ -39,7 +39,7 @@ public class EnemySlashProjectile : PoolObject, ISlashProjectile
             if (other.TryGetComponent<PlayerHitBox>(out PlayerHitBox hitBox))
             {
                 hitBox.GetComponent<Rigidbody>()
-                    .AddForce(hitBox.transform.up * CharacterUpForce, ForceMode.Impulse);
+                    .AddForce(hitBox.transform.up * CharacterForce, ForceMode.Impulse);
                 hitBox.TakeDamage(Damage);
                 Triggered?.Invoke();
             }

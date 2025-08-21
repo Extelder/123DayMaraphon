@@ -11,6 +11,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
     [SerializeField] private Health _health;
     [Inject] private Pools _pools;
 
+    private Rigidbody _rigidbody;
     public IHypeMeasurable CurrentHypeMeasurable { get; private set; }
 
     public event Action Hit;
@@ -20,6 +21,11 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
     public void OnDrawGizmos()
     {
         _deathHypeHandler = GetComponentInParent<DeathHypeHandler>();
+    }
+
+    private void Start()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     public void Visit(WeaponShoot weaponShoot)
@@ -94,7 +100,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         UnitHitted?.Invoke();
     }
 
-    public void Visit(PlayerSlashProjectile slashProjectile, float damage)
+    public void Visit(PlayerSlashProjectile slashProjectile)
     {
         if (!_health)
             return;
@@ -102,6 +108,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
             return;
         CurrentHypeMeasurable = slashProjectile;
         TakeDamage(slashProjectile.Damage, CurrentHypeMeasurable.HypeType);
+        _rigidbody.AddForce(-transform.forward * slashProjectile.CharacterForce, ForceMode.Impulse);
         Hit?.Invoke();
         UnitHitted?.Invoke();
     }

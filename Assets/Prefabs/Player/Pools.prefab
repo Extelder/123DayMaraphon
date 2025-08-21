@@ -11208,7 +11208,7 @@ MonoBehaviour:
   _autoreturnToPool: 1
   <Damage>k__BackingField: 10
   <Speed>k__BackingField: 30
-  <CharacterUpForce>k__BackingField: 0
+  <CharacterForce>k__BackingField: 200
   <Collider>k__BackingField: {fileID: 1395748872979602891}
   <HypeValue>k__BackingField: 0.15
   <HypeType>k__BackingField: 4
@@ -56866,7 +56866,7 @@ MonoBehaviour:
   _autoreturnToPool: 1
   <Damage>k__BackingField: 20
   <Speed>k__BackingField: 10
-  <CharacterUpForce>k__BackingField: 7
+  <CharacterForce>k__BackingField: 0
   <Collider>k__BackingField: {fileID: 5765167558742323956}
 --- !u!54 &1171277618503377842
 Rigidbody:
@@ -59097,6 +59097,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948890003675709011, guid: e6d2b68e7549c1040aafb58da56ea93a,
+        type: 3}
+      propertyPath: _slashDamageMultiplier
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5292180974330146522, guid: e6d2b68e7549c1040aafb58da56ea93a,
         type: 3}

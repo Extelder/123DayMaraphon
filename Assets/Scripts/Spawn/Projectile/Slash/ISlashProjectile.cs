@@ -8,7 +8,7 @@ public interface ISlashProjectile
 {
     public float Damage { get; set; }
     public float Speed { get; set; }
-    public float CharacterUpForce { get; set; }
+    public float CharacterForce { get; set; }
     public Collider Collider { get; set; }
     
     public event Action Triggered;

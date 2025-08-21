@@ -98,7 +98,7 @@ public class IceProjectile : PoolObject, IWeaponVisitor
     {
     }
 
-    public void Visit(PlayerSlashProjectile slashProjectile, float damage)
+    public void Visit(PlayerSlashProjectile slashProjectile)
     {
     }
 }
