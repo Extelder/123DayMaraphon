@@ -10,5 +10,5 @@ public interface IWeaponVisitor
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit);
     public void Visit(Projectile projectile);
     public void Visit(Ghost ghost, float damage);
-    public void Visit(PlayerSlashProjectile slashProjectile, float damage);
+    public void Visit(PlayerSlashProjectile slashProjectile);
 }

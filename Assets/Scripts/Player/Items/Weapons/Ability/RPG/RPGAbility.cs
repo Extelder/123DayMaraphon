@@ -11,6 +11,7 @@ public class RPGAbility : WeaponAbility
     [SerializeField] private Transform _camera;
     [SerializeField] private double _cooldown;
     [SerializeField] private GameObject _indicator;
+    [SerializeField] private AudioSource _abilitySound;
 
     [Inject] private Pools _pools;
     
@@ -20,6 +21,8 @@ public class RPGAbility : WeaponAbility
     {
         base.OnAbilityUsed();
         CameraShakeInvoke();
+        StopAbility();
+        _abilitySound.Play();
         Observable.Interval(TimeSpan.FromSeconds(_cooldown)).Subscribe(_ =>
         {
             PoolObject instance = _pools.PlayerSlashProjectilePool.GetFreeElement(_slashSpawnPoint.position, _camera.transform.rotation);
@@ -29,14 +32,13 @@ public class RPGAbility : WeaponAbility
 
     public void StopAbility()
     {
-        _indicator.SetActive(false);
         _disposable?.Clear();
+        _indicator.SetActive(false);
     }
 
     protected override void OnDisableVirtual()
     {
         base.OnDisableVirtual();
-        _indicator.SetActive(false);
-        _disposable.Clear();
+        StopAbility();
     }
 }
