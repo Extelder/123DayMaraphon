@@ -12,6 +12,7 @@ public class PlayerFallTrigger : PlayerTrigger
 
     public override void Triggered()
     {
+        _character.ResetVelocity();
         _character.Transform.position = _character.PlayerLevelCheckPoint.LastCheckPoint;
         _playerHealth.TakeDamage(_damage);
     }

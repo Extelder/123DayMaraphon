@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
+
 public class RandomRotatingBox : MonoBehaviour
 {
     [SerializeField] private Ease _rotationEase;
@@ -20,8 +21,7 @@ public class RandomRotatingBox : MonoBehaviour
 
     private NavMeshSurface[] _surfaces;
     private NavMeshAgent[] _agents;
-
-
+    
     private void Start()
     {
         _surfaces = GetComponentsInChildren<NavMeshSurface>();
@@ -89,6 +89,7 @@ public class RandomRotatingBox : MonoBehaviour
 
     private void OnDisable()
     {
+        StopAllCoroutines();
         _currentTween?.Kill();
     }
 }

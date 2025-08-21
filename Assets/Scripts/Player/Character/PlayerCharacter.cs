@@ -16,13 +16,13 @@ public class PlayerCharacter : MonoBehaviour
     [field: SerializeField] public Transform Camera { get; private set; }
     [field: SerializeField] public WeaponSwitch WeaponSwitch { get; private set; }
     [field: SerializeField] public PlayerHints Hints { get; private set; }
-    
+
     public Vector3 PlayerPositionForNavMesh { get; private set; }
     [SerializeField] private float _rayRange;
     [SerializeField] private float _randomNavMeshRadius;
     [SerializeField] private LayerMask _layer;
     [SerializeField] private Vector3 _offset;
-    
+
     private RaycastHit _hit;
     public static PlayerCharacter Instance { get; private set; }
 
@@ -39,7 +39,6 @@ public class PlayerCharacter : MonoBehaviour
     }
 
 
-
     private void Update()
     {
         if (Physics.Raycast(Transform.position, -Transform.up, out _hit, _rayRange, _layer))
@@ -50,6 +49,11 @@ public class PlayerCharacter : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void ResetVelocity()
+    {
+        Rigidbody.velocity = new Vector3(0, 0, 0);
     }
 
     public Vector3 RandomNavmeshLocation(float radius)
