@@ -7,7 +7,7 @@ using UniRx.Triggers;
 using UnityEngine;
 using Zenject;
 
-public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisitor, IHypeMeasurable
+public class PlayerSlashProjectile : PoolObjectTimeScalable, ISlashProjectile, IWeaponVisitor, IHypeMeasurable
 {
     [field: SerializeField] public float Damage { get; set; }
     [field: SerializeField] public float Speed { get; set; }
@@ -16,7 +16,8 @@ public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisito
     [field: SerializeField] public float HypeValue { get; set; }
     [field: SerializeField] public HypeType HypeType { get; set; }
 
-    
+    [SerializeField] private float _multiplier;
+
     private PlayerCharacter _playerCharacter;
 
     public event Action Triggered;
@@ -41,9 +42,9 @@ public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisito
         _rigidbody.AddForce(transform.forward * Speed, ForceMode.Impulse);
         Collider.OnTriggerEnterAsObservable().Subscribe(other =>
         {
-            if (other.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
+            if (other.TryGetComponent<IGhostTrapable>(out IGhostTrapable ghostTrapable))
             {
-                visitor.Visit(this);
+                ghostTrapable.ObjectVisitor.Visit(this);
                 Triggered?.Invoke();
             }
         }).AddTo(_disposable);
@@ -62,6 +63,9 @@ public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisito
 
     public void Visit(KunitanShoot kunitanShoot)
     {
+        transform.localScale *= _multiplier;
+        Damage *= _multiplier;
+        Speed *= _multiplier;
     }
 
     public void Visit(KunitanaUltimateAttack kunitanShoot)
@@ -70,6 +74,9 @@ public class PlayerSlashProjectile : PoolObject, ISlashProjectile, IWeaponVisito
 
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
+        transform.localScale *= _multiplier;
+        Damage *= _multiplier;
+        Speed *= _multiplier;
     }
 
     public void Visit(Projectile projectile)
