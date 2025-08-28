@@ -11069,7 +11069,7 @@ GameObject:
   - component: {fileID: 1395748872979602891}
   - component: {fileID: 2655863936016302620}
   - component: {fileID: 7344676679899653899}
-  m_Layer: 8
+  m_Layer: 23
   m_Name: SlashCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
