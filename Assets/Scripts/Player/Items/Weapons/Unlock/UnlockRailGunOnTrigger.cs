@@ -9,7 +9,7 @@ public class UnlockRailGunOnTrigger : PlayerTrigger
 
     [Inject] private PlayerCharacter _character;
 
-    public override void Triggered()
+    public override void OnTriggered()
     {
         _particle.transform.parent = null;
         _particle.transform.SetParent(null);

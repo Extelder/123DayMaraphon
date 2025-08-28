@@ -7,7 +7,7 @@ public class HintTrigger : PlayerTrigger
 {
     [SerializeField] private string _hintText;
     [Inject] private PlayerCharacter _character;
-    public override void Triggered()
+    public override void OnTriggered()
     { 
         _character.Hints.AcceptNewHint(_hintText);
     }

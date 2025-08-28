@@ -18,7 +18,7 @@ public class PlayerTextTrigger : PlayerTrigger
     [SerializeField] private Transform _spawnPlace;
     [SerializeField] private Transform _particleSpawnPlace;
     [SerializeField] private float _scaleChangeFactor;
-    public override void Triggered()
+    public override void OnTriggered()
     {
         var instance = _textPool.GetFreeElement(_spawnPlace.position);
         var placeForTextLerping = _character.PlaceForTextLerping.transform;

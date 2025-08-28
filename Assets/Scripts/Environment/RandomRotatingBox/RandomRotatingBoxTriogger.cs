@@ -8,7 +8,7 @@ public class RandomRotatingBoxTriogger : PlayerTrigger
 
     [SerializeField] private GameObject _enter;
 
-    public override void Triggered()
+    public override void OnTriggered()
     {
         _randomRotatingBox.enabled = true;
         _enter.SetActive(true);

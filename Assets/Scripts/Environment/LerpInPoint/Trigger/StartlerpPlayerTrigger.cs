@@ -7,7 +7,7 @@ public class StartlerpPlayerTrigger : PlayerTrigger
 {
     [SerializeField] private LerpInPoint[] _lerps;
 
-    public override void Triggered()
+    public override void OnTriggered()
     {
         for (int i = 0; i < _lerps.Length; i++)
         {

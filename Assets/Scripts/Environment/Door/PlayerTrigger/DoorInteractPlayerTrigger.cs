@@ -6,7 +6,7 @@ public class DoorInteractPlayerTrigger : PlayerTriggerEnterExit
 {
     [SerializeField] private Door _door;
 
-    public override void Triggered()
+    public override void OnTriggered()
     {
         _door.TryOpenClose();
     }

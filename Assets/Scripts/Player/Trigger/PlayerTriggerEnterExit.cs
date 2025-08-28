@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class PlayerTriggerEnterExit : PlayerTrigger
 {
-    public override void Triggered()
+    public override void OnTriggered()
     {
         
     }

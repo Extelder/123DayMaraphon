@@ -24,7 +24,7 @@ public class PlayerCheckPoint : PlayerTrigger
         }
     }
 
-    public override void Triggered()
+    public override void OnTriggered()
     {
         _collider.enabled = false;
 

@@ -10,7 +10,7 @@ public class PlayerFallTrigger : PlayerTrigger
 
     [SerializeField] private float _damage = 10;
 
-    public override void Triggered()
+    public override void OnTriggered()
     {
         _character.ResetVelocity();
         _character.Transform.position = _character.PlayerLevelCheckPoint.LastCheckPoint;

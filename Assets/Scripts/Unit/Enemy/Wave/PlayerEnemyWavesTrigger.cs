@@ -6,7 +6,7 @@ public class PlayerEnemyWavesTrigger : PlayerTrigger
 {
     [SerializeField] private EnemyWaveSystem _enemyWaveSystem;
 
-    public override void Triggered()
+    public override void OnTriggered()
     {
         _enemyWaveSystem.StartWaves();
     }

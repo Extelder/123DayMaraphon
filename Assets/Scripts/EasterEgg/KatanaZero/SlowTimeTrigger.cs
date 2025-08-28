@@ -8,7 +8,7 @@ public class SlowTimeTrigger : PlayerTrigger
     [SerializeField] private float _slowedTime = 0.7f;
     [SerializeField] private AudioSource _musicVolume;
 
-    public override void Triggered()
+    public override void OnTriggered()
     {
         Time.timeScale = _slowedTime;
         _musicVolume.pitch = 0.5f;

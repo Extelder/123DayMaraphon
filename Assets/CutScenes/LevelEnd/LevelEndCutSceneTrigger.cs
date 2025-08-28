@@ -6,7 +6,7 @@ public class LevelEndCutSceneTrigger : PlayerTrigger
 {
     [SerializeField] private LevelEndCutScene _levelEndCutScene;
 
-    public override void Triggered()
+    public override void OnTriggered()
     {
         _levelEndCutScene.StartCutScene();
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SocialNetworksTrigger : PlayerTrigger
 {
     [SerializeField] private string _socialNetwork;
-    public override void Triggered()
+    public override void OnTriggered()
     {
         Application.OpenURL(_socialNetwork);
     }

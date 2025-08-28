@@ -9,7 +9,7 @@ public class SetPlayerPosition : PlayerTrigger
     [Inject] private PlayerCharacter _character;
     [SerializeField] private Transform _newPlayerTransform;
     [SerializeField] private Quaternion _newPlayerRotation;
-    public override void Triggered()
+    public override void OnTriggered()
     {
         _character.Transform.SetPositionAndRotation(_newPlayerTransform.position, _newPlayerRotation);
     }

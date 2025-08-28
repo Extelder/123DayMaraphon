@@ -7,7 +7,7 @@ public class LevelCompleateSwithcSceneTrigger : PlayerTrigger
 {
     [SerializeField] private Level _level;
 
-    public override void Triggered()
+    public override void OnTriggered()
     {
         _level.CompleateLevel();
         PlayerPrefs.SetInt("CurrentScene", SceneManager.GetActiveScene().buildIndex + 1);

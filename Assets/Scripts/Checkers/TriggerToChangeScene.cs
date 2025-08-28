@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TriggerToChangeScene : PlayerTrigger
 {
-    public override void Triggered()
+    public override void OnTriggered()
     {
         PlayerPrefs.SetInt("CurrentScene", SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene("SceneSwitcher");

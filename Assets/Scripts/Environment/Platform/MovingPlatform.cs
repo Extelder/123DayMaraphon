@@ -11,7 +11,7 @@ public class MovingPlatform : PlayerTrigger
     [SerializeField] private float _lerpingTime;
 
     private Tween _tween;
-    public override void Triggered()
+    public override void OnTriggered()
     {
         _tween = _platform.transform.DOMove(_endPoint.position, _lerpingTime).SetSpeedBased().SetEase(Ease.Linear);
     }
