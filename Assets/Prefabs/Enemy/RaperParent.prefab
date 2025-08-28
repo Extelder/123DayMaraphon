@@ -1446,11 +1446,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7984933381430265274}
   - component: {fileID: 6256588849872571508}
-  - component: {fileID: 7868356059316689478}
   - component: {fileID: 8724937872105237072}
   - component: {fileID: 7052839120387373509}
   - component: {fileID: 8303966736048713403}
   - component: {fileID: 7644981833572575923}
+  - component: {fileID: 3871605994903410659}
   m_Layer: 9
   m_Name: GhostTrappable
   m_TagString: Untagged
@@ -1490,20 +1490,6 @@ MonoBehaviour:
   _lineStartPointOffset: {x: 0, y: 2, z: 0}
   _stateMachine: {fileID: 1857984563578601612}
   _trapedState: {fileID: 6249386717721726317}
---- !u!114 &7868356059316689478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2729793539967085449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 3320232514636139407}
-  _health: {fileID: 3864246836606820053}
 --- !u!65 &8724937872105237072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1542,7 +1528,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2113
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 7868356059316689478}
+  _hitBox: {fileID: 3871605994903410659}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &8303966736048713403
@@ -1569,6 +1555,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7e1c58bb3179e4d9cf421d091685b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3871605994903410659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2729793539967085449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ad62190a6c0984b9ee7872004cf403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deathHypeHandler: {fileID: 3320232514636139407}
+  _health: {fileID: 3864246836606820053}
+  <UnitParent>k__BackingField: {fileID: 1252803942768269277}
+  _speedMultiplier: 10
 --- !u!1 &2939712037516640709
 GameObject:
   m_ObjectHideFlags: 0

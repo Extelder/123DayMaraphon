@@ -161,6 +161,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5736326409206112858}
+    - targetCorrespondingSourceObject: {fileID: 737805163889370052, guid: 2e038841cad57ea4c9134a27406cc8f7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2388641862320296482}
   m_SourcePrefab: {fileID: 100100000, guid: 2e038841cad57ea4c9134a27406cc8f7, type: 3}
 --- !u!114 &104902272252410029 stripped
 MonoBehaviour:
@@ -174,6 +178,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d613f7ce5fa294e9b26677fff88c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &609001408764999276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8512145482612669077, guid: 2e038841cad57ea4c9134a27406cc8f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 9102527713523305721}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9500d1dd4e2a3d45a6ac6f55aafa7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &3738589712644884668 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5598131787329193029, guid: 2e038841cad57ea4c9134a27406cc8f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 9102527713523305721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8390093239849824061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 737805163889370052, guid: 2e038841cad57ea4c9134a27406cc8f7,
@@ -192,3 +214,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7e1c58bb3179e4d9cf421d091685b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2388641862320296482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390093239849824061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ad62190a6c0984b9ee7872004cf403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deathHypeHandler: {fileID: 104902272252410029}
+  _health: {fileID: 609001408764999276}
+  <UnitParent>k__BackingField: {fileID: 3738589712644884668}
+  _speed: 50

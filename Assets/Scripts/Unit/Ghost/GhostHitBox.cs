@@ -9,6 +9,7 @@ using Zenject;
 public class GhostHitBox : MonoBehaviour, IWeaponVisitor
 {
     [SerializeField] private WeaponItem _railGunWeaponItem;
+    [SerializeField] private float _speed;
 
     [SerializeField] private Animator _animator;
     [SerializeField] private string _rpgShootedTriggetName = "RpgShoot";
@@ -16,8 +17,6 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
 
     [SerializeField] private Ghost _ghost;
     [SerializeField] private Pools _pools;
-
-    private Rigidbody _rigidbody;
 
     public event Action RailGunHitted;
     public event Action RPGProjectilHitted;
@@ -30,7 +29,6 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
     private void Awake()
     {
         _defaultScale = transform.localScale;
-        _rigidbody = GetComponent<Rigidbody>();
     }
 
     private void OnDisable()
@@ -89,10 +87,13 @@ public class GhostHitBox : MonoBehaviour, IWeaponVisitor
 
     public void Visit(PlayerSlashProjectile slashProjectile)
     {
+        Debug.Log("ghossst");
         DefaultHit(slashProjectile.Damage, transform.position);
         DamageTrapedUnits(slashProjectile.Damage);
-        _rigidbody.AddForce(transform.position - PlayerCharacter.Instance.Transform.position * slashProjectile.CharacterForce, ForceMode.Impulse);
         _ghost.GhostRadiusMultiplier = 3;
+        Vector3 delta = transform.position - PlayerCharacter.Instance.Transform.position;
+        transform.position = Vector3.MoveTowards(transform.position,
+            delta * _speed, slashProjectile.CharacterForce * Time.deltaTime);
     }
 
     private void DefaultHit(float damage, Vector3 vfxPosition)
