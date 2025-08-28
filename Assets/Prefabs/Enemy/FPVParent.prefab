@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 94995860154012280}
-  - component: {fileID: 7170611439302710317}
   - component: {fileID: 1870187283910255390}
   - component: {fileID: 1054016052058011597}
   - component: {fileID: 5367030205455967674}
   - component: {fileID: 7494866558967395811}
   - component: {fileID: 5496223813247382431}
+  - component: {fileID: 5967502649165419177}
   m_Layer: 9
   m_Name: GhostTrappable
   m_TagString: Untagged
@@ -38,20 +38,6 @@ Transform:
   m_Father: {fileID: 1906731387418258990}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7170611439302710317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737805163889370052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b139feada2b769046a956bf29c874e2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deathHypeHandler: {fileID: 9162042059858179156}
-  _health: {fileID: 8512145482612669077}
 --- !u!65 &1870187283910255390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90,7 +76,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   _randomRangeMultiplier: 1
-  _hitBox: {fileID: 7170611439302710317}
+  _hitBox: {fileID: 5967502649165419177}
   _bloodSplatterPerHit: 3
   _spreadFactor: 1.2
 --- !u!114 &5367030205455967674
@@ -133,6 +119,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7e1c58bb3179e4d9cf421d091685b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5967502649165419177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737805163889370052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ad62190a6c0984b9ee7872004cf403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deathHypeHandler: {fileID: 9162042059858179156}
+  _health: {fileID: 8512145482612669077}
+  <UnitParent>k__BackingField: {fileID: 5598131787329193029}
+  _speedMultiplier: 10
 --- !u!1 &2755688322391149186
 GameObject:
   m_ObjectHideFlags: 0

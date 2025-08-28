@@ -11206,9 +11206,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ReturnToPoolDelay>k__BackingField: 23
   _autoreturnToPool: 1
-  <Damage>k__BackingField: 10
+  <Damage>k__BackingField: 15
   <Speed>k__BackingField: 30
-  <CharacterForce>k__BackingField: 10
+  <CharacterForce>k__BackingField: 50
   <Collider>k__BackingField: {fileID: 1395748872979602891}
   <HypeValue>k__BackingField: 0.15
   <HypeType>k__BackingField: 4
@@ -59752,7 +59752,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 067bd86b55211714f8c6db4609a8d090,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 067bd86b55211714f8c6db4609a8d090,
         type: 3}
@@ -59792,7 +59792,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 067bd86b55211714f8c6db4609a8d090,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 067bd86b55211714f8c6db4609a8d090,
         type: 3}
@@ -59993,6 +59993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _railGunWeaponItem: {fileID: 11400000, guid: 0d2964763c92e8142b6bde12c6829bac, type: 2}
+  _speed: 200
   _animator: {fileID: 326318093803381365}
   _rpgShootedTriggetName: RpgShoot
   _lightningShootedTriggetName: LightningShoot

@@ -94,7 +94,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         UnitHitted?.Invoke();
     }
 
-    public void Visit(PlayerSlashProjectile slashProjectile)
+    public virtual void Visit(PlayerSlashProjectile slashProjectile)
     {
         if (!_health)
             return;

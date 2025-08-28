@@ -42,9 +42,9 @@ public class PlayerSlashProjectile : PoolObjectTimeScalable, ISlashProjectile, I
         _rigidbody.AddForce(transform.forward * Speed, ForceMode.Impulse);
         Collider.OnTriggerEnterAsObservable().Subscribe(other =>
         {
-            if (other.TryGetComponent<IGhostTrapable>(out IGhostTrapable ghostTrapable))
+            if (other.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
             {
-                ghostTrapable.ObjectVisitor.Visit(this);
+                visitor.Visit(this);
                 Triggered?.Invoke();
             }
         }).AddTo(_disposable);
