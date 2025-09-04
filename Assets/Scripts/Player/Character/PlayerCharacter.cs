@@ -16,6 +16,8 @@ public class PlayerCharacter : MonoBehaviour
     [field: SerializeField] public Transform Camera { get; private set; }
     [field: SerializeField] public WeaponSwitch WeaponSwitch { get; private set; }
     [field: SerializeField] public PlayerHints Hints { get; private set; }
+    [field: SerializeField] public PlayerWalk PlayerWalk { get; private set; }
+    [field: SerializeField] public PlayerDeath PlayerDeath { get; private set; }
 
     public Vector3 PlayerPositionForNavMesh { get; private set; }
     [SerializeField] private float _rayRange;

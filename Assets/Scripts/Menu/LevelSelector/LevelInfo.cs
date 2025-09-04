@@ -11,6 +11,7 @@ public class LevelInfo : MonoBehaviour
     [field: SerializeField] public Collider Collider { get; private set; }
 
     [SerializeField] private GameObject _locked;
+    [SerializeField] private GameObject _medal;
 
     private void Start()
     {
@@ -18,6 +19,10 @@ public class LevelInfo : MonoBehaviour
         if (PlayerPrefs.GetString(LevelName) != "Unlocked")
         {
             _locked.SetActive(false);
+        }
+        if (PlayerPrefs.GetInt("PerfectlyPassed" + LevelBuildIndex, 0) == 1)
+        {
+            _medal.SetActive(true);
         }
     }
 }

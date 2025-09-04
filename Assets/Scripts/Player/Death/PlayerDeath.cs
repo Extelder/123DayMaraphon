@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
+    public int Deaths { get; private set; }
     [SerializeField] private GameObject _deadCanvas;
 
     public bool Dead { get; private set; }
@@ -17,6 +18,7 @@ public class PlayerDeath : MonoBehaviour
 
     private void OnDead()
     {
+        Deaths++;
         _deadCanvas.SetActive(true);
         Dead = true;
         GameCursor.Instance.Show();
