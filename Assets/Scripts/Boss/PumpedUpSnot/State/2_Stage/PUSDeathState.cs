@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PUSDeathState : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PUSDeathState : MonoBehaviour
 
     [SerializeField] private PUSHealth _health;
 
+    public UnityEvent Dead;
+    
     private void OnEnable()
     {
         _health.Dead += OnDead;
@@ -33,5 +36,6 @@ public class PUSDeathState : MonoBehaviour
         _flash.SetActive(true);
         _deathAnimPus.SetActive(true);
         _pus.SetActive(false);
+        Dead?.Invoke();
     }
 }
