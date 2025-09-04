@@ -15,7 +15,7 @@ public class PlayerWalk : MovementSpeedLerping
 
     [Inject] private PlayerInputs _inputs;
     private Rigidbody _rigidbody;
-    public BoolReactiveProperty _moving = new BoolReactiveProperty();
+    public BoolReactiveProperty Moving = new BoolReactiveProperty();
     private CompositeDisposable _walkDisposable = new CompositeDisposable();
     private Coroutine _smoothlyLerpMoveSpeedCoroutine;
     private Coroutine _smoothlyLerpMoveSpeedToStartValue;
@@ -52,7 +52,7 @@ public class PlayerWalk : MovementSpeedLerping
 
     public void Walk(Vector3 input)
     {
-        _moving.Value =
+        Moving.Value =
             (_inputs.PlayerMovementInputs.MovementHorizontal != 0 ||
              _inputs.PlayerMovementInputs.MovementVertical != 0);
         input = transform.TransformDirection(input);
@@ -61,9 +61,9 @@ public class PlayerWalk : MovementSpeedLerping
 
         Vector3 desiredVelocityXZ = new Vector3(input.x * moveSpeed, 0, input.z * moveSpeed);
 
-        if (_moving.Value == true || _groundChecker.Detected == true)
+        if (Moving.Value == true || _groundChecker.Detected == true)
             _currentVelocity = Vector3.MoveTowards(_currentVelocity, desiredVelocityXZ, _acceleration * Time.deltaTime);
-        else if (_moving.Value == false)
+        else if (Moving.Value == false)
         {
             _currentVelocity =
                 Vector3.MoveTowards(_currentVelocity, desiredVelocityXZ, _decceleration * Time.deltaTime);

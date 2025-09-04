@@ -15,7 +15,10 @@ public class Level : MonoBehaviour
 
     public void Awake()
     {
-        Instance = this;
+        if (!Instance)
+        {
+            Instance = this;
+        }
         _character.Hints.AcceptNewHint("Level - " + _name);
         PlayerPrefs.SetString(_name, "Unlocked");
     }

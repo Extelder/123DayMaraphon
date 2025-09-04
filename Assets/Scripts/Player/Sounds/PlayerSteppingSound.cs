@@ -15,7 +15,7 @@ public class PlayerSteppingSound : MonoBehaviour
 
     private void Update()
     {
-        if (_groundChecker.Detected && _walk._moving.Value)
+        if (_groundChecker.Detected && _walk.Moving.Value)
         {
             if (_playingSound)
                 return;

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,8 +11,10 @@ public class LevelSelector : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private GameObject _playButton;
     [SerializeField] private AudioSource _insertSound;
+    [SerializeField] private int _allLevels;
 
     private LevelInfo _currentLevelInfo;
+    private int _levelNumber;
 
     public void SendCurrentLevelInfo(LevelInfo levelInfo)
     {

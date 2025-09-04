@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,11 @@ public class LevelCompleateSwithcSceneTrigger : PlayerTrigger
 
     public override void OnTriggered()
     {
+        if (PlayerCharacter.Instance.PlayerDeath.Deaths == 0)
+        {
+            Debug.Log("PerfectlyPassed" + SceneManager.GetActiveScene().buildIndex);
+            PlayerPrefs.SetInt("PerfectlyPassed" + SceneManager.GetActiveScene().buildIndex, 1);
+        }
         _level.CompleateLevel();
         PlayerPrefs.SetInt("CurrentScene", SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene("SceneSwitcher");
