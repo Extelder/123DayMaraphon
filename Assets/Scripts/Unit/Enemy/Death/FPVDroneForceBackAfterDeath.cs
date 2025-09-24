@@ -9,7 +9,7 @@ public class FPVDroneForceBackAfterDeath : MonoBehaviour
 {
     [Inject] private Pools _pools;
     
-    [SerializeField] private FPVDroneEnemyHealth _health;
+    [SerializeField] private FlyEnemyHealth _health;
     [SerializeField] private float _forceBackStrength;
     [SerializeField] private float _forceDowmStrength;
     [SerializeField] private EnemyGroundChecker _groundChecker;
@@ -41,7 +41,7 @@ public class FPVDroneForceBackAfterDeath : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
             _rigidbody.AddForce(-transform.forward * _forceBackStrength, ForceMode.Impulse);
             _rigidbody.AddForce(-transform.up * _forceDowmStrength, ForceMode.Impulse);
-            if (_groundChecker.Detected == true)
+            if (_groundChecker.Detected)
             {
                 _explosionParticle.transform.parent = null;
                 _explosionParticle.Play();

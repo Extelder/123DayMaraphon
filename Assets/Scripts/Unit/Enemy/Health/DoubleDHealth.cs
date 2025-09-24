@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoubleDHealth : Health
+public class DoubleDHealth : FlyEnemyHealth
 {
-    public override void Death()
-    {
-    }
 }
