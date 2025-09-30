@@ -1841,9 +1841,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cefd3f26b01264490e76de2beb27ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponTransform: {fileID: 5515317869771656455}
+  weaponTransform: {fileID: 0}
   swayAmount: 0.22
-  maxSwayAmount: 0.02
+  maxSwayAmount: 0.23
   swaySmooth: 12.29
   swayCurve:
     serializedVersion: 2
@@ -1851,7 +1851,7 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
+      inSlope: 2
       outSlope: 2
       tangentMode: 0
       weightedMode: 0
@@ -1870,8 +1870,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   swaySmoothCounteraction: 1
-  rotationSwayMultiplier: 1
-  positionSwayMultiplier: -0.16
+  rotationSwayMultiplier: 0.16
+  positionSwayMultiplier: -0.14
 --- !u!114 &2560276373154446857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10467,10 +10467,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cefd3f26b01264490e76de2beb27ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponTransform: {fileID: 4527533214777322488}
-  swayAmount: 0.22
-  maxSwayAmount: 0.02
-  swaySmooth: 12.29
+  weaponTransform: {fileID: 0}
+  swayAmount: 0.3
+  maxSwayAmount: 0.3
+  swaySmooth: 7
   swayCurve:
     serializedVersion: 2
     m_Curve:
@@ -10496,8 +10496,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   swaySmoothCounteraction: 1
-  rotationSwayMultiplier: 1
-  positionSwayMultiplier: -0.16
+  rotationSwayMultiplier: 0.3
+  positionSwayMultiplier: -0.3
 --- !u!114 &8464092765065633555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27974,7 +27974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.001095286}
+  m_AnchoredPosition: {x: 0, y: 0.26266554}
   m_SizeDelta: {x: 0, y: 1950}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &4127798127888806470
@@ -41391,7 +41391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7072282785594033488
 Transform:
   m_ObjectHideFlags: 0
@@ -41420,10 +41420,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cefd3f26b01264490e76de2beb27ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponTransform: {fileID: 7072282785594033488}
-  swayAmount: 0.22
-  maxSwayAmount: 0.1
-  swaySmooth: 5.54
+  weaponTransform: {fileID: 0}
+  swayAmount: 0.3
+  maxSwayAmount: 0.2
+  swaySmooth: 6
   swayCurve:
     serializedVersion: 2
     m_Curve:
@@ -41449,8 +41449,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   swaySmoothCounteraction: 1
-  rotationSwayMultiplier: 0.6
-  positionSwayMultiplier: 0.1
+  rotationSwayMultiplier: 0.8
+  positionSwayMultiplier: 0.6
 --- !u!114 &5222283345106868722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50487,7 +50487,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1012574710482735430}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99993026
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -52190,7 +52190,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3971672482335757073}
   m_HandleRect: {fileID: 2681690423874278365}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.99999976
   m_Size: 0.6775871
   m_NumberOfSteps: 0
   m_OnValueChanged:
