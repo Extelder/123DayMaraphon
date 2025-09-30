@@ -1246,6 +1246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41ea0d733d2ec1409cd69ec1ffc6dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notActiveDelayAfterSpawn: 0
 --- !u!54 &1036759230452235383
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1351,7 +1352,7 @@ MonoBehaviour:
   _acceleration: 64
   _decceleration: 256
   _groundChecker: {fileID: 4964944240793527871}
-  _moving:
+  Moving:
     value: 0
   _currentVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &5641981363132158727
@@ -1771,6 +1772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hip: {fileID: 2355311876792254004}
   _crosshair: {fileID: 3058645582484512094}
+  _scaleHitFactor: {x: 0, y: 0, z: 0}
 --- !u!1 &130655720114257054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,6 +3532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea7d6f35a83d07428552d5dfa1900b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 1474800283387674261}
   <Item>k__BackingField: {fileID: 2937317531586693380}
   _idle: {fileID: 1474800283387674261}
@@ -3630,6 +3633,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   <Range>k__BackingField: 1000
+  <HypeValue>k__BackingField: 0.1
+  <HypeType>k__BackingField: 0
   _weaponShootState: {fileID: 3354817536897171287}
   <Weapon>k__BackingField: {fileID: 0}
   CurrentShootOffset: {x: 0, y: 0, z: 0}
@@ -8006,6 +8011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hip: {fileID: 2355311876792254004}
   _crosshair: {fileID: 5243817676716080634}
+  _scaleHitFactor: {x: 0, y: 0, z: 0}
 --- !u!1 &1274097555397470549
 GameObject:
   m_ObjectHideFlags: 0
@@ -8058,6 +8064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea7d6f35a83d07428552d5dfa1900b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 1309777057274245923}
   <Item>k__BackingField: {fileID: 5754290561732599916}
   _idle: {fileID: 1309777057274245923}
@@ -8123,6 +8130,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0.1
+  <HypeType>k__BackingField: 0
   _weaponShootState: {fileID: 6508201918829019867}
   <Weapon>k__BackingField: {fileID: 11400000, guid: fba12b8b04b9c7d4f912cc7dba8463f2,
     type: 2}
@@ -9365,6 +9374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hip: {fileID: 2355311876792254004}
   _crosshair: {fileID: 2968931737232319642}
+  _scaleHitFactor: {x: 0, y: 0, z: 0}
 --- !u!1 &1486986671366015828
 GameObject:
   m_ObjectHideFlags: 0
@@ -9948,6 +9958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea7d6f35a83d07428552d5dfa1900b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 3718009088530074559}
   <Item>k__BackingField: {fileID: 5754290561732599916}
   _idle: {fileID: 3718009088530074559}
@@ -10013,6 +10024,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0.1
+  <HypeType>k__BackingField: 0
   _weaponShootState: {fileID: 4790951523656600414}
   <Weapon>k__BackingField: {fileID: 11400000, guid: fba12b8b04b9c7d4f912cc7dba8463f2,
     type: 2}
@@ -12524,6 +12537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea7d6f35a83d07428552d5dfa1900b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 5281985551822062462}
   <Item>k__BackingField: {fileID: 5754290561732599916}
   _idle: {fileID: 5281985551822062462}
@@ -12589,6 +12603,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0.1
+  <HypeType>k__BackingField: 0
   _weaponShootState: {fileID: 1844518493131980979}
   <Weapon>k__BackingField: {fileID: 11400000, guid: fba12b8b04b9c7d4f912cc7dba8463f2,
     type: 2}
@@ -15003,6 +15019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hip: {fileID: 2355311876792254004}
   _crosshair: {fileID: 4020928417513734440}
+  _scaleHitFactor: {x: 0, y: 0, z: 0}
 --- !u!1 &2733853650382079817
 GameObject:
   m_ObjectHideFlags: 0
@@ -16273,6 +16290,7 @@ MonoBehaviour:
   _animator: {fileID: 4015475542653503384}
   _shootAnimationTrigger: Shoot
   _pool: {fileID: 2623208612636468382}
+  _bluePool: {fileID: 0}
 --- !u!95 &4015475542653503384
 Animator:
   serializedVersion: 5
@@ -16976,6 +16994,7 @@ MonoBehaviour:
   _animator: {fileID: 53354292850617959}
   _shootAnimationTrigger: Shoot
   _pool: {fileID: 2623208612636468382}
+  _bluePool: {fileID: 0}
 --- !u!95 &53354292850617959
 Animator:
   serializedVersion: 5
@@ -22271,6 +22290,7 @@ MonoBehaviour:
   _animator: {fileID: 2218734316005087752}
   _shootAnimationTrigger: Shoot
   _pool: {fileID: 2623208612636468382}
+  _bluePool: {fileID: 0}
 --- !u!95 &2218734316005087752
 Animator:
   serializedVersion: 5
@@ -23355,6 +23375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e691ae161bbc7d64ca496d70012da36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 2382372539970945161}
   _idle: {fileID: 2382372539970945161}
   _move: {fileID: 1853661587071733548}
@@ -23485,8 +23506,11 @@ MonoBehaviour:
   <Rigidbody>k__BackingField: {fileID: 1036759230452235383}
   <PlayerLevelCheckPoint>k__BackingField: {fileID: 5269098643553466132}
   <PlaceForTextLerping>k__BackingField: {fileID: 2828551417129132083}
+  <Camera>k__BackingField: {fileID: 0}
   <WeaponSwitch>k__BackingField: {fileID: 259153463143571494}
   <Hints>k__BackingField: {fileID: 1891272932422648087}
+  <PlayerWalk>k__BackingField: {fileID: 0}
+  <PlayerDeath>k__BackingField: {fileID: 0}
   _rayRange: 1000
   _randomNavMeshRadius: 0
   _layer:
@@ -23535,15 +23559,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d20bb3072e15d148af505889f274214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cinemachineImpulseListener: {fileID: 0}
   _settingsCanvas: {fileID: 803857868255793102}
   _mixer: {fileID: 24100000, guid: f52253784b4fc7845a0853f4f6fc749d, type: 2}
   _cinemachineVirtual: {fileID: 3993687150684033421}
   _themeController: {fileID: 11400000, guid: e00c7d2bc58a2424b8dc09ecdafdb067, type: 2}
+  _playerFOV: {fileID: 0}
   _sensetivitySlider: {fileID: 5517408106398254099}
-  _masterVolumeSlider: {fileID: 5593206649295061585}
+  MasterVolumeSlider: {fileID: 0}
   _musicVolumeSlider: {fileID: 3203845703939567970}
   _effectsVolumeSlider: {fileID: 1990054006824973530}
+  _fovSlider: {fileID: 0}
+  _resolutionDropdown: {fileID: 0}
   _death: {fileID: 3986596030218241735}
+  _onText: 
+  _offText: 
+  _outlineSwitchText: {fileID: 0}
+  _outlineRenders: []
+  _fullScreenOnOffTText: {fileID: 0}
+  _bloodSplatOnOffTText: {fileID: 0}
+  _cameraShakeOnOffTText: {fileID: 0}
+  _sensetivityValueText: {fileID: 0}
+  _fovValueText: {fileID: 0}
+  _musicVolumeValueText: {fileID: 0}
+  _effectsVolumeValueText: {fileID: 0}
+  _masterVolumeValueText: {fileID: 0}
+  _hub: 0
 --- !u!114 &7484785311019272337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23561,6 +23602,7 @@ MonoBehaviour:
   _lerpDashSpeed: 5
   _lerpDefaultSpeed: 5
   _cinemachine: {fileID: 3993687150684033421}
+  _playerFOV: {fileID: 0}
 --- !u!114 &2302039331714082503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23592,7 +23634,9 @@ MonoBehaviour:
   - {fileID: 2793338393023193088}
   - {fileID: 4543791982442273409}
   _kunitanaHarakiriState: {fileID: 4858288843575502137}
+  _hypeSystem: {fileID: 0}
   _damage: 40
+  _multiplier: 1.5
   _animatorSpeedMultipier: 1.4
   _boostRecovery: 10
 --- !u!114 &3986596030218241735
@@ -29367,6 +29411,7 @@ MonoBehaviour:
   _animator: {fileID: 6287848714521406173}
   _shootAnimationTrigger: Shoot
   _pool: {fileID: 2623208612636468382}
+  _bluePool: {fileID: 0}
 --- !u!95 &6287848714521406173
 Animator:
   serializedVersion: 5
@@ -31615,6 +31660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea7d6f35a83d07428552d5dfa1900b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 6455763092832587959}
   <Item>k__BackingField: {fileID: 8788267672937244077}
   _idle: {fileID: 6455763092832587959}
@@ -31701,6 +31747,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 1000
+  <HypeValue>k__BackingField: 0.1
+  <HypeType>k__BackingField: 0
   _weaponShootState: {fileID: 1806215672519784806}
   <Weapon>k__BackingField: {fileID: 11400000, guid: 0d2964763c92e8142b6bde12c6829bac,
     type: 2}
@@ -33981,6 +34029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hip: {fileID: 2355311876792254004}
   _crosshair: {fileID: 4020928417513734440}
+  _scaleHitFactor: {x: 0, y: 0, z: 0}
 --- !u!1 &6017898828619017164
 GameObject:
   m_ObjectHideFlags: 0
@@ -35423,6 +35472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3cd18cbf5de43d4eb903f3534b5f850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 4837592715498660126}
   <Item>k__BackingField: {fileID: 1655120035542009783}
   _idle: {fileID: 4837592715498660126}
@@ -35472,7 +35522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanChanged: 1
-  _animator: {fileID: 216319107453146862}
+  <Animator>k__BackingField: {fileID: 0}
 --- !u!114 &758412039500632669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35490,6 +35540,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0.1
+  <HypeType>k__BackingField: 0
   _weaponShootState: {fileID: 4155217248066667139}
   <Weapon>k__BackingField: {fileID: 11400000, guid: bf3c78d8e854b6e4390cd3418c4169bf,
     type: 2}
@@ -35508,6 +35560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponAbilityState: {fileID: 5086388326725073061}
   _ghostSpawnPoint: {fileID: 4557924352021366555}
+  _camera: {fileID: 0}
 --- !u!114 &216319107453146862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36643,6 +36696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _loadingObject: {fileID: 6407992388213720546}
+  _settingsCanvas: {fileID: 0}
   _playerWarmingUp: {fileID: 3338078079682817988}
 --- !u!1 &6408134655306987174
 GameObject:
@@ -38808,7 +38862,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b3758f2ea4e0d47b46f700339bd193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 4805559587196700125}
+  _animator: {fileID: 0}
+  _attackVariantIntAnimatorName: AttackVariant
+  _kunitanaShoot: {fileID: 0}
   <Item>k__BackingField: {fileID: 162747182129732807}
   _idle: {fileID: 4805559587196700125}
   _harakiri: {fileID: 4858288843575502137}
@@ -38886,6 +38944,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9606cace33ed984fa5c6dd2c396f481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <HypeValue>k__BackingField: 0.1
+  <HypeType>k__BackingField: 0
+  <HitHypeMultiplier>k__BackingField: 1.1
   _weaponShootState: {fileID: 9187560661398838710}
   _overlapSettings: {fileID: 3441942452329656358}
   _kayotTime: 0.3
@@ -39671,6 +39732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea7d6f35a83d07428552d5dfa1900b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 7621906589930472671}
   <Item>k__BackingField: {fileID: 5564480935497898426}
   _idle: {fileID: 7621906589930472671}
@@ -39722,6 +39784,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0.1
+  <HypeType>k__BackingField: 0
   _weaponShootState: {fileID: 8571587115518006524}
   <Weapon>k__BackingField: {fileID: 11400000, guid: bf3c78d8e854b6e4390cd3418c4169bf,
     type: 2}
@@ -50906,6 +50970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea7d6f35a83d07428552d5dfa1900b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _notStartOnEnable: 0
   _startState: {fileID: 5586404855298466204}
   <Item>k__BackingField: {fileID: 5754290561732599916}
   _idle: {fileID: 5586404855298466204}
@@ -50971,6 +51036,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12
   <Range>k__BackingField: 100
+  <HypeValue>k__BackingField: 0.1
+  <HypeType>k__BackingField: 0
   _weaponShootState: {fileID: 5120729000631435336}
   <Weapon>k__BackingField: {fileID: 11400000, guid: fba12b8b04b9c7d4f912cc7dba8463f2,
     type: 2}
