@@ -20,6 +20,7 @@ public class PlayerCheckPoint : PlayerTrigger
         _collider = GetComponent<Collider>();
         if (PlayerPrefs.GetString(SceneManager.GetActiveScene().name) == gameObject.name)
         {
+            Debug.LogError(transform.position);
             _character.Transform.position = transform.position;
         }
     }
