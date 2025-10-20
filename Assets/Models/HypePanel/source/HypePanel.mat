@@ -292,7 +292,7 @@ Material:
     - _NormalMapIntensity: 1
     - _OcclusionMapIntensity: 1
     - _OcclusionStrength: 1
-    - _OptionsTab: 1
+    - _OptionsTab: 0
     - _Outline: 3
     - _OutlineClipOffset: 0
     - _OutlineData: 0
