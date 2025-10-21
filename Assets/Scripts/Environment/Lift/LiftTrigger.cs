@@ -10,5 +10,6 @@ public class LiftTrigger : PlayerTrigger
     public override void OnTriggered()
     {
         _lift.position = _tpPoint.position;
+        PlayerCharacter.Instance.Transform.position = _tpPoint.position;
     }
 }
