@@ -16,6 +16,7 @@ public class FlyCommand : MonoBehaviour
         {
             _spawnedCharacter =
                 Instantiate(_flyCharacter, PlayerCharacter.Instance.Transform.position, Quaternion.identity);
+            PlayerCharacter.Instance.gameObject.SetActive(false);
         }
         else
         {
@@ -27,6 +28,10 @@ public class FlyCommand : MonoBehaviour
     [Command]
     public void StopFly()
     {
+        if (PlayerCharacter.Instance != null)
+            PlayerCharacter.Instance.gameObject.SetActive(true);
+
+
         if (_spawnedCharacter != null)
         {
             Destroy(_spawnedCharacter);
