@@ -11,6 +11,7 @@ public class PlayerCharacter : MonoBehaviour
     [field: SerializeField] public Transform Transform { get; private set; }
     [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
     [field: SerializeField] public PlayerLevelCheckPoint PlayerLevelCheckPoint { get; private set; }
+    [field: SerializeField] public PlayerHitBox PlayerHitBox { get; private set; }
 
     [field: SerializeField] public Transform PlaceForTextLerping { get; private set; }
     [field: SerializeField] public Transform Camera { get; private set; }

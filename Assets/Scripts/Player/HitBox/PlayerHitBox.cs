@@ -11,7 +11,7 @@ public class PlayerHitBox : MonoBehaviour
     
     [Inject] private PlayerHealth _health;
 
-    private bool _active;
+    public bool Active { get; set; }
     
     private void Start()
     {
@@ -22,12 +22,12 @@ public class PlayerHitBox : MonoBehaviour
     private IEnumerator WaitForDelay()
     {
         yield return new WaitForSeconds(_notActiveDelayAfterSpawn);
-        _active = true;
+        Active = true;
     }
 
     public void TakeDamage(float damage)
     {
-        if (!_active)
+        if (!Active)
             return;
         
         _health.TakeDamage(damage);

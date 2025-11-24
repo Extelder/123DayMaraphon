@@ -67,6 +67,26 @@ MonoBehaviour:
       Parameters:
       - Data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
       Flags: 36
+  - Name: DisableImmortality
+    Description: 
+    TargetType: 0
+    Group: Default
+    SerializableMethod:
+      Type:
+        Data: 005d496e66696e6974794865616c7468436f6d6d616e642c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      MethodName: DisableImmortality
+      Parameters: []
+      Flags: 20
+  - Name: EnableImmortality
+    Description: 
+    TargetType: 0
+    Group: Default
+    SerializableMethod:
+      Type:
+        Data: 005d496e66696e6974794865616c7468436f6d6d616e642c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      MethodName: EnableImmortality
+      Parameters: []
+      Flags: 20
   - Name: Fly
     Description: 
     TargetType: 0
