@@ -72,6 +72,7 @@
       <Path>Build</Path>
       <Path>KLITTER Demo</Path>
       <Path>Logs</Path>
+      <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
     </explicitExcludes>
