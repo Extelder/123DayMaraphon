@@ -22,11 +22,11 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         _deathHypeHandler = GetComponentInParent<DeathHypeHandler>();
     }
 
-    public void Visit(WeaponShoot weaponShoot)
+    public virtual void Visit(WeaponShoot weaponShoot)
     {
     }
 
-    public void Visit(KunitanShoot kunitanShoot)
+    public virtual void Visit(KunitanShoot kunitanShoot)
     {
         if (!_health)
             return;
@@ -39,7 +39,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         UnitHitted?.Invoke();
     }
 
-    public void Visit(KunitanaUltimateAttack kunitanaUltimateAttack)
+    public virtual void Visit(KunitanaUltimateAttack kunitanaUltimateAttack)
     {
         if (!_health)
             return;
@@ -59,7 +59,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         _health.TakeDamage(damage);
     }
 
-    public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
+    public virtual void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
         if (!_health)
             return;
@@ -72,7 +72,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         UnitHitted?.Invoke();
     }
 
-    public void Visit(Projectile projectile)
+    public virtual void Visit(Projectile projectile)
     {
         if (!_health)
             return;
@@ -85,7 +85,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         UnitHitted?.Invoke();
     }
 
-    public void Visit(Ghost ghost, float damage)
+    public virtual void Visit(Ghost ghost, float damage)
     {
         CurrentHypeMeasurable = ghost;
         SpawningDecal(transform.position);
