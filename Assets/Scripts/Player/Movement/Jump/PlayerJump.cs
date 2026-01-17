@@ -31,7 +31,7 @@ public class PlayerJump : MovementSpeedLerping
         if (_resetRigidBodyYAfterJump)
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, 0, _rigidbody.velocity.z);
 
-        _rigidbody.AddForce(Vector3.up * moveSpeed, ForceMode.Impulse);
+        _rigidbody.AddForce(transform.up * moveSpeed, ForceMode.Impulse);
         Jumped?.Invoke();
     }
 
