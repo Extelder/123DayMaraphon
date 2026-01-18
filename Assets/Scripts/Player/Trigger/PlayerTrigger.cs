@@ -23,6 +23,6 @@ public abstract class PlayerTrigger : MonoBehaviour
                 Destroy(this);
         }
     }
-
+    
     public abstract void OnTriggered();
 }

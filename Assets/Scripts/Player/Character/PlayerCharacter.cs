@@ -13,8 +13,8 @@ public class PlayerCharacter : MonoBehaviour
     [field: SerializeField] public PlayerLevelCheckPoint PlayerLevelCheckPoint { get; private set; }
     [field: SerializeField] public PlayerHitBox PlayerHitBox { get; private set; }
 
-    [field: SerializeField] public Transform PlaceForTextLerping { get; private set; }
     [field: SerializeField] public Transform Camera { get; private set; }
+    [field: SerializeField] public Transform GuideTargetPoint { get; private set; }
     [field: SerializeField] public Transform CinemachineParent { get; private set; }
     [field: SerializeField] public Transform HeadBobParent { get; private set; }
     [field: SerializeField] public WeaponSwitch WeaponSwitch { get; private set; }

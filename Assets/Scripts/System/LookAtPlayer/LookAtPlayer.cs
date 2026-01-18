@@ -15,7 +15,7 @@ public class LookAtPlayer : MonoBehaviour
 
     private void Awake()
     {
-            _player = _playerCharacter.Transform;
+        _player = _playerCharacter.Transform;
     }
 
     private void OnEnable()

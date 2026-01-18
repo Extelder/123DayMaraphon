@@ -17,7 +17,7 @@ public class EnemyAnimator : UnitAnimator
         SetAnimationBool(_attackAnimationBoolName, false);
     }
 
-    public void Idle()
+    public virtual void Idle()
     {
         DisableAllBools();
     }
