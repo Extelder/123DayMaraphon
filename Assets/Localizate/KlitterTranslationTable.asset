@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: KlitterTranslationTable
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 6eaecf92c7b302f4da5f69a1f99d882d, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 07f356138270ffa46ad414fc02f9e427, type: 2}
+  - {fileID: 11400000, guid: 1f0cbae41eeadc2438de510c35e0a6f2, type: 2}
+  - {fileID: 11400000, guid: 1c3466547f618ea47af06414c37850da, type: 2}
+  - {fileID: 11400000, guid: a244433fd7b92d44aa87ec93d6ded4b9, type: 2}
+  - {fileID: 11400000, guid: e99c094b1d36d934aabe8d8c4c26bdc3, type: 2}
+  - {fileID: 11400000, guid: ba6ee4465c42597449037f533ef76017, type: 2}
+  - {fileID: 11400000, guid: 4e4a707503994a34eb3f027b847344df, type: 2}
+  - {fileID: 11400000, guid: 6d8a1fa2397ec9b408c0814464bec17c, type: 2}
+  - {fileID: 11400000, guid: 75379308c8cb00e4b98c1508b6cf3924, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

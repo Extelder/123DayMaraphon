@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: KlitterTranslationTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: KlitterTranslationTable
+  m_TableCollectionNameGuidString: 6eaecf92c7b302f4da5f69a1f99d882d
+  m_Entries:
+  - m_Id: 2705905459201
+    m_Key: Graphics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705905459200
+    m_Key: General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705909653504
+    m_Key: Color
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705901264896
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705909653505
+    m_Key: Sensitivity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705909653507
+    m_Key: music_volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705909653506
+    m_Key: master_volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705909653509
+    m_Key: fov
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705909653515
+    m_Key: exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705909653514
+    m_Key: enter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705909653508
+    m_Key: effects_volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705909653513
+    m_Key: easy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705909653512
+    m_Key: difficulty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2705909653510
+    m_Key: blood_splat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 233083383619584
+    m_Key: Camera Shake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 233689640902656
+    m_Key: Clear Save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237058312937472
+    m_Key: 'Mode
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237433573122048
+    m_Key: 'Low
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237440321757184
+    m_Key: 'Middle
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237441995284480
+    m_Key: High
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237749068668928
+    m_Key: Outline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237823249129472
+    m_Key: Full Screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237870405689344
+    m_Key: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238112366698496
+    m_Key: Health Bar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238156536913920
+    m_Key: HUD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238290964357120
+    m_Key: SHOW SOCIAL NETWORKS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239152629587968
+    m_Key: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239246540054528
+    m_Key: Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241353561251840
+    m_Key: Dead
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241448180555776
+    m_Key: Retry
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4772237109385494553
+  references:
+    version: 2
+    RefIds:
+    - rid: 4772237109385494553
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1768677351188
