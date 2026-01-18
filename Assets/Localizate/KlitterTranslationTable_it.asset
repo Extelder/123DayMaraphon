@@ -19,67 +19,125 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 2705901264896
-    m_Localized: 
+    m_Localized: Impostazioni
     m_Metadata:
       m_Items: []
   - m_Id: 2705905459200
-    m_Localized: 
+    m_Localized: Generale
     m_Metadata:
       m_Items: []
   - m_Id: 2705905459201
-    m_Localized: 
+    m_Localized: Grafica
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653504
-    m_Localized: 
+    m_Localized: Colore
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653505
-    m_Localized: 
+    m_Localized: "Sensibilit\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653506
-    m_Localized: 
+    m_Localized: Volume principale
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653507
-    m_Localized: 
+    m_Localized: Volume musica
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653508
-    m_Localized: 
+    m_Localized: Volume effetti
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653509
-    m_Localized: 
+    m_Localized: Campo visivo
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653510
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2705909653511
-    m_Localized: 
+    m_Localized: Sangue
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653512
-    m_Localized: 
+    m_Localized: "Difficolt\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653513
-    m_Localized: 
+    m_Localized: Facile
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653514
-    m_Localized: 
+    m_Localized: Invio
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653515
-    m_Localized: 
+    m_Localized: Esci
     m_Metadata:
       m_Items: []
-  - m_Id: 2705909653516
-    m_Localized: 
+  - m_Id: 233083383619584
+    m_Localized: Scuotimento camera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 233689640902656
+    m_Localized: Cancella salvataggio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237058312937472
+    m_Localized: "Modalit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237433573122048
+    m_Localized: BASSO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237440321757184
+    m_Localized: MEDIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237441995284480
+    m_Localized: ALTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237749068668928
+    m_Localized: Contorno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237823249129472
+    m_Localized: Schermo intero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237870405689344
+    m_Localized: Risoluzione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238112366698496
+    m_Localized: Barra della salute
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238156536913920
+    m_Localized: HUD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238290964357120
+    m_Localized: MOSTRA SOCIAL NETWORK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239152629587968
+    m_Localized: Riprendi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239246540054528
+    m_Localized: Menu principale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241353561251840
+    m_Localized: 'AHAHAHAHAHAHAHA!
+
+      CADAVERE LOL'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241448180555776
+    m_Localized: Riprova
     m_Metadata:
       m_Items: []
   references:

@@ -19,67 +19,125 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 2705901264896
-    m_Localized: 
+    m_Localized: Ustawienia
     m_Metadata:
       m_Items: []
   - m_Id: 2705905459200
-    m_Localized: 
+    m_Localized: "Og\xF3lne"
     m_Metadata:
       m_Items: []
   - m_Id: 2705905459201
-    m_Localized: 
+    m_Localized: Grafika
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653504
-    m_Localized: 
+    m_Localized: Kolor
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653505
-    m_Localized: 
+    m_Localized: "Czu\u0142o\u015B\u0107"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653506
-    m_Localized: 
+    m_Localized: "G\u0142o\u015Bno\u015B\u0107 g\u0142\xF3wna"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653507
-    m_Localized: 
+    m_Localized: "G\u0142o\u015Bno\u015B\u0107 muzyki"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653508
-    m_Localized: 
+    m_Localized: "G\u0142o\u015Bno\u015B\u0107 efekt\xF3w"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653509
-    m_Localized: 
+    m_Localized: Pole widzenia
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653510
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2705909653511
-    m_Localized: 
+    m_Localized: Rozprysk krwi
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653512
-    m_Localized: 
+    m_Localized: "Trudno\u015B\u0107"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653513
-    m_Localized: 
+    m_Localized: "\u0141atwy"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653514
-    m_Localized: 
+    m_Localized: "Wejd\u017A"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653515
-    m_Localized: 
+    m_Localized: "Wyj\u015Bcie"
     m_Metadata:
       m_Items: []
-  - m_Id: 2705909653516
-    m_Localized: 
+  - m_Id: 233083383619584
+    m_Localized: Drganie kamery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 233689640902656
+    m_Localized: "Wyczy\u015B\u0107 zapis"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237058312937472
+    m_Localized: Tryb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237433573122048
+    m_Localized: NISKI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237440321757184
+    m_Localized: "\u015AREDNI"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237441995284480
+    m_Localized: WYSOKI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237749068668928
+    m_Localized: Kontur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237823249129472
+    m_Localized: "Pe\u0142ny ekran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237870405689344
+    m_Localized: "Rozdzielczo\u015B\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238112366698496
+    m_Localized: Pasek zdrowia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238156536913920
+    m_Localized: HUD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238290964357120
+    m_Localized: "POKA\u017B SIECI SPO\u0141ECZNO\u015ACIOWE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239152629587968
+    m_Localized: "Wzn\xF3w"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239246540054528
+    m_Localized: "Menu g\u0142\xF3wne"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241353561251840
+    m_Localized: 'AHAHAHAHAHAHAHA!
+
+      TRUP LOL'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241448180555776
+    m_Localized: "Pon\xF3w"
     m_Metadata:
       m_Items: []
   references:

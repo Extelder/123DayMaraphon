@@ -19,67 +19,125 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 2705901264896
-    m_Localized: 
+    m_Localized: Einstellungen
     m_Metadata:
       m_Items: []
   - m_Id: 2705905459200
-    m_Localized: 
+    m_Localized: Allgemein
     m_Metadata:
       m_Items: []
   - m_Id: 2705905459201
-    m_Localized: 
+    m_Localized: Grafik
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653504
-    m_Localized: 
+    m_Localized: Farbe
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653505
-    m_Localized: 
+    m_Localized: Empfindlichkeit
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653506
-    m_Localized: 
+    m_Localized: "Gesamtlautst\xE4rke"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653507
-    m_Localized: 
+    m_Localized: "Musiklautst\xE4rke"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653508
-    m_Localized: 
+    m_Localized: "Effektlautst\xE4rke"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653509
-    m_Localized: 
+    m_Localized: Sichtfeld
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653510
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2705909653511
-    m_Localized: 
+    m_Localized: Blutspritzer
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653512
-    m_Localized: 
+    m_Localized: Schwierigkeit
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653513
-    m_Localized: 
+    m_Localized: Leicht
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653514
-    m_Localized: 
+    m_Localized: Eingabe
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653515
-    m_Localized: 
+    m_Localized: Beenden
     m_Metadata:
       m_Items: []
-  - m_Id: 2705909653516
-    m_Localized: 
+  - m_Id: 233083383619584
+    m_Localized: Kamerawackeln
+    m_Metadata:
+      m_Items: []
+  - m_Id: 233689640902656
+    m_Localized: "Spielstand l\xF6schen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237058312937472
+    m_Localized: Modus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237433573122048
+    m_Localized: NIEDRIG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237440321757184
+    m_Localized: MITTEL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237441995284480
+    m_Localized: HOCH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237749068668928
+    m_Localized: Umriss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237823249129472
+    m_Localized: Vollbild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237870405689344
+    m_Localized: "Aufl\xF6sung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238112366698496
+    m_Localized: Gesundheitsleiste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238156536913920
+    m_Localized: HUD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238290964357120
+    m_Localized: SOZIALE NETZWERKE ANZEIGEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239152629587968
+    m_Localized: Fortsetzen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239246540054528
+    m_Localized: "Hauptmen\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241353561251840
+    m_Localized: 'AHAHAHAHAHAHAHA!
+
+      LEICHE LOL'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241448180555776
+    m_Localized: Erneut versuchen
     m_Metadata:
       m_Items: []
   references:

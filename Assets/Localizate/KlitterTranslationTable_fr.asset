@@ -19,67 +19,125 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 2705901264896
-    m_Localized: 
+    m_Localized: "Param\xE8tres"
     m_Metadata:
       m_Items: []
   - m_Id: 2705905459200
-    m_Localized: 
+    m_Localized: "G\xE9n\xE9ral"
     m_Metadata:
       m_Items: []
   - m_Id: 2705905459201
-    m_Localized: 
+    m_Localized: Graphismes
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653504
-    m_Localized: 
+    m_Localized: Couleur
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653505
-    m_Localized: 
+    m_Localized: "Sensibilit\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653506
-    m_Localized: 
+    m_Localized: "Volume g\xE9n\xE9ral"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653507
-    m_Localized: 
+    m_Localized: Volume de la musique
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653508
-    m_Localized: 
+    m_Localized: Volume des effets
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653509
-    m_Localized: 
+    m_Localized: Champ de vision
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653510
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2705909653511
-    m_Localized: 
+    m_Localized: "\xC9claboussures de sang"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653512
-    m_Localized: 
+    m_Localized: "Difficult\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653513
-    m_Localized: 
+    m_Localized: Facile
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653514
-    m_Localized: 
+    m_Localized: Entrer
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653515
-    m_Localized: 
+    m_Localized: Quitter
     m_Metadata:
       m_Items: []
-  - m_Id: 2705909653516
-    m_Localized: 
+  - m_Id: 233083383619584
+    m_Localized: "Secousse de la cam\xE9ra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 233689640902656
+    m_Localized: Effacer la sauvegarde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237058312937472
+    m_Localized: Mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237433573122048
+    m_Localized: FAIBLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237440321757184
+    m_Localized: MOYEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237441995284480
+    m_Localized: "\xC9LEV\xC9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237749068668928
+    m_Localized: Contour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237823249129472
+    m_Localized: "Plein \xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237870405689344
+    m_Localized: "R\xE9solution"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238112366698496
+    m_Localized: "Barre de sant\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238156536913920
+    m_Localized: HUD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238290964357120
+    m_Localized: "AFFICHER LES R\xC9SEAUX SOCIAUX"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239152629587968
+    m_Localized: Reprendre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239246540054528
+    m_Localized: Menu principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241353561251840
+    m_Localized: 'AHAHAHAHAHAHAHA !
+
+      CADAVRE MDR'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241448180555776
+    m_Localized: "R\xE9essayer"
     m_Metadata:
       m_Items: []
   references:

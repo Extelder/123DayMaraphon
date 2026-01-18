@@ -19,67 +19,125 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 2705901264896
-    m_Localized: 
+    m_Localized: Settings
     m_Metadata:
       m_Items: []
   - m_Id: 2705905459200
-    m_Localized: 
+    m_Localized: General
     m_Metadata:
       m_Items: []
   - m_Id: 2705905459201
-    m_Localized: 
+    m_Localized: Graphics
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653504
-    m_Localized: 
+    m_Localized: Color
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653505
-    m_Localized: 
+    m_Localized: Sensitivity
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653506
-    m_Localized: 
+    m_Localized: Master Volume
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653507
-    m_Localized: 
+    m_Localized: Music Volume
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653508
-    m_Localized: 
+    m_Localized: Effects Volume
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653509
-    m_Localized: 
+    m_Localized: Field of View
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653510
-    m_Localized: 
+    m_Localized: Blood Splatter
     m_Metadata:
       m_Items: []
-  - m_Id: 2705909653511
-    m_Localized: 
+  - m_Id: 233689640902656
+    m_Localized: Clear Save
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653512
-    m_Localized: 
+    m_Localized: Difficulty
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653513
-    m_Localized: 
+    m_Localized: Easy
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653514
-    m_Localized: 
+    m_Localized: Enter
     m_Metadata:
       m_Items: []
   - m_Id: 2705909653515
-    m_Localized: 
+    m_Localized: Exit
     m_Metadata:
       m_Items: []
-  - m_Id: 2705909653516
-    m_Localized: 
+  - m_Id: 233083383619584
+    m_Localized: Camera Shake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237058312937472
+    m_Localized: Mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237433573122048
+    m_Localized: LOW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237440321757184
+    m_Localized: MIDDLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237441995284480
+    m_Localized: HIGH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237749068668928
+    m_Localized: Outline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237823249129472
+    m_Localized: Full Screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237870405689344
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238112366698496
+    m_Localized: Health Bar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238156536913920
+    m_Localized: HUD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 238290964357120
+    m_Localized: SHOW SOCIAL NETWORKS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239152629587968
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 239246540054528
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241353561251840
+    m_Localized: 'AHAHAAHAHAHAHAHA!
+
+      DEAD BODY LOL'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241448180555776
+    m_Localized: Retry
     m_Metadata:
       m_Items: []
   references:
