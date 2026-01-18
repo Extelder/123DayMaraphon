@@ -6883,6 +6883,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &883809691916327458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4941465194001980224}
+  m_Layer: 14
+  m_Name: GuideTargetPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4941465194001980224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883809691916327458}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.63, y: -0.88, z: 4.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 11070492389160087}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &890267130512622279
 GameObject:
   m_ObjectHideFlags: 0
@@ -28167,7 +28198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00000555471}
+  m_AnchoredPosition: {x: 0, y: 25.487926}
   m_SizeDelta: {x: 0, y: 1950}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &4127798127888806470
@@ -28582,8 +28613,8 @@ MonoBehaviour:
   <Rigidbody>k__BackingField: {fileID: 1036759230452235383}
   <PlayerLevelCheckPoint>k__BackingField: {fileID: 5269098643553466132}
   <PlayerHitBox>k__BackingField: {fileID: 4756442699330366297}
-  <PlaceForTextLerping>k__BackingField: {fileID: 2828551417129132083}
   <Camera>k__BackingField: {fileID: 11070492389160087}
+  <GuideTargetPoint>k__BackingField: {fileID: 4941465194001980224}
   <CinemachineParent>k__BackingField: {fileID: 5704195461790563236}
   <HeadBobParent>k__BackingField: {fileID: 742206447437934234}
   <WeaponSwitch>k__BackingField: {fileID: 259153463143571494}
@@ -51022,7 +51053,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1012574710482735430}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99306166
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -51644,6 +51675,7 @@ Transform:
   - {fileID: 5895265998692266422}
   - {fileID: 778277280401525036}
   - {fileID: 8801395015208326508}
+  - {fileID: 4941465194001980224}
   m_Father: {fileID: 8964689684812152432}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4313768413448818042
@@ -52718,7 +52750,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2681690423874278365}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.6775871
+  m_Size: 0.677587
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
