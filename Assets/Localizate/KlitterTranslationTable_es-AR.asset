@@ -138,6 +138,58 @@ MonoBehaviour:
     m_Localized: Reintentar
     m_Metadata:
       m_Items: []
+  - m_Id: 625504177135616
+    m_Localized: "\xA1Hola, soy el robot gu\xEDa! Si ves una pantalla como esta,
+      \xA1puede ayudarte!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625506186207232
+    m_Localized: "\xA1Aprendamos el movimiento b\xE1sico! Us\xE1 SPACE para SALTAR!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625507830374400
+    m_Localized: "\xA1SEGU\xCD! Us\xE1 SHIFT para DASH!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625509591982080
+    m_Localized: "\xA1Pod\xE9s rebotar en las superficies! Probalo... SALT\xC1 SALT\xC1
+      SALT\xC1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625510833496064
+    m_Localized: "\xA1Ahora mat\xE1 a ese pedazo de mierda que baila! \xA1US\xC1
+      LMB para DISPARAR!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625511852711936
+    m_Localized: "\xA1US\xC1 RMB para hacer un movimiento especial! Si hay enemigos
+      en el rango del fantasma, \xA1TODOS van a recibir DA\xD1O!!! \xA1Solo disparale
+      al FANTASMA!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625512620269568
+    m_Localized: "\xA1Dispar\xE1 hacia abajo para IMPULSARTE hacia arriba y salt\xE1
+      al MISMO tiempo!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625513501073408
+    m_Localized: "\xA1Ahora adem\xE1s us\xE1 la KATANA! Si DISPAR\xC1S y PEG\xC1S
+      con la KATANA al MISMO tiempo, \xA1ten\xE9s M\xC1S DA\xD1O y M\xC1S FUERZA!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625514293796864
+    m_Localized: "\xA1BUENA SUERTE, PUTAAAAAA!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625516256731136
+    m_Localized: "\xA1Encontraste una sala SECRETA! A lo largo de toda la partida,
+      vas a encontrar salas PARECIDAS muy seguido!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625517670211584
+    m_Localized: "\xA1And\xE1 al JUMPPAD! \xA1US\xC1 CTRP para DASH hacia abajo!!!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

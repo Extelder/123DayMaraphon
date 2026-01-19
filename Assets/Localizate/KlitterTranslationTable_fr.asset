@@ -140,6 +140,59 @@ MonoBehaviour:
     m_Localized: "R\xE9essayer"
     m_Metadata:
       m_Items: []
+  - m_Id: 625504177135616
+    m_Localized: "Salut, je suis le robot guide ! Si tu vois un \xE9cran comme celui-ci,
+      il peut t\u2019aider !!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625506186207232
+    m_Localized: "Apprenons les bases du d\xE9placement ! Appuie sur ESPACE (SPACE)
+      pour SAUTER !!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625507830374400
+    m_Localized: CONTIIINUUUE ! Appuie sur SHIFT pour DASH !!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625509591982080
+    m_Localized: Tu peux rebondir sur les surfaces ! Essaie juste... SAUTE SAUTE
+      SAUTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625510833496064
+    m_Localized: Maintenant, bute ce morceau de merde qui danse ! UTILISE LMB pour
+      TIRER !!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625511852711936
+    m_Localized: "UTILISE RMB pour FAIRE un mouvement sp\xE9cial ! Si des ennemis
+      sont dans la port\xE9e du fant\xF4me, ILS PRENNENT TOUS DES D\xC9G\xC2TS !!!
+      TIRE JUSTE SUR LE FANT\xD4ME !!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625512620269568
+    m_Localized: "TIRE vers le bas pour te PROPULSER vers le haut et SAUTE en M\xCAME
+      TEMPS !!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625513501073408
+    m_Localized: "Maintenant UTILISE aussi le KATANA ! Si tu TIRES et FRAPPES au
+      KATANA en M\xCAME TEMPS, tu as PLUS DE D\xC9G\xC2TS et PLUS DE PUISSANCE !!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625514293796864
+    m_Localized: BONNE CHANCE, SALOPEEEE !!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625516256731136
+    m_Localized: "TU as trouv\xE9 une salle SECR\xC8TE ! Pendant toute la partie,
+      tu tomberas souvent sur des salles SIMILAIRES !!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625517670211584
+    m_Localized: Va sur le JUMPPAD ! UTILISE CTRP pour DASH vers le bas !!!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

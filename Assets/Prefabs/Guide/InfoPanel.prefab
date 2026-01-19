@@ -104,6 +104,18 @@ MonoBehaviour:
   _stateMachine: {fileID: 0}
   _text: HIIIIIIIIIIIIIIIIII
   _targetGuidePoint: {fileID: 3963505862446245906}
+  myLocalizedString:
+    m_TableReference:
+      m_TableCollectionName: My Table
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: My Entry
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &2686641337369326769
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +262,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.3826841, z: -0, w: 0.92387927}
   m_LocalPosition: {x: -3.8, y: -15.076, z: 92.26}
-  m_LocalScale: {x: 0.97609675, y: 1.0383037, z: 1.2340908}
+  m_LocalScale: {x: 1.6825175, y: 2.2053237, z: 2.1272273}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6552807513523709734}

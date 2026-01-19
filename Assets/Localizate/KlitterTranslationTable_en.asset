@@ -140,6 +140,54 @@ MonoBehaviour:
     m_Localized: Retry
     m_Metadata:
       m_Items: []
+  - m_Id: 625504177135616
+    m_Localized: Hi I'm guide robot! If you see screen like this one - it can help
+      you!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625506186207232
+    m_Localized: Let's study basic movemet! Use SPACE to JUMP!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625507830374400
+    m_Localized: CONTINUUUE! Use SHIFT to DASH!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625509591982080
+    m_Localized: You can bounce off surfaces! Just try IT... JUMP JUMP JUMP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625510833496064
+    m_Localized: Now kill that dancing peace of shit! USE LMB to SHOOT!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625511852711936
+    m_Localized: USE RMB to MAKE special MOVE! If enemies will be in ghost range
+      ALL OF THEM can TAKE DAMAGE!!! JUST SHOOT AT GHOST!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625512620269568
+    m_Localized: SHOOT down to FORCE UP and JUMP at the SAME TIME!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625513501073408
+    m_Localized: Now USE KATANA additionally! If you SHOOT and HIT by KATANA at the
+      SAME TIME to have MORE DAMAGE and MORE FORCE!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625514293796864
+    m_Localized: HAVE A GOOD LUCK BITCHHHHH!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625516256731136
+    m_Localized: YOU found SECRET room! Throughout the entire playthrought, you will
+      often come across SIMILAR rooms!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625517670211584
+    m_Localized: Go ON JUMPPAD! USE CTRP to DASH DOWN!!!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

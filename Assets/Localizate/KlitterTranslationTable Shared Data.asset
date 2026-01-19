@@ -141,6 +141,50 @@ MonoBehaviour:
     m_Key: Retry
     m_Metadata:
       m_Items: []
+  - m_Id: 625504177135616
+    m_Key: InfoPanel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625506186207232
+    m_Key: InfoPanel 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625507830374400
+    m_Key: InfoPanel 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625509591982080
+    m_Key: InfoPanel 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625510833496064
+    m_Key: InfoPanel 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625511852711936
+    m_Key: InfoPanel 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625512620269568
+    m_Key: InfoPanel 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625513501073408
+    m_Key: InfoPanel 7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625514293796864
+    m_Key: InfoPanel 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625516256731136
+    m_Key: InfoPanel 9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625517670211584
+    m_Key: InfoPanel 10
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

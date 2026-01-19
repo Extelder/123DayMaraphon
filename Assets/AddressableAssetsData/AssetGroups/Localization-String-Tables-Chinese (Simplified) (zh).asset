@@ -16,14 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 834865e14c3bb044a88319bde508cc35
-  m_SerializeEntries:
-  - m_GUID: 07f356138270ffa46ad414fc02f9e427
-    m_Address: KlitterTranslationTable_zh
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-zh
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 464d7dd1e2609d44abf879afad9a102d, type: 2}
   m_SchemaSet:

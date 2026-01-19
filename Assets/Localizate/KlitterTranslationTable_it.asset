@@ -140,6 +140,54 @@ MonoBehaviour:
     m_Localized: Riprova
     m_Metadata:
       m_Items: []
+  - m_Id: 625504177135616
+    m_Localized: "Ciao, sono il robot guida! Se vedi una schermata come questa, pu\xF2
+      aiutarti!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625506186207232
+    m_Localized: Studiamo i movimenti base! Usa SPACE per SALTARE!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625507830374400
+    m_Localized: CONTINUUAA! Usa SHIFT per DASH!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625509591982080
+    m_Localized: Puoi rimbalzare sulle superfici! Prova e basta... SALTA SALTA SALTA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625510833496064
+    m_Localized: Ora ammazza quel pezzo di merda che balla! USA LMB per SPARARE!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625511852711936
+    m_Localized: USA RMB per fare una MOSSA speciale! Se i nemici sono nel raggio
+      del fantasma, TUTTI subiranno DANNI!!! Spara SOLO AL FANTASMA!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625512620269568
+    m_Localized: Spara verso il basso per SPINGERTI in su e SALTA nello STESSO momento!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625513501073408
+    m_Localized: "Ora USA anche la KATANA! Se SPARI e COLPISCI con la KATANA nello
+      STESSO momento avrai PI\xD9 DANNI e PI\xD9 FORZA!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625514293796864
+    m_Localized: BUONA FORTUNA, STRONZAAA!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625516256731136
+    m_Localized: HAI trovato una stanza SEGRETA! Durante tutta la run incontrerai
+      spesso stanze SIMILI!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625517670211584
+    m_Localized: Vai sul JUMPPAD! USA CTRP per DASHARE verso il basso!!!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

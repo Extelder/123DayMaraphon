@@ -140,6 +140,57 @@ MonoBehaviour:
     m_Localized: Erneut versuchen
     m_Metadata:
       m_Items: []
+  - m_Id: 625504177135616
+    m_Localized: Hi, ich bin der Guide-Roboter! Wenn du so einen Bildschirm siehst,
+      kann er dir helfen!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625506186207232
+    m_Localized: "Lass uns die Grundbewegung lernen! Dr\xFCcke SPACE, um zu SPRINGEN!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625507830374400
+    m_Localized: "WEITERMACHEN! Dr\xFCcke SHIFT zum DASHEN!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625509591982080
+    m_Localized: "Du kannst von Oberfl\xE4chen abprallen! Probier's einfach... SPRING
+      SPRING SPRING"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625510833496064
+    m_Localized: "Jetzt kill dieses tanzende St\xFCck Schei\xDFe! BENUTZE LMB zum
+      SCHIESSEN!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625511852711936
+    m_Localized: "BENUTZE RMB f\xFCr einen Spezial-MOVE! Wenn Gegner in Geister-Reichweite
+      sind, NEHMEN SIE ALLE SCHADEN!!! SCHIESS EINFACH AUF DEN GEIST!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625512620269568
+    m_Localized: "Schie\xDF nach unten, um dich nach oben zu SCHLEUDERN und spring
+      GLEICHZEITIG!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625513501073408
+    m_Localized: Jetzt auch das KATANA benutzen! Wenn du GLEICHZEITIG SCHIESST und
+      mit dem KATANA TRIFFST, hast du MEHR SCHADEN und MEHR WUCHT!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625514293796864
+    m_Localized: "VIEL GL\xDCCK, SCHLAMPEEEE!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625516256731136
+    m_Localized: "DU hast einen GEHEIMRAUM gefunden! W\xE4hrend des ganzen Durchlaufs
+      wirst du oft auf \xC4HNLICHE R\xE4ume sto\xDFen!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625517670211584
+    m_Localized: Geh aufs JUMPPAD! BENUTZE CTRP, um nach unten zu DASHEN!!!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

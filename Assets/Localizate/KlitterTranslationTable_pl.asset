@@ -140,6 +140,60 @@ MonoBehaviour:
     m_Localized: "Pon\xF3w"
     m_Metadata:
       m_Items: []
+  - m_Id: 625504177135616
+    m_Localized: "Cze\u015B\u0107, jestem robotem przewodnikiem! Je\u015Bli widzisz
+      ekran jak ten - mo\u017Ce ci pom\xF3c!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625506186207232
+    m_Localized: "Poznajmy podstawy ruchu! U\u017Cyj SPACE, \u017Ceby SKOCZY\u0106!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625507830374400
+    m_Localized: "DALEEEJ! U\u017Cyj SHIFT, \u017Ceby DASHOWA\u0106!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625509591982080
+    m_Localized: "Mo\u017Cesz odbija\u0107 si\u0119 od powierzchni! Po prostu spr\xF3buj...
+      SKACZ SKACZ SKACZ"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625510833496064
+    m_Localized: "Teraz zabij to ta\u0144cz\u0105ce g\xF3wno! U\u017BYJ LMB, \u017Ceby
+      STRZELA\u0106!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625511852711936
+    m_Localized: "U\u017BYJ RMB, \u017Ceby zrobi\u0107 specjalny RUCH! Je\u015Bli
+      w zasi\u0119gu ducha b\u0119d\u0105 wrogowie, WSZYSCY dostan\u0105 OBRA\u017BENIA!!!
+      Po prostu STRZELAJ DO DUCHA!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625512620269568
+    m_Localized: "Strzel w d\xF3\u0142, \u017Ceby WYRZUCI\u0106 SI\u0118 w g\xF3r\u0119
+      i SKOCZ w tym SAMYM czasie!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625513501073408
+    m_Localized: "Teraz dodatkowo u\u017Cyj KATANY! Je\u015Bli STRZELASZ i UDERZASZ
+      KATAN\u0104 w tym SAMYM czasie, masz WI\u0118KSZE OBRA\u017BENIA i WI\u0118KSZ\u0104
+      SI\u0141\u0118!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625514293796864
+    m_Localized: POWODZENIA, SUKAAAA!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625516256731136
+    m_Localized: "Znalaz\u0142e\u015B TAJNY pok\xF3j! Przez ca\u0142y playthrough
+      b\u0119dziesz cz\u0119sto trafia\u0107 na PODOBNE pokoje!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625517670211584
+    m_Localized: "Wejd\u017A na JUMPPAD! U\u017BYJ CTRP, \u017Ceby DASHOWA\u0106
+      w d\xF3\u0142!!!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
