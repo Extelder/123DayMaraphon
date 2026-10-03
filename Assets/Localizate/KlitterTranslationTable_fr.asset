@@ -176,8 +176,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 625513501073408
-    m_Localized: "Maintenant UTILISE aussi le KATANA ! Si tu TIRES et FRAPPES au
-      KATANA en M\xCAME TEMPS, tu as PLUS DE D\xC9G\xC2TS et PLUS DE PUISSANCE !!!"
+    m_Localized: "Maintenant UTILISE aussi le KATANA \"F\" ! Si tu TIRES et FRAPPES
+      au KATANA en M\xCAME TEMPS, tu as PLUS DE D\xC9G\xC2TS et PLUS DE PUISSANCE
+      !!!"
     m_Metadata:
       m_Items: []
   - m_Id: 625514293796864

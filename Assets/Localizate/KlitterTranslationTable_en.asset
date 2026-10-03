@@ -171,8 +171,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 625513501073408
-    m_Localized: Now USE KATANA additionally! If you SHOOT and HIT by KATANA at the
-      SAME TIME to have MORE DAMAGE and MORE FORCE!!!
+    m_Localized: Now USE KATANA "F"  additionally! If you SHOOT and HIT by KATANA
+      at the SAME TIME to have MORE DAMAGE and MORE FORCE!!!
     m_Metadata:
       m_Items: []
   - m_Id: 625514293796864
