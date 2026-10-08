@@ -50,7 +50,7 @@ public class ProjectileRaycastExplode : MonoBehaviour, IWeaponVisitor
     {
         _hittedExplosionGFX.SetActive(true);
         _defaultExplosionGFX.SetActive(false);
-        _projectile.SearchNearestEnemy();
+        _projectile.DetonateByShot();
         ProjectileShooted?.Invoke();
     }
 

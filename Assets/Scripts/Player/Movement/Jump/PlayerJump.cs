@@ -26,6 +26,7 @@ public class PlayerJump : MovementSpeedLerping
     {
         if (!_canJump)
             return;
+        PlayerSlopeMovement.SuspendGroundStick(this, 0.35f);
         StartCoroutine(SmoothlyLerpMoveSpeed());
 
         if (_resetRigidBodyYAfterJump)
@@ -37,6 +38,7 @@ public class PlayerJump : MovementSpeedLerping
 
     public void Jump(Vector3 velocity, bool resetRigidbodyYAfterJump = true)
     {
+        PlayerSlopeMovement.SuspendGroundStick(this, 0.5f);
         if (resetRigidbodyYAfterJump)
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, 0, _rigidbody.velocity.z);
         _rigidbody.AddForce(velocity, ForceMode.Impulse);

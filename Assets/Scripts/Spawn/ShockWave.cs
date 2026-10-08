@@ -20,6 +20,7 @@ public class ShockWave : MonoBehaviour
         {
             if (other.TryGetComponent<PlayerHitBox>(out PlayerHitBox hitBox))
             {
+                PlayerSlopeMovement.SuspendGroundStick(hitBox, 0.5f);
                 hitBox.GetComponent<Rigidbody>()
                     .AddForce(hitBox.transform.up * _characterUpForce, ForceMode.Impulse);
                 hitBox.TakeDamage(Damage);

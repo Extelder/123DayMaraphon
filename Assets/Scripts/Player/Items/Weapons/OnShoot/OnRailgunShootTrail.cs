@@ -8,4 +8,6 @@ public class OnRailgunShootTrail : OnRaycastWeaponShootTrail
     {
         pool = Pool.RailgunTrailPool;
     }
+
+    protected override ShotTracer.Style TracerStyle => ShotTracer.Style.Rail;
 }

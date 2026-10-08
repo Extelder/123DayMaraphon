@@ -29,6 +29,17 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
     private bool _useGravity;
     public CompositeDisposable Disposable { get; private set; } = new CompositeDisposable();
 
+    // Множитель урона от комбо (рост шара); сбрасывается при возврате в пул.
+    public float BonusDamageMultiplier { get; set; } = 1f;
+
+    // Снаряд выпущен комбо (ракета-монета призрака) — сам комбо больше не запускает.
+    public bool ComboSpawned { get; set; }
+
+    public bool HasExploded => _explosived;
+
+    // Снаряд застрял в волне РПГ и стал сингулярностью — сам больше не взрывается от касаний.
+    public bool SingularityCaptured { get; private set; }
+
     private float _defaultDamage;
 
     private float _trailTime;
@@ -60,7 +71,7 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
         StartCoroutine(WaitingForFrame());
         if (useTargetPosition)
             transform.LookAt(targetPosition, transform.forward);
-        Rigidbody.AddForce(transform.forward * _speed, ForceMode.Impulse);
+        Rigidbody.AddForce(transform.forward * (_speed * LaunchSpeedMultiplier), ForceMode.Impulse);
         Initiated?.Invoke();
     }
 
@@ -76,6 +87,9 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
         _trail.time = 0;
         _trail.enabled = false;
         _explosived = false;
+        BonusDamageMultiplier = 1f;
+        ComboSpawned = false;
+        SingularityCaptured = false;
         OnDisableVirtual();
     }
 
@@ -86,6 +100,8 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
 
     private void OnCollisionEnter(Collision other)
     {
+        if (SingularityCaptured)
+            return;
         if (other.collider.material.bounciness >= 0.95f)
             return;
         ;
@@ -100,11 +116,20 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
 
     private void OnTriggerEnter(Collider other)
     {
+        if (SingularityCaptured)
+            return;
         if (other.material.bounciness >= 0.95f)
             return;
         ;
         if (other.TryGetComponent<Projectile>(out Projectile projectile))
             return;
+
+        // Снаряд игрока + волна РПГ = сингулярность (затягивает и схлопывается), а не обычный взрыв.
+        if (!_onlyPlayerHealth && !_explosived && other.GetComponentInParent<PlayerSlashProjectile>() != null)
+        {
+            Singularity.Trigger(this);
+            return;
+        }
         if (_onlyPlayerHealth)
             Explode();
 
@@ -114,16 +139,15 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
 
     public void Explode()
     {
-        Damage = _defaultDamage;
         Explode(1);
     }
 
     public void Explode(float damageMultiplier)
     {
         Disposable.Clear();
-        Damage *= damageMultiplier;
         if (_explosived)
             return;
+        Damage = _defaultDamage * BonusDamageMultiplier * damageMultiplier;
         _collider.enabled = false;
         _trail.time = 0;
 
@@ -164,11 +188,39 @@ public class Projectile : PoolObjectTimeScalable, IHypeMeasurable
 
 
         Exploded?.Invoke();
+        ExplosionFx.Kind kind = SingularityCaptured ? ExplosionFx.Kind.Singularity : GetExplosionKind(damageMultiplier);
+        ExplosionFx.Play(transform.position, ExplosionRange, kind);
         _explosiveParticle?.Play();
         _projectileGFX.SetActive(false);
         Invoke(nameof(ReturnToPool), ReturnToPoolDelay);
     }
 
+
+    // Снаряд замирает в центре сингулярности (видимый, без коллайдера) и ждёт схлопывания.
+    public void Capture(float holdSeconds)
+    {
+        SingularityCaptured = true;
+        Disposable.Clear();
+        _collider.enabled = false;
+        Rigidbody.useGravity = false;
+        Rigidbody.velocity = Vector3.zero;
+        // Страховка, если сингулярность пропадёт; с запасом на отыгрыш взрыва после схлопывания.
+        RestartLifetime(holdSeconds + ReturnToPoolDelay);
+        OnCaptured();
+    }
+
+    protected virtual float LaunchSpeedMultiplier => 1f;
+
+    protected virtual void OnCaptured()
+    {
+    }
+
+    protected virtual ExplosionFx.Kind GetExplosionKind(float damageMultiplier)
+    {
+        if (_onlyPlayerHealth)
+            return ExplosionFx.Kind.Enemy;
+        return damageMultiplier > 1f ? ExplosionFx.Kind.RocketBig : ExplosionFx.Kind.Rocket;
+    }
 
     private void OnDrawGizmos()
     {

@@ -95,7 +95,9 @@ public class WeaponFeel : MonoBehaviour
         {
             Viewmodel viewmodel = GetViewmodel(shoot.transform);
             WeaponFeelKind kind = KindOf(shoot);
-            Action handler = () => Kick(viewmodel, kind, false);
+            RaycastWeaponShoot raycast = shoot as RaycastWeaponShoot;
+            Action handler = () =>
+                Kick(viewmodel, kind, false, raycast != null && raycast.Bursting ? _settings.BurstShotMultiplier : 1f);
             shoot.ShootPerformed += handler;
             _unsubscribers.Add(() => shoot.ShootPerformed -= handler);
         }
@@ -118,11 +120,15 @@ public class WeaponFeel : MonoBehaviour
         }
 
         UnitHitBox.UnitHitted += OnUnitHitted;
+        LightningBall.Nuked += OnNuked;
+        ExplosionFx.Exploded += OnExploded;
     }
 
     private void OnDestroy()
     {
         UnitHitBox.UnitHitted -= OnUnitHitted;
+        LightningBall.Nuked -= OnNuked;
+        ExplosionFx.Exploded -= OnExploded;
         foreach (Action unsubscribe in _unsubscribers)
             unsubscribe();
         _unsubscribers.Clear();
@@ -163,10 +169,10 @@ public class WeaponFeel : MonoBehaviour
         UpdateLight(deltaTime);
     }
 
-    private void Kick(Viewmodel viewmodel, WeaponFeelKind kind, bool ability)
+    private void Kick(Viewmodel viewmodel, WeaponFeelKind kind, bool ability, float scale = 1f)
     {
         WeaponFeelProfile profile = _settings.Get(kind);
-        float multiplier = _settings.Intensity * (ability ? profile.AbilityMultiplier : 1f);
+        float multiplier = _settings.Intensity * scale * (ability ? profile.AbilityMultiplier : 1f);
         if (multiplier <= 0f)
             return;
 
@@ -208,6 +214,53 @@ public class WeaponFeel : MonoBehaviour
             Abs(_settings.HitCameraKick) * (MaxAccumulation * intensity));
         _cameraFov.Kick(new Vector3(_settings.HitFovPunch * intensity, 0, 0), 1f,
             Vector3.one * (Mathf.Abs(_settings.HitFovPunch) * MaxAccumulation * intensity));
+        ApplyCamera();
+    }
+
+    private void OnExploded(Vector3 position, float radius, ExplosionFx.Kind kind)
+    {
+        // Nuke трясёт отдельно (OnNuked), чтобы не сложилось дважды.
+        if (_settings == null || kind == ExplosionFx.Kind.Nuke || !CameraKickEnabled || _cameraRecoil == null)
+            return;
+
+        float distance = Vector3.Distance(_cameraRecoil.transform.position, position);
+        float reach = radius * _settings.ExplosionShakeRadii + _settings.ExplosionShakeExtraDistance;
+        float falloff = 1f - Mathf.Clamp01(distance / reach);
+        if (falloff <= 0f)
+            return;
+
+        float strength = falloff * falloff * _settings.Intensity * ExplosionStrength(kind);
+        _cameraRotation.Kick(RandomizedKick(_settings.ExplosionCameraKick) * strength, 1f,
+            Abs(_settings.ExplosionCameraKick) * (MaxAccumulation * strength));
+        _cameraFov.Kick(new Vector3(_settings.ExplosionFovPunch * strength, 0, 0), 1f,
+            Vector3.one * (Mathf.Abs(_settings.ExplosionFovPunch) * MaxAccumulation * strength));
+        ApplyCamera();
+    }
+
+    private static float ExplosionStrength(ExplosionFx.Kind kind)
+    {
+        switch (kind)
+        {
+            case ExplosionFx.Kind.RocketBig: return 1.8f;
+            case ExplosionFx.Kind.BallMax: return 2.6f;
+            case ExplosionFx.Kind.Singularity: return 2.4f;
+            case ExplosionFx.Kind.Ball: return 1.2f;
+            case ExplosionFx.Kind.Enemy: return 0.5f;
+            case ExplosionFx.Kind.Ghost: return 0.7f;
+            default: return 1f;
+        }
+    }
+
+    private void OnNuked(Vector3 position)
+    {
+        if (_settings == null || !CameraKickEnabled)
+            return;
+
+        float intensity = _settings.Intensity;
+        _cameraRotation.Kick(RandomizedKick(_settings.NukeCameraKick) * intensity, 1f,
+            Abs(_settings.NukeCameraKick) * (MaxAccumulation * intensity));
+        _cameraFov.Kick(new Vector3(_settings.NukeFovPunch * intensity, 0, 0), 1f,
+            Vector3.one * (Mathf.Abs(_settings.NukeFovPunch) * MaxAccumulation * intensity));
         ApplyCamera();
     }
 

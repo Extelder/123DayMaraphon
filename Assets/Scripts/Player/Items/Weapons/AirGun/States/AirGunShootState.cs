@@ -27,6 +27,7 @@ public class AirGunShootState : WeaponShootState
 
     public void PerformShoot()
     {
+        PlayerSlopeMovement.SuspendGroundStick(_playerRigidbody, 0.35f);
         _playerRigidbody.velocity = new Vector3(0, 0, 0);
         _playerRigidbody.AddForce(-_camera.forward * _force, ForceMode.Impulse);
     }

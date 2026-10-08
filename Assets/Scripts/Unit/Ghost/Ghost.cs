@@ -15,7 +15,16 @@ public class Ghost : MonoBehaviour, IHypeMeasurable
     [SerializeField] private float _checkRate;
     [field: SerializeField] public List<IGhostTrapable> TrapedUnits { get; private set; } = new List<IGhostTrapable>();
 
-    public int GhostRadiusMultiplier { get; set; } = 1;
+    public float GhostRadiusMultiplier { get; set; } = 1f;
+
+    public LayerMask TargetLayer => _overlapSettings._searchLayer;
+
+    public float StunRadius => _overlapSettings._sphereRadius * GhostRadiusMultiplier;
+
+    public void ExtendRadius(float multiplier, float max)
+    {
+        GhostRadiusMultiplier = Mathf.Min(GhostRadiusMultiplier * multiplier, max);
+    }
 
     private void OnEnable()
     {

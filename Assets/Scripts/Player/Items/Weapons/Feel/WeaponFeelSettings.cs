@@ -61,6 +61,21 @@ public class WeaponFeelSettings : ScriptableObject
     public Vector3 HitCameraKick = new Vector3(0.2f, 0.3f, 0.6f);
     public float HitFovPunch = -0.9f;
 
+    [Tooltip("Отдача одного выстрела берста рейлгана относительно обычного выстрела")]
+    [Range(0f, 1f)] public float BurstShotMultiplier = 0.55f;
+
+    [Header("Explosions")]
+    [Tooltip("Кик камеры от взрыва вплотную; дальше ослабевает с расстоянием")]
+    public Vector3 ExplosionCameraKick = new Vector3(3.5f, 2f, 5f);
+    public float ExplosionFovPunch = 7f;
+    [Tooltip("Во сколько радиусов взрыва тряска затухает до нуля (плюс запас в метрах)")]
+    public float ExplosionShakeRadii = 4f;
+    public float ExplosionShakeExtraDistance = 12f;
+
+    [Header("Nuke (шар + берст рейлгана)")]
+    public Vector3 NukeCameraKick = new Vector3(6f, 2.5f, 6f);
+    public float NukeFovPunch = 14f;
+
     public WeaponFeelProfile Rifle = new WeaponFeelProfile
     {
         KickPosition = new Vector3(0.004f, 0.006f, 0.035f),

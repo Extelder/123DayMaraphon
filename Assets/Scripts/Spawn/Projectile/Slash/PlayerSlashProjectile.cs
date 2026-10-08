@@ -24,17 +24,27 @@ public class PlayerSlashProjectile : PoolObjectTimeScalable, ISlashProjectile, I
 
     private Rigidbody _rigidbody;
 
+    private float _baseDamage;
+    private float _baseSpeed;
+    private readonly HashSet<IWeaponVisitor> _hitVisitors = new HashSet<IWeaponVisitor>();
+
     private CompositeDisposable _disposable = new CompositeDisposable();
 
     private void Awake()
     {
         _playerCharacter = PlayerCharacter.Instance;
         _rigidbody = GetComponent<Rigidbody>();
+        _baseDamage = Damage;
+        _baseSpeed = Speed;
     }
 
 
     public void Initiate()
     {
+        // Объект из пула: усиления прошлого запуска (катана, крест) не должны копиться.
+        Damage = _baseDamage;
+        Speed = _baseSpeed;
+        _hitVisitors.Clear();
         transform.eulerAngles = new Vector3(0, 0, 0);
 
         _rigidbody.velocity = new Vector3(0, 0, 0);
@@ -42,7 +52,8 @@ public class PlayerSlashProjectile : PoolObjectTimeScalable, ISlashProjectile, I
         _rigidbody.AddForce(transform.forward * Speed, ForceMode.Impulse);
         Collider.OnTriggerEnterAsObservable().Subscribe(other =>
         {
-            if (other.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
+            // У волны-креста два коллайдера — каждую цель бьём один раз.
+            if (other.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor) && _hitVisitors.Add(visitor))
             {
                 visitor.Visit(this);
                 Triggered?.Invoke();
@@ -74,9 +85,6 @@ public class PlayerSlashProjectile : PoolObjectTimeScalable, ISlashProjectile, I
 
     public void Visit(RaycastWeaponShoot raycastWeaponShoot, RaycastHit hit)
     {
-        transform.localScale *= _multiplier;
-        Damage *= _multiplier;
-        Speed *= _multiplier;
     }
 
     public void Visit(Projectile projectile)

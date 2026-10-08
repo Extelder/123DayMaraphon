@@ -22,6 +22,7 @@ public class OnWeaponShootAddImpulse : MonoBehaviour
 
     private void OnShootPerformed()
     {
+        PlayerSlopeMovement.SuspendGroundStick(_rigidbody, 0.35f);
         _rigidbody.AddForce(-_transformInTheOppositeDirectionFromWhereTheImpulseWillComeFrom.forward * _impulse, ForceMode.Impulse);
     }
 }

@@ -14,6 +14,19 @@ public class PoolObject : MonoBehaviour
             Invoke("ReturnToPool", ReturnToPoolDelay);
     }
 
+    public void RestartLifetime(float seconds)
+    {
+        CancelInvoke(nameof(ReturnToPool));
+        Invoke(nameof(ReturnToPool), seconds);
+    }
+
+    public void RestartLifetime()
+    {
+        CancelInvoke(nameof(ReturnToPool));
+        if (_autoreturnToPool)
+            Invoke(nameof(ReturnToPool), ReturnToPoolDelay);
+    }
+
     public virtual void ReturnToPool()
     {
         gameObject.SetActive(false);

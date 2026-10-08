@@ -4,9 +4,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+// Тип выстрела для комбо: берст рейлгана — мультишот, дробь — buckshot, остальные рейкасты — hitscan.
+public enum RaycastShotKind
+{
+    HitScan,
+    Buckshot,
+    Multishot
+}
+
 public class RaycastWeaponShoot : WeaponShoot
 {
     public event Action<RaycastHit?> ShootPerformedWithRaycastHit;
+
+    public bool Bursting { get; set; }
+    public float BurstDamageMultiplier { get; set; } = 1f;
+
+    public RaycastShotKind Kind
+    {
+        get
+        {
+            if (Bursting)
+                return RaycastShotKind.Multishot;
+            return Weapon != null && Weapon.HitsPerShot > 1 ? RaycastShotKind.Buckshot : RaycastShotKind.HitScan;
+        }
+    }
+
+    public float Damage => Weapon.DamagePerHit * (Bursting ? BurstDamageMultiplier : 1f);
 
     private RaycastHit _hit;
 

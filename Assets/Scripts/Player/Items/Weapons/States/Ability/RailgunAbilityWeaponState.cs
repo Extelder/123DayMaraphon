@@ -12,13 +12,21 @@ public class RailgunAbilityWeaponState : AblityWeaponState
     [SerializeField] private Material _railgunChargedMaterial;
 
     [SerializeField] private float _secondsForFullCharge;
+    [SerializeField] private float _burstDamageMultiplier = 2f;
 
+    private RaycastWeaponShoot _weaponShoot;
     private bool _pressedUp;
 
     private float _currentSeconds;
 
+    private void Awake()
+    {
+        _weaponShoot = GetComponent<RaycastWeaponShoot>();
+    }
+
     public override void Enter()
     {
+        SetBursting(false);
         AbilityUsed += OnAbilityUsed;
         CanChanged = false;
         _currentSeconds = 0;
@@ -49,14 +57,26 @@ public class RailgunAbilityWeaponState : AblityWeaponState
         }
 
         _chargingSound.Stop();
+        // Короткое нажатие — шар (клип RailgunAbilityBoom по триггеру "Shooting"),
+        // полный заряд — берст (клип RailgunAbilityShooting по триггеру "Charging").
         if (_currentSeconds >= _secondsForFullCharge)
         {
-            Animator.SetAnimationTrigger("Shooting");
+            SetBursting(true);
+            Animator.SetAnimationTrigger("Charging");
         }
         else
         {
-            Animator.SetAnimationTrigger("Charging");
+            Animator.SetAnimationTrigger("Shooting");
         }
+    }
+
+    private void SetBursting(bool bursting)
+    {
+        if (_weaponShoot == null)
+            return;
+
+        _weaponShoot.Bursting = bursting;
+        _weaponShoot.BurstDamageMultiplier = _burstDamageMultiplier;
     }
 
     public override void Exit()
@@ -64,11 +84,13 @@ public class RailgunAbilityWeaponState : AblityWeaponState
         AbilityUsed -= OnAbilityUsed;
         PlayerInputs.PlayerWeaponInputs.WeaponAbilityPressedUp -= OnWeaponAbilityPressedUp;
         _railgun.material = _railgunDefaultMaterial;
+        SetBursting(false);
         base.Exit();
     }
 
     private void OnDisable()
     {
+        SetBursting(false);
         AbilityUsed -= OnAbilityUsed;
         PlayerInputs.PlayerWeaponInputs.WeaponAbilityPressedUp -= OnWeaponAbilityPressedUp;
     }

@@ -17,6 +17,10 @@ public class WeaponStateMachine : StateMachine
 
         PlayerInputs.PlayerWeaponInputs.MainShootPressedDown += OnMainShootPressedDown;
         PlayerInputs.PlayerWeaponInputs.MainShootPressedUp += OnMainShootPressedUp;
+
+        // Свап с зажатой кнопкой — новое оружие сразу продолжает стрелять.
+        if (PlayerInputs.PlayerWeaponInputs.MainShooting)
+            OnMainShootPressedDown();
     }
 
     private void OnMainShootPressedUp()

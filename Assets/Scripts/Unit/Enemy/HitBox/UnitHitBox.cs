@@ -13,6 +13,8 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
 
     public IHypeMeasurable CurrentHypeMeasurable { get; private set; }
 
+    public bool CanBeHit => _health != null && !_health.IsDead();
+
     public event Action Hit;
 
     public static event Action UnitHitted;
@@ -66,7 +68,7 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
         if (_health.IsDead())
             return;
         CurrentHypeMeasurable = raycastWeaponShoot;
-        TakeDamage(raycastWeaponShoot.Weapon.DamagePerHit, CurrentHypeMeasurable.HypeType);
+        TakeDamage(raycastWeaponShoot.Damage, CurrentHypeMeasurable.HypeType);
         SpawningDecal(hit.point);
         Hit?.Invoke();
         UnitHitted?.Invoke();
@@ -87,6 +89,8 @@ public class UnitHitBox : MonoBehaviour, IWeaponVisitor
 
     public virtual void Visit(Ghost ghost, float damage)
     {
+        if (!CanBeHit)
+            return;
         CurrentHypeMeasurable = ghost;
         SpawningDecal(transform.position);
         TakeDamage(damage, CurrentHypeMeasurable.HypeType);

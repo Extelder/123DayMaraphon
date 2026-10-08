@@ -99,6 +99,16 @@ public class RPGProjectile : Projectile
         }
     }
 
+    // Ракета + HitScan: подрыв на месте усиленным взрывом.
+    public void DetonateByShot()
+    {
+        // Дробь попадает в ракету несколькими лучами за кадр — масштабируем взрыв один раз.
+        if (HasExploded)
+            return;
+        ScaleProjectile();
+        HitExplode();
+    }
+
     public void ScaleProjectile()
     {
         ExplosionRange *= _scaleFactor;
