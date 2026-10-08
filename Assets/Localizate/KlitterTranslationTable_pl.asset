@@ -194,6 +194,90 @@ MonoBehaviour:
       w d\xF3\u0142!!!"
     m_Metadata:
       m_Items: []
+  - m_Id: 990000000000001
+    m_Localized: "Sterowanie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000002
+    m_Localized: "Ruch"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000003
+    m_Localized: "Walka"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000004
+    m_Localized: "Bro\u0144"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000005
+    m_Localized: "Do przodu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000006
+    m_Localized: "Do ty\u0142u"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000007
+    m_Localized: "W lewo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000008
+    m_Localized: "W prawo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000009
+    m_Localized: "Skok"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000010
+    m_Localized: "Dash"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000011
+    m_Localized: "Dash w d\u00f3\u0142"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000012
+    m_Localized: "Strza\u0142"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000013
+    m_Localized: "Atak alternatywny"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000014
+    m_Localized: "Katana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000015
+    m_Localized: "Ulta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000016
+    m_Localized: "Strzelba"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000017
+    m_Localized: "Karabin / RPG"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000018
+    m_Localized: "Railgun"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000019
+    m_Localized: "Przywr\u00f3\u0107 sterowanie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000020
+    m_Localized: "Resetuj"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000021
+    m_Localized: "Wci\u015bnij klawisz"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -191,6 +191,90 @@ MonoBehaviour:
     m_Localized: Geh aufs JUMPPAD! BENUTZE CTRP, um nach unten zu DASHEN!!!
     m_Metadata:
       m_Items: []
+  - m_Id: 990000000000001
+    m_Localized: "Steuerung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000002
+    m_Localized: "Bewegung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000003
+    m_Localized: "Kampf"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000004
+    m_Localized: "Waffen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000005
+    m_Localized: "Vorw\u00e4rts"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000006
+    m_Localized: "R\u00fcckw\u00e4rts"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000007
+    m_Localized: "Links"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000008
+    m_Localized: "Rechts"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000009
+    m_Localized: "Springen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000010
+    m_Localized: "Dash"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000011
+    m_Localized: "Dash nach unten"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000012
+    m_Localized: "Schie\u00dfen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000013
+    m_Localized: "Alt-Feuer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000014
+    m_Localized: "Katana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000015
+    m_Localized: "Ultimate"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000016
+    m_Localized: "Schrotflinte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000017
+    m_Localized: "Gewehr / RPG"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000018
+    m_Localized: "Railgun"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000019
+    m_Localized: "Steuerung zur\u00fccksetzen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000020
+    m_Localized: "Zur\u00fccksetzen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000021
+    m_Localized: "Taste dr\u00fccken"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

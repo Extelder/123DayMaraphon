@@ -150,6 +150,8 @@ public class Settings : MonoBehaviour
                 _pools.BloodSplatPool.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             _bloodSplatOnOffTText.text = _onText;
         }
+
+        KeyBindingsMenu.Install(_settingsCanvas);
     }
 
     public void OpenCloseSettings()
@@ -174,11 +176,12 @@ public class Settings : MonoBehaviour
     public void ClearPrefs()
     {
         PlayerPrefs.DeleteAll();
+        KeyBindings.ResetToDefaults();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !KeyBindings.EscapeConsumed)
         {
             OpenCloseSettings();
         }

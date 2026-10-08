@@ -43,6 +43,11 @@ public class PlayerCharacter : MonoBehaviour
         Debug.LogError("THERE`s one more PlAYERCHARACTER");
     }
 
+    private void Start()
+    {
+        WeaponFeel.Install(gameObject);
+    }
+
 
     private void Update()
     {

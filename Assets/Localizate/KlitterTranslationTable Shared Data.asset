@@ -185,6 +185,90 @@ MonoBehaviour:
     m_Key: InfoPanel 10
     m_Metadata:
       m_Items: []
+  - m_Id: 990000000000001
+    m_Key: controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000002
+    m_Key: bind_header_movement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000003
+    m_Key: bind_header_combat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000004
+    m_Key: bind_header_weapons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000005
+    m_Key: bind_move_forward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000006
+    m_Key: bind_move_back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000007
+    m_Key: bind_move_left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000008
+    m_Key: bind_move_right
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000009
+    m_Key: bind_jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000010
+    m_Key: bind_dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000011
+    m_Key: bind_dash_down
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000012
+    m_Key: bind_shoot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000013
+    m_Key: bind_ability
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000014
+    m_Key: bind_katana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000015
+    m_Key: bind_ultimate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000016
+    m_Key: bind_weapon_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000017
+    m_Key: bind_weapon_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000018
+    m_Key: bind_weapon_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000019
+    m_Key: bind_reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000020
+    m_Key: bind_reset_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000021
+    m_Key: bind_press_key
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

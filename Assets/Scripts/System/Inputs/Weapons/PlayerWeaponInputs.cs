@@ -3,10 +3,10 @@ using System;
 
 public class PlayerWeaponInputs : MonoBehaviour
 {
-    [field: SerializeField] public KeyCode MainShootKeyCode { get; private set; }
-    [field: SerializeField] public KeyCode KunitanaShootKeyCode { get; private set; }
-    [field: SerializeField] public KeyCode WeaponAbilityKeyCode { get; private set; }
-    [field: SerializeField] public KeyCode KunitanaUltimateShootKeyCode { get; private set; }
+    public KeyCode MainShootKeyCode => KeyBindings.Get(GameAction.Shoot);
+    public KeyCode KunitanaShootKeyCode => KeyBindings.Get(GameAction.Katana);
+    public KeyCode WeaponAbilityKeyCode => KeyBindings.Get(GameAction.Ability);
+    public KeyCode KunitanaUltimateShootKeyCode => KeyBindings.Get(GameAction.Shoot);
 
     public bool MainShooting { get; private set; }
     public bool KunitanaAttacking { get; private set; }

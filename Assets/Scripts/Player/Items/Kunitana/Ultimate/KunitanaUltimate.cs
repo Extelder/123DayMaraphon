@@ -14,8 +14,6 @@ public class KunitanaUltimate : MonoBehaviour
     [SerializeField] private PlayerHypeSystem _playerHypeSystem;
     [SerializeField] private float _cooldown;
 
-    [SerializeField] private KeyCode _ultimateKeyCode;
-
     [SerializeField] private GameObject _weapons;
     [SerializeField] private GameObject _kunitanas;
     [SerializeField] private GameObject _hint;
@@ -56,7 +54,7 @@ public class KunitanaUltimate : MonoBehaviour
                 Observable.EveryUpdate().Subscribe(_ =>
                 {
                     _pressed = true;
-                    if (Input.GetKeyDown(_ultimateKeyCode))
+                    if (Input.GetKeyDown(KeyBindings.Get(GameAction.Ultimate)))
                     {
                         _hint.SetActive(false);
                         KunitanaAttack();

@@ -188,6 +188,90 @@ MonoBehaviour:
     m_Localized: Vai sul JUMPPAD! USA CTRP per DASHARE verso il basso!!!
     m_Metadata:
       m_Items: []
+  - m_Id: 990000000000001
+    m_Localized: "Comandi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000002
+    m_Localized: "Movimento"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000003
+    m_Localized: "Combattimento"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000004
+    m_Localized: "Armi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000005
+    m_Localized: "Avanti"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000006
+    m_Localized: "Indietro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000007
+    m_Localized: "Sinistra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000008
+    m_Localized: "Destra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000009
+    m_Localized: "Salto"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000010
+    m_Localized: "Scatto"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000011
+    m_Localized: "Scatto in gi\u00f9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000012
+    m_Localized: "Sparare"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000013
+    m_Localized: "Fuoco secondario"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000014
+    m_Localized: "Katana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000015
+    m_Localized: "Ultimate"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000016
+    m_Localized: "Fucile a pompa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000017
+    m_Localized: "Fucile / RPG"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000018
+    m_Localized: "Railgun"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000019
+    m_Localized: "Ripristina comandi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000020
+    m_Localized: "Ripristina"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000021
+    m_Localized: "Premi un tasto"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

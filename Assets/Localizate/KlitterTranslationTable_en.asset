@@ -188,6 +188,90 @@ MonoBehaviour:
     m_Localized: Go ON JUMPPAD! USE CTRP to DASH DOWN!!!
     m_Metadata:
       m_Items: []
+  - m_Id: 990000000000001
+    m_Localized: "Controls"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000002
+    m_Localized: "Movement"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000003
+    m_Localized: "Combat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000004
+    m_Localized: "Weapons"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000005
+    m_Localized: "Forward"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000006
+    m_Localized: "Back"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000007
+    m_Localized: "Left"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000008
+    m_Localized: "Right"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000009
+    m_Localized: "Jump"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000010
+    m_Localized: "Dash"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000011
+    m_Localized: "Dash down"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000012
+    m_Localized: "Shoot"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000013
+    m_Localized: "Alt fire"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000014
+    m_Localized: "Katana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000015
+    m_Localized: "Ultimate"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000016
+    m_Localized: "Shotgun"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000017
+    m_Localized: "Rifle / RPG"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000018
+    m_Localized: "Railgun"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000019
+    m_Localized: "Reset controls"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000020
+    m_Localized: "Reset"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990000000000021
+    m_Localized: "Press key"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

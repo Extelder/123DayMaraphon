@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class PlayerMovementInputs : MonoBehaviour
 {
-    [field: SerializeField] public KeyCode DashKeyCode { get; private set; }
-    [field: SerializeField] public KeyCode DasDownhKeyCode { get; private set; }
-    [field: SerializeField] public KeyCode JumpKeyCode { get; private set; }
+    public KeyCode DashKeyCode => KeyBindings.Get(GameAction.Dash);
+    public KeyCode DasDownhKeyCode => KeyBindings.Get(GameAction.DashDown);
+    public KeyCode JumpKeyCode => KeyBindings.Get(GameAction.Jump);
     public float MovementHorizontal { get; private set; }
     public float MovementVertical { get; private set; }
     public event Action DashPressedDown;
@@ -17,8 +17,8 @@ public class PlayerMovementInputs : MonoBehaviour
 
     public void GetMovingInputs()
     {
-        MovementHorizontal = Input.GetAxisRaw("Horizontal");
-        MovementVertical = Input.GetAxisRaw("Vertical");
+        MovementHorizontal = KeyBindings.GetAxis(GameAction.MoveRight, GameAction.MoveLeft);
+        MovementVertical = KeyBindings.GetAxis(GameAction.MoveForward, GameAction.MoveBack);
         IsMoving = true;
     }
 

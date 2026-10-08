@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class PlayerSwitchWeaponInputs : MonoBehaviour
 {
-    [field: SerializeField] public KeyCode ShotGunKeyCode { get; private set; }
-    [field: SerializeField] public KeyCode RifleKeyCode { get; private set; }
-    [field: SerializeField] public KeyCode RPGKeyCode { get; private set; }
-    [field: SerializeField] public KeyCode RailgunKeyCode { get; private set; }
+    public KeyCode ShotGunKeyCode => KeyBindings.Get(GameAction.Weapon1);
+    public KeyCode RifleKeyCode => KeyBindings.Get(GameAction.Weapon2);
+    public KeyCode RPGKeyCode => KeyBindings.Get(GameAction.Weapon2);
+    public KeyCode RailgunKeyCode => KeyBindings.Get(GameAction.Weapon3);
     
     public event Action ShotGunKeyPressedDown;
     public event Action RifleKeyPressedDown;
